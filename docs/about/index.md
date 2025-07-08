@@ -1,29 +1,33 @@
 # About Me
 
-Hello! I'm **Yunsung Lee**, a passionate software developer with a love for creating innovative solutions and exploring new technologies.
+Hello! I'm **Yunsung Lee**, an AI/ML research engineer with strong research foundations and practical experience in deploying commercial AI products.
 
 ## Who I Am
 
-I'm a dedicated software engineer who enjoys tackling complex problems and building applications that make a difference. My journey in technology has been driven by curiosity and a constant desire to learn and grow.
+I'm a dedicated AI researcher and engineer who enjoys tackling complex problems in machine learning and computer vision. My journey in AI has been driven by curiosity and a passion for translating cutting-edge research into real-world applications with significant impact.
 
 ## What I Do
 
-- **Software Development**: Building robust applications using modern technologies and best practices
-- **Problem Solving**: Analyzing complex challenges and developing efficient solutions
-- **Continuous Learning**: Staying up-to-date with the latest trends and technologies in software development
-- **Knowledge Sharing**: Contributing to the developer community through blog posts and open-source projects
+- **AI/ML Research**: Specializing in vision-language multimodal systems, diffusion models, and autonomous agents
+- **Research Leadership**: Leading research initiatives at Maum.ai's WoRV team for robotics and vehicle control
+- **Product Development**: Deploying commercial AI products with over 5M MAUs
+- **Academic Contributions**: Publishing in top-tier conferences with 1.5K+ citations
+- **Knowledge Sharing**: Contributing to the AI community through research, open-source projects, and conference reviews
 
-## My Interests
+## My Research Interests
 
-### Technology
-I'm passionate about various aspects of software development, including:
+### Core Areas
 
-- Web development and modern frameworks
-- Software architecture and design patterns
-- DevOps and deployment automation
-- Open-source contributions
+I'm passionate about various aspects of AI and machine learning, including:
+
+- Vision-Language Multimodal AI
+- Diffusion Models and Generative AI
+- Autonomous Agents and Embodied AI
+- Robotics Foundation Models
+- Open-source AI tools and frameworks
 
 ### Beyond Code
+
 When I'm not coding, you can find me:
 
 - Reading about emerging technologies
@@ -36,8 +40,8 @@ When I'm not coding, you can find me:
 I'm always interested in connecting with fellow developers, discussing new ideas, and collaborating on interesting projects. Feel free to reach out through any of the following channels:
 
 - **GitHub**: [@alohays](https://github.com/alohays)
-- **Website**: [alohays.com](https://alohays.com)
-- **Email**: Feel free to reach out through my GitHub profile
+- **LinkedIn**: [Yunsung Lee](https://www.linkedin.com/in/yunsung-lee-23a926150/)
+- **Email**: [dldbstjd9751@gmail.com](mailto:dldbstjd9751@gmail.com)
 
 ## This Website
 

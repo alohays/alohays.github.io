@@ -1,6 +1,6 @@
 # Welcome to My Personal Website
 
-Hello! I'm **Yunsung Lee**, a passionate software developer and technology enthusiast. Welcome to my personal corner of the internet where I share my journey, insights, and projects.
+Hello! I'm **Yunsung Lee**, an AI/ML research engineer with strong research foundations and practical experience deploying commercial AI products. Welcome to my personal corner of the internet where I share my journey, insights, and research.
 
 ## What You'll Find Here
 
@@ -43,7 +43,8 @@ Check out my latest thoughts and technical insights:
 I'm always interested in connecting with fellow developers and discussing new ideas. Feel free to reach out through:
 
 - **GitHub**: [@alohays](https://github.com/alohays)
-- **Website**: [alohays.com](https://alohays.com)
+- **LinkedIn**: [Yunsung Lee](https://www.linkedin.com/in/yunsung-lee-23a926150/)
+- **Email**: [dldbstjd9751@gmail.com](mailto:dldbstjd9751@gmail.com)
 
 ---
 

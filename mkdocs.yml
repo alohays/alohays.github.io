@@ -21,9 +21,7 @@ plugins:
       blog_toc: true
       post_date_format: full
       post_url_format: "{date}/{slug}"
-      post_slugify: !!python/object/apply:pymdownx.slugs.slugify
-        kwds:
-          case: lower
+      post_slugify_separator: "_"
       post_excerpt_separator: <!-- more -->
       archive_toc: true
       categories_toc: true
@@ -69,9 +67,14 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/alohays/alohays-github-io
-    - icon: fontawesome/brands/python
-      link: https://pypi.org/project/alohays-github-io
+      link: https://github.com/alohays
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/yunsung-lee-23a926150/
+    - icon: fontawesome/solid/envelope
+      link: mailto:dldbstjd9751@gmail.com
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - abbr
@@ -88,9 +91,7 @@ markdown_extensions:
       smart_enable: all
   - pymdownx.caret
   - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.emoji
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -105,11 +106,7 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.snippets
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
