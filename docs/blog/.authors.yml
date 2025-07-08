@@ -1,0 +1,13 @@
+authors:
+  yunsung:
+    name: Yunsung Lee
+    description: Software Developer & Tech Enthusiast
+    avatar: https://github.com/alohays.png
+    url: https://alohays.com
+    social:
+      - icon: fontawesome/brands/github
+        link: https://github.com/alohays
+      - icon: fontawesome/brands/linkedin
+        link: https://linkedin.com/in/yunsung-lee
+      - icon: fontawesome/solid/globe
+        link: https://alohays.com
