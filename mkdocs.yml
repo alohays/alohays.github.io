@@ -15,7 +15,8 @@ nav:
       - blog/index.md
 
 plugins:
-  - search
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - meta
   - blog:
       blog_dir: blog
@@ -27,10 +28,6 @@ plugins:
       archive_toc: true
       categories_toc: true
       authors_file: "{blog}/.authors.yml"
-  - mkdocstrings:
-      handlers:
-        python:
-          paths: ["alohays_github_io"]
 theme:
   name: material
   features:
@@ -43,6 +40,7 @@ theme:
     - navigation.path
     - navigation.top
     - navigation.indexes
+    - navigation.footer
     - toc.follow
     - search.highlight
     - search.share
@@ -51,39 +49,47 @@ theme:
     - content.action.edit
     - content.tooltips
   palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue grey
-      accent: deep orange
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
+    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue grey
-      accent: deep orange
+      primary: black
+      accent: indigo
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Switch to system preference
   icon:
     repo: fontawesome/brands/github
     edit: material/pencil
     view: material/eye
   font:
-    text: Inter
-    code: JetBrains Mono
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
 
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/alohays
+      name: GitHub
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/yunsung-lee-23a926150/
+      name: LinkedIn
     - icon: fontawesome/solid/envelope
       link: mailto:dldbstjd9751@gmail.com
-
-extra_css:
-  - stylesheets/extra.css
+      name: Email
 
 markdown_extensions:
   - abbr

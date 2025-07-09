@@ -18,13 +18,10 @@ I'm a dedicated AI researcher and engineer who enjoys tackling complex problems 
 
 ### Core Areas
 
-I'm passionate about various aspects of AI and machine learning, including:
-
-- Vision-Language Multimodal AI
-- Diffusion Models and Generative AI
-- Autonomous Agents and Embodied AI
-- Robotics Foundation Models
-- Open-source AI tools and frameworks
+- **Vision-Language AI**: Multimodal systems that understand both visual and textual information
+- **Diffusion Models**: Generative AI and advanced diffusion-based approaches
+- **Autonomous Agents**: Embodied AI systems that can act in real-world environments
+- **Foundation Models**: Large-scale robotics models for generalizable intelligence
 
 ### Beyond Code
 

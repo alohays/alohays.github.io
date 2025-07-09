@@ -7,7 +7,7 @@ description: Professional CV of Yunsung Lee - AI/ML Research Engineer
 
 **AI/ML Research Engineer**
 
-**Contact Information:**
+## Contact Information
 
 - **Phone:** [(+82) 10-2988-9751](tel:+821029889751)
 - **Email:** [dldbstjd9751@gmail.com](mailto:dldbstjd9751@gmail.com)
@@ -37,45 +37,38 @@ Research Team Management, Cross-functional Collaboration, Technical Mentoring
 !!! info "Alternative Military Service"
 Positions at Wrtn Technologies and Riiid serve as Alternative Military Service (Technical Research Personnel, 전문연구요원) until April 14, 2025, combining mandatory service with R&D in strategic industries.
 
-### Head of Research, WoRV Team
-
-**MaumAI** · _Seongnam, South Korea_ · **May 2025 - Present**
+**Head of Research, WoRV Team**
+MaumAI · Seongnam, South Korea · May 2025 - Present
 
 Leading research initiatives for WoRV (World Model for Robotics and Vehicle Control), Maum.ai's flagship Embodied AI research organization. Overseeing development of foundation models that integrate language, vision, and action for robotics and autonomous driving applications. Driving projects including SketchDrive navigation agents, autonomous agricultural machinery, and open-world agents research.
 
-### AI Engineer
-
-**Wrtn Technologies** · _Seoul, South Korea_ · **Oct. 2023 - Apr. 2025**
+**AI Engineer**
+Wrtn Technologies · Seoul, South Korea · Oct. 2023 - Apr. 2025
 
 Artificial intelligence engineer specializing in memory and personalization for autonomous agents, and multimodal capabilities for [wrtn](https://wrtn.ai/). Led core development efforts, spanning ML technology research and implementation to backend engineering. Drove key functionalities of the project with focus on autonomous agent capabilities.
 
-### Research Scientist
-
-**Riiid** · _Seoul, South Korea_ · **Apr. 2022 - Oct. 2023**
+**Research Scientist**
+Riiid · Seoul, South Korea · Apr. 2022 - Oct. 2023
 
 Computer vision research scientist focusing on educational AI applications. Math problem image retrieval for [AI:R Math](https://www.airmath.com/). English vocabulary visualization with text-to-image diffusion models ([Santa](https://www.aitutorsanta.com/)).
 
-### ML Research Scientist
-
-**Scatter Lab** · _Seoul, South Korea_ · **Jul. 2021 - Mar. 2022**
+**ML Research Scientist**
+Scatter Lab · Seoul, South Korea · Jul. 2021 - Mar. 2022
 
 Researched vision-and-language multimodal dialogue system for the chatbot "Luda Lee". Reference: [Make Luda see](https://tv.naver.com/v/33862680), Naver Deview 2023.
 
-### OCR Team Intern
-
-**CLOVA, NAVER Corp** · _Seongnam, South Korea_ · **Sep. 2020 - Mar. 2021**
+**OCR Team Intern**
+CLOVA, NAVER Corp · Seongnam, South Korea · Sep. 2020 - Mar. 2021
 
 Researched self-supervised representation learning, domain generalization, and data augmentations for document images.
 
-### ML Team Intern
-
-**HYPERCONNECT** · _Seoul, South Korea_ · **Jul. 2020 - Aug. 2020**
+**ML Team Intern**
+HYPERCONNECT · Seoul, South Korea · Jul. 2020 - Aug. 2020
 
 Researched adversarial robust semi-supervised learning.
 
-### Intern, Web Developer
-
-**Algorithm Labs** · _Seoul, South Korea_ · **Dec. 2016 - Feb. 2017**
+**Intern, Web Developer**
+Algorithm Labs · Seoul, South Korea · Dec. 2016 - Feb. 2017
 
 On-site internship with focus on competitive programming and web development. Wrote competitive programming problems and contributed to web front-end development.
 
@@ -83,21 +76,16 @@ On-site internship with focus on competitive programming and web development. Wr
 
 ## Education
 
-### M.Sc. Computer Science
-
-**Korea University** · _Seoul, South Korea_ · **Mar. 2019 - Feb. 2022**
-
+**M.Sc. Computer Science**
+Korea University · Seoul, South Korea · Mar. 2019 - Feb. 2022
 Advisor: Seungryong Kim, Jaegul Choo
 
-### Visiting Scholar
-
-**Carnegie Mellon University** · _PA, USA_ · **Jan. 2020 - Jul. 2020**
-
+**Visiting Scholar**
+Carnegie Mellon University · PA, USA · Jan. 2020 - Jul. 2020
 Artificial Intelligence, Language Technologies Institute. Sponsored by IITP under South Korean Government.
 
-### B.Sc. Computer Science
-
-**Hanyang University** · _Seoul, South Korea_ · **Mar. 2014 - Feb. 2019**
+**B.Sc. Computer Science**
+Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 ---
 
