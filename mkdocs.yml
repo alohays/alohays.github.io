@@ -1,10 +1,10 @@
 site_name: Yunsung Lee
-repo_url: https://github.com/alohays/alohays-github-io
-site_url: https://alohays.github.io/alohays-github-io
+repo_url: https://github.com/alohays/alohays.github.io
+site_url: https://alohays.github.io
 site_description: Personal website and blog of Yunsung Lee
 site_author: Yunsung Lee
 edit_uri: edit/main/docs/
-repo_name: alohays/alohays-github-io
+repo_name: alohays/alohays.github.io
 copyright: Copyright &copy; 2025 Yunsung Lee
 
 nav:
@@ -102,7 +102,7 @@ markdown_extensions:
       normalize_issue_symbols: true
       repo_url_shorthand: true
       user: alohays
-      repo: alohays-github-io
+      repo: alohays.github.io
   - pymdownx.mark
   - pymdownx.smartsymbols
   - pymdownx.snippets

@@ -1,15 +1,15 @@
-# alohays-github-io
+# alohays.github.io
 
-[![Release](https://img.shields.io/github/v/release/alohays/alohays-github-io)](https://img.shields.io/github/v/release/alohays/alohays-github-io)
-[![Build status](https://img.shields.io/github/actions/workflow/status/alohays/alohays-github-io/main.yml?branch=main)](https://github.com/alohays/alohays-github-io/actions/workflows/main.yml?query=branch%3Amain)
-[![codecov](https://codecov.io/gh/alohays/alohays-github-io/branch/main/graph/badge.svg)](https://codecov.io/gh/alohays/alohays-github-io)
-[![Commit activity](https://img.shields.io/github/commit-activity/m/alohays/alohays-github-io)](https://img.shields.io/github/commit-activity/m/alohays/alohays-github-io)
-[![License](https://img.shields.io/github/license/alohays/alohays-github-io)](https://img.shields.io/github/license/alohays/alohays-github-io)
+[![Release](https://img.shields.io/github/v/release/alohays/alohays.github.io)](https://img.shields.io/github/v/release/alohays/alohays.github.io)
+[![Build status](https://img.shields.io/github/actions/workflow/status/alohays/alohays.github.io/main.yml?branch=main)](https://github.com/alohays/alohays.github.io/actions/workflows/main.yml?query=branch%3Amain)
+[![codecov](https://codecov.io/gh/alohays/alohays.github.io/branch/main/graph/badge.svg)](https://codecov.io/gh/alohays/alohays.github.io)
+[![Commit activity](https://img.shields.io/github/commit-activity/m/alohays/alohays.github.io)](https://img.shields.io/github/commit-activity/m/alohays/alohays.github.io)
+[![License](https://img.shields.io/github/license/alohays/alohays.github.io)](https://img.shields.io/github/license/alohays/alohays.github.io)
 
-alohays maangeek sung
+Personal website and blog of Yunsung Lee
 
-- **Github repository**: <https://github.com/alohays/alohays-github-io/>
-- **Documentation** <https://alohays.github.io/alohays-github-io/>
+- **Github repository**: <https://github.com/alohays/alohays.github.io/>
+- **Website**: <https://alohays.github.io/>
 
 ## Getting started with your project
 
@@ -21,7 +21,7 @@ First, create a repository on GitHub with the same name as this project, and the
 git init -b main
 git add .
 git commit -m "init commit"
-git remote add origin git@github.com:alohays/alohays-github-io.git
+git remote add origin git@github.com:alohays/alohays.github.io.git
 git push -u origin main
 ```
 
@@ -61,8 +61,6 @@ For activating the automatic documentation with MkDocs, see [here](https://fpgma
 To enable the code coverage reports, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/codecov/).
 
 ## Releasing a new version
-
-
 
 ---
 
