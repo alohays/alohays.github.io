@@ -5,7 +5,7 @@ Welcome to my blog! Here you'll find articles about software development, techno
 I write about various topics including:
 
 - **Software Development**: Best practices, tutorials, and lessons learned
-- **Technology Trends**: Insights on emerging technologies and industry developments  
+- **Technology Trends**: Insights on emerging technologies and industry developments
 - **Personal Projects**: Deep dives into projects I'm working on
 - **Career Growth**: Experiences and advice for fellow developers
 
