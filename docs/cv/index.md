@@ -1,159 +1,103 @@
+---
+title: Curriculum Vitae
+description: Professional CV of Yunsung Lee - AI/ML Research Engineer
+---
+
 # Yunsung Lee
 
-<div class="cv-header" markdown>
+**AI/ML Research Engineer**
 
-:material-account-tie:{ .lg .middle } **AI Engineer @ Wrtn Technologies**
+**Contact Information:**
 
-:material-phone:{ .middle } [(+82) 10-2988-9751](tel:+821029889751) ·
-:material-email:{ .middle } [dldbstjd9751@gmail.com](mailto:dldbstjd9751@gmail.com) ·
-:material-email-outline:{ .middle } [sung@wrtn.io](mailto:sung@wrtn.io)
+- **Phone:** [(+82) 10-2988-9751](tel:+821029889751)
+- **Email:** [dldbstjd9751@gmail.com](mailto:dldbstjd9751@gmail.com)
+- **Work Email:** [sung@wrtn.io](mailto:sung@wrtn.io)
+- **GitHub:** [github.com/alohays](https://github.com/alohays)
+- **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/yunsung-lee-23a926150/)
 
-:material-github:{ .middle } [github.com/alohays](https://github.com/alohays) ·
-:material-linkedin:{ .middle } [LinkedIn Profile](https://www.linkedin.com/in/yunsung-lee-23a926150/)
+## Professional Summary
 
-</div>
+AI/ML research engineer with strong research foundations (**10+ publications** in top-tier conferences, **1.5K+ citations**) and practical experience deploying commercial AI products (over **5M MAUs**). Currently leading research initiatives at Maum.ai's **WoRV** team, specializing in Embodied AI, autonomous agents, and robotics foundation models. Expertise spans multimodal AI, autonomous systems, and translating cutting-edge research into real-world applications.
 
----
+## Core Competencies
 
-## Summary
+**Research Areas:**
+Vision-Language Multimodal AI, Diffusion Models, Autonomous Agents, Robotics Foundation Models
 
-I'm an AI/ML research engineer with strong research foundations (**10+ publications** in top-tier conferences, and **1.5K+ citations**) and practical experience deploying commercial AI products (over **5M MAUs**, python back-end engineering, ML model deployment, etc.). Currently leading research initiatives at Maum.ai's **WoRV** (World model for Robotics and Vehicle control) team, specializing in Embodied AI, autonomous agents, and robotics foundation models. My expertise spans multimodal AI, autonomous systems, and translating cutting-edge research into real-world applications with significant industry impact.
+**Technical Skills:**
+Python, PyTorch, Git, Docker, FastAPI, Elasticsearch, ML Model Deployment
 
----
-
-## Technical Strengths
-
-<div class="grid cards" markdown>
-
-- :material-brain:{ .lg .middle } **ML Research**
-
-  ***
-
-  Vision-Language Multimodal, Diffusion Models, Autonomous Agents
-
-- :material-tools:{ .lg .middle } **Tools & Technologies**
-
-  ***
-
-  Python, PyTorch, Git, Docker, FastAPI, Elasticsearch
-
-</div>
+**Leadership:**
+Research Team Management, Cross-functional Collaboration, Technical Mentoring
 
 ---
 
-## Work Experience
+## Professional Experience
 
 !!! info "Alternative Military Service"
 Positions at Wrtn Technologies and Riiid serve as Alternative Military Service (Technical Research Personnel, 전문연구요원) until April 14, 2025, combining mandatory service with R&D in strategic industries.
 
-<div class="grid cards" markdown>
+### Head of Research, WoRV Team
 
-- :material-brain:{ .lg .middle } **Head of Research, WoRV Team**
+**MaumAI** · _Seongnam, South Korea_ · **May 2025 - Present**
 
-  ***
+Leading research initiatives for WoRV (World Model for Robotics and Vehicle Control), Maum.ai's flagship Embodied AI research organization. Overseeing development of foundation models that integrate language, vision, and action for robotics and autonomous driving applications. Driving projects including SketchDrive navigation agents, autonomous agricultural machinery, and open-world agents research.
 
-  **MaumAI** · _Seongnam, South Korea_
-  **May 2025 - Present**
+### AI Engineer
 
-  - Leading research initiatives for WoRV (World Model for Robotics and Vehicle Control), Maum.ai's flagship Embodied AI research organization
-  - Overseeing development of foundation models that integrate language, vision, and action for robotics and autonomous driving applications
-  - Driving projects including SketchDrive navigation agents, autonomous agricultural machinery, and open-world agents research
+**Wrtn Technologies** · _Seoul, South Korea_ · **Oct. 2023 - Apr. 2025**
 
-- :material-robot:{ .lg .middle } **AI Engineer**
+Artificial intelligence engineer specializing in memory and personalization for autonomous agents, and multimodal capabilities for [wrtn](https://wrtn.ai/). Led core development efforts, spanning ML technology research and implementation to backend engineering. Drove key functionalities of the project with focus on autonomous agent capabilities.
 
-  ***
+### Research Scientist
 
-  **Wrtn Technologies** · _Seoul, South Korea_
-  **Oct. 2023 - Apr. 2025**
+**Riiid** · _Seoul, South Korea_ · **Apr. 2022 - Oct. 2023**
 
-  - Artificial intelligence engineer specializing in memory and personalization for autonomous agents, and multimodal capabilities for [wrtn](https://wrtn.ai/)
-  - Led core development efforts, spanning ML technology research and implementation to backend engineering
-  - Drove key functionalities of the project with focus on autonomous agent capabilities
+Computer vision research scientist focusing on educational AI applications. Math problem image retrieval for [AI:R Math](https://www.airmath.com/). English vocabulary visualization with text-to-image diffusion models ([Santa](https://www.aitutorsanta.com/)).
 
-- :material-school:{ .lg .middle } **Research Scientist**
+### ML Research Scientist
 
-  ***
+**Scatter Lab** · _Seoul, South Korea_ · **Jul. 2021 - Mar. 2022**
 
-  **Riiid** · _Seoul, South Korea_
-  **Apr. 2022 - Oct. 2023**
+Researched vision-and-language multimodal dialogue system for the chatbot "Luda Lee". Reference: [Make Luda see](https://tv.naver.com/v/33862680), Naver Deview 2023.
 
-  - Computer vision research scientist focusing on educational AI applications
-  - Math problem image retrieval for [AI:R Math](https://www.airmath.com/)
-  - English vocabulary visualization with text-to-image diffusion models ([Santa](https://www.aitutorsanta.com/))
+### OCR Team Intern
 
-- :material-chat:{ .lg .middle } **ML Research Scientist**
+**CLOVA, NAVER Corp** · _Seongnam, South Korea_ · **Sep. 2020 - Mar. 2021**
 
-  ***
+Researched self-supervised representation learning, domain generalization, and data augmentations for document images.
 
-  **Scatter Lab** · _Seoul, South Korea_
-  **Jul. 2021 - Mar. 2022**
+### ML Team Intern
 
-  - Researched vision-and-language multimodal dialogue system for the chatbot "Luda Lee"
-  - Reference: [Make Luda see](https://tv.naver.com/v/33862680), Naver Deview 2023
+**HYPERCONNECT** · _Seoul, South Korea_ · **Jul. 2020 - Aug. 2020**
 
-- :material-text-recognition:{ .lg .middle } **OCR Team Intern**
+Researched adversarial robust semi-supervised learning.
 
-  ***
+### Intern, Web Developer
 
-  **CLOVA, NAVER Corp** · _Seongnam, South Korea_
-  **Sep. 2020 - Mar. 2021**
+**Algorithm Labs** · _Seoul, South Korea_ · **Dec. 2016 - Feb. 2017**
 
-  - Researched self-supervised representation learning, domain generalization, and data augmentations for document images
-
-- :material-shield-check:{ .lg .middle } **ML Team Intern**
-
-  ***
-
-  **HYPERCONNECT** · _Seoul, South Korea_
-  **Jul. 2020 - Aug. 2020**
-
-  - Researched adversarial robust semi-supervised learning
-
-- :material-web:{ .lg .middle } **Intern, Web Developer**
-
-  ***
-
-  **Algorithm Labs** · _Seoul, South Korea_
-  **Dec. 2016 - Feb. 2017**
-
-  - On-site internship with focus on competitive programming and web development
-  - Wrote competitive programming problems and contributed to web front-end development
-
-</div>
+On-site internship with focus on competitive programming and web development. Wrote competitive programming problems and contributed to web front-end development.
 
 ---
 
 ## Education
 
-<div class="grid cards" markdown>
+### M.Sc. Computer Science
 
-- :material-school:{ .lg .middle } **M.Sc. Computer Science**
+**Korea University** · _Seoul, South Korea_ · **Mar. 2019 - Feb. 2022**
 
-  ***
+Advisor: Seungryong Kim, Jaegul Choo
 
-  **Korea University** · _Seoul, South Korea_
-  **Mar. 2019 - Feb. 2022**
+### Visiting Scholar
 
-  Advisor: Seungryong Kim, Jaegul Choo
+**Carnegie Mellon University** · _PA, USA_ · **Jan. 2020 - Jul. 2020**
 
-- :material-airplane:{ .lg .middle } **Visiting Scholar**
+Artificial Intelligence, Language Technologies Institute. Sponsored by IITP under South Korean Government.
 
-  ***
+### B.Sc. Computer Science
 
-  **Carnegie Mellon University** · _PA, USA_
-  **Jan. 2020 - Jul. 2020**
-
-  Artificial Intelligence, Language Technologies Institute
-  Sponsored by IITP under South Korean Government
-
-- :material-graduation-cap:{ .lg .middle } **B.Sc. Computer Science**
-
-  ***
-
-  **Hanyang University** · _Seoul, South Korea_
-  **Mar. 2014 - Feb. 2019**
-
-</div>
+**Hanyang University** · _Seoul, South Korea_ · **Mar. 2014 - Feb. 2019**
 
 ---
 
@@ -212,17 +156,11 @@ My publications have accumulated over **1,500 citations** on Google Scholar, dem
 
 ## Honors & Awards
 
-<div class="grid cards" markdown>
+### Competition Awards
 
-- :material-trophy:{ .lg .middle } **Competition Awards**
-
-  ***
-
-  - **5th place**, RLT-DiMP team, VOT-Long-Term, ECCVW Visual Object Tracking Challenge, 2020
-  - **4th place**, HYU Programming Contest (Advanced Division), Seoul, Korea, 2015
-  - **Dean's citation** for ACM-ICPC Daejeon Regional, Hanyang University, Seoul, Korea, 2014
-
-</div>
+- **5th place**, RLT-DiMP team, VOT-Long-Term, ECCVW Visual Object Tracking Challenge, 2020
+- **4th place**, HYU Programming Contest (Advanced Division), Seoul, Korea, 2015
+- **Dean's citation** for ACM-ICPC Daejeon Regional, Hanyang University, Seoul, Korea, 2014
 
 ---
 
@@ -230,7 +168,7 @@ My publications have accumulated over **1,500 citations** on Google Scholar, dem
 
 ### Conference Reviewer
 
-:material-account-check:{ .middle } **Top-tier ML/CV Conferences**
+**Top-tier ML/CV Conferences:**
 
 - The IEEE/CVF Conference on Computer Vision and Pattern Recognition (**CVPR**) (2023 - )
 - The IEEE/CVF International Conference on Computer Vision (**ICCV**) (2023 - )
@@ -241,76 +179,52 @@ My publications have accumulated over **1,500 citations** on Google Scholar, dem
 
 ### Selected Open-source Contribution
 
-<div class="grid cards" markdown>
+#### Open-World Agents
 
-- :material-github:{ .lg .middle } **Open-World Agents**
+Main contribution member of [open-world-agents org](https://github.com/open-world-agents), [open-world-agents](https://github.com/open-world-agents/open-world-agents), [desktop-env](https://github.com/open-world-agents/desktop-env/). An open-source organization that aims to contribute useful tools for open-world agent R&D, including a real-time, high-frequency, real-world desktop environment suitable for desktop-based ML development (agents, world models, etc.).
 
-  ***
+#### Mem0
 
-  Main contribution member of [open-world-agents org](https://github.com/open-world-agents), [open-world-agents](https://github.com/open-world-agents/open-world-agents), [desktop-env](https://github.com/open-world-agents/desktop-env/). An open-source organization that aims to contribute useful tools for open-world agent R&D, including a real-time, high-frequency, real-world desktop environment suitable for desktop-based ML development (agents, world models, etc.).
+Contributor of [mem0](https://github.com/mem0ai/mem0), the Memory layer for your AI apps.
 
-- :material-memory:{ .lg .middle } **Mem0**
+#### Awesome Vision Transformers
 
-  ***
-
-  Contributor of [mem0](https://github.com/mem0ai/mem0), the Memory layer for your AI apps.
-
-- :material-star:{ .lg .middle } **Awesome Vision Transformers**
-
-  ***
-
-  Creator of [awesome-visual-representation-learning-with-transformers](https://github.com/alohays/awesome-visual-representation-learning-with-transformers), an awesome repository (with 200+ stars) from 2021, when Vision Transformer research was in its early renaissance.
-
-</div>
+Creator of [awesome-visual-representation-learning-with-transformers](https://github.com/alohays/awesome-visual-representation-learning-with-transformers), an awesome repository (with 200+ stars) from 2021, when Vision Transformer research was in its early renaissance.
 
 ### Professional Organizations & Activities
 
-<div class="grid cards" markdown>
+#### PR12, Tensorflow Korea
 
-- :material-tensorflow:{ .lg .middle } **PR12, Tensorflow Korea**
+**Member** | _Jun. 2020 - Present_
 
-  ***
+Active member of TensorFlow Korea, the country's largest machine learning research community, participating in an advanced study group focused on cutting-edge ML research.
 
-  **Member** | _Jun. 2020 - Present_
+#### TEDxHanyangU
 
-  Active member of TensorFlow Korea, the country's largest machine learning research community, participating in an advanced study group focused on cutting-edge ML research.
+**Organizer** | _Sep. 2017 - Jun. 2018_
 
-- :material-presentation:{ .lg .middle } **TEDxHanyangU**
+- Experience Catalyst, 2018
+- Web Engineer, 2017
 
-  ***
+#### SW Maestro
 
-  **Organizer** | _Sep. 2017 - Jun. 2018_
+**Trainee** | _Aug. 2017 - Jan. 2018_
 
-  - Experience Catalyst, 2018
-  - Web Engineer, 2017
+Talent training program by Ministry of Science and ICT Korea (under South Korean Government). Did a CPA document automation project. Learned basic computer vision and machine learning. Motivated to go to graduate school.
 
-- :material-school-outline:{ .lg .middle } **SW Maestro**
+#### ALOHA (Algorithm research team)
 
-  ***
+**Team Leader** | _Nov. 2015 - Oct. 2016_
 
-  **Trainee** | _Aug. 2017 - Jan. 2018_
+- Taught algorithms to team members. Hosted several programming contests
+- Test writer & Presenter, The First KSH (Korea, Sookmyung W, Hanyang Univ.) Algorithm Camp
+- Chief test writer, HYU Programming Contest
 
-  Talent training program by Ministry of Science and ICT Korea (under South Korean Government). Did a CPA document automation project. Learned basic computer vision and machine learning. Motivated to go to graduate school.
+#### Home Bartender
 
-- :material-algorithm:{ .lg .middle } **ALOHA (Algorithm research team)**
+**Licensed Craftsman Bartender**
 
-  ***
-
-  **Team Leader** | _Nov. 2015 - Oct. 2016_
-
-  - Taught algorithms to team members. Hosted several programming contests
-  - Test writer & Presenter, The First KSH (Korea, Sookmyung W, Hanyang Univ.) Algorithm Camp
-  - Chief test writer, HYU Programming Contest
-
-- :material-glass-cocktail:{ .lg .middle } **Home Bartender**
-
-  ***
-
-  **Licensed Craftsman Bartender**
-
-  Licensed Craftsman Bartender certified by the South Korean government, combining precision and creativity in both professional and recreational pursuits.
-
-</div>
+Licensed Craftsman Bartender certified by the South Korean government, combining precision and creativity in both professional and recreational pursuits.
 
 ---
 

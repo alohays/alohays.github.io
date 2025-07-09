@@ -1,49 +1,192 @@
-/* Custom styles for CV and personal website */
+/* Professional CV and Personal Website Styles */
+
+/* Import Google Fonts for better typography */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+/* Root variables for consistent theming - Light theme (default) */
+:root {
+  --cv-primary-color: #37474f;
+  --cv-accent-color: #ff5722;
+  --cv-text-color: #263238;
+  --cv-light-bg: #fafafa;
+  --cv-border-color: #e0e0e0;
+  --cv-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --cv-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --cv-border-radius: 8px;
+  --cv-spacing-sm: 0.5rem;
+  --cv-spacing-md: 1rem;
+  --cv-spacing-lg: 2rem;
+  --cv-spacing-xl: 3rem;
+}
+
+/* Dark theme variables - Slate color scheme */
+[data-md-color-scheme="slate"] {
+  --cv-primary-color: #90caf9;
+  --cv-accent-color: #ff7043;
+  --cv-text-color: #e3f2fd;
+  --cv-light-bg: #2d3748;
+  --cv-border-color: #4a5568;
+  --cv-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --cv-shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  /* Override MkDocs Material variables for better contrast */
+  --md-default-fg-color: #e3f2fd;
+  --md-default-fg-color--light: #bbdefb;
+  --md-default-fg-color--lighter: #90caf9;
+  --md-default-fg-color--lightest: #64b5f6;
+  --md-default-bg-color: #1a202c;
+  --md-default-bg-color--light: #2d3748;
+  --md-default-bg-color--lighter: #4a5568;
+  --md-default-bg-color--lightest: #718096;
+
+  /* Primary color adjustments for dark theme */
+  --md-primary-fg-color: #90caf9;
+  --md-primary-fg-color--light: #bbdefb;
+  --md-primary-fg-color--dark: #42a5f5;
+
+  /* Accent color adjustments */
+  --md-accent-fg-color: #ff7043;
+  --md-accent-fg-color--transparent: rgba(255, 112, 67, 0.1);
+}
+
+/* Hero section styling for homepage */
+.hero-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: var(--cv-spacing-xl) var(--cv-spacing-lg);
+  border-radius: var(--cv-border-radius);
+  margin-bottom: var(--cv-spacing-xl);
+  text-align: center;
+  border: 1px solid var(--cv-border-color);
+}
+
+/* Dark theme hero section */
+[data-md-color-scheme="slate"] .hero-section {
+  background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+  border-color: var(--cv-border-color);
+  color: var(--cv-text-color);
+}
+
+.hero-section h2 {
+  color: var(--cv-primary-color);
+  font-weight: 600;
+  margin-bottom: var(--cv-spacing-md);
+  font-size: 1.8rem;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--cv-text-color);
+  margin-bottom: var(--cv-spacing-lg);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* CV Header styling */
 .cv-header {
-  background: linear-gradient(135deg, var(--md-primary-fg-color--light), var(--md-primary-fg-color));
+  background: linear-gradient(135deg, var(--cv-primary-color), #455a64);
   color: white;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  margin-bottom: 2rem;
+  padding: var(--cv-spacing-xl);
+  border-radius: var(--cv-border-radius);
+  margin-bottom: var(--cv-spacing-xl);
   text-align: center;
+  box-shadow: var(--cv-shadow);
+}
+
+/* Dark theme CV header */
+[data-md-color-scheme="slate"] .cv-header {
+  background: linear-gradient(135deg, #2d3748, #4a5568);
+  color: var(--cv-text-color);
 }
 
 .cv-header a {
   color: white !important;
   text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+[data-md-color-scheme="slate"] .cv-header a {
+  color: var(--cv-text-color) !important;
 }
 
 .cv-header a:hover {
+  opacity: 0.8;
   text-decoration: underline;
 }
 
-/* Enhanced card styling for CV sections */
+/* Enhanced card styling for professional sections */
 .grid.cards > * {
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  transition: all 0.3s ease;
+  border: 1px solid var(--cv-border-color);
+  border-radius: var(--cv-border-radius);
+  box-shadow: var(--cv-shadow);
+  background: white;
+}
+
+/* Dark theme cards */
+[data-md-color-scheme="slate"] .grid.cards > * {
+  background: var(--cv-light-bg);
+  color: var(--cv-text-color);
 }
 
 .grid.cards > *:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--cv-shadow-hover);
+  border-color: var(--cv-accent-color);
+}
+
+/* Contact grid styling */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--cv-spacing-lg);
+  margin: var(--cv-spacing-lg) 0;
+}
+
+.contact-grid > * {
+  padding: var(--cv-spacing-lg);
+  background: var(--cv-light-bg);
+  border-radius: var(--cv-border-radius);
+  border: 1px solid var(--cv-border-color);
+  text-align: center;
+  transition: all 0.3s ease;
+  color: var(--cv-text-color);
+}
+
+/* Dark theme contact grid */
+[data-md-color-scheme="slate"] .contact-grid > * {
+  background: var(--cv-light-bg);
+  color: var(--cv-text-color);
+}
+
+.contact-grid > *:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--cv-shadow);
+  border-color: var(--cv-accent-color);
 }
 
 /* Publication styling */
 .publications-section {
-  margin: 2rem 0;
+  margin: var(--cv-spacing-lg) 0;
 }
 
 .publication-year {
-  border-left: 4px solid var(--md-primary-fg-color);
-  padding-left: 1rem;
-  margin: 1.5rem 0;
+  border-left: 4px solid var(--cv-accent-color);
+  padding-left: var(--cv-spacing-md);
+  margin: var(--cv-spacing-lg) 0;
+  background: var(--cv-light-bg);
+  padding: var(--cv-spacing-md);
+  border-radius: 0 var(--cv-border-radius) var(--cv-border-radius) 0;
+  color: var(--cv-text-color);
 }
 
 .publication-item {
-  margin: 1rem 0;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  margin: var(--cv-spacing-md) 0;
+  padding: var(--cv-spacing-md) 0;
+  border-bottom: 1px solid var(--cv-border-color);
+  line-height: 1.6;
+  color: var(--cv-text-color);
 }
 
 .publication-item:last-child {
@@ -53,6 +196,7 @@
 /* Enhanced admonition styling */
 .md-typeset .admonition.success {
   border-color: #4caf50;
+  background: rgba(76, 175, 80, 0.05);
 }
 
 .md-typeset .admonition.success > .admonition-title {
@@ -60,42 +204,172 @@
   border-color: #4caf50;
 }
 
-/* Timeline styling for work experience */
-.timeline-item {
-  position: relative;
-  padding-left: 2rem;
-  margin-bottom: 2rem;
+.md-typeset .admonition.info {
+  border-color: var(--cv-accent-color);
+  background: rgba(255, 87, 34, 0.05);
 }
 
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.5rem;
-  width: 0.75rem;
-  height: 0.75rem;
-  background-color: var(--md-primary-fg-color);
-  border-radius: 50%;
+.md-typeset .admonition.info > .admonition-title {
+  background-color: rgba(255, 87, 34, 0.1);
+  border-color: var(--cv-accent-color);
 }
 
-.timeline-item::after {
-  content: '';
-  position: absolute;
-  left: 0.375rem;
-  top: 1.25rem;
-  width: 2px;
-  height: calc(100% - 1rem);
-  background-color: var(--md-default-fg-color--lightest);
+/* Dark theme admonition adjustments */
+[data-md-color-scheme="slate"] .md-typeset .admonition.success {
+  background: rgba(76, 175, 80, 0.15);
+  color: var(--cv-text-color);
 }
 
-.timeline-item:last-child::after {
-  display: none;
+[data-md-color-scheme="slate"]
+  .md-typeset
+  .admonition.success
+  > .admonition-title {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #81c784;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.info {
+  background: rgba(255, 112, 67, 0.15);
+  color: var(--cv-text-color);
+}
+
+[data-md-color-scheme="slate"]
+  .md-typeset
+  .admonition.info
+  > .admonition-title {
+  background-color: rgba(255, 112, 67, 0.2);
+  color: var(--cv-accent-color);
+}
+
+/* Professional button styling */
+.md-button {
+  transition: all 0.3s ease;
+  border-radius: var(--cv-border-radius);
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  text-transform: none;
+}
+
+.md-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--cv-shadow);
+}
+
+.md-button--primary {
+  background-color: var(--cv-accent-color);
+  border-color: var(--cv-accent-color);
+  color: white;
+}
+
+.md-button--primary:hover {
+  background-color: #e64a19;
+  border-color: #e64a19;
+}
+
+/* Dark theme button adjustments */
+[data-md-color-scheme="slate"] .md-button--primary {
+  background-color: var(--cv-accent-color);
+  border-color: var(--cv-accent-color);
+  color: white;
+}
+
+[data-md-color-scheme="slate"] .md-button--primary:hover {
+  background-color: #ff8a65;
+  border-color: #ff8a65;
+}
+
+/* Typography improvements */
+.md-typeset h1 {
+  font-weight: 700;
+  color: var(--cv-primary-color);
+  margin-bottom: var(--cv-spacing-lg);
+}
+
+.md-typeset h2 {
+  font-weight: 600;
+  color: var(--cv-primary-color);
+  margin-top: var(--cv-spacing-xl);
+  margin-bottom: var(--cv-spacing-md);
+  border-bottom: 2px solid var(--cv-border-color);
+  padding-bottom: var(--cv-spacing-sm);
+}
+
+.md-typeset h3 {
+  font-weight: 500;
+  color: var(--cv-text-color);
+  margin-top: var(--cv-spacing-lg);
+  margin-bottom: var(--cv-spacing-sm);
+}
+
+/* Dark theme typography adjustments */
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3 {
+  color: var(--cv-text-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1 {
+  color: var(--cv-primary-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  color: var(--cv-primary-color);
+}
+
+/* Link styling improvements for dark theme */
+[data-md-color-scheme="slate"] .md-typeset a {
+  color: var(--cv-primary-color);
+}
+
+[data-md-color-scheme="slate"] .md-typeset a:hover {
+  color: var(--cv-accent-color);
+}
+
+/* Ensure proper text contrast in dark theme */
+[data-md-color-scheme="slate"] .md-typeset p,
+[data-md-color-scheme="slate"] .md-typeset li,
+[data-md-color-scheme="slate"] .md-typeset td {
+  color: var(--cv-text-color);
+}
+
+/* Icon styling for dark theme */
+[data-md-color-scheme="slate"] .md-typeset .twemoji {
+  filter: brightness(1.2);
+}
+
+/* Smooth transitions for theme switching */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Ensure proper focus states for accessibility */
+.md-button:focus,
+.grid.cards > *:focus,
+.contact-grid > *:focus {
+  outline: 2px solid var(--cv-accent-color);
+  outline-offset: 2px;
+}
+
+/* Improve code block styling for dark theme */
+[data-md-color-scheme="slate"] .md-typeset .highlight {
+  background-color: #2d3748;
+}
+
+[data-md-color-scheme="slate"] .md-typeset code {
+  background-color: #4a5568;
+  color: #e2e8f0;
 }
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
+  .hero-section {
+    padding: var(--cv-spacing-lg) var(--cv-spacing-md);
+    text-align: center;
+  }
+
   .cv-header {
-    padding: 1.5rem;
+    padding: var(--cv-spacing-lg);
     text-align: center;
   }
 
@@ -103,17 +377,68 @@
     grid-template-columns: 1fr !important;
   }
 
-  .timeline-item {
-    padding-left: 1rem;
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--cv-spacing-md);
   }
 
-  .timeline-item::before {
-    left: -0.375rem;
+  .hero-section h2 {
+    font-size: 1.5rem;
   }
 
-  .timeline-item::after {
-    left: -0.25rem;
+  .hero-section p {
+    font-size: 1rem;
   }
+}
+
+/* Enhanced icon styling */
+.md-typeset .twemoji {
+  vertical-align: middle;
+}
+
+/* Skills section styling */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--cv-spacing-md);
+  margin: var(--cv-spacing-lg) 0;
+}
+
+.skill-category {
+  padding: var(--cv-spacing-lg);
+  border-radius: var(--cv-border-radius);
+  background-color: var(--cv-light-bg);
+  border-left: 4px solid var(--cv-accent-color);
+  transition: all 0.3s ease;
+  color: var(--cv-text-color);
+}
+
+.skill-category:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--cv-shadow);
+}
+
+.skill-category h4 {
+  margin-top: 0;
+  color: var(--cv-accent-color);
+  font-weight: 600;
+}
+
+/* Content spacing improvements */
+.md-typeset > * {
+  margin-bottom: var(--cv-spacing-md);
+}
+
+.md-typeset > h1,
+.md-typeset > h2,
+.md-typeset > h3 {
+  margin-top: var(--cv-spacing-xl);
+}
+
+.md-typeset > h1:first-child,
+.md-typeset > h2:first-child,
+.md-typeset > h3:first-child {
+  margin-top: 0;
 }
 
 /* Print styles for CV */
@@ -130,78 +455,47 @@
     max-width: none !important;
   }
 
-  .cv-header {
+  .cv-header,
+  .hero-section {
     background: none !important;
     color: black !important;
     border: 2px solid #333;
+    box-shadow: none !important;
   }
 
-  .grid.cards > * {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
+  .grid.cards > *,
+  .contact-grid > *,
   .publication-item {
     break-inside: avoid;
     page-break-inside: avoid;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    background: white !important;
+    color: black !important;
   }
-}
 
-/* Enhanced icon styling */
-.md-typeset .twemoji {
-  vertical-align: middle;
-}
+  .md-button {
+    display: none !important;
+  }
 
-/* Contact information styling */
-.contact-info {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-}
+  /* Ensure proper spacing in print */
+  .hero-section,
+  .cv-header {
+    margin-bottom: 2rem !important;
+  }
 
-.contact-info a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  background-color: var(--md-default-fg-color--lightest);
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-}
+  /* Force all text to be black for print */
+  * {
+    color: black !important;
+    background: white !important;
+  }
 
-.contact-info a:hover {
-  background-color: var(--md-default-fg-color--lighter);
-}
-
-/* Skills section styling */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin: 1rem 0;
-}
-
-.skill-category {
-  padding: 1rem;
-  border-radius: 0.5rem;
-  background-color: var(--md-code-bg-color);
-  border-left: 4px solid var(--md-primary-fg-color);
-}
-
-.skill-category h4 {
-  margin-top: 0;
-  color: var(--md-primary-fg-color);
-}
-
-/* Enhanced button styling */
-.md-button {
-  transition: all 0.2s ease;
-}
-
-.md-button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #333 !important;
+  }
 }

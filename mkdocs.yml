@@ -1,17 +1,18 @@
 site_name: Yunsung Lee
 repo_url: https://github.com/alohays/alohays.github.io
 site_url: https://alohays.github.io
-site_description: Personal website and blog of Yunsung Lee
+site_description: AI/ML Research Engineer | Personal Website & Portfolio
 site_author: Yunsung Lee
 edit_uri: edit/main/docs/
 repo_name: alohays/alohays.github.io
 copyright: Copyright &copy; 2025 Yunsung Lee
 
 nav:
+  - Home: index.md
   - About: about/index.md
+  - CV: cv/index.md
   - Blog:
       - blog/index.md
-  - CV: cv/index.md
 
 plugins:
   - search
@@ -33,36 +34,44 @@ plugins:
 theme:
   name: material
   features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
-    - navigation.expand
     - navigation.path
     - navigation.top
+    - navigation.indexes
+    - toc.follow
     - search.highlight
     - search.share
+    - search.suggest
     - content.code.copy
     - content.action.edit
+    - content.tooltips
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: blue grey
+      accent: deep orange
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: indigo
-      accent: indigo
+      primary: blue grey
+      accent: deep orange
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
   icon:
     repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: Inter
+    code: JetBrains Mono
 
 extra:
   social:
