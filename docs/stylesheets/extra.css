@@ -1,0 +1,121 @@
+/* Custom styles for enhanced homepage */
+
+:root {
+  --hero-gradient-start: #3f51b5;
+  --hero-gradient-end: #5c6bc0;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced card animations */
+.md-typeset .section-card,
+.md-typeset .stat-card {
+  cursor: pointer;
+}
+
+/* Improved button styling */
+.md-button {
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.md-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Enhanced admonition styling */
+.md-typeset .admonition {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Better link colors */
+.md-typeset a {
+  transition: color 0.2s ease;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem !important;
+  }
+
+  .hero-description {
+    font-size: 1rem !important;
+  }
+
+  .profile-image {
+    width: 150px !important;
+    height: 150px !important;
+  }
+
+  .stats-grid,
+  .section-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Dark mode enhancements */
+[data-md-color-scheme="slate"] {
+  --md-code-bg-color: #1e1e1e;
+}
+
+[data-md-color-scheme="slate"] .stat-card,
+[data-md-color-scheme="slate"] .section-card {
+  background: #1e1e1e;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-md-color-scheme="slate"] .profile-image {
+  border-color: var(--md-primary-fg-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Improved typography */
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-weight: 600;
+}
+
+/* Loading animation for profile image */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-section {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Pulse animation for important elements */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.md-button--primary {
+  animation: pulse 2s infinite;
+}
+
+.md-button--primary:hover {
+  animation: none;
+}
