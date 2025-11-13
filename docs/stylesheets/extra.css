@@ -83,7 +83,8 @@ html {
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
-[data-md-color-scheme="slate"] .hero-description {
+[data-md-color-scheme="slate"] .hero-description,
+[data-md-color-scheme="slate"] .hero-description strong {
   color: rgba(255, 255, 255, 0.87) !important;
 }
 
@@ -93,6 +94,10 @@ html {
 
 [data-md-color-scheme="slate"] .section-card h3 {
   color: #90caf9 !important;
+}
+
+[data-md-color-scheme="slate"] .section-card a {
+  color: #90caf9;
 }
 
 [data-md-color-scheme="slate"] .profile-image {
