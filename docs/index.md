@@ -116,6 +116,25 @@ hide:
   margin-top: 0;
   color: var(--md-primary-fg-color);
 }
+
+/* Dark mode specific styles */
+[data-md-color-scheme="slate"] .hero-description,
+[data-md-color-scheme="slate"] .hero-description strong {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+[data-md-color-scheme="slate"] .stat-card,
+[data-md-color-scheme="slate"] .section-card {
+  background: #2d2d2d;
+}
+
+[data-md-color-scheme="slate"] .section-card p {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+[data-md-color-scheme="slate"] .section-card a {
+  color: #90caf9;
+}
 </style>
 
 <div class="hero-section" markdown="1">
