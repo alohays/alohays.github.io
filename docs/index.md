@@ -249,14 +249,8 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
 
 I'm always interested in connecting with fellow researchers and discussing new ideas in AI and machine learning.
 
-<div style="text-align: center; margin-top: 2rem;">
-  <a href="https://github.com/alohays" class="md-button">
-    :fontawesome-brands-github: GitHub
-  </a>
-  <a href="https://www.linkedin.com/in/yunsung-lee-23a926150/" class="md-button">
-    :fontawesome-brands-linkedin: LinkedIn
-  </a>
-  <a href="mailto:dldbstjd9751@gmail.com" class="md-button">
-    :fontawesome-solid-envelope: Email
-  </a>
+<div style="text-align: center; margin-top: 2rem;" markdown="1">
+  [:fontawesome-brands-github: GitHub](https://github.com/alohays){ .md-button }
+  [:fontawesome-brands-linkedin: LinkedIn](https://www.linkedin.com/in/yunsung-lee-23a926150/){ .md-button }
+  [:fontawesome-solid-envelope: Email](mailto:dldbstjd9751@gmail.com){ .md-button }
 </div>
