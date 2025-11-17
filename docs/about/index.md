@@ -11,7 +11,7 @@ I'm a dedicated AI researcher and engineer who enjoys tackling complex problems 
 - **AI/ML Research**: Specializing in vision-language multimodal systems, diffusion models, and autonomous agents
 - **Research Leadership**: Leading research initiatives at Maum.ai's WoRV team for robotics and vehicle control
 - **Product Development**: Deploying commercial AI products with over 5M MAUs
-- **Academic Contributions**: Publishing in top-tier conferences with 1.5K+ citations
+- **Academic Contributions**: Publishing in top-tier conferences with 1.7K+ citations
 - **Knowledge Sharing**: Contributing to the AI community through research, open-source projects, and conference reviews
 
 ## My Research Interests
