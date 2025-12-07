@@ -14,6 +14,7 @@ description: Professional CV of Yunsung Lee - AI/ML Research Engineer
 - **Work Email:** [sung@wrtn.io](mailto:sung@wrtn.io)
 - **GitHub:** [github.com/alohays](https://github.com/alohays)
 - **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/yunsung-lee-23a926150/)
+- **CV PDF:** [Download PDF](cv.pdf)
 
 ## Professional Summary
 
@@ -98,7 +99,7 @@ My publications have accumulated over **1,700 citations** on Google Scholar, dem
 
 ### 2025
 
-- Yohan Lee\*, Sungho Park\*, Sangwoo Han\*, **Yunsung Lee**\*^†, Yongwoo Song, Adam Lee, Jiwung Hyun, Jaemin Kim, Seungtaek Choi, HyeJin Gong^† "SAFARI: Sample-specific Assessment Framework for AI in Real-world Interactions," Findings of Annual Conference of the North American Chapter of the Association for Computational Linguistics (**Findings of NAACL'25**), 2025
+- Yohan Lee\*, Sungho Park\*, Sangwoo Han\*, **Yunsung Lee**\*^†, Yongwoo Song, Adam Lee, Jiwung Hyun, Jaemin Kim, Seungtaek Choi, HyeJin Gong^† "SAFARI: Sample-specific Assessment Framework for AI in Real-world Interactions," Findings of Annual Conference of the North American Chapter of the Association for Computational Linguistics (**Findings of NAACL'25**), 2025 (Accepted, but withdrawn due to corporate policy)
 
 - Jin-Young Kim\*, Soonwoo Kwon\*, Hyojun Go\*, **Yunsung Lee**, and Seungtaek Choi, "ScoreCL: Augmentation-Adaptive Contrastive Learning via Score-Matching Function," Machine Learning (Springer Journal), 2025
 
@@ -153,6 +154,14 @@ My publications have accumulated over **1,700 citations** on Google Scholar, dem
 ---
 
 ## Other Activities
+
+### Judge Experience
+
+**Hack@thon (Lovable-sponsored)**
+
+**Judge** | _Nov. 2025_
+
+- Served as a Judge for the Hack@thon held at Sogang University. [[link]](https://scc.sogang.ac.kr/front/cmsboardview.do?siteId=sweducenter&bbsConfigFK=7250&pkid=928764)
 
 ### Conference Reviewer
 
