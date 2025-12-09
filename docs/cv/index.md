@@ -99,6 +99,8 @@ My publications have accumulated over **1,700 citations** on Google Scholar, dem
 
 ### 2025
 
+- Sungwan Choi\*, Jaeyoon Jung\*, Haebin Seong\*, Minchan Kim, Minyeong Kim, Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu^†, **Yunsung Lee**^†, "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI," arXiv preprint arXiv:2510.05684, 2025. [[Project Code]](https://worv-ai.github.io/d2e/)
+
 - Yohan Lee\*, Sungho Park\*, Sangwoo Han\*, **Yunsung Lee**\*^†, Yongwoo Song, Adam Lee, Jiwung Hyun, Jaemin Kim, Seungtaek Choi, HyeJin Gong^† "SAFARI: Sample-specific Assessment Framework for AI in Real-world Interactions," Findings of Annual Conference of the North American Chapter of the Association for Computational Linguistics (**Findings of NAACL'25**), 2025 (Accepted, but withdrawn due to corporate policy)
 
 - Jin-Young Kim\*, Soonwoo Kwon\*, Hyojun Go\*, **Yunsung Lee**, and Seungtaek Choi, "ScoreCL: Augmentation-Adaptive Contrastive Learning via Score-Matching Function," Machine Learning (Springer Journal), 2025
