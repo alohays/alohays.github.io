@@ -44,8 +44,8 @@ I'm always interested in connecting with fellow developers, discussing new ideas
 
 This personal website serves as a hub for my professional presence, featuring:
 
-- **[Blog](../blog/index.md)**: Technical articles, tutorials, and insights
-- **[CV](../cv/index.md)**: My professional experience and qualifications
+- **[Blog](../blog/)**: Technical articles, tutorials, and insights
+- **[CV](../cv/)**: My professional experience and qualifications
 - **Projects**: Showcases of my work and contributions
 
 Thank you for visiting, and I hope you find the content here valuable and interesting!

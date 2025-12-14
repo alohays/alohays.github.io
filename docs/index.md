@@ -131,9 +131,9 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
 </p>
 
 <div class="button-group">
-  <a href="cv/index.md" class="md-button md-button--primary">📄 View My CV</a>
-  <a href="blog/index.md" class="md-button">✍️ Read My Blog</a>
-  <a href="about/index.md" class="md-button">👋 About Me</a>
+  <a href="cv/" class="md-button md-button--primary">📄 View My CV</a>
+  <a href="blog/" class="md-button">✍️ Read My Blog</a>
+  <a href="about/" class="md-button">👋 About Me</a>
 </div>
 
 </div>
@@ -163,19 +163,19 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
   <div class="section-card">
     <h3>👨‍💻 About Me</h3>
     <p>Learn about my background, research interests, and what drives my passion for AI technology.</p>
-    <p><a href="about/index.md">→ Learn More</a></p>
+    <p><a href="about/">→ Learn More</a></p>
   </div>
 
   <div class="section-card">
     <h3>📋 Professional CV</h3>
     <p>Comprehensive overview of my experience, publications, and achievements in AI research.</p>
-    <p><a href="cv/index.md">→ View CV</a></p>
+    <p><a href="cv/">→ View CV</a></p>
   </div>
 
   <div class="section-card">
     <h3>📝 Technical Blog</h3>
     <p>Insights, tutorials, and thoughts on AI research, machine learning, and technology trends.</p>
-    <p><a href="blog/index.md">→ Read Blog</a></p>
+    <p><a href="blog/">→ Read Blog</a></p>
   </div>
 </div>
 
@@ -219,7 +219,7 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
 - **Addressing Negative Transfer in Diffusion Models** (NeurIPS'23)
 - **Towards Practical Plug-and-Play Diffusion Models** (CVPR'23)
 
-[View All Publications](cv/index.md#publications){ .md-button .md-button--primary }
+[View All Publications](cv/#publications){ .md-button .md-button--primary }
 
 ---
 
