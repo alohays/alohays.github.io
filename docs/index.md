@@ -185,8 +185,8 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
 
 <div class="section-grid">
   <div class="section-card">
-    <h3>🤖 Vision-Language AI</h3>
-    <p>Multimodal systems that understand both visual and textual information</p>
+    <h3>🤖 Vision-Language(-Action) AI</h3>
+    <p>Expanding multimodal AI: vision → language → action</p>
   </div>
 
   <div class="section-card">
@@ -195,13 +195,13 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
   </div>
 
   <div class="section-card">
-    <h3>🚀 Autonomous Agents</h3>
-    <p>Embodied AI systems for real-world environments</p>
+    <h3>🚀 Embodied Agents</h3>
+    <p>AI systems that perceive and act in real-world environments</p>
   </div>
 
   <div class="section-card">
-    <h3>🏗️ Foundation Models</h3>
-    <p>Large-scale robotics models for generalizable intelligence</p>
+    <h3>🏗️ Agentic AI</h3>
+    <p>Autonomous AI agents with reasoning and decision-making capabilities</p>
   </div>
 </div>
 
@@ -219,7 +219,7 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
 - **Addressing Negative Transfer in Diffusion Models** (NeurIPS'23)
 - **Towards Practical Plug-and-Play Diffusion Models** (CVPR'23)
 
-[View All Publications](cv/#publications){ .md-button .md-button--primary }
+[View All Publications](https://scholar.google.co.kr/citations?user=7iaKhrEAAAAJ&hl=en){ .md-button .md-button--primary }
 
 ---
 
