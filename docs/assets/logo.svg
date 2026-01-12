@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <!-- YSL Monogram - Clean version for navigation -->
+  <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Y letter -->
+    <path d="M 12 8 L 19 18 L 19 24"/>
+    <path d="M 26 8 L 19 18"/>
+
+    <!-- S letter -->
+    <path d="M 30 14
+             C 30 11, 26 10, 24 10
+             C 20 10, 17 12, 17 15
+             C 17 18, 20 20, 24 21
+             C 28 22, 31 24, 31 28
+             C 31 31, 27 34, 24 34
+             C 21 34, 17 32, 17 29"/>
+
+    <!-- L letter -->
+    <path d="M 19 24 L 19 38 L 36 38"/>
+  </g>
+</svg>
