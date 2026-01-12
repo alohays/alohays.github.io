@@ -110,6 +110,11 @@ html {
   background-image: url('../assets/images/hero-bg-dark.svg');
 }
 
+/* Dark mode logo - invert to white */
+[data-md-color-scheme="slate"] .md-logo img {
+  filter: brightness(0) invert(1);
+}
+
 /* Improved typography */
 .md-typeset h1,
 .md-typeset h2,
