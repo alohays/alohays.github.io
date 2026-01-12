@@ -105,6 +105,11 @@ html {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
+/* Dark mode hero background */
+[data-md-color-scheme="slate"] .hero-section {
+  background-image: url('../assets/images/hero-bg-dark.svg');
+}
+
 /* Improved typography */
 .md-typeset h1,
 .md-typeset h2,
