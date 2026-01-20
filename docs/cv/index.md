@@ -11,7 +11,7 @@ description: Professional CV of Yunsung Lee - AI/ML Research Engineer
 
 - **Phone:** [(+82) 10-2988-9751](tel:+821029889751)
 - **Email:** [dldbstjd9751@gmail.com](mailto:dldbstjd9751@gmail.com)
-- **Work Email:** [sung@wrtn.io](mailto:sung@wrtn.io)
+- **Work Email:** [sung@maum.ai](mailto:sung@maum.ai)
 - **GitHub:** [github.com/alohays](https://github.com/alohays)
 - **LinkedIn:** [LinkedIn Profile](https://www.linkedin.com/in/yunsung-lee-23a926150/)
 - **CV PDF:** [Download PDF](cv.pdf)
