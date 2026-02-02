@@ -36,7 +36,7 @@ Research Team Management, Cross-functional Collaboration, Technical Mentoring
 ## Professional Experience
 
 !!! info "Alternative Military Service"
-Positions at Wrtn Technologies and Riiid serve as Alternative Military Service (Technical Research Personnel, 전문연구요원) until April 14, 2025, combining mandatory service with R&D in strategic industries.
+    Positions at Wrtn Technologies and Riiid serve as Alternative Military Service (Technical Research Personnel, 전문연구요원) until April 14, 2025, combining mandatory service with R&D in strategic industries.
 
 **Head of Research, WoRV Team**
 MaumAI · Seongnam, South Korea · May 2025 - Present
@@ -93,13 +93,15 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 ## Publications
 
 !!! success "Research Impact"
-My publications have accumulated over **1,700 citations** on Google Scholar, demonstrating significant influence in machine learning and computer vision research.
+    My publications have accumulated over **1,700 citations** on Google Scholar, demonstrating significant influence in machine learning and computer vision research.
 
-!!! note "Publication Notes" \* denotes equal contribution (co-first authors). ^† denotes co-corresponding authorship.
+!!! note "Publication Notes"
+    **\*** denotes equal contribution (co-first authors).
+    **†** denotes co-corresponding authorship.
 
 ### 2026
 
-- Suhwan Choi\*, Jaeyoon Jung\*, Haebin Seong\*, Minchan Kim, Minyeong Kim, Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu^†, **Yunsung Lee**^†, "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI," The International Conference on Learning Representations (**ICLR'26**), 2026. [[Project Code]](https://worv-ai.github.io/d2e/)
+- Suhwan Choi\*, Jaeyoon Jung\*, Haebin Seong\*, Minchan Kim, Minyeong Kim, Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu^†, **Yunsung Lee**^†, "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI," The International Conference on Learning Representations (**ICLR'26**), 2026. [Project Code](https://worv-ai.github.io/d2e/)
 
 ### 2025
 
@@ -165,7 +167,7 @@ My publications have accumulated over **1,700 citations** on Google Scholar, dem
 
 **Judge** | _Nov. 2025_
 
-- Served as a Judge for the Hack@thon held at Sogang University. [[link]](https://scc.sogang.ac.kr/front/cmsboardview.do?siteId=sweducenter&bbsConfigFK=7250&pkid=928764)
+- Served as a Judge for the Hack@thon held at Sogang University. [link](https://scc.sogang.ac.kr/front/cmsboardview.do?siteId=sweducenter&bbsConfigFK=7250&pkid=928764)
 
 ### Conference Reviewer
 
@@ -230,4 +232,4 @@ Licensed Craftsman Bartender certified by the South Korean government, combining
 ---
 
 !!! tip "Contact"
-For more information or collaboration opportunities, feel free to reach out through any of the contact methods listed above.
+    For more information or collaboration opportunities, feel free to reach out through any of the contact methods listed above.
