@@ -36,7 +36,7 @@ Research Team Management, Cross-functional Collaboration, Technical Mentoring
 ## Professional Experience
 
 !!! info "Alternative Military Service"
-Positions at Wrtn Technologies and Riiid serve as Alternative Military Service (Technical Research Personnel, 전문연구요원) until April 14, 2025, combining mandatory service with R&D in strategic industries.
+    Positions at Wrtn Technologies and Riiid serve as Alternative Military Service (Technical Research Personnel, 전문연구요원) until April 14, 2025, combining mandatory service with R&D in strategic industries.
 
 **Head of Research, WoRV Team**
 MaumAI · Seongnam, South Korea · May 2025 - Present
@@ -93,7 +93,7 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 ## Publications
 
 !!! success "Research Impact"
-My publications have accumulated over **1,700 citations** on Google Scholar, demonstrating significant influence in machine learning and computer vision research.
+    My publications have accumulated over **1,700 citations** on Google Scholar, demonstrating significant influence in machine learning and computer vision research.
 
 !!! note "Publication Notes"
     **\*** denotes equal contribution (co-first authors).
@@ -232,4 +232,4 @@ Licensed Craftsman Bartender certified by the South Korean government, combining
 ---
 
 !!! tip "Contact"
-For more information or collaboration opportunities, feel free to reach out through any of the contact methods listed above.
+    For more information or collaboration opportunities, feel free to reach out through any of the contact methods listed above.
