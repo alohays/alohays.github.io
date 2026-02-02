@@ -101,7 +101,7 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 ### 2026
 
-- Suhwan Choi\*, Jaeyoon Jung\*, Haebin Seong\*, Minchan Kim, Minyeong Kim, Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu^†, **Yunsung Lee**^†, "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI," The International Conference on Learning Representations (**ICLR'26**), 2026. [[Project Code]](https://worv-ai.github.io/d2e/)
+- Suhwan Choi\*, Jaeyoon Jung\*, Haebin Seong\*, Minchan Kim, Minyeong Kim, Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu^†, **Yunsung Lee**^†, "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI," The International Conference on Learning Representations (**ICLR'26**), 2026. [Project Code](https://worv-ai.github.io/d2e/)
 
 ### 2025
 
@@ -167,7 +167,7 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 **Judge** | _Nov. 2025_
 
-- Served as a Judge for the Hack@thon held at Sogang University. [[link]](https://scc.sogang.ac.kr/front/cmsboardview.do?siteId=sweducenter&bbsConfigFK=7250&pkid=928764)
+- Served as a Judge for the Hack@thon held at Sogang University. [link](https://scc.sogang.ac.kr/front/cmsboardview.do?siteId=sweducenter&bbsConfigFK=7250&pkid=928764)
 
 ### Conference Reviewer
 
