@@ -95,7 +95,9 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 !!! success "Research Impact"
 My publications have accumulated over **1,700 citations** on Google Scholar, demonstrating significant influence in machine learning and computer vision research.
 
-!!! note "Publication Notes" \* denotes equal contribution (co-first authors). ^† denotes co-corresponding authorship.
+!!! note "Publication Notes"
+    **\*** denotes equal contribution (co-first authors).
+    **†** denotes co-corresponding authorship.
 
 ### 2026
 
