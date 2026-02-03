@@ -22,7 +22,7 @@ mkdocs.yml             # MkDocs configuration
 When updating CV content (publications, work experience, etc.), **all three sources must be kept in sync**:
 
 1. **`docs/index.md`** — Update the "Recent Publications" list if the change affects it.
-2. **`docs/cv/index.md`** — Update the Markdown CV page (publications are organized by year sections: `### 2026`, `### 2025`, etc.).
+2. **`docs/cv/index.md`** — Update the Markdown CV page (publications are organized by sections: `### Under Review`, `### 2026`, `### 2025`, etc.).
 3. **`docs/cv/yunsungs_cv/Resume_for_Frehers.tex`** — Update the LaTeX source in the submodule.
 4. **Rebuild PDF** — Run `pdflatex` in the submodule directory to regenerate `Resume_for_Frehers.pdf`.
 5. **Copy PDF** — Copy the rebuilt PDF to the served location:
@@ -58,7 +58,7 @@ pdflatex -interaction=nonstopmode Resume_for_Frehers.tex
 - Authors, "Paper Title," Full Venue Name (**VENUE'YY**), YYYY. [[Project Code]](url)
 ```
 - Escaped asterisks for equal contribution: `\*`
-- Co-corresponding: `^†`
+- Co-corresponding: `†` (no superscript, just the dagger symbol)
 
 ### CV LaTeX (`Resume_for_Frehers.tex`)
 ```latex
