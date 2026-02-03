@@ -101,17 +101,17 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 ### Under Review
 
-- Jisu Nam, Yicong Hong, Chun-Hao Huang, Feng Liu, JoungBin Lee, Jiyoung Kim, Siyoon Jin, **Yunsung Lee**, Jaeyoon Jung, Suwhan Choi, Seungryong Kim^†, Yang Zhou^†, "Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation," Under Review.
+- Jisu Nam, Yicong Hong, Chun-Hao Huang, Feng Liu, JoungBin Lee, Jiyoung Kim, Siyoon Jin, **Yunsung Lee**, Jaeyoon Jung, Suwhan Choi, Seungryong Kim†, Yang Zhou†, "Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation," Under Review.
 
 ### 2026
 
-- Suhwan Choi\*, Jaeyoon Jung\*, Haebin Seong\*, Minchan Kim, Minyeong Kim, Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu^†, **Yunsung Lee**^†, "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI," The International Conference on Learning Representations (**ICLR'26**), 2026. [Project Code](https://worv-ai.github.io/d2e/)
+- Suhwan Choi\*, Jaeyoon Jung\*, Haebin Seong\*, Minchan Kim, Minyeong Kim, Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu†, **Yunsung Lee**†, "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI," The International Conference on Learning Representations (**ICLR'26**), 2026. [Project Code](https://worv-ai.github.io/d2e/)
 
 ### 2025
 
-- Haebin Seong\*, Sungmin Kim\*, Yongjun Cho\*, Myunchul Joe, Geunwoo Kim, Yubeen Park, Sunhoo Kim, Yoonshik Kim, Suhwan Choi, Jaeyoon Jung, Jiyong Youn, Jinmyung Kwak, Sunghee Ahn, Jaemin Lee, Younggil Do, Seungyeop Yi, Woojin Cheong, Minhyeok Oh, Minchan Kim, Yoonseok Kang, Seongjae Kang, Samwoo Seong, Youngjae Yu^†, **Yunsung Lee**^†, "CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents," arXiv preprint arXiv:2511.20216, 2025. [[arXiv]](https://arxiv.org/abs/2511.20216)
+- Haebin Seong\*, Sungmin Kim\*, Yongjun Cho\*, Myunchul Joe, Geunwoo Kim, Yubeen Park, Sunhoo Kim, Yoonshik Kim, Suhwan Choi, Jaeyoon Jung, Jiyong Youn, Jinmyung Kwak, Sunghee Ahn, Jaemin Lee, Younggil Do, Seungyeop Yi, Woojin Cheong, Minhyeok Oh, Minchan Kim, Yoonseok Kang, Seongjae Kang, Samwoo Seong, Youngjae Yu†, **Yunsung Lee**†, "CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents," arXiv preprint arXiv:2511.20216, 2025. [[arXiv]](https://arxiv.org/abs/2511.20216)
 
-- Yohan Lee\*, Sungho Park\*, Sangwoo Han\*, **Yunsung Lee**\*^†, Yongwoo Song, Adam Lee, Jiwung Hyun, Jaemin Kim, Seungtaek Choi, HyeJin Gong^† "SAFARI: Sample-specific Assessment Framework for AI in Real-world Interactions," Findings of Annual Conference of the North American Chapter of the Association for Computational Linguistics (**Findings of NAACL'25**), 2025 (Accepted, but withdrawn due to corporate policy)
+- Yohan Lee\*, Sungho Park\*, Sangwoo Han\*, **Yunsung Lee**\*†, Yongwoo Song, Adam Lee, Jiwung Hyun, Jaemin Kim, Seungtaek Choi, HyeJin Gong† "SAFARI: Sample-specific Assessment Framework for AI in Real-world Interactions," Findings of Annual Conference of the North American Chapter of the Association for Computational Linguistics (**Findings of NAACL'25**), 2025 (Accepted, but withdrawn due to corporate policy)
 
 - Jin-Young Kim\*, Soonwoo Kwon\*, Hyojun Go\*, **Yunsung Lee**, and Seungtaek Choi, "ScoreCL: Augmentation-Adaptive Contrastive Learning via Score-Matching Function," Machine Learning (Springer Journal), 2025
 
