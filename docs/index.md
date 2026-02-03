@@ -214,6 +214,7 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
 
 ### Recent Publications
 
+- **CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents** (arXiv'25)
 - **D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI** (ICLR'26)
 - **Multi-Architecture Multi-Expert Diffusion Models** (AAAI'24)
 - **Addressing Negative Transfer in Diffusion Models** (NeurIPS'23)
