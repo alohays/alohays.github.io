@@ -82,13 +82,13 @@ hide:
 .stat-number {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--md-primary-fg-color);
+  color: var(--md-accent-fg-color);
   display: block;
 }
 
 .stat-label {
   font-size: 0.9rem;
-  color: var(--md-default-fg-color--light);
+  color: var(--md-default-fg-color);
   margin-top: 0.5rem;
 }
 
