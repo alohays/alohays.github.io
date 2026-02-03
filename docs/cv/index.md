@@ -99,6 +99,10 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
     **\*** denotes equal contribution (co-first authors).
     **†** denotes co-corresponding authorship.
 
+### Under Review
+
+- Jisu Nam, Yicong Hong, Chun-Hao Huang, Feng Liu, JoungBin Lee, Jiyoung Kim, Siyoon Jin, **Yunsung Lee**, Jaeyoon Jung, Suwhan Choi, Seungryong Kim^†, Yang Zhou^†, "Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation," Under Review.
+
 ### 2026
 
 - Suhwan Choi\*, Jaeyoon Jung\*, Haebin Seong\*, Minchan Kim, Minyeong Kim, Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu^†, **Yunsung Lee**^†, "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI," The International Conference on Learning Representations (**ICLR'26**), 2026. [Project Code](https://worv-ai.github.io/d2e/)
