@@ -1,13 +1,13 @@
 authors:
   yunsung:
     name: Yunsung Lee
-    description: Software Developer & Tech Enthusiast
+    description: AI/ML Research Engineer
     avatar: https://github.com/alohays.png
-    url: https://alohays.com
+    url: https://alohays.github.io
     social:
       - icon: fontawesome/brands/github
         link: https://github.com/alohays
       - icon: fontawesome/brands/linkedin
-        link: https://linkedin.com/in/yunsung-lee
+        link: https://www.linkedin.com/in/yunsung-lee-23a926150/
       - icon: fontawesome/solid/globe
         link: https://alohays.github.io/
