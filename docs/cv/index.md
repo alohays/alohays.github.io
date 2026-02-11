@@ -18,7 +18,7 @@ description: Professional CV of Yunsung Lee - AI/ML Research Engineer
 
 ## Professional Summary
 
-AI/ML research engineer with strong research foundations (**10+ publications** in top-tier conferences, **1.7K+ citations**) and practical experience deploying commercial AI products (over **5M MAUs**). Currently leading research initiatives at Maum.ai's **WoRV** team, specializing in Embodied AI, autonomous agents, and robotics foundation models. Expertise spans multimodal AI, autonomous systems, and translating cutting-edge research into real-world applications.
+AI/ML research engineer with strong research foundations (**{{ stats.publications }} publications** in top-tier conferences, **{{ stats.citations }} citations**) and practical experience deploying commercial AI products (over **{{ stats.maus }} MAUs**). Currently leading research initiatives at Maum.ai's **WoRV** team, specializing in Embodied AI, autonomous agents, and robotics foundation models. Expertise spans multimodal AI, autonomous systems, and translating cutting-edge research into real-world applications.
 
 ## Core Competencies
 
@@ -93,7 +93,7 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 ## Publications
 
 !!! success "Research Impact"
-    My publications have accumulated over **1,700 citations** on Google Scholar, demonstrating significant influence in machine learning and computer vision research.
+    My publications have accumulated over **{{ stats.citations_full }} citations** on Google Scholar, demonstrating significant influence in machine learning and computer vision research.
 
 !!! note "Publication Notes"
     **\*** denotes equal contribution (co-first authors).

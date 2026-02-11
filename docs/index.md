@@ -29,15 +29,15 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
 
 <div class="stats-grid">
   <div class="stat-card">
-    <span class="stat-number">10+</span>
+    <span class="stat-number">{{ stats.publications }}</span>
     <span class="stat-label">Publications</span>
   </div>
   <div class="stat-card">
-    <span class="stat-number">1.7K+</span>
+    <span class="stat-number">{{ stats.citations }}</span>
     <span class="stat-label">Citations</span>
   </div>
   <div class="stat-card">
-    <span class="stat-number">5M+</span>
+    <span class="stat-number">{{ stats.maus }}</span>
     <span class="stat-label">MAUs Reached</span>
   </div>
 </div>
@@ -97,7 +97,7 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
 ## 📚 Research Highlights
 
 !!! success "Research Impact"
-    My publications have accumulated over **1,700 citations** on Google Scholar, demonstrating significant influence in machine learning and computer vision research.
+    My publications have accumulated over **{{ stats.citations_full }} citations** on Google Scholar, demonstrating significant influence in machine learning and computer vision research.
 
 ### Recent Publications
 

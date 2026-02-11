@@ -15,4 +15,5 @@ dev = [
     "pre-commit>=2.20.0",
     "mkdocs>=1.4.2",
     "mkdocs-material>=8.5.10",
+    "mkdocs-macros-plugin>=1.5.0",
 ]
