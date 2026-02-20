@@ -85,8 +85,8 @@ theme:
 extra:
   stats:
     publications: "10+"
-    citations: "1.7K+"
-    citations_full: "1,700"
+    citations: "1.8K+"
+    citations_full: "1,800"
     maus: "5M+"
   social:
     - icon: fontawesome/brands/github
