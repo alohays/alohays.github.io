@@ -39,6 +39,15 @@ Since `docs/cv/yunsungs_cv/` is a **git submodule**, commits and pushes must hap
 
 Use `git push --recurse-submodules=on-demand` from the parent repo to push both in one command, or push each repo individually.
 
+## Local Development
+
+This project uses **uv** for Python dependency management. Always run MkDocs commands through `uv run`:
+
+```bash
+uv run mkdocs serve    # Local dev server at http://127.0.0.1:8000
+uv run mkdocs build    # Build static site
+```
+
 ## LaTeX Build
 
 ```bash
