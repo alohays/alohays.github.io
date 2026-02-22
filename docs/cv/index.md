@@ -101,7 +101,7 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 ### Under Review
 
-- **Yunsung Lee**, Hyeongmin Lee, "Choosing the Right Prediction Target Maintains Realistic Manifold in Diffusion Models with Training-Free Guidance," European Conference on Computer Vision (**ECCV'26**), 2026.
+- **Yunsung Lee**, Hyeongmin Lee, "Choosing the Right Prediction Target Maintains Realistic Manifold in Diffusion Models with Training-Free Guidance," Under Review.
 
 - Jisu Nam, Yicong Hong, Chun-Hao Huang, Feng Liu, JoungBin Lee, Jiyoung Kim, Siyoon Jin, **Yunsung Lee**, Jaeyoon Jung, Suwhan Choi, Seungryong Kim†, Yang Zhou†, "Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation," Under Review.
 
