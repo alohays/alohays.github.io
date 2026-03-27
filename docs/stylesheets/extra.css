@@ -160,6 +160,14 @@ html {
   transition: color 0.2s ease;
 }
 
+/* ===== Tablet: 2x2 grid for 4-card stats ===== */
+
+@media screen and (min-width: 769px) and (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* ===== Responsive adjustments ===== */
 
 @media screen and (max-width: 768px) {

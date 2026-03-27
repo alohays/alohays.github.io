@@ -33,6 +33,10 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
     <span class="stat-label">Publications</span>
   </div>
   <div class="stat-card">
+    <span class="stat-number">{{ stats.h_index }}</span>
+    <span class="stat-label">H-index</span>
+  </div>
+  <div class="stat-card">
     <span class="stat-number">{{ stats.citations }}</span>
     <span class="stat-label">Citations</span>
   </div>
@@ -101,6 +105,7 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
 
 ### Recent Publications
 
+- **vla-eval: A Unified Evaluation Harness for Vision-Language-Action Models** (Under Review)
 - **Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation** (Under Review)
 - **CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents** (arXiv'25)
 - **D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI** (ICLR'26)
