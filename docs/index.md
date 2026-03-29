@@ -14,7 +14,7 @@ hide:
 <p class="hero-subtitle">AI/ML Research Engineer</p>
 
 <p class="hero-description">
-Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous agents</strong>, and <strong>robotics foundation models</strong>. Currently <strong>Head of Research</strong> at Maum.ai's WoRV team.
+Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous agents</strong>, and <strong>robotics foundation models</strong>. Currently <strong>Head of Research</strong> at MaumAI's WoRV team.
 </p>
 
 <div class="button-group">
@@ -105,6 +105,7 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
 
 ### Recent Publications
 
+- **Choosing the Right Prediction Target Maintains Realistic Manifold in Diffusion Models with Training-Free Guidance** (Under Review)
 - **vla-eval: A Unified Evaluation Harness for Vision-Language-Action Models** (Under Review)
 - **Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation** (Under Review)
 - **CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents** (arXiv'25)

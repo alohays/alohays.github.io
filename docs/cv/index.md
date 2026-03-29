@@ -18,7 +18,7 @@ description: Professional CV of Yunsung Lee - AI/ML Research Engineer
 
 ## Professional Summary
 
-AI/ML research engineer with strong research foundations (**{{ stats.publications }} publications** in top-tier conferences, **{{ stats.citations }} citations**) and practical experience deploying commercial AI products (over **{{ stats.maus }} MAUs**). Currently leading research initiatives at Maum.ai's **WoRV** team, specializing in Embodied AI, autonomous agents, and robotics foundation models. Expertise spans multimodal AI, autonomous systems, and translating cutting-edge research into real-world applications.
+AI/ML research engineer with strong research foundations (**{{ stats.publications }} publications** in top-tier conferences, **{{ stats.citations }} citations**) and practical experience deploying commercial AI products (over **{{ stats.maus }} MAUs**). Currently leading research initiatives at MaumAI's **WoRV** team, specializing in Embodied AI, autonomous agents, and robotics foundation models. Expertise spans multimodal AI, autonomous systems, and translating cutting-edge research into real-world applications.
 
 ## Core Competencies
 
@@ -41,7 +41,7 @@ Research Team Management, Cross-functional Collaboration, Technical Mentoring
 **Head of Research, WoRV Team**
 MaumAI · Seongnam, South Korea · May 2025 - Present
 
-Leading research initiatives for WoRV (World Model for Robotics and Vehicle Control), Maum.ai's flagship Embodied AI research organization. Overseeing development of foundation models that integrate language, vision, and action for robotics and autonomous driving applications. Driving projects including SketchDrive navigation agents, autonomous agricultural machinery, and open-world agents research.
+Leading research initiatives for WoRV (World Model for Robotics and Vehicle Control), MaumAI's flagship Embodied AI research organization. Overseeing development of foundation models that integrate language, vision, and action for robotics and autonomous driving applications. Driving projects including SketchDrive navigation agents, autonomous agricultural machinery, and open-world agents research.
 
 **AI Engineer**
 Wrtn Technologies · Seoul, South Korea · Oct. 2023 - Apr. 2025
@@ -118,31 +118,31 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
     ??? note "Show all 23 authors"
         Haebin Seong\*, Sungmin Kim\*, Yongjun Cho\*, Myunchul Joe, Geunwoo Kim, Yubeen Park, Sunhoo Kim, Yoonshik Kim, Suhwan Choi, Jaeyoon Jung, Jiyong Youn, Jinmyung Kwak, Sunghee Ahn, Jaemin Lee, Younggil Do, Seungyeop Yi, Woojin Cheong, Minhyeok Oh, Minchan Kim, Seongjae Kang, Samwoo Seong, Youngjae Yu†, **Yunsung Lee**†
 
-- Yohan Lee\*, Sungho Park\*, Sangwoo Han\*, **Yunsung Lee**\*†, Yongwoo Song, Adam Lee, Jiwung Hyun, Jaemin Kim, Seungtaek Choi, HyeJin Gong† "SAFARI: Sample-specific Assessment Framework for AI in Real-world Interactions," Findings of Annual Conference of the North American Chapter of the Association for Computational Linguistics (**Findings of NAACL'25**), 2025 (Accepted, but withdrawn due to corporate policy)
+- Yohan Lee\*, Sungho Park\*, Sangwoo Han\*, **Yunsung Lee**\*†, Yongwoo Song, Adam Lee, Jiwung Hyun, Jaemin Kim, Seungtaek Choi, HyeJin Gong†, "SAFARI: Sample-specific Assessment Framework for AI in Real-world Interactions," Findings of Annual Conference of the North American Chapter of the Association for Computational Linguistics (**Findings of NAACL'25**), 2025 (Accepted, but withdrawn due to corporate policy)
 
 - Jin-Young Kim\*, Soonwoo Kwon\*, Hyojun Go\*, **Yunsung Lee**, and Seungtaek Choi, "ScoreCL: Augmentation-Adaptive Contrastive Learning via Score-Matching Function," Machine Learning (Springer Journal), 2025
 
 ### 2024
 
-- **Yunsung Lee**\*, Jin-Young Kim\*, Hyojun Go\*, Myeongho Jeong, Shinhyeok Oh, and Seungtaek Choi "Multi-Architecture Multi-Expert Diffusion Models," Annual AAAI Conference on Artificial Intelligence (**AAAI'24**), 2024
+- **Yunsung Lee**\*, Jin-Young Kim\*, Hyojun Go\*, Myeongho Jeong, Shinhyeok Oh, and Seungtaek Choi, "Multi-Architecture Multi-Expert Diffusion Models," Annual AAAI Conference on Artificial Intelligence (**AAAI'24**), 2024
 
 ### 2023
 
-- Hyojun Go\*, Jinyoung Kim\*, **Yunsung Lee**\*, Seunghyun Lee, Shinhyeok Oh, Hyeongdon Moon, and Seungtaek Choi "Addressing Negative Transfer in Diffusion Models," Conference on Neural Information Processing Systems (**NeurIPS'23**), 2023
+- Hyojun Go\*, Jin-Young Kim\*, **Yunsung Lee**\*, Seunghyun Lee, Shinhyeok Oh, Hyeongdon Moon, and Seungtaek Choi, "Addressing Negative Transfer in Diffusion Models," Conference on Neural Information Processing Systems (**NeurIPS'23**), 2023
 
 - Shinhyeok Oh\*, Hyojun Go\*, Hyeongdon Moon, **Yunsung Lee**, Myeongho Jeong, Hyun Seung Lee, and Seungtaek Choi, "Evaluation of Question Generation Needs More References," Findings of Annual Meeting of the Association for Computational Linguistics (**Findings of ACL'23**), 2023
 
-- Hyun Seung Lee\*, Seungtaek Choi\*, **Yunsung Lee**, Hyeongdon Moon, Shinhyeok Oh, Myeongho Jeong, Hyojun Go, and Christian Wallraven "Cross Encoding As Augmentation: Towards Effective Educational Text Classification," Findings of Annual Meeting of the Association for Computational Linguistics (**Findings of ACL'23**), 2023
+- Hyun Seung Lee\*, Seungtaek Choi\*, **Yunsung Lee**, Hyeongdon Moon, Shinhyeok Oh, Myeongho Jeong, Hyojun Go, and Christian Wallraven, "Cross Encoding as Augmentation: Towards Effective Educational Text Classification," Findings of Annual Meeting of the Association for Computational Linguistics (**Findings of ACL'23**), 2023
 
-- Hyojun Go\*, **Yunsung Lee**\*, Jin-Young Kim\*, Seunghyun Lee, Myeongho Jeong, Hyun Seung Lee, and Seungtaek Choi "Towards Practical Plug-and-Play Diffusion Models," The IEEE/CVF Conference on Computer Vision and Pattern Recognition 2023 (**CVPR'23**), 2023
+- Hyojun Go\*, **Yunsung Lee**\*, Jin-Young Kim\*, Seunghyun Lee, Myeongho Jeong, Hyun Seung Lee, and Seungtaek Choi, "Towards Practical Plug-and-Play Diffusion Models," The IEEE/CVF Conference on Computer Vision and Pattern Recognition 2023 (**CVPR'23**), 2023
 
 ### 2022
 
-- **Yunsung Lee**\*, Gyuseong Lee\*, Kwangrok Ryoo\*, Hyojun Go\*, Jihye Park\*, Seungryong Kim "Towards Flexible Inductive Bias via Progressive Reparameterization Scheduling," ECCV 2022 Visual Inductive Priors for Data-Efficient Deep Learning Workshop (**ECCVW'22**), 2022
+- **Yunsung Lee**\*, Gyuseong Lee\*, Kwangrok Ryoo\*, Hyojun Go\*, Jihye Park\*, Seungryong Kim, "Towards Flexible Inductive Bias via Progressive Reparameterization Scheduling," ECCV 2022 Visual Inductive Priors for Data-Efficient Deep Learning Workshop (**ECCVW'22**), 2022
 
 ### 2021
 
-- Seokju Cho\*, Sunghwan Hong\*, Sangryul Jeon, **Yunsung Lee**, Kwanghoon Sohn, and Seungryong Kim "CATs: Cost Aggregation Transformers for Visual Correspondence," Conference on Neural Information Processing Systems (**NeurIPS'21**), 2021
+- Seokju Cho\*, Sunghwan Hong\*, Sangryul Jeon, **Yunsung Lee**, Kwanghoon Sohn, and Seungryong Kim, "CATs: Cost Aggregation Transformers for Visual Correspondence," Conference on Neural Information Processing Systems (**NeurIPS'21**), 2021
 
 - Junbum Cha, Hancheol Cho, Kyungjae Lee, Seunghyun Park, **Yunsung Lee**, and Sungrae Park. "SWAD: Domain Generalization by Seeking Flat Minima," Conference on Neural Information Processing Systems (**NeurIPS'21**), 2021
 
@@ -154,11 +154,11 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 - Seokeon Choi, Junhyun Lee, **Yunsung Lee**, and Alexander Hauptmann. "Robust Long-Term Object Tracking via Improved Discriminative Model Prediction," The ECCV-20 Workshop on Visual Object Tracking Challenge (**ECCVW'20**), 2020
 
-- Junsoo Lee\*, Eungyeup Kim\*, **Yunsung Lee**, Dongjun Kim, Jaehyuk Chang, and Jaegul Choo "Reference-Based Sketch Image Colorization using Augmented-Self Reference and Dense Semantic Correspondence," IEEE Conference on Computer Vision and Pattern Recognition (**CVPR'20**), 2020
+- Junsoo Lee\*, Eungyeup Kim\*, **Yunsung Lee**, Dongjun Kim, Jaehyuk Chang, and Jaegul Choo, "Reference-Based Sketch Image Colorization using Augmented-Self Reference and Dense Semantic Correspondence," IEEE Conference on Computer Vision and Pattern Recognition (**CVPR'20**), 2020
 
 ### 2019
 
-- Sookyung Kim,\* Sunghyun Park,\* Sunghyo Chung,\* Joonseok Lee, **Yunsung Lee**, Hyojin Kim, Mr Prabhat, and Jaegul Choo "Learning to Focus and Track Extreme Climate Events," British Machine Vision Conference (**BMVC'19**), 2019. Accepted as Spotlight Presentation (6.9% acceptance rate for spotlight papers), 2019.
+- Sookyung Kim\*, Sunghyun Park\*, Sunghyo Chung\*, Joonseok Lee, **Yunsung Lee**, Hyojin Kim, Mr Prabhat, and Jaegul Choo, "Learning to Focus and Track Extreme Climate Events," British Machine Vision Conference (**BMVC'19**), 2019. Accepted as Spotlight Presentation (6.9% acceptance rate for spotlight papers).
 
 ---
 
