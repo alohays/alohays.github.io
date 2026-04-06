@@ -174,6 +174,14 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 ## Other Activities
 
+### Invited Talk
+
+**State University of New York (SUNY) Korea**
+
+**Invited Speaker** | _Apr. 2026_
+
+- Invited talk for STEM undergraduate students.
+
 ### Judge Experience
 
 **Hack@thon (Lovable-sponsored)**
