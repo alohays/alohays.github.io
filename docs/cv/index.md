@@ -109,14 +109,14 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 ### 2026
 
-- Suhwan Choi\*, Jaeyoon Jung\*, Haebin Seong\*, Minchan Kim, Minyeong Kim, Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu†, **Yunsung Lee**†, "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI," The International Conference on Learning Representations (**ICLR'26**), 2026. [Project Code](https://worv-ai.github.io/d2e/)
-
-### 2025
-
-- Haebin Seong\*, Sungmin Kim\*, Yongjun Cho\*, ..., Youngjae Yu†, **Yunsung Lee**†, "CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents," arXiv preprint arXiv:2511.20216, 2025. [[arXiv]](https://arxiv.org/abs/2511.20216)
+- Haebin Seong\*, Sungmin Kim\*, Yongjun Cho\*, ..., Youngjae Yu†, **Yunsung Lee**†, "CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents," The First Workshop on Scalable Robot Learning Systems at CVPR 2026 (**ScaleBot @ CVPR'26**), 2026. [[arXiv]](https://arxiv.org/abs/2511.20216)
 
     ??? note "Show all 23 authors"
         Haebin Seong\*, Sungmin Kim\*, Yongjun Cho\*, Myunchul Joe, Geunwoo Kim, Yubeen Park, Sunhoo Kim, Yoonshik Kim, Suhwan Choi, Jaeyoon Jung, Jiyong Youn, Jinmyung Kwak, Sunghee Ahn, Jaemin Lee, Younggil Do, Seungyeop Yi, Woojin Cheong, Minhyeok Oh, Minchan Kim, Seongjae Kang, Samwoo Seong, Youngjae Yu†, **Yunsung Lee**†
+
+- Suhwan Choi\*, Jaeyoon Jung\*, Haebin Seong\*, Minchan Kim, Minyeong Kim, Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu†, **Yunsung Lee**†, "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI," The International Conference on Learning Representations (**ICLR'26**), 2026. [Project Code](https://worv-ai.github.io/d2e/)
+
+### 2025
 
 - Yohan Lee\*, Sungho Park\*, Sangwoo Han\*, **Yunsung Lee**\*†, Yongwoo Song, Adam Lee, Jiwung Hyun, Jaemin Kim, Seungtaek Choi, HyeJin Gong†, "SAFARI: Sample-specific Assessment Framework for AI in Real-world Interactions," Findings of Annual Conference of the North American Chapter of the Association for Computational Linguistics (**Findings of NAACL'25**), 2025 (Accepted, but withdrawn due to corporate policy)
 

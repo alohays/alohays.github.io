@@ -108,7 +108,7 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
 - **Choosing the Right Prediction Target Maintains Realistic Manifold in Diffusion Models with Training-Free Guidance** (Under Review)
 - **vla-eval: A Unified Evaluation Harness for Vision-Language-Action Models** (Under Review)
 - **Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation** (Under Review)
-- **CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents** (arXiv'25)
+- **CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents** (ScaleBot @ CVPR'26)
 - **D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI** (ICLR'26)
 - **Multi-Architecture Multi-Expert Diffusion Models** (AAAI'24)
 - **Addressing Negative Transfer in Diffusion Models** (NeurIPS'23)
