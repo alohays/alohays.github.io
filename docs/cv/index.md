@@ -103,16 +103,16 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 - **Yunsung Lee**, Hyeongmin Lee, "Choosing the Right Prediction Target Maintains Realistic Manifold in Diffusion Models with Training-Free Guidance," Under Review.
 
-- Jisu Nam, Yicong Hong, Chun-Hao Huang, Feng Liu, JoungBin Lee, Jiyoung Kim, Siyoon Jin, **Yunsung Lee**, Jaeyoon Jung, Suwhan Choi, Seungryong Kim†, Yang Zhou†, "Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation," Under Review.
-
-- Suhwan Choi, **Yunsung Lee**, Yubeen Park, Chris Dongjoo Kim, Ranjay Krishna, Dieter Fox, Youngjae Yu, "vla-eval: A Unified Evaluation Harness for Vision-Language-Action Models," Under Review. [[arXiv]](https://arxiv.org/abs/2603.13966)
-
 ### 2026
 
 - Haebin Seong\*, Sungmin Kim\*, Yongjun Cho\*, ..., Youngjae Yu†, **Yunsung Lee**†, "CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents," The First Workshop on Scalable Robot Learning Systems at CVPR 2026 (**ScaleBot @ CVPR'26**), 2026. [[arXiv]](https://arxiv.org/abs/2511.20216)
 
     ??? note "Show all 23 authors"
         Haebin Seong\*, Sungmin Kim\*, Yongjun Cho\*, Myunchul Joe, Geunwoo Kim, Yubeen Park, Sunhoo Kim, Yoonshik Kim, Suhwan Choi, Jaeyoon Jung, Jiyong Youn, Jinmyung Kwak, Sunghee Ahn, Jaemin Lee, Younggil Do, Seungyeop Yi, Woojin Cheong, Minhyeok Oh, Minchan Kim, Seongjae Kang, Samwoo Seong, Youngjae Yu†, **Yunsung Lee**†
+
+- Jisu Nam, Yicong Hong, Chun-Hao Huang, Feng Liu, JoungBin Lee, Jiyoung Kim, Siyoon Jin, **Yunsung Lee**, Jaeyoon Jung, Suhwan Choi, Seungryong Kim†, Yang Zhou†, "WorldCam: Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation," The CVPR 2026 Workshop on Video World Models (**VideoWorldModel @ CVPR'26**), 2026. [[arXiv]](https://arxiv.org/abs/2603.16871)
+
+- Suhwan Choi, **Yunsung Lee**, Yubeen Park, Chris Dongjoo Kim, Ranjay Krishna, Dieter Fox, Youngjae Yu, "vla-eval: A Unified Evaluation Harness for Vision-Language-Action Models," The ICRA 2026 Workshop on From Data to Decisions (**From Data to Decisions @ ICRA'26**), 2026. [[arXiv]](https://arxiv.org/abs/2603.13966)
 
 - Suhwan Choi\*, Jaeyoon Jung\*, Haebin Seong\*, Minchan Kim, Minyeong Kim, Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu†, **Yunsung Lee**†, "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI," The International Conference on Learning Representations (**ICLR'26**), 2026. [Project Code](https://worv-ai.github.io/d2e/)
 
