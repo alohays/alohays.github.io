@@ -114,8 +114,6 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
 - **vla-eval: A Unified Evaluation Harness for Vision-Language-Action Models** (From Data to Decisions @ ICRA'26)
 - **D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI** (ICLR'26)
 - **Multi-Architecture Multi-Expert Diffusion Models** (AAAI'24)
-- **Addressing Negative Transfer in Diffusion Models** (NeurIPS'23)
-- **Towards Practical Plug-and-Play Diffusion Models** (CVPR'23)
 
 [View All Publications](https://scholar.google.co.kr/citations?user=7iaKhrEAAAAJ&hl=en){ .md-button .md-button--primary }
 
