@@ -100,6 +100,9 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
 
 ## 📚 Research Highlights
 
+!!! tip "Recognition"
+    Selected as an **ICML 2026 Gold Reviewer** — placed among top reviewers based on area-chair ratings, with complimentary conference registration as recognition.
+
 !!! success "Research Impact"
     My publications have accumulated over **{{ stats.citations_full }} citations** on Google Scholar, demonstrating significant influence in machine learning and computer vision research.
 
