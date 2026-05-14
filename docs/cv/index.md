@@ -166,7 +166,7 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 ### Service Awards
 
-- **ICML 2026 Gold Reviewer** — Recognized among top reviewers based on area-chair ratings on submitted reviews; received complimentary registration as a token of appreciation, 2026
+- ICML 2026 Gold Reviewer — Recognized among top reviewers based on area-chair ratings on submitted reviews; received complimentary registration as a token of appreciation, 2026
 
 ### Competition Awards
 
@@ -203,7 +203,7 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 - Advances in Neural Information Processing Systems (**NeurIPS**) (2024 - )
 - European Conference on Computer Vision (**ECCV**) (2024 - )
 - The International Conference on Learning Representations (**ICLR**) (2024 - )
-- The International Conference on Machine Learning (**ICML**) (2026 - ) — **Gold Reviewer Award**, 2026
+- The International Conference on Machine Learning (**ICML**) (2026 - ) — Gold Reviewer Award, 2026
 - ACL Rolling Review for **ACL, EMNLP** (2024 - )
 
 ### Selected Open-source Contribution
