@@ -81,6 +81,15 @@ html, body {
   font-family: var(--font-body);
   font-size: var(--size-body);
   -webkit-font-smoothing: antialiased;
+  /* Hide scrollbar in presentation mode (still scrollable via keys/wheel) */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 html {
@@ -801,45 +810,47 @@ body.notes-mode aside.notes h4 {
           Bommasani et al. · Stanford CRFM · 2021
         </div>
 
-        <svg viewBox="0 0 600 280" style="width: 100%; max-height: 320px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+        <svg viewBox="0 0 680 280" style="width: 100%; max-height: 320px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+          <!-- Left: input modalities (boxes widened 80→130) -->
           <g font-size="13" text-anchor="middle" fill="currentColor">
-            <text x="60" y="40">Web text</text>
-            <text x="60" y="115">Images</text>
-            <text x="60" y="190">Audio</text>
-            <text x="60" y="260">Video</text>
+            <text x="80" y="40">Web text</text>
+            <text x="80" y="115">Images</text>
+            <text x="80" y="190">Audio</text>
+            <text x="80" y="260">Video</text>
           </g>
           <g fill="none" stroke="#0a0a0a" stroke-width="1.5">
-            <rect x="20" y="20" width="80" height="30"/>
-            <rect x="20" y="95" width="80" height="30"/>
-            <rect x="20" y="170" width="80" height="30"/>
-            <rect x="20" y="245" width="80" height="30"/>
+            <rect x="15" y="20"  width="130" height="30"/>
+            <rect x="15" y="95"  width="130" height="30"/>
+            <rect x="15" y="170" width="130" height="30"/>
+            <rect x="15" y="245" width="130" height="30"/>
           </g>
           <g stroke="#0a0a0a" stroke-width="1.5" fill="none">
-            <path d="M 100 35 L 240 130" marker-end="url(#arr)"/>
-            <path d="M 100 110 L 240 140" marker-end="url(#arr)"/>
-            <path d="M 100 185 L 240 150" marker-end="url(#arr)"/>
-            <path d="M 100 260 L 240 160" marker-end="url(#arr)"/>
+            <path d="M 145 35  L 270 130" marker-end="url(#arr)"/>
+            <path d="M 145 110 L 270 140" marker-end="url(#arr)"/>
+            <path d="M 145 185 L 270 150" marker-end="url(#arr)"/>
+            <path d="M 145 260 L 270 160" marker-end="url(#arr)"/>
           </g>
-          <rect x="240" y="115" width="120" height="60" fill="#ff3300"/>
-          <text x="300" y="142" font-size="13" font-weight="800" text-anchor="middle" fill="white" font-family="var(--font-display)">FOUNDATION</text>
-          <text x="300" y="160" font-size="13" font-weight="800" text-anchor="middle" fill="white" font-family="var(--font-display)">MODEL</text>
+          <rect x="270" y="115" width="140" height="60" fill="#ff3300"/>
+          <text x="340" y="142" font-size="13" font-weight="800" text-anchor="middle" fill="white" font-family="var(--font-display)">FOUNDATION</text>
+          <text x="340" y="160" font-size="13" font-weight="800" text-anchor="middle" fill="white" font-family="var(--font-display)">MODEL</text>
           <g stroke="#0a0a0a" stroke-width="1.5" fill="none">
-            <path d="M 360 130 L 500 35" marker-end="url(#arr)"/>
-            <path d="M 360 140 L 500 110" marker-end="url(#arr)"/>
-            <path d="M 360 150 L 500 185" marker-end="url(#arr)"/>
-            <path d="M 360 160 L 500 260" marker-end="url(#arr)"/>
+            <path d="M 410 130 L 535 35"  marker-end="url(#arr)"/>
+            <path d="M 410 140 L 535 110" marker-end="url(#arr)"/>
+            <path d="M 410 150 L 535 185" marker-end="url(#arr)"/>
+            <path d="M 410 160 L 535 260" marker-end="url(#arr)"/>
           </g>
+          <!-- Right: downstream tasks (boxes widened 80→130) -->
           <g font-size="13" text-anchor="middle" fill="currentColor">
-            <text x="540" y="40">QA</text>
-            <text x="540" y="115">Translation</text>
-            <text x="540" y="190">Code gen</text>
-            <text x="540" y="260">Captioning</text>
+            <text x="600" y="40">QA</text>
+            <text x="600" y="115">Translation</text>
+            <text x="600" y="190">Code gen</text>
+            <text x="600" y="260">Captioning</text>
           </g>
           <g fill="none" stroke="#0a0a0a" stroke-width="1.5">
-            <rect x="500" y="20" width="80" height="30"/>
-            <rect x="500" y="95" width="80" height="30"/>
-            <rect x="500" y="170" width="80" height="30"/>
-            <rect x="500" y="245" width="80" height="30"/>
+            <rect x="535" y="20"  width="130" height="30"/>
+            <rect x="535" y="95"  width="130" height="30"/>
+            <rect x="535" y="170" width="130" height="30"/>
+            <rect x="535" y="245" width="130" height="30"/>
           </g>
           <defs>
             <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
@@ -1125,10 +1136,11 @@ body.notes-mode aside.notes h4 {
 
     <div style="margin-top: 2rem; flex: 1; display: flex; flex-direction: column; gap: 2rem;">
 
-      <div style="position: relative; height: 240px;">
+      <div style="position: relative; height: 240px; padding: 0 1rem;">
+        <!-- Reduce each cell from 12.5% to 11% so 8 cells (= 88%) leave 6% margin on each side -->
         <div style="position: absolute; top: 50%; left: 2%; right: 2%; height: 2px; background: var(--color-ink); transform: translateY(-50%);"></div>
 
-        <div style="position: absolute; left: 0%; top: 0; bottom: 0; width: 12.5%; display: flex; flex-direction: column; align-items: center;">
+        <div style="position: absolute; left: 2%; top: 0; bottom: 0; width: 11.5%; display: flex; flex-direction: column; align-items: center;">
           <div style="text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 1rem;">
             <div class="mono" style="font-size: var(--size-tiny); color: var(--color-ink-muted);">2022</div>
             <div style="font-family: var(--font-display); font-weight: 800; font-size: var(--size-h3); margin-top: 0.2rem;">RT-1</div>
@@ -1139,7 +1151,7 @@ body.notes-mode aside.notes h4 {
           </div>
         </div>
 
-        <div style="position: absolute; left: 12.5%; top: 0; bottom: 0; width: 12.5%; display: flex; flex-direction: column; align-items: center;">
+        <div style="position: absolute; left: 14%; top: 0; bottom: 0; width: 11.5%; display: flex; flex-direction: column; align-items: center;">
           <div style="text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 1rem;">
             <div class="mono" style="font-size: var(--size-tiny); color: var(--color-ink-muted);">2023</div>
             <div style="font-family: var(--font-display); font-weight: 800; font-size: var(--size-h3); margin-top: 0.2rem;">RT-2</div>
@@ -1150,7 +1162,7 @@ body.notes-mode aside.notes h4 {
           </div>
         </div>
 
-        <div style="position: absolute; left: 25%; top: 0; bottom: 0; width: 12.5%; display: flex; flex-direction: column; align-items: center;">
+        <div style="position: absolute; left: 26%; top: 0; bottom: 0; width: 11.5%; display: flex; flex-direction: column; align-items: center;">
           <div style="text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 1rem;">
             <div class="mono" style="font-size: var(--size-tiny); color: var(--color-ink-muted);">2024</div>
             <div style="font-family: var(--font-display); font-weight: 800; font-size: var(--size-h3); margin-top: 0.2rem;">OpenVLA</div>
@@ -1161,7 +1173,7 @@ body.notes-mode aside.notes h4 {
           </div>
         </div>
 
-        <div style="position: absolute; left: 37.5%; top: 0; bottom: 0; width: 12.5%; display: flex; flex-direction: column; align-items: center;">
+        <div style="position: absolute; left: 38%; top: 0; bottom: 0; width: 11.5%; display: flex; flex-direction: column; align-items: center;">
           <div style="text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 1rem;">
             <div class="mono" style="font-size: var(--size-tiny); color: var(--color-ink-muted);">2024-10</div>
             <div style="font-family: var(--font-display); font-weight: 800; font-size: var(--size-h3); margin-top: 0.2rem;">π0</div>
@@ -1172,7 +1184,7 @@ body.notes-mode aside.notes h4 {
           </div>
         </div>
 
-        <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 12.5%; display: flex; flex-direction: column; align-items: center;">
+        <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 11.5%; display: flex; flex-direction: column; align-items: center;">
           <div style="text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 1rem;">
             <div class="mono" style="font-size: var(--size-tiny); color: var(--color-ink-muted);">2025-02</div>
             <div style="font-family: var(--font-display); font-weight: 800; font-size: var(--size-h3); margin-top: 0.2rem;">Helix</div>
@@ -1183,7 +1195,7 @@ body.notes-mode aside.notes h4 {
           </div>
         </div>
 
-        <div style="position: absolute; left: 62.5%; top: 0; bottom: 0; width: 12.5%; display: flex; flex-direction: column; align-items: center;">
+        <div style="position: absolute; left: 62%; top: 0; bottom: 0; width: 11.5%; display: flex; flex-direction: column; align-items: center;">
           <div style="text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 1rem;">
             <div class="mono" style="font-size: var(--size-tiny); color: var(--color-ink-muted);">2025-03</div>
             <div style="font-family: var(--font-display); font-weight: 800; font-size: var(--size-h3); margin-top: 0.2rem;">GR00T N1</div>
@@ -1194,7 +1206,7 @@ body.notes-mode aside.notes h4 {
           </div>
         </div>
 
-        <div style="position: absolute; left: 75%; top: 0; bottom: 0; width: 12.5%; display: flex; flex-direction: column; align-items: center;">
+        <div style="position: absolute; left: 74%; top: 0; bottom: 0; width: 11.5%; display: flex; flex-direction: column; align-items: center;">
           <div style="text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 1rem;">
             <div class="mono" style="font-size: var(--size-tiny); color: var(--color-ink-muted);">2025-04</div>
             <div style="font-family: var(--font-display); font-weight: 800; font-size: var(--size-h3); margin-top: 0.2rem;">π0.5</div>
@@ -1205,7 +1217,7 @@ body.notes-mode aside.notes h4 {
           </div>
         </div>
 
-        <div style="position: absolute; left: 87.5%; top: 0; bottom: 0; width: 12.5%; display: flex; flex-direction: column; align-items: center;">
+        <div style="position: absolute; left: 86%; top: 0; bottom: 0; width: 11.5%; display: flex; flex-direction: column; align-items: center;">
           <div style="text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; padding-bottom: 1rem;">
             <div class="mono" style="font-size: var(--size-tiny); color: var(--color-accent);">2026-02</div>
             <div style="font-family: var(--font-display); font-weight: 900; font-size: var(--size-h3); margin-top: 0.2rem; color: var(--color-accent);">DreamZero</div>
@@ -1334,43 +1346,43 @@ body.notes-mode aside.notes h4 {
 
     <div class="stagger" style="margin-top: 0.85rem; display: flex; flex-direction: column; gap: 0.4rem; flex: 1; min-height: 0;">
 
-      <div class="roadmap-row" style="display: grid; grid-template-columns: 4rem 9rem 1fr; gap: 1rem; align-items: center; padding: 0.45rem 0; border-bottom: 1px solid var(--color-grid-line);">
+      <div class="roadmap-row" style="display: grid; grid-template-columns: 4rem 13rem 1fr; gap: 1rem; align-items: center; padding: 0.45rem 0; border-bottom: 1px solid var(--color-grid-line);">
         <span class="mono" style="font-size: var(--size-small); color: var(--color-accent); font-weight: 700;">CH 2</span>
         <strong>Action modality</strong>
         <span style="color: var(--color-ink-soft);">How do we tokenize action?</span>
       </div>
 
-      <div class="roadmap-row" style="display: grid; grid-template-columns: 4rem 9rem 1fr; gap: 1rem; align-items: center; padding: 0.45rem 0; border-bottom: 1px solid var(--color-grid-line);">
+      <div class="roadmap-row" style="display: grid; grid-template-columns: 4rem 13rem 1fr; gap: 1rem; align-items: center; padding: 0.45rem 0; border-bottom: 1px solid var(--color-grid-line);">
         <span class="mono" style="font-size: var(--size-small); color: var(--color-accent); font-weight: 700;">CH 3</span>
         <strong>Data scaling</strong>
         <span style="color: var(--color-ink-soft);">How do we collect and grow that action data?</span>
       </div>
 
-      <div class="roadmap-row" style="display: grid; grid-template-columns: 4rem 9rem 1fr; gap: 1rem; align-items: center; padding: 0.45rem 0; border-bottom: 1px solid var(--color-grid-line);">
+      <div class="roadmap-row" style="display: grid; grid-template-columns: 4rem 13rem 1fr; gap: 1rem; align-items: center; padding: 0.45rem 0; border-bottom: 1px solid var(--color-grid-line);">
         <span class="mono" style="font-size: var(--size-small); color: var(--color-accent); font-weight: 700;">CH 4</span>
         <strong>VLAs</strong>
         <span style="color: var(--color-ink-soft);">How does a VLM become a VLA?</span>
       </div>
 
-      <div class="roadmap-row" style="display: grid; grid-template-columns: 4rem 9rem 1fr; gap: 1rem; align-items: center; padding: 0.45rem 0; border-bottom: 1px solid var(--color-grid-line);">
+      <div class="roadmap-row" style="display: grid; grid-template-columns: 4rem 13rem 1fr; gap: 1rem; align-items: center; padding: 0.45rem 0; border-bottom: 1px solid var(--color-grid-line);">
         <span class="mono" style="font-size: var(--size-small); color: var(--color-accent); font-weight: 700;">CH 5</span>
         <strong>Diffusion + Dual</strong>
         <span style="color: var(--color-ink-soft);">Speed and reasoning, simultaneously</span>
       </div>
 
-      <div class="roadmap-row" style="display: grid; grid-template-columns: 4rem 9rem 1fr; gap: 1rem; align-items: center; padding: 0.45rem 0; border-bottom: 1px solid var(--color-grid-line);">
+      <div class="roadmap-row" style="display: grid; grid-template-columns: 4rem 13rem 1fr; gap: 1rem; align-items: center; padding: 0.45rem 0; border-bottom: 1px solid var(--color-grid-line);">
         <span class="mono" style="font-size: var(--size-small); color: var(--color-accent); font-weight: 700;">CH 6</span>
         <strong>World Models</strong>
         <span style="color: var(--color-ink-soft);">Can a model learn the world's dynamics?</span>
       </div>
 
-      <div class="roadmap-row" style="display: grid; grid-template-columns: 4rem 9rem 1fr; gap: 1rem; align-items: center; padding: 0.45rem 0; border-bottom: 1px solid var(--color-grid-line);">
+      <div class="roadmap-row" style="display: grid; grid-template-columns: 4rem 13rem 1fr; gap: 1rem; align-items: center; padding: 0.45rem 0; border-bottom: 1px solid var(--color-grid-line);">
         <span class="mono" style="font-size: var(--size-small); color: var(--color-accent); font-weight: 700;">CH 7</span>
         <strong>World Action Models</strong>
         <span style="color: var(--color-ink-soft);">Does "knowing" turn into zero-shot policies?</span>
       </div>
 
-      <div class="roadmap-row" style="display: grid; grid-template-columns: 4rem 9rem 1fr; gap: 1rem; align-items: center; padding: 0.45rem 0; border-bottom: 3px solid var(--color-korean-flag);">
+      <div class="roadmap-row" style="display: grid; grid-template-columns: 4rem 13rem 1fr; gap: 1rem; align-items: center; padding: 0.45rem 0; border-bottom: 3px solid var(--color-korean-flag);">
         <span class="mono" style="font-size: var(--size-small); color: var(--color-korean-flag); font-weight: 700;">CH 8</span>
         <strong>WoRV @ maum.ai</strong>
         <span style="color: var(--color-ink-soft);">How we're working on this from Korea — and who to talk to about joining</span>
@@ -1481,14 +1493,18 @@ body.notes-mode aside.notes h4 {
         </p>
       </div>
 
-      <div style="flex: 1; display: flex; flex-direction: column; gap: 0.75rem;">
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 0.65rem; min-height: 0;">
         <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
-          Clip &middot; Brian Ichter @ Stanford Seminar
+          Original figure &middot; CLIP &middot; Radford et al. 2021
         </div>
-        <div class="video-frame aspect-16x9">
-          <iframe src="https://www.youtube-nocookie.com/embed/wnPNRh-jtZM?start=396&end=480&autoplay=1&mute=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media" frameborder="0"></iframe>
+        <div style="flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; background: white; padding: 0.5rem; border: 1px solid var(--color-grid-line);">
+          <img src="images/papers/clip/architecture-1.png"
+               alt="CLIP — contrastive pre-training + zero-shot prediction (Radford et al. 2021 Fig 1)"
+               style="max-width: 100%; max-height: 100%; object-fit: contain;">
         </div>
-        <p class="video-caption">"Natural overlap" between text tokens and action tokens &middot; 06:36&ndash;08:00</p>
+        <p class="video-caption" style="margin-top: 0;">
+          Image &harr; text tokens trained with contrastive loss &mdash; the canonical proof that any modality fits the &quot;tokenize &amp; predict&quot; recipe.
+        </p>
       </div>
 
     </div>
@@ -1790,21 +1806,21 @@ body.notes-mode aside.notes h4 {
             <text x="230" y="85" font-size="13" font-family="var(--font-display)" font-weight="800" text-anchor="middle" fill="white">DENOISE</text>
             <text x="230" y="105" font-size="11" font-family="var(--font-mono)" text-anchor="middle" fill="white">&epsilon;&#920;(a&#7511;, t, o)</text>
           </g>
-          <path d="M 295 90 L 355 90" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr17b)"/>
-          <!-- chunk output -->
+          <path d="M 295 90 L 290 90" stroke="#0a0a0a" stroke-width="0" fill="none"/>
+          <!-- chunk output (widened cells 20→40 each to fit a_{n+1}, a_{n+k} labels) -->
           <g stroke="#0a0a0a" stroke-width="1" fill="none">
-            <rect x="360" y="60" width="80" height="60"/>
-            <line x1="380" y1="60" x2="380" y2="120"/>
-            <line x1="400" y1="60" x2="400" y2="120"/>
-            <line x1="420" y1="60" x2="420" y2="120"/>
+            <rect x="295" y="60" width="160" height="60"/>
+            <line x1="335" y1="60" x2="335" y2="120"/>
+            <line x1="375" y1="60" x2="375" y2="120"/>
+            <line x1="415" y1="60" x2="415" y2="120"/>
           </g>
-          <g font-family="var(--font-mono)" font-size="11" fill="#0a0a0a">
-            <text x="370" y="93" text-anchor="middle">a&#8344;</text>
-            <text x="390" y="93" text-anchor="middle">a&#8344;&#8330;&#8321;</text>
-            <text x="410" y="93" text-anchor="middle">&middot;&middot;&middot;</text>
-            <text x="430" y="93" text-anchor="middle">a&#8344;&#8330;&#8342;</text>
+          <g font-family="var(--font-mono)" font-size="12" fill="#0a0a0a">
+            <text x="315" y="95" text-anchor="middle">a&#8344;</text>
+            <text x="355" y="95" text-anchor="middle">a&#8344;&#8330;&#8321;</text>
+            <text x="395" y="95" text-anchor="middle">&middot;&middot;&middot;</text>
+            <text x="435" y="95" text-anchor="middle">a&#8344;&#8330;&#8342;</text>
           </g>
-          <text x="400" y="140" font-size="11" font-family="var(--font-mono)" text-anchor="middle" fill="#0a0a0a">k-step chunk</text>
+          <text x="375" y="140" font-size="11" font-family="var(--font-mono)" text-anchor="middle" fill="#0a0a0a">k-step chunk</text>
         </svg>
 
         <ul class="bullet-list" style="font-size: var(--size-small);">
@@ -2092,107 +2108,42 @@ body.notes-mode aside.notes h4 {
     <span>20 / 77</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1.5rem);">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1rem); gap: 0.6rem;">
 
     <h1>FAST &mdash; a <span class="accent-text">compression-based</span> tokenizer</h1>
 
-    <div class="split" style="display: flex; gap: 2.25rem; margin-top: 1rem; flex: 1; align-items: stretch;">
+    <div style="display: flex; gap: 1.25rem; flex: 1; align-items: stretch; min-height: 0;">
 
-      <div style="flex: 1.2; display: flex; flex-direction: column; gap: 0.85rem;">
+      <!-- LEFT: FAST DCT method figure (original) -->
+      <div style="flex: 1.55; display: flex; flex-direction: column; gap: 0.45rem; min-height: 0;">
         <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
-          &pi;0-FAST &middot; Pertsch &middot; Jan 2025
+          Pertsch et al. Jan 2025 &middot; Fig 2
         </div>
-
-        <svg viewBox="0 0 560 220" style="width: 100%; max-height: 240px;" preserveAspectRatio="xMidYMid meet">
-          <defs>
-            <marker id="arr20" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-              <path d="M 0 0 L 6 4 L 0 8 z" fill="#0a0a0a"/>
-            </marker>
-          </defs>
-
-          <!-- Stage 1: continuous chunk -->
-          <g>
-            <text x="60" y="22" font-size="12" font-family="var(--font-mono)" text-anchor="middle" fill="#8b8b8b">1 &middot; CHUNK</text>
-            <rect x="20" y="36" width="80" height="120" fill="none" stroke="#0a0a0a" stroke-width="1"/>
-            <!-- mini waveform suggesting joint trajectories -->
-            <polyline points="25,70 35,55 45,80 55,60 65,90 75,72 85,85 95,68" fill="none" stroke="#ff3300" stroke-width="1.5"/>
-            <polyline points="25,110 35,120 45,98 55,115 65,100 75,118 85,105 95,112" fill="none" stroke="#0a0a0a" stroke-width="1.5"/>
-            <polyline points="25,140 35,132 45,144 55,128 65,140 75,135 85,142 95,130" fill="none" stroke="#8b8b8b" stroke-width="1.5"/>
-            <text x="60" y="172" font-size="11" font-family="var(--font-mono)" text-anchor="middle" fill="#0a0a0a">k-step a&#8336; &isin; &#8477;&#7517;</text>
-          </g>
-
-          <path d="M 105 95 L 145 95" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr20)"/>
-
-          <!-- Stage 2: DCT -->
-          <g>
-            <text x="195" y="22" font-size="12" font-family="var(--font-mono)" text-anchor="middle" fill="#8b8b8b">2 &middot; DCT</text>
-            <rect x="150" y="36" width="90" height="120" fill="#f5f3ee" stroke="#0a0a0a" stroke-width="1"/>
-            <!-- bars representing frequency coefficients -->
-            <g fill="#ff3300">
-              <rect x="158" y="80" width="8" height="60"/>
-              <rect x="170" y="100" width="8" height="40"/>
-              <rect x="182" y="115" width="8" height="25"/>
-              <rect x="194" y="125" width="8" height="15"/>
-              <rect x="206" y="130" width="8" height="10"/>
-              <rect x="218" y="133" width="8" height="7"/>
-              <rect x="230" y="135" width="8" height="5"/>
-            </g>
-            <line x1="155" y1="142" x2="240" y2="142" stroke="#0a0a0a" stroke-width="1"/>
-            <text x="195" y="172" font-size="11" font-family="var(--font-mono)" text-anchor="middle" fill="#0a0a0a">freq. coefficients</text>
-          </g>
-
-          <path d="M 245 95 L 285 95" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr20)"/>
-
-          <!-- Stage 3: Quantize + drop tail -->
-          <g>
-            <text x="335" y="22" font-size="12" font-family="var(--font-mono)" text-anchor="middle" fill="#8b8b8b">3 &middot; QUANT + DROP</text>
-            <rect x="290" y="36" width="90" height="120" fill="none" stroke="#0a0a0a" stroke-width="1"/>
-            <g font-family="var(--font-mono)" font-size="12" fill="#0a0a0a">
-              <text x="298" y="60">42 18 11 4</text>
-              <text x="298" y="78">2 0 0 0</text>
-              <text x="298" y="96" fill="#ff3300">&larr; keep top-k</text>
-              <text x="298" y="118" fill="#8b8b8b" font-size="11">drop high-freq noise</text>
-              <text x="298" y="132" fill="#8b8b8b" font-size="11">(energy concentrates</text>
-              <text x="298" y="142" fill="#8b8b8b" font-size="11">in low-freq)</text>
-            </g>
-            <text x="335" y="172" font-size="11" font-family="var(--font-mono)" text-anchor="middle" fill="#0a0a0a">int sequence</text>
-          </g>
-
-          <path d="M 385 95 L 425 95" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr20)"/>
-
-          <!-- Stage 4: BPE -->
-          <g>
-            <text x="490" y="22" font-size="12" font-family="var(--font-mono)" text-anchor="middle" fill="#ff3300" font-weight="700">4 &middot; BPE</text>
-            <rect x="430" y="36" width="120" height="120" fill="#0a0a0a"/>
-            <g font-family="var(--font-mono)" font-size="11" fill="white" text-anchor="middle">
-              <text x="490" y="68">&lt;f_42&gt;</text>
-              <text x="490" y="86">&lt;f_18&gt;</text>
-              <text x="490" y="104">&lt;f_11&gt;</text>
-              <text x="490" y="125" fill="#ff3300" font-weight="700">~5&times; fewer</text>
-              <text x="490" y="140" fill="#ff3300" font-weight="700">tokens</text>
-            </g>
-            <text x="490" y="172" font-size="11" font-family="var(--font-mono)" text-anchor="middle" fill="#0a0a0a">discrete tokens</text>
-          </g>
-        </svg>
-
-        <ul class="bullet-list" style="font-size: var(--size-small);">
-          <li><strong>Continuous &rarr; back to discrete</strong>, but each token carries more info</li>
-          <li>Energy concentrates in low-frequency &mdash; <em>drop the noise tail for free</em></li>
-          <li><strong>5&times; shorter</strong> sequences than RT-1-style binning &rarr; faster train, faster inference</li>
-        </ul>
+        <div style="flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; background: white; padding: 0.5rem; border: 1px solid var(--color-grid-line);">
+          <img src="images/papers/fast/dct-method-1.png"
+               alt="FAST tokenization method (paper Fig 2) — 5-step pipeline: normalized action chunk → DCT → quantize → sparse matrix → flatten → BPE-compressed tokens"
+               style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        </div>
+        <p style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-align: center; margin-top: 0;">
+          (1) chunk &rarr; (2) <strong>DCT</strong> &rarr; (3) quantize &rarr; (4) flatten low-freq first &rarr; (5) <strong>BPE</strong> compress
+        </p>
       </div>
 
-      <div style="flex: 0.9; display: flex; flex-direction: column; gap: 0.85rem;">
-        <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
-          Clip &middot; Sergey Levine @ TWiML #719
+      <!-- RIGHT: takeaway + acronym expansion + result -->
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 0.7rem; justify-content: center;">
+
+        <h2 style="font-size: var(--size-h2); line-height: 1.15;">Continuous &rarr; <span class="accent-text">back to discrete</span>, in a smarter basis.</h2>
+
+        <ul class="bullet-list" style="font-size: var(--size-small); gap: 0.5rem;">
+          <li><strong>DCT</strong> = <em>Discrete Cosine Transform</em> (same idea as JPEG image compression). Energy concentrates in the low-frequency components &mdash; the high-frequency tail is mostly noise.</li>
+          <li><strong>BPE</strong> = <em>Byte-Pair Encoding</em> (same tokenizer family as GPT). Greedy merge of frequent integer pairs &rarr; compact vocabulary.</li>
+          <li>Result: <strong>~5&times; shorter</strong> action sequences than RT-1-style 256-bin discretization &rarr; faster train + faster inference, same accuracy.</li>
+        </ul>
+
+        <div style="padding: 0.65rem 0.95rem; background: var(--color-bg-alt); border-left: 3px solid var(--color-accent); font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.45;">
+          <strong>Big picture:</strong> FAST is Strategy C &mdash; the 2025 hybrid that quietly returns to discrete tokens, but in a basis where each token carries real information about the trajectory.
         </div>
-        <div class="video-frame aspect-16x9">
-          <iframe src="https://www.youtube-nocookie.com/embed/5mY71rGXAkM?start=2357&end=2425&autoplay=1&mute=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media" frameborder="0"></iframe>
-        </div>
-        <p class="video-caption">"A better way to compress actions" &mdash; FAST motivation &middot; 39:17&ndash;40:25</p>
-        <div style="padding: 0.85rem 1rem; background: var(--color-bg-alt); border-left: var(--border-accent); font-size: var(--size-small); color: var(--color-ink-soft);">
-          The third option: <strong>continuous &rarr; back to discrete</strong>, but in a basis where each token carries real information.
-        </div>
+
       </div>
 
     </div>
@@ -2200,13 +2151,20 @@ body.notes-mode aside.notes h4 {
   </div>
 
   <footer class="slide-footer">
-    <span><span class="citation">arXiv:2501.09747</span> &middot; Pertsch et al. "FAST: Efficient Action Tokenization for VLA Models"</span>
+    <span><span class="citation">arXiv:2501.09747</span> &middot; Pertsch et al. "FAST: Efficient Action Tokenization for VLA Models" &middot; pi.website/research/fast</span>
     <span class="mono">20</span>
   </footer>
 
   <aside class="notes">
-    <h4>FAST tokenizer</h4>
-    The 2025 twist on Strategy A. Take a chunk of continuous actions, run it through a Discrete Cosine Transform (energy concentrates in the low-frequency bins), quantize and drop the high-frequency tail (which is mostly noise anyway), and BPE-encode the result. The output is a discrete vocabulary again, but each token carries far more information than a single 256-bin quantization &mdash; sequences are roughly 5x shorter, so training and inference both speed up. Levine's TWiML quote is the cleanest statement of the intuition: "a better way to compress actions."
+    <h4>FAST tokenizer &mdash; original Fig 2</h4>
+    The 2025 twist on Strategy A. Paper Fig 2 walks the 5-step pipeline:<br>
+    (1) Take a chunk of continuous actions (normalized).<br>
+    (2) Apply <strong>DCT</strong> &mdash; Discrete Cosine Transform &mdash; the same orthonormal basis JPEG uses for images. Smooth trajectories have most energy in the low-frequency components.<br>
+    (3) Quantize the frequency coefficients to small integers. The high-frequency tail collapses to zeros (noise drops out for free).<br>
+    (4) Flatten low-frequency components first &mdash; gives a sparse integer sequence where the front is informative and the back is mostly zeros.<br>
+    (5) Apply <strong>BPE</strong> &mdash; Byte-Pair Encoding &mdash; the same greedy-merge tokenizer GPT uses for text. The repeated zero patterns compress into single tokens.<br><br>
+    Result is ~5&times; shorter action sequences than RT-1's 256-bin scheme, at matched accuracy. That speedup is what makes &pi;0-FAST viable on consumer-grade hardware.<br><br>
+    Strategy C in the chapter's three-way takeaway: continuous &rarr; back to discrete, but in a basis where each token carries real information.
   </aside>
 </section>
 
@@ -2279,14 +2237,18 @@ body.notes-mode aside.notes h4 {
         </div>
       </div>
 
-      <div style="flex: 0.9; display: flex; flex-direction: column; gap: 0.85rem;">
+      <div style="flex: 0.9; display: flex; flex-direction: column; gap: 0.65rem; min-height: 0;">
         <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
-          Closer clip &middot; Fei Xia @ Stanford CS25 V3
+          7 action-head architectures &middot; Survey Fig 3
         </div>
-        <div class="video-frame aspect-16x9">
-          <iframe src="https://www.youtube-nocookie.com/embed/fz8wf9hN20c?start=3492&end=3565&autoplay=1&mute=1&rel=0&modestbranding=1" allow="autoplay; encrypted-media" frameborder="0"></iframe>
+        <div style="flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; background: white; padding: 0.5rem; border: 1px solid var(--color-grid-line);">
+          <img src="images/survey-2510-07077/sensorimotor-1.png"
+               alt="Survey Fig 3 — 7 sensorimotor architecture types for VLA (Transformer/VLM × Discrete/Diffusion/Flow)"
+               style="max-width: 100%; max-height: 100%; object-fit: contain;">
         </div>
-        <p class="video-caption">"Action as yet another language" &middot; 58:12&ndash;59:25</p>
+        <p style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-align: center; margin-top: 0;">
+          Backbone (Transformer / VLM) &times; Action head (Discrete token / Diffusion / Flow / DiT) &mdash; 7 known combinations
+        </p>
       </div>
 
     </div>
@@ -2349,49 +2311,80 @@ body.notes-mode aside.notes h4 {
           Robot-learning datasets · log scale
         </div>
 
-        <svg viewBox="0 0 640 320" style="width: 100%; max-height: 360px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
-          <line x1="170" y1="20" x2="170" y2="280" stroke="#0a0a0a" stroke-width="1.5"/>
-          <line x1="170" y1="280" x2="620" y2="280" stroke="#0a0a0a" stroke-width="1.5"/>
+        <svg viewBox="0 0 640 480" class="diagram-safe" style="width: 100%; max-height: 56vh; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+          <!-- DATA WALL with EXAGGERATED LLM CEILING
+               Upper region y=40..170  = 10¹³ (LLM tokens, visually FAR above)
+               Axis break  y=190..220  = wavy gap
+               Lower region y=240..440 = 10³..10⁷ (robotics datasets) -->
 
-          <g font-size="11" text-anchor="end" fill="#8b8b8b">
-            <text x="165" y="285">10³</text>
-            <text x="165" y="220">10⁴</text>
-            <text x="165" y="155">10⁵</text>
-            <text x="165" y="90">10⁶</text>
-            <text x="165" y="25">10⁷</text>
+          <line x1="170" y1="40"  x2="170" y2="440" stroke="#0a0a0a" stroke-width="1.5"/>
+          <line x1="170" y1="440" x2="620" y2="440" stroke="#0a0a0a" stroke-width="1.5"/>
+
+          <!-- axis break — zigzag indicating "scale skipped" -->
+          <g stroke="#0a0a0a" stroke-width="1.5" fill="white">
+            <path d="M 160 222 L 170 215 L 180 222 L 170 230 Z"/>
+            <path d="M 160 202 L 170 195 L 180 202 L 170 210 Z"/>
           </g>
 
+          <!-- Lower region — robotics 10³..10⁷ -->
+          <g font-size="12" text-anchor="end" fill="#8b8b8b">
+            <text x="165" y="444">10³</text>
+            <text x="165" y="394">10⁴</text>
+            <text x="165" y="344">10⁵</text>
+            <text x="165" y="294">10⁶</text>
+            <text x="165" y="244">10⁷</text>
+          </g>
           <g stroke="#0a0a0a" stroke-opacity="0.06" stroke-dasharray="2,3">
-            <line x1="170" y1="220" x2="620" y2="220"/>
-            <line x1="170" y1="155" x2="620" y2="155"/>
-            <line x1="170" y1="90" x2="620" y2="90"/>
-            <line x1="170" y1="25" x2="620" y2="25"/>
+            <line x1="170" y1="394" x2="620" y2="394"/>
+            <line x1="170" y1="344" x2="620" y2="344"/>
+            <line x1="170" y1="294" x2="620" y2="294"/>
+            <line x1="170" y1="244" x2="620" y2="244"/>
           </g>
 
-          <rect x="185" y="240" width="60" height="40" fill="#0a0a0a"/>
-          <text x="215" y="234" font-size="11" font-weight="700" text-anchor="middle" fill="#0a0a0a">RoboMimic</text>
-          <text x="215" y="298" font-size="11" text-anchor="middle" fill="#8b8b8b">~6k demos</text>
+          <rect x="185" y="412" width="60" height="28" fill="#0a0a0a"/>
+          <text x="215" y="406" font-size="12" font-weight="700" text-anchor="middle" fill="#0a0a0a">RoboMimic</text>
+          <text x="215" y="456" font-size="10" text-anchor="middle" fill="#8b8b8b">~6k</text>
 
-          <rect x="260" y="175" width="60" height="105" fill="#0a0a0a"/>
-          <text x="290" y="169" font-size="11" font-weight="700" text-anchor="middle" fill="#0a0a0a">BridgeData V2</text>
-          <text x="290" y="298" font-size="11" text-anchor="middle" fill="#8b8b8b">60k demos</text>
+          <rect x="260" y="362" width="60" height="78" fill="#0a0a0a"/>
+          <text x="290" y="356" font-size="12" font-weight="700" text-anchor="middle" fill="#0a0a0a">BridgeV2</text>
+          <text x="290" y="456" font-size="10" text-anchor="middle" fill="#8b8b8b">60k</text>
 
-          <rect x="335" y="167" width="60" height="113" fill="#0a0a0a"/>
-          <text x="365" y="161" font-size="11" font-weight="700" text-anchor="middle" fill="#0a0a0a">DROID</text>
-          <text x="365" y="298" font-size="11" text-anchor="middle" fill="#8b8b8b">76k traj · 564 scenes</text>
+          <rect x="335" y="355" width="60" height="85" fill="#0a0a0a"/>
+          <text x="365" y="349" font-size="12" font-weight="700" text-anchor="middle" fill="#0a0a0a">DROID</text>
+          <text x="365" y="456" font-size="10" text-anchor="middle" fill="#8b8b8b">76k</text>
 
-          <rect x="410" y="155" width="60" height="125" fill="#0a0a0a"/>
-          <text x="440" y="149" font-size="11" font-weight="700" text-anchor="middle" fill="#0a0a0a">RoboCasa</text>
-          <text x="440" y="298" font-size="11" text-anchor="middle" fill="#8b8b8b">100k kitchen demos</text>
+          <rect x="410" y="345" width="60" height="95" fill="#0a0a0a"/>
+          <text x="440" y="339" font-size="12" font-weight="700" text-anchor="middle" fill="#0a0a0a">RoboCasa</text>
+          <text x="440" y="456" font-size="10" text-anchor="middle" fill="#8b8b8b">100k</text>
 
-          <rect x="485" y="90" width="60" height="190" fill="#ff3300"/>
-          <text x="515" y="84" font-size="12" font-weight="800" text-anchor="middle" fill="#ff3300">OpenX</text>
-          <text x="515" y="298" font-size="11" text-anchor="middle" fill="#0a0a0a">1M+ episodes · 22 embodiments</text>
+          <rect x="485" y="294" width="60" height="146" fill="#ff3300"/>
+          <text x="515" y="288" font-size="13" font-weight="800" text-anchor="middle" fill="#ff3300">OpenX</text>
+          <text x="515" y="456" font-size="10" text-anchor="middle" fill="#ff3300" font-weight="700">1M+ ep</text>
 
-          <line x1="170" y1="20" x2="615" y2="20" stroke="#ff3300" stroke-width="1.2" stroke-dasharray="4,3"/>
-          <text x="615" y="14" font-size="11" font-weight="700" text-anchor="end" fill="#ff3300">LLM tokens ≈ 10¹³ (off-chart)</text>
+          <!-- Upper region — LLM ceiling visually FAR above -->
+          <text x="165" y="115" font-size="12" font-weight="700" text-anchor="end" fill="#ff3300">10¹³</text>
+          <rect x="170" y="80" width="450" height="30" fill="#ffe8e3" stroke="#ff3300" stroke-width="0.5"/>
+          <line x1="170" y1="110" x2="620" y2="110" stroke="#ff3300" stroke-width="2.5" stroke-dasharray="6,3"/>
+          <text x="395" y="100" font-size="15" font-weight="800" text-anchor="middle" fill="#ff3300" font-family="var(--font-display)">
+            LLM training tokens &mdash; 10¹³
+          </text>
 
-          <text x="615" y="50" font-size="11" text-anchor="end" fill="#8b8b8b">→ still 6 orders short</text>
+          <!-- gap label -->
+          <text x="395" y="155" font-size="11" font-style="italic" fill="#8b8b8b" text-anchor="middle">
+            &middot; &middot; &middot; six orders of magnitude gap &middot; &middot; &middot;
+          </text>
+
+          <!-- annotation arrow from OpenX up to LLM line -->
+          <path d="M 545 290 L 585 130" stroke="#ff3300" stroke-width="1" fill="none" stroke-dasharray="2,3" marker-end="url(#arr23up)"/>
+          <text x="610" y="210" font-size="11" font-weight="700" fill="#ff3300" text-anchor="end" transform="rotate(-72 610 210)">
+            still ~10&#8310;&times; short
+          </text>
+
+          <defs>
+            <marker id="arr23up" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+              <path d="M 0 0 L 6 4 L 0 8 z" fill="#ff3300"/>
+            </marker>
+          </defs>
         </svg>
       </div>
 
@@ -3196,12 +3189,12 @@ body.notes-mode aside.notes h4 {
       <!-- Left: video -->
       <div style="flex: 1.05; display: flex; flex-direction: column; gap: 0.5rem;">
         <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
-          Official &middot; Google DeepMind &middot; "Revolutionizing Robotics: Introducing RT-2"
+          Official project-page video &middot; robotics-transformer2.github.io
         </div>
         <div class="video-frame aspect-16x9">
-          <iframe src="https://www.youtube-nocookie.com/embed/F-irGcBneRc?autoplay=1&mute=1&loop=1&playlist=F-irGcBneRc&rel=0&modestbranding=1&controls=0" allow="autoplay; encrypted-media" frameborder="0"></iframe>
+          <video src="https://pub-678d8fb0a3f1496e94a1891463933279.r2.dev/videos/inline/rt2_teaser.mp4" autoplay loop muted playsinline></video>
         </div>
-        <p class="video-caption">Robot picks the "extinct animal" toy &middot; never trained on the word "dinosaur"</p>
+        <p class="video-caption">Robot picks the "extinct animal" toy &middot; never trained on the word "dinosaur" (rt2_teaser.mp4)</p>
       </div>
 
       <!-- Right: key facts -->
@@ -3727,173 +3720,66 @@ body.notes-mode aside.notes h4 {
     <span>39 / 77</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1rem); gap: 0.5rem;">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1.1rem); gap: 0.75rem;">
 
     <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 2rem;">
-      <h1>VLA cheat-sheet &mdash; <span class="accent-text">12 models, one table</span></h1>
+      <h1>VLA timeline &mdash; <span class="accent-text">14 milestone models</span></h1>
       <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
-        Bookmark for the rest of the talk
+        Survey Fig 2 &middot; bookmark for Ch5&ndash;7
       </div>
     </div>
 
-    <style>
-      .vla-table { width: 100%; border-collapse: collapse; font-size: clamp(0.55rem, 1.05vw, 0.85rem); table-layout: fixed; }
-      .vla-table thead tr { border-top: 2px solid var(--color-ink); border-bottom: 2px solid var(--color-ink); }
-      .vla-table thead th { padding: 0.55rem 0.45rem; text-align: left; font-family: var(--font-mono); font-size: clamp(0.5rem, 0.85vw, 0.7rem); text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ink-soft); }
-      .vla-table tbody tr { border-bottom: 1px solid var(--color-grid-line); }
-      .vla-table tbody tr:hover { background: var(--color-bg-alt); }
-      .vla-table tbody td { padding: 0.5rem 0.45rem; vertical-align: middle; line-height: 1.3; }
-      .vla-table .col-model    { width: 16%; }
-      .vla-table .col-year     { width: 9%; }
-      .vla-table .col-org      { width: 14%; }
-      .vla-table .col-backbone { width: 24%; }
-      .vla-table .col-head     { width: 22%; }
-      .vla-table .col-open     { width: 15%; text-align: center; }
-      .vla-table .model-name { font-family: var(--font-display); font-weight: 800; color: var(--color-ink); }
-      .vla-table .yr { font-family: var(--font-mono); color: var(--color-ink-muted); }
-      .vla-table .org { color: var(--color-ink-soft); font-family: var(--font-mono); font-size: 0.95em; }
-      .vla-table .backbone { color: var(--color-ink-soft); }
-      .vla-table .head-cell { color: var(--color-ink); }
-      .vla-table .open-yes { color: var(--color-accent); font-weight: 800; font-family: var(--font-mono); }
-      .vla-table .open-no  { color: var(--color-ink-muted); font-family: var(--font-mono); }
-      .vla-table .open-partial { color: var(--color-ink-soft); font-weight: 700; font-family: var(--font-mono); font-size: 0.92em; }
-      .vla-table .row-anchor { background: var(--color-accent-soft); }
-    </style>
+    <div style="display: flex; gap: 1.5rem; flex: 1; min-height: 0; margin-top: 0.4rem;">
 
-    <div style="flex: 1; overflow: hidden; display: flex; flex-direction: column; min-height: 0;">
-      <table class="vla-table">
-        <colgroup>
-          <col class="col-model"><col class="col-year"><col class="col-org"><col class="col-backbone"><col class="col-head"><col class="col-open">
-        </colgroup>
-        <thead>
-          <tr>
-            <th>Model</th>
-            <th>Year</th>
-            <th>Org</th>
-            <th>Backbone</th>
-            <th>Action head</th>
-            <th>Open?</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="model-name">RT-1</span></td>
-            <td class="yr">2022</td>
-            <td class="org">Google</td>
-            <td class="backbone">FiLM-EfficientNet + Transformer</td>
-            <td class="head-cell">256-bin discrete tokens (11-dim)</td>
-            <td><span class="open-no">closed</span></td>
-          </tr>
-          <tr>
-            <td><span class="model-name">RT-2</span></td>
-            <td class="yr">2023</td>
-            <td class="org">Google DeepMind</td>
-            <td class="backbone">PaLI-X / PaLM-E (5B&middot;55B)</td>
-            <td class="head-cell">Actions as text tokens (co-FT)</td>
-            <td><span class="open-no">closed</span></td>
-          </tr>
-          <tr class="row-anchor">
-            <td><span class="model-name">OpenVLA</span></td>
-            <td class="yr">2024</td>
-            <td class="org">Stanford / UW / Toyota</td>
-            <td class="backbone">SigLIP + DINOv2 &rarr; Llama-2 7B</td>
-            <td class="head-cell">256-bin discrete tokens</td>
-            <td><span class="open-yes">OPEN 7B</span></td>
-          </tr>
-          <tr class="row-anchor">
-            <td><span class="model-name">Octo</span></td>
-            <td class="yr">2024</td>
-            <td class="org">Berkeley / Stanford</td>
-            <td class="backbone">Block-wise transformer (93M&middot;27M)</td>
-            <td class="head-cell">Diffusion action head</td>
-            <td><span class="open-yes">OPEN</span></td>
-          </tr>
-          <tr class="row-anchor">
-            <td><span class="model-name">RDT-1B</span></td>
-            <td class="yr">2024</td>
-            <td class="org">Tsinghua TSAIL</td>
-            <td class="backbone">DiT-style transformer (1B)</td>
-            <td class="head-cell">Diffusion over action chunk</td>
-            <td><span class="open-yes">OPEN 1B</span></td>
-          </tr>
-          <tr>
-            <td><span class="model-name">&pi;0</span></td>
-            <td class="yr">2024</td>
-            <td class="org">Physical Intelligence</td>
-            <td class="backbone">PaliGemma 3B + 300M expert</td>
-            <td class="head-cell">Flow-matching action expert</td>
-            <td><span class="open-no">closed</span></td>
-          </tr>
-          <tr>
-            <td><span class="model-name">&pi;0.5</span></td>
-            <td class="yr">2025</td>
-            <td class="org">Physical Intelligence</td>
-            <td class="backbone">Hierarchical &pi;0 (HL + LL VLA)</td>
-            <td class="head-cell">Flow-matching + HL semantic plan</td>
-            <td><span class="open-no">closed</span></td>
-          </tr>
-          <tr>
-            <td><span class="model-name">Helix</span></td>
-            <td class="yr">2025</td>
-            <td class="org">Figure AI</td>
-            <td class="backbone">S2 VLM 7B (7-9 Hz) + S1 80M (200 Hz)</td>
-            <td class="head-cell">Latent vector &rarr; small motor expert</td>
-            <td><span class="open-no">closed</span></td>
-          </tr>
-          <tr class="row-anchor">
-            <td><span class="model-name">GR00T N1</span></td>
-            <td class="yr">2025</td>
-            <td class="org">NVIDIA GEAR</td>
-            <td class="backbone">Eagle VLM (~2B) + DiT</td>
-            <td class="head-cell">DiT action head (System-1)</td>
-            <td><span class="open-yes">OPEN</span></td>
-          </tr>
-          <tr class="row-anchor">
-            <td><span class="model-name">GR00T N1.5</span></td>
-            <td class="yr">2025</td>
-            <td class="org">NVIDIA GEAR</td>
-            <td class="backbone">Eagle VLM + DiT + FLARE</td>
-            <td class="head-cell">DiT + ego-video latent alignment</td>
-            <td><span class="open-yes">OPEN</span></td>
-          </tr>
-          <tr>
-            <td><span class="model-name">Gemini Robotics 1.5</span></td>
-            <td class="yr">2025</td>
-            <td class="org">Google DeepMind</td>
-            <td class="backbone">Gemini + ER 1.5 reasoner</td>
-            <td class="head-cell">Embodied CoT &rarr; action</td>
-            <td><span class="open-no">closed</span></td>
-          </tr>
-          <tr>
-            <td><span class="model-name">DreamZero (GR00T N2)</span></td>
-            <td class="yr">2026</td>
-            <td class="org">NVIDIA GEAR</td>
-            <td class="backbone">14B AR video diffusion</td>
-            <td class="head-cell">Joint video + action generation (WAM)</td>
-            <td><span class="open-partial">paper-only</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+      <!-- LEFT: original survey figure -->
+      <div style="flex: 1.55; display: flex; flex-direction: column; gap: 0.45rem; min-height: 0;">
+        <div style="flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; border: 1px solid var(--color-grid-line); padding: 0.6rem; background: var(--color-bg);">
+          <img src="images/survey-2510-07077/history-1.png"
+               alt="Timeline of major VLA models — Kawaharazuka et al. Survey Fig 2"
+               style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        </div>
+        <p style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-align: center;">
+          Y-axis: chronology &middot; X-axis: architectural lineage (CNN &rarr; Transformer &rarr; VLM &rarr; Diffusion / DiT &rarr; Flow &rarr; Latent action &rarr; Hierarchical)
+        </p>
+      </div>
 
-    <div style="margin-top: 0.5rem; padding: 0.55rem 1rem; background: var(--color-bg-alt); font-size: var(--size-small); color: var(--color-ink-soft); display: flex; gap: 1.5rem; align-items: center;">
-      <span><span style="display: inline-block; width: 0.8rem; height: 0.8rem; background: var(--color-accent-soft); border: 1px solid var(--color-accent); vertical-align: middle;"></span> <strong style="color: var(--color-accent);">open-weights</strong> rows = your candidate list for hands-on work.</span>
-      <span style="margin-left: auto; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted);">Section recap &middot; bookmark for Ch5&ndash;7</span>
+      <!-- RIGHT: takeaway sidebar -->
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 0.85rem; justify-content: center;">
+
+        <h2 style="font-size: var(--size-h2); line-height: 1.15;">Read the chart left&ndash;right.</h2>
+
+        <p style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.5;">
+          Each x-column is a <strong>family of decoder choices</strong>.
+          Same vision input, completely different action head &mdash; that's why "VLA" isn't a single recipe.
+        </p>
+
+        <ul class="bullet-list" style="font-size: var(--size-small); gap: 0.55rem;">
+          <li><strong>Open-weight track</strong> &mdash; OpenVLA &middot; Octo &middot; RDT-1B &middot; GR00T N1/N1.5 are your candidate list for hands-on work.</li>
+          <li><strong>Backbone shrinks over time</strong> &mdash; PaLI-X 55B &rarr; Llama-2 7B &rarr; PaliGemma 3B &rarr; Eagle 2B. Smaller, faster, robot-tuned.</li>
+          <li><strong>Right edge = today</strong> &mdash; Hierarchical (&pi;0.5) + Latent action (LAPA) + DiT (GR00T) are the live frontier.</li>
+        </ul>
+
+        <div style="padding: 0.65rem 1rem; background: var(--color-bg-alt); border-left: 3px solid var(--color-accent); font-size: var(--size-tiny); color: var(--color-ink-soft); line-height: 1.5;">
+          The two models in this talk that aren't yet on the survey chart: <strong>Helix</strong> (Figure AI, 2025-02 &mdash; closed) and <strong>DreamZero</strong> (NVIDIA GR00T N2, 2026 &mdash; covered in Ch7 as a WAM, not a VLA).
+        </div>
+
+      </div>
+
     </div>
 
   </div>
 
   <footer class="slide-footer">
-    <span>RT-1 &middot; RT-2 &middot; OpenVLA &middot; Octo &middot; RDT-1B &middot; &pi;0 &middot; &pi;0.5 &middot; Helix &middot; GR00T N1/N1.5 &middot; Gemini Robotics 1.5 &middot; DreamZero</span>
+    <span>Figure: Kawaharazuka, Oh, Yamada, Posner, Zhu &middot; <span class="citation">arXiv:2510.07077</span> &middot; Survey on VLA Models (Fig 2)</span>
     <span class="mono">39</span>
   </footer>
 
   <aside class="notes">
     <h4>VLA cheat-sheet &mdash; the closing bookmark</h4>
-    One page to hold while we walk through the rest of the talk. Twelve models, ordered by year. Five columns: model name, year, org, backbone, action head, openness.<br><br>
-    Highlighted rows (red background) = open weights, the practical candidate list. OpenVLA, Octo, RDT-1B, GR00T N1, GR00T N1.5. If you need to ship something this semester, start there.<br><br>
-    Notice the action-head column: bin tokens (RT-1/RT-2/OpenVLA), diffusion (Octo, RDT), flow matching (&pi;0/&pi;0.5), small motor expert (Helix), DiT (GR00T family), CoT reasoner (Gemini Robotics 1.5), and joint video-action (DreamZero, the WAM line we'll cover in Ch7). Same input modality, completely different decoders &mdash; that's what "VLA is not a single recipe" means in one glance.<br><br>
-    Backbone trend: the LM keeps shrinking and getting more specialised. PaLI-X 55B (RT-2) &rarr; Llama-2 7B (OpenVLA) &rarr; PaliGemma 3B (&pi;0) &rarr; Eagle 2B (GR00T) &mdash; smaller, faster, robot-tuned.
+    Survey Figure 2 (Kawaharazuka et al. 2025, arXiv:2510.07077). The Y-axis is chronology, the X-axis is architectural lineage. The chart packs the entire 2022-2025 VLA evolution onto one diagram.<br><br>
+    Read left to right: CNN era (CLIPort) &rarr; Transformer foundation (Gato, VIMA) &rarr; RT-series with VLM backbones &rarr; Diffusion Policy lineage &rarr; DiT (RDT-1B) &rarr; Flow matching (&pi;0) &rarr; Latent action (LAPA) &rarr; Hierarchical (&pi;0.5, GR00T N1). That arc is exactly the substrate of Chapters 5-7.<br><br>
+    Two callouts not yet on the survey chart: Helix (Figure AI, closed) and DreamZero (NVIDIA, the WAM line in Ch7). For everything else, the chart is your one-page bookmark.<br><br>
+    Open-weight subset: OpenVLA, Octo, RDT-1B, GR00T N1/N1.5 &mdash; the practical candidate list for hands-on work.
   </aside>
 </section>
 
@@ -3930,186 +3816,65 @@ body.notes-mode aside.notes h4 {
     <span>41 / 77</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1.25rem); gap: 1rem;">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1rem); gap: 0.6rem;">
 
-    <h1>Diffusion as <span class="accent-text">policy</span> &mdash; from image denoise to action denoise</h1>
+    <h1>Diffusion as <span class="accent-text">policy</span> &mdash; original figures, RSS 2023</h1>
 
-    <!-- Top row: recap diagram (left) → action-denoise diagram (right) -->
-    <div style="display: flex; gap: 1.5rem; align-items: stretch;">
+    <div style="display: flex; gap: 1.25rem; flex: 1; align-items: stretch; min-height: 0;">
 
-      <div style="flex: 1; display: flex; flex-direction: column; gap: 0.4rem;">
+      <!-- LEFT: Fig 1 — three policy classes -->
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem; min-height: 0;">
         <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
-          Week 12 recap &middot; DDPM image-denoise
+          Chi et al. RSS 2023 &middot; Fig 1
         </div>
-        <svg viewBox="0 0 560 130" style="width: 100%; max-height: 140px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
-          <!-- noisy image grid -->
-          <g>
-            <rect x="10" y="35" width="70" height="70" fill="none" stroke="#0a0a0a" stroke-width="1.5"/>
-            <g fill="#8b8b8b" opacity="0.7">
-              <rect x="12" y="37" width="10" height="10"/><rect x="28" y="40" width="9" height="11"/><rect x="48" y="38" width="11" height="9"/><rect x="65" y="42" width="10" height="10"/>
-              <rect x="15" y="60" width="11" height="9"/><rect x="35" y="58" width="10" height="11"/><rect x="55" y="62" width="9" height="10"/>
-              <rect x="14" y="80" width="9" height="11"/><rect x="32" y="82" width="11" height="9"/><rect x="52" y="80" width="10" height="11"/><rect x="68" y="84" width="9" height="10"/>
-            </g>
-            <text x="45" y="125" font-size="11" text-anchor="middle" fill="#8b8b8b">x_T noise</text>
-          </g>
-          <!-- arrow → eps_theta box -->
-          <path d="M 88 70 L 145 70" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr41a)"/>
-          <rect x="150" y="50" width="120" height="40" fill="#0a0a0a"/>
-          <text x="210" y="68" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff" font-family="var(--font-display)">&epsilon;<tspan font-size="11" dy="-2">&theta;</tspan></text>
-          <text x="210" y="84" font-size="11" text-anchor="middle" fill="#ffffff">U-Net</text>
-          <text x="210" y="105" font-size="11" text-anchor="middle" fill="#8b8b8b">predict noise</text>
-          <!-- arrow → denoised image -->
-          <path d="M 275 70 L 332 70" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr41a)"/>
-          <g>
-            <rect x="340" y="35" width="70" height="70" fill="none" stroke="#0a0a0a" stroke-width="1.5"/>
-            <circle cx="375" cy="70" r="14" fill="#0a0a0a"/>
-            <rect x="362" y="56" width="26" height="28" fill="#ff3300"/>
-            <text x="375" y="125" font-size="11" text-anchor="middle" fill="#8b8b8b">x_0 image</text>
-          </g>
-          <!-- loop arrow -->
-          <path d="M 210 110 Q 210 130 320 130 Q 410 130 410 110" stroke="#8b8b8b" stroke-width="1" fill="none" stroke-dasharray="3,3" marker-end="url(#arr41a)"/>
-          <text x="475" y="40" font-size="12" fill="#8b8b8b" font-style="italic">T steps</text>
-          <defs>
-            <marker id="arr41a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 6 4 L 0 8 z" fill="#0a0a0a"/></marker>
-          </defs>
-        </svg>
+        <div style="flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; background: white; padding: 0.5rem; border: 1px solid var(--color-grid-line);">
+          <img src="images/papers/diffusion-policy/teaser-1.png"
+               alt="Diffusion Policy Fig 1 — Explicit / Implicit / Diffusion policy comparison"
+               style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        </div>
+        <p style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-align: center;">
+          (a) Explicit: regression / GMM &middot; (b) Implicit: energy-based &middot; (c) Diffusion: learn the gradient field
+        </p>
       </div>
 
-      <div style="flex: 1; display: flex; flex-direction: column; gap: 0.4rem; border-left: 2px solid var(--color-accent); padding-left: 1.25rem;">
-        <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em;">
-          Diffusion Policy &middot; action-denoise
+      <!-- RIGHT: Fig 2 — architecture + input/output -->
+      <div style="flex: 1.1; display: flex; flex-direction: column; gap: 0.5rem; min-height: 0;">
+        <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
+          Chi et al. RSS 2023 &middot; Fig 2
         </div>
-        <svg viewBox="0 0 560 130" style="width: 100%; max-height: 140px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
-          <!-- noisy action sequence -->
-          <g>
-            <line x1="15" y1="70" x2="80" y2="70" stroke="#0a0a0a" stroke-width="1"/>
-            <g stroke="#8b8b8b" stroke-width="1.5" fill="none" opacity="0.7">
-              <path d="M 18 60 L 26 80 L 34 55 L 42 78 L 50 62 L 58 75 L 66 58 L 74 80"/>
-            </g>
-            <text x="45" y="125" font-size="11" text-anchor="middle" fill="#8b8b8b">a_T noise</text>
-          </g>
-          <path d="M 88 70 L 145 70" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr41b)"/>
-          <rect x="150" y="50" width="120" height="40" fill="#ff3300"/>
-          <text x="210" y="68" font-size="11" font-weight="700" text-anchor="middle" fill="#ffffff" font-family="var(--font-display)">&epsilon;<tspan font-size="11" dy="-2">&theta;</tspan> ( a_t , o_t , k )</text>
-          <text x="210" y="84" font-size="11" text-anchor="middle" fill="#ffffff">cond. on observation</text>
-          <text x="210" y="105" font-size="11" text-anchor="middle" fill="#8b8b8b">predict action noise</text>
-          <path d="M 275 70 L 332 70" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr41b)"/>
-          <g>
-            <line x1="340" y1="70" x2="410" y2="70" stroke="#0a0a0a" stroke-width="1"/>
-            <g stroke="#ff3300" stroke-width="2" fill="none">
-              <path d="M 343 75 L 350 68 L 358 60 L 366 55 L 374 58 L 382 65 L 390 70 L 398 78 L 406 82"/>
-            </g>
-            <g fill="#ff3300">
-              <circle cx="343" cy="75" r="2"/><circle cx="350" cy="68" r="2"/><circle cx="358" cy="60" r="2"/><circle cx="366" cy="55" r="2"/><circle cx="374" cy="58" r="2"/><circle cx="382" cy="65" r="2"/><circle cx="390" cy="70" r="2"/><circle cx="398" cy="78" r="2"/><circle cx="406" cy="82" r="2"/>
-            </g>
-            <text x="375" y="125" font-size="11" text-anchor="middle" fill="#8b8b8b">a_0 = action chunk</text>
-          </g>
-          <path d="M 210 110 Q 210 130 320 130 Q 410 130 410 110" stroke="#8b8b8b" stroke-width="1" fill="none" stroke-dasharray="3,3" marker-end="url(#arr41b)"/>
-          <text x="475" y="40" font-size="12" fill="#ff3300" font-style="italic">k denoise steps</text>
-          <defs>
-            <marker id="arr41b" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 6 4 L 0 8 z" fill="#0a0a0a"/></marker>
-          </defs>
-        </svg>
+        <div style="flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; background: white; padding: 0.5rem; border: 1px solid var(--color-grid-line);">
+          <img src="images/papers/diffusion-policy/policy-io-1.png"
+               alt="Diffusion Policy Fig 2 — observation horizon → action chunk; CNN + Transformer variants"
+               style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        </div>
+        <p style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-align: center;">
+          Observation chunk &rarr; &epsilon;<sub>&theta;</sub>(O, A, k) denoises a T<sub>p</sub>-step action chunk &middot; CNN (FiLM) or Transformer
+        </p>
       </div>
 
     </div>
 
-    <!-- Bottom row: architecture box + demo video tile + multimodal narrative -->
-    <div style="display: flex; gap: 1.5rem; align-items: stretch; flex: 1;">
-
-      <div style="flex: 1.3; display: flex; flex-direction: column; gap: 0.5rem;">
-        <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
-          Chi et al. 2023 &middot; Fig 2 redrawn
-        </div>
-        <svg viewBox="0 0 700 220" style="width: 100%; max-height: 100%; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
-          <!-- observation history -->
-          <g>
-            <text x="60" y="25" font-size="12" font-weight="700" text-anchor="middle" fill="#0a0a0a">OBSERVATION HISTORY</text>
-            <g fill="none" stroke="#0a0a0a" stroke-width="1.2">
-              <rect x="15" y="35" width="40" height="32"/>
-              <rect x="60" y="35" width="40" height="32"/>
-              <rect x="105" y="35" width="40" height="32"/>
-            </g>
-            <g fill="#0a0a0a" font-size="11" text-anchor="middle">
-              <text x="35" y="55">o&#x2080;</text>
-              <text x="80" y="55">o&#x2081;</text>
-              <text x="125" y="55">o&#x2082;</text>
-            </g>
-            <text x="80" y="83" font-size="11" text-anchor="middle" fill="#8b8b8b">vision + proprio</text>
-          </g>
-
-          <!-- arrow to vision encoder -->
-          <path d="M 150 51 L 200 51" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr41c)"/>
-          <rect x="205" y="35" width="105" height="32" fill="none" stroke="#0a0a0a" stroke-width="1.2"/>
-          <text x="257" y="55" font-size="12" text-anchor="middle" fill="#0a0a0a" font-weight="700">ResNet vision enc.</text>
-
-          <!-- noise input -->
-          <g>
-            <text x="60" y="125" font-size="12" font-weight="700" text-anchor="middle" fill="#0a0a0a">NOISY ACTION a_k</text>
-            <rect x="15" y="135" width="130" height="32" fill="none" stroke="#0a0a0a" stroke-width="1.2"/>
-            <g stroke="#8b8b8b" stroke-width="1.2" fill="none">
-              <path d="M 22 155 L 32 145 L 42 160 L 52 148 L 62 158 L 72 145 L 82 162 L 92 148 L 102 158 L 112 145 L 122 160 L 132 148"/>
-            </g>
-            <text x="80" y="184" font-size="11" text-anchor="middle" fill="#8b8b8b">+ timestep k embedding</text>
-          </g>
-          <path d="M 150 151 L 200 151" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr41c)"/>
-
-          <!-- denoise network -->
-          <rect x="205" y="80" width="170" height="100" fill="#ff3300"/>
-          <text x="290" y="115" font-size="14" font-weight="900" text-anchor="middle" fill="#ffffff" font-family="var(--font-display)">CONDITIONAL</text>
-          <text x="290" y="135" font-size="14" font-weight="900" text-anchor="middle" fill="#ffffff" font-family="var(--font-display)">DENOISE U-NET</text>
-          <text x="290" y="158" font-size="12" text-anchor="middle" fill="#ffffff">1D conv / transformer</text>
-
-          <!-- output: action chunk -->
-          <path d="M 375 130 L 430 130" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr41c)"/>
-          <g>
-            <text x="555" y="25" font-size="12" font-weight="700" text-anchor="middle" fill="#0a0a0a">ACTION CHUNK (T_p steps)</text>
-            <rect x="435" y="40" width="240" height="180" fill="none" stroke="#0a0a0a" stroke-width="1.2"/>
-            <!-- multi-modal trajectories -->
-            <g stroke="#ff3300" stroke-width="2" fill="none" opacity="0.85">
-              <path d="M 445 180 Q 480 150 515 120 T 585 80 T 665 60"/>
-              <path d="M 445 180 Q 475 165 510 165 T 585 145 T 665 130"/>
-              <path d="M 445 180 Q 485 200 525 195 T 600 175 T 665 165"/>
-            </g>
-            <g fill="#ff3300">
-              <circle cx="445" cy="180" r="3"/>
-              <circle cx="665" cy="60" r="3"/><circle cx="665" cy="130" r="3"/><circle cx="665" cy="165" r="3"/>
-            </g>
-            <text x="555" y="208" font-size="11" text-anchor="middle" fill="#8b8b8b">multi-modal action distribution &mdash; mode-collapse-free</text>
-          </g>
-
-          <defs>
-            <marker id="arr41c" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 6 4 L 0 8 z" fill="#0a0a0a"/></marker>
-          </defs>
-        </svg>
+    <!-- Bottom takeaway strip -->
+    <div style="padding: 0.7rem 1.25rem; background: var(--color-ink); color: var(--color-bg); font-size: var(--size-small); display: flex; gap: 1.5rem; align-items: center; line-height: 1.45;">
+      <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; flex-shrink: 0;">In one line</div>
+      <div>
+        The same &epsilon;<sub>&theta;</sub> that denoises image pixels now denoises an <strong style="color: var(--color-accent);">action chunk</strong> conditioned on observation history &mdash;
+        sample from a multi-modal action distribution instead of regressing to the mean.
       </div>
-
-      <div style="flex: 1; display: flex; flex-direction: column; gap: 0.5rem;">
-        <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
-          Demo &middot; Push-T (Chi 2023)
-        </div>
-        <div class="video-frame aspect-16x9">
-          <video src="https://pub-678d8fb0a3f1496e94a1891463933279.r2.dev/videos/inline/diffusion-policy-pusht.mp4" autoplay muted loop playsinline></video>
-        </div>
-        <div style="padding: 0.75rem 1rem; background: var(--color-bg-alt); border-left: var(--border-accent); font-size: var(--size-small); margin-top: auto;">
-          Same <strong>&epsilon;<sub>&theta;</sub></strong> that denoised pixels now denoises an <strong>action chunk</strong> &mdash; conditioned on observations, multi-modal by construction.
-        </div>
-      </div>
-
     </div>
 
   </div>
 
   <footer class="slide-footer">
-    <span>Chi, Feng, Du, Xu, Burchfiel, Tedrake, Song &middot; RSS 2023 &middot; <span class="citation">arxiv:2303.04137</span> &middot; diffusion-policy.cs.columbia.edu</span>
+    <span>Chi, Feng, Du, Xu, Burchfiel, Tedrake, Song &middot; RSS 2023 &middot; <span class="citation">arXiv:2303.04137</span> &middot; diffusion-policy.cs.columbia.edu</span>
     <span class="mono">41</span>
   </footer>
 
   <aside class="notes">
-    <h4>Diffusion as policy</h4>
-    Single-slide version of what used to be two. <strong>The pitch in one line:</strong> the &epsilon;<sub>&theta;</sub> network you saw last week predicting image noise &mdash; here it predicts noise on an <em>action chunk</em> conditioned on the observation history. Everything else is the same DDPM machinery (timestep embedding, T denoise steps, identical loss).<br><br>
-    Why this matters: behavior cloning with an MSE head collapses to the mean when the demonstration data is multi-modal (multiple valid ways to push the T-block). Diffusion samples from the distribution &mdash; so each rollout commits to one mode. That's the entire reason every modern policy uses a diffusion or flow head.<br><br>
-    Push-T loop on the right is the canonical demo from the project page.
+    <h4>Diffusion as policy &mdash; original paper figures</h4>
+    Left = paper Fig 1: the three policy classes compared on the same 1-D regression toy. (a) Explicit policy regresses to the mean &mdash; collapses on multi-modal data. (b) Implicit / energy-based is bumpy and hard to optimise. (c) Diffusion learns the gradient field across the whole action space &mdash; samples cleanly from either mode.<br><br>
+    Right = paper Fig 2: the architecture. T<sub>o</sub>-step observation history conditions a U-Net (FiLM-conditioned 1D conv) <em>or</em> a Transformer (cross-attention). Output is a T<sub>p</sub>-step action chunk.<br><br>
+    The pitch in one line: the same &epsilon;<sub>&theta;</sub> that denoises image pixels now denoises an action chunk &mdash; conditioned on observation history, multi-modal by construction. That's why every modern policy uses a diffusion or flow head.
   </aside>
 </section>
 
@@ -4121,165 +3886,80 @@ body.notes-mode aside.notes h4 {
     <span>42 / 77</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1.25rem); gap: 1rem;">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1rem); gap: 0.65rem;">
 
     <h1>Why <span class="accent-text">"fast"</span> matters &mdash; control frequency</h1>
 
-    <div style="display: flex; gap: 2rem; flex: 1; align-items: stretch;">
+    <div style="display: flex; gap: 1.25rem; flex: 1; align-items: stretch; min-height: 0;">
 
-      <!-- Chart -->
-      <div style="flex: 2; display: flex; flex-direction: column; gap: 0.5rem; min-width: 0;">
+      <!-- LEFT: FiS-VLA method figure showing dual-system frequency split -->
+      <div style="flex: 1.5; display: flex; flex-direction: column; gap: 0.45rem; min-height: 0;">
         <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
-          Reported inference / action-loop rate &middot; log Hz axis
+          FiS-VLA architecture &middot; Chen et al. 2025 &middot; Fig 2
         </div>
-
-        <svg viewBox="0 0 820 440" style="width: 100%; max-height: 100%; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
-
-          <!-- background grid for log Hz -->
-          <g stroke="rgba(10,10,10,0.06)" stroke-width="1">
-            <!-- vertical grid at 1, 10, 30, 100, 200, 1000 -->
-            <line x1="90"  y1="40" x2="90"  y2="370"/>
-            <line x1="225" y1="40" x2="225" y2="370"/>
-            <line x1="305" y1="40" x2="305" y2="370"/>
-            <line x1="395" y1="40" x2="395" y2="370"/>
-            <line x1="455" y1="40" x2="455" y2="370"/>
-            <line x1="555" y1="40" x2="555" y2="370"/>
-            <line x1="700" y1="40" x2="700" y2="370"/>
-          </g>
-
-          <!-- contact threshold band -->
-          <rect x="395" y="40" width="60" height="330" fill="#ff3300" opacity="0.06"/>
-          <text x="425" y="34" font-size="11" fill="#ff3300" text-anchor="middle" font-weight="700">contact band 30-50 Hz</text>
-
-          <!-- force band -->
-          <rect x="555" y="40" width="145" height="330" fill="#ff3300" opacity="0.10"/>
-          <text x="627" y="34" font-size="11" fill="#ff3300" text-anchor="middle" font-weight="700">force-control 200 Hz+</text>
-
-          <!-- axes -->
-          <line x1="90" y1="370" x2="780" y2="370" stroke="#0a0a0a" stroke-width="1.5"/>
-          <line x1="90" y1="40" x2="90" y2="370" stroke="#0a0a0a" stroke-width="1.5"/>
-
-          <!-- x-axis ticks + labels (log) -->
-          <g font-size="11" fill="#0a0a0a" text-anchor="middle">
-            <line x1="90"  y1="370" x2="90"  y2="376" stroke="#0a0a0a"/>
-            <line x1="225" y1="370" x2="225" y2="376" stroke="#0a0a0a"/>
-            <line x1="305" y1="370" x2="305" y2="376" stroke="#0a0a0a"/>
-            <line x1="395" y1="370" x2="395" y2="376" stroke="#0a0a0a"/>
-            <line x1="455" y1="370" x2="455" y2="376" stroke="#0a0a0a"/>
-            <line x1="555" y1="370" x2="555" y2="376" stroke="#0a0a0a"/>
-            <line x1="700" y1="370" x2="700" y2="376" stroke="#0a0a0a"/>
-            <text x="90"  y="392">1</text>
-            <text x="225" y="392">5</text>
-            <text x="305" y="392">10</text>
-            <text x="395" y="392">30</text>
-            <text x="455" y="392">50</text>
-            <text x="555" y="392">100</text>
-            <text x="700" y="392">200</text>
-          </g>
-          <text x="435" y="418" font-size="12" font-weight="700" fill="#0a0a0a" text-anchor="middle">CONTROL FREQUENCY (Hz, log scale)</text>
-
-          <!-- Helper: each model = horizontal lane with a labeled marker -->
-          <!-- lane y positions: 70, 110, 150, 190, 230, 270, 310, 350 -->
-
-          <!-- RT-2 ~1 Hz -->
-          <g>
-            <line x1="90" y1="70" x2="98" y2="70" stroke="#0a0a0a" stroke-width="1" stroke-dasharray="2,3" opacity="0.4"/>
-            <circle cx="90" cy="70" r="7" fill="#0a0a0a"/>
-            <text x="105" y="74" font-size="11" font-weight="700" fill="#0a0a0a">RT-2</text>
-            <text x="155" y="74" font-size="12" fill="#8b8b8b">~1 Hz &middot; 55B VLA, end-to-end LM</text>
-          </g>
-
-          <!-- OpenVLA ~5 Hz -->
-          <g>
-            <line x1="90" y1="110" x2="223" y2="110" stroke="#0a0a0a" stroke-width="1" stroke-dasharray="2,3" opacity="0.4"/>
-            <circle cx="225" cy="110" r="7" fill="#0a0a0a"/>
-            <text x="240" y="114" font-size="11" font-weight="700" fill="#0a0a0a">OpenVLA</text>
-            <text x="320" y="114" font-size="12" fill="#8b8b8b">~5 Hz &middot; 7B autoregressive</text>
-          </g>
-
-          <!-- Diffusion Policy ~10 Hz -->
-          <g>
-            <line x1="90" y1="150" x2="303" y2="150" stroke="#0a0a0a" stroke-width="1" stroke-dasharray="2,3" opacity="0.4"/>
-            <circle cx="305" cy="150" r="7" fill="#0a0a0a"/>
-            <text x="320" y="154" font-size="11" font-weight="700" fill="#0a0a0a">Diffusion Policy</text>
-            <text x="450" y="154" font-size="12" fill="#8b8b8b">~10 Hz &middot; DDIM inference</text>
-          </g>
-
-          <!-- ACT 50 Hz -->
-          <g>
-            <line x1="90" y1="190" x2="453" y2="190" stroke="#0a0a0a" stroke-width="1" stroke-dasharray="2,3" opacity="0.4"/>
-            <circle cx="455" cy="190" r="7" fill="#0a0a0a"/>
-            <text x="470" y="194" font-size="11" font-weight="700" fill="#0a0a0a">ACT (ALOHA)</text>
-            <text x="585" y="194" font-size="12" fill="#8b8b8b">50 Hz &middot; chunked transformer</text>
-          </g>
-
-          <!-- π0 ~50 Hz action expert -->
-          <g>
-            <line x1="225" y1="230" x2="453" y2="230" stroke="#ff3300" stroke-width="2" opacity="0.3"/>
-            <circle cx="225" cy="230" r="7" fill="none" stroke="#0a0a0a" stroke-width="2"/>
-            <circle cx="455" cy="230" r="8" fill="#ff3300"/>
-            <text x="470" y="234" font-size="11" font-weight="700" fill="#0a0a0a">&pi;0 &middot; flow-matching</text>
-            <text x="618" y="234" font-size="12" fill="#8b8b8b">~50 Hz expert + 5 Hz VLM</text>
-          </g>
-
-          <!-- Fast-in-Slow 117.7 Hz -->
-          <g>
-            <line x1="225" y1="270" x2="608" y2="270" stroke="#ff3300" stroke-width="2" opacity="0.3"/>
-            <circle cx="225" cy="270" r="7" fill="none" stroke="#0a0a0a" stroke-width="2"/>
-            <circle cx="610" cy="270" r="8" fill="#ff3300"/>
-            <text x="625" y="274" font-size="11" font-weight="700" fill="#0a0a0a">Fast-in-Slow</text>
-            <text x="725" y="274" font-size="12" fill="#8b8b8b">117.7 Hz</text>
-          </g>
-
-          <!-- GR00T N1 (single point, "robot rate") -->
-          <g>
-            <line x1="225" y1="310" x2="453" y2="310" stroke="#ff3300" stroke-width="2" opacity="0.3"/>
-            <circle cx="225" cy="310" r="7" fill="none" stroke="#0a0a0a" stroke-width="2"/>
-            <circle cx="455" cy="310" r="8" fill="#ff3300"/>
-            <text x="470" y="314" font-size="11" font-weight="700" fill="#0a0a0a">GR00T N1</text>
-            <text x="555" y="314" font-size="12" fill="#8b8b8b">~50 Hz expert + slow VLM</text>
-          </g>
-
-          <!-- Helix 7-9 Hz S2 + 200 Hz S1 -->
-          <g>
-            <line x1="265" y1="350" x2="698" y2="350" stroke="#ff3300" stroke-width="2.5" opacity="0.45"/>
-            <circle cx="265" cy="350" r="8" fill="#0a0a0a"/>
-            <circle cx="700" cy="350" r="10" fill="#ff3300" stroke="#0a0a0a" stroke-width="2"/>
-            <text x="247" y="334" font-size="11" fill="#0a0a0a" text-anchor="middle">S2 7-9 Hz</text>
-            <text x="700" y="334" font-size="11" fill="#ff3300" text-anchor="middle" font-weight="700">S1 200 Hz</text>
-            <text x="715" y="354" font-size="11" font-weight="700" fill="#0a0a0a">Helix</text>
-            <text x="715" y="367" font-size="11" fill="#8b8b8b">7B + 80M</text>
-          </g>
-
-          <!-- legend -->
-          <g transform="translate(110, 50)">
-            <circle cx="0" cy="0" r="6" fill="#0a0a0a"/>
-            <text x="12" y="4" font-size="12" fill="#0a0a0a">single-loop</text>
-            <line x1="100" y1="0" x2="135" y2="0" stroke="#ff3300" stroke-width="2.5" opacity="0.5"/>
-            <circle cx="100" cy="0" r="6" fill="none" stroke="#0a0a0a" stroke-width="2"/>
-            <circle cx="135" cy="0" r="6" fill="#ff3300"/>
-            <text x="148" y="4" font-size="12" fill="#0a0a0a">dual-system (S2 &rarr; S1)</text>
-          </g>
-
-        </svg>
+        <div style="flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; background: white; padding: 0.5rem; border: 1px solid var(--color-grid-line);">
+          <img src="images/papers/fis-vla/method-1.png"
+               alt="FiS-VLA architecture (paper Fig 2) — System 2 (low-frequency planner) drives System 1 (high-frequency motor expert)"
+               style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        </div>
+        <p style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-align: center; margin-top: 0;">
+          <strong>System 2</strong> (low-freq plan, 1/<em>n</em> &times; step) drives <strong>System 1</strong> (high-freq motor, every step)
+        </p>
       </div>
 
-      <!-- Takeaway sidebar -->
-      <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between; gap: 1rem; max-width: 280px;">
-        <div>
-          <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">Smarter = slower</div>
-          <p style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.5;">
-            RT-2 has the strongest semantic reasoning &mdash; and runs at <strong>1&nbsp;Hz</strong>. Contact-rich tasks need <strong>30-50&nbsp;Hz</strong>. Force control needs <strong>200&nbsp;Hz+</strong>.
-          </p>
+      <!-- RIGHT: per-model inference-rate ladder -->
+      <div style="flex: 1; display: flex; flex-direction: column; gap: 0.55rem; min-height: 0;">
+        <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
+          Reported inference rate &middot; log Hz
         </div>
-        <div style="padding: 1rem; background: var(--color-bg-alt); border-left: var(--border-accent);">
-          <p style="font-size: var(--size-small); line-height: 1.4;">
-            One model can't be both. <strong>Solution:</strong> split into a fast S1 + slow S2 &mdash; the chapter's central pattern.
-          </p>
+
+        <table style="width: 100%; border-collapse: collapse; font-size: var(--size-small);">
+          <thead>
+            <tr style="border-top: 2px solid var(--color-ink); border-bottom: 1px solid var(--color-ink);">
+              <th style="text-align: left; padding: 0.35rem 0.45rem; font-family: var(--font-mono); font-size: var(--size-tiny); text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ink-soft);">Model</th>
+              <th style="text-align: right; padding: 0.35rem 0.45rem; font-family: var(--font-mono); font-size: var(--size-tiny); text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ink-soft);">Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--color-grid-line);">
+              <td style="padding: 0.4rem 0.45rem;"><strong>RT-2</strong> <span style="color: var(--color-ink-muted);">55B end-to-end</span></td>
+              <td style="padding: 0.4rem 0.45rem; text-align: right; font-family: var(--font-mono); color: var(--color-ink-muted);">~1 Hz</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--color-grid-line);">
+              <td style="padding: 0.4rem 0.45rem;"><strong>OpenVLA</strong> <span style="color: var(--color-ink-muted);">7B AR</span></td>
+              <td style="padding: 0.4rem 0.45rem; text-align: right; font-family: var(--font-mono); color: var(--color-ink-muted);">~5 Hz</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--color-grid-line);">
+              <td style="padding: 0.4rem 0.45rem;"><strong>Diffusion Policy</strong></td>
+              <td style="padding: 0.4rem 0.45rem; text-align: right; font-family: var(--font-mono); color: var(--color-ink-muted);">~10 Hz</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--color-grid-line);">
+              <td style="padding: 0.4rem 0.45rem;"><strong>ACT</strong> <span style="color: var(--color-ink-muted);">chunked</span></td>
+              <td style="padding: 0.4rem 0.45rem; text-align: right; font-family: var(--font-mono);">50 Hz</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--color-grid-line); background: var(--color-accent-soft);">
+              <td style="padding: 0.4rem 0.45rem;"><strong>&pi;0</strong> <span style="color: var(--color-ink-muted);">flow-matching</span></td>
+              <td style="padding: 0.4rem 0.45rem; text-align: right; font-family: var(--font-mono); color: var(--color-accent); font-weight: 700;">~50 Hz</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--color-grid-line); background: var(--color-accent-soft);">
+              <td style="padding: 0.4rem 0.45rem;"><strong>GR00T N1</strong> <span style="color: var(--color-ink-muted);">DiT expert</span></td>
+              <td style="padding: 0.4rem 0.45rem; text-align: right; font-family: var(--font-mono); color: var(--color-accent); font-weight: 700;">~50 Hz</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--color-grid-line); background: var(--color-accent-soft);">
+              <td style="padding: 0.4rem 0.45rem;"><strong>FiS-VLA</strong> <span style="color: var(--color-ink-muted);">shared params</span></td>
+              <td style="padding: 0.4rem 0.45rem; text-align: right; font-family: var(--font-mono); color: var(--color-accent); font-weight: 700;">117.7 Hz</td>
+            </tr>
+            <tr style="background: var(--color-accent-soft); border-bottom: 2px solid var(--color-accent);">
+              <td style="padding: 0.4rem 0.45rem;"><strong>Helix</strong> <span style="color: var(--color-ink-muted);">S2 7B + S1 80M</span></td>
+              <td style="padding: 0.4rem 0.45rem; text-align: right; font-family: var(--font-mono); color: var(--color-accent); font-weight: 800;">200 Hz</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div style="padding: 0.55rem 0.85rem; background: var(--color-bg-alt); border-left: 3px solid var(--color-accent); font-size: var(--size-tiny); color: var(--color-ink-soft); line-height: 1.4;">
+          Contact: <strong>30-50 Hz</strong> &middot; Force-control: <strong>200 Hz+</strong>. Smart-single-loop models all fall below; <span style="color: var(--color-accent); font-weight: 700;">red rows = dual-system</span>.
         </div>
-        <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); line-height: 1.5;">
-          Numbers from each paper's reported inference rate; dashed line = bridge from VLM trigger to action-expert rate.
-        </div>
+
       </div>
 
     </div>
@@ -4287,15 +3967,15 @@ body.notes-mode aside.notes h4 {
   </div>
 
   <footer class="slide-footer">
-    <span>RT-2 2307.15818 &middot; OpenVLA 2406.09246 &middot; DP 2303.04137 &middot; ACT 2304.13705 &middot; &pi;0 2410.24164 &middot; Helix figure.ai/news/helix &middot; FiS-VLA 2506.01953 &middot; GR00T N1 2503.14734</span>
+    <span>FiS-VLA fig 2 &middot; <span class="citation">arXiv:2506.01953</span> &middot; RT-2/OpenVLA/DP/ACT/&pi;0/Helix/GR00T per-paper rates</span>
     <span class="mono">42</span>
   </footer>
 
   <aside class="notes">
     <h4>Control frequency &mdash; smart vs fast</h4>
-    Self-authored chart. The slope of the slide: every step up in semantic capability has so far cost an order of magnitude in inference rate. RT-2 is the smartest single VLA in 2023 and runs at 1 Hz. OpenVLA opens it up &mdash; same shape, 5 Hz. Diffusion Policy is 10 Hz because of iterative denoising. ACT runs at 50 Hz because the chunk gets predicted in one pass.<br><br>
-    The red bars are the <strong>physics thresholds</strong> &mdash; contact-rich manipulation needs 30-50 Hz, force-controlled assembly needs 200 Hz+. Helix is the cleanest example: its S2 runs at 7-9 Hz (essentially RT-2 speed) while its S1 runs at 200 Hz. The dotted line shows the bridge: latent vector from S2 conditions S1's much faster loop.<br><br>
-    The takeaway sets up the next slide &mdash; this is exactly the analogy Kahneman made in 2002 for humans.
+    Left: FiS-VLA's architecture (paper Fig 2) is the cleanest visual of the dual-system pattern. System 2 runs at a low frequency (one forward pass every n steps), feeds shared latents into System 1, which runs at the high control frequency. The fast path uses diffusion; the slow path uses autoregression.<br><br>
+    Right: per-model reported inference rate. The slope of the slide &mdash; every step up in semantic capability has so far cost an order of magnitude in inference rate. RT-2 (55B end-to-end) is 1 Hz; OpenVLA opens the same architecture at 5 Hz; chunked transformers and flow heads reach 50; only dual-system stacks (Helix, FiS-VLA) cross 100 Hz.<br><br>
+    Physics threshold call-outs: contact-rich manipulation needs 30-50 Hz, force-controlled assembly needs 200 Hz+. Helix is the existence proof that you can have both &mdash; the next slide explains why "S1/S2" is exactly the partition Kahneman drew for humans.
   </aside>
 </section>
 
@@ -5675,8 +5355,8 @@ body.notes-mode aside.notes h4 {
         <div class="vg-meta"><span>NVIDIA</span><span>arXiv:2511.00062</span></div>
         <div class="vg-name">Cosmos Predict 2.5</div>
         <div class="video-frame aspect-16x9">
-          <iframe src="https://www.youtube-nocookie.com/embed/TLz2-fB6Mf0?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=TLz2-fB6Mf0&amp;rel=0&amp;modestbranding=1&amp;controls=0"
-                  title="Cosmos 2.5 launch" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <iframe src="https://www.youtube-nocookie.com/embed/9Uch931cDx8?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=9Uch931cDx8&amp;rel=0&amp;modestbranding=1&amp;controls=0"
+                  title="NVIDIA Cosmos — official launch" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
         <div class="vg-caption">Unified T2W / I2W / V2W flow model &middot; <strong>200 M clips</strong> &middot; 2 B + 14 B. Targets AV &amp; robotics.</div>
       </div>
