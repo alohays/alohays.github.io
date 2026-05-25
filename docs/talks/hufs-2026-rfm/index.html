@@ -3133,17 +3133,17 @@ body.notes-mode aside.notes h4 {
             <text x="248" y="115" text-anchor="middle" font-family="Archivo, sans-serif" font-size="11" font-weight="700">LM</text>
             <text x="248" y="130" text-anchor="middle" font-family="Archivo, sans-serif" font-size="11" font-weight="700">backbone</text>
             <text x="248" y="148" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#4a4a4a">Llama / PaliGemma</text>
-            <!-- Action head -->
-            <rect x="308" y="60" width="46" height="120" fill="#ff3300" stroke="#0a0a0a" stroke-width="1.5"/>
-            <text x="331" y="108" text-anchor="middle" font-family="Archivo, sans-serif" font-size="12" font-weight="800" fill="#ffffff">action</text>
-            <text x="331" y="123" text-anchor="middle" font-family="Archivo, sans-serif" font-size="12" font-weight="800" fill="#ffffff">tokens</text>
-            <text x="331" y="142" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#ffffff">or chunk</text>
-            <text x="331" y="156" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#ffffff">or flow</text>
+            <!-- Action head — widened from 46 to 90 so labels fit -->
+            <rect x="298" y="60" width="62" height="120" fill="#ff3300" stroke="#0a0a0a" stroke-width="1.5"/>
+            <text x="329" y="106" text-anchor="middle" font-family="Archivo, sans-serif" font-size="11" font-weight="800" fill="#ffffff">action</text>
+            <text x="329" y="120" text-anchor="middle" font-family="Archivo, sans-serif" font-size="11" font-weight="800" fill="#ffffff">tokens</text>
+            <text x="329" y="142" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#ffffff">/ chunk</text>
+            <text x="329" y="156" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9.5" fill="#ffffff">/ flow</text>
             <!-- Arrows -->
             <line x1="78" y1="56" x2="106" y2="80" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arrB)"/>
             <line x1="78" y1="184" x2="106" y2="162" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arrB)"/>
             <line x1="188" y1="120" x2="206" y2="120" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arrB)"/>
-            <line x1="288" y1="120" x2="306" y2="120" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arrB)"/>
+            <line x1="288" y1="120" x2="296" y2="120" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arrB)"/>
             <!-- Output label -->
             <text x="180" y="232" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#0a0a0a" font-weight="700">image + text &rarr; ACTION</text>
           </svg>
@@ -7567,19 +7567,25 @@ body.notes-mode aside.notes h4 {
 
         <div style="display: flex; gap: 1.25rem; align-items: stretch;">
           <div style="text-align: center;">
-            <div style="width: 130px; height: 130px; background: white; border: 1px solid var(--color-ink); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-ink-muted);">[QR]</div>
+            <div style="width: 130px; height: 130px; background: white; border: 1px solid var(--color-ink); padding: 0.4rem;">
+              <img src="images/qr-deck.png" alt="QR — alohays.github.io/talks/hufs-2026-rfm" style="width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated;">
+            </div>
             <div class="mono" style="font-size: var(--size-tiny); margin-top: 0.4rem;">Deck</div>
             <div class="mono" style="font-size: 0.55rem; color: var(--color-ink-muted);">alohays.github.io/<br>talks/hufs-2026-rfm</div>
           </div>
 
           <div style="text-align: center;">
-            <div style="width: 130px; height: 130px; background: white; border: 1px solid var(--color-ink); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-ink-muted);">[QR]</div>
+            <div style="width: 130px; height: 130px; background: white; border: 1px solid var(--color-ink); padding: 0.4rem;">
+              <img src="images/qr-survey.png" alt="QR — arXiv:2605.00080 NTU MARS WM survey" style="width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated;">
+            </div>
             <div class="mono" style="font-size: var(--size-tiny); margin-top: 0.4rem;">Survey</div>
             <div class="mono" style="font-size: 0.55rem; color: var(--color-ink-muted);">arXiv:2605.00080</div>
           </div>
 
           <div style="text-align: center;">
-            <div style="width: 130px; height: 130px; background: white; border: 1px solid var(--color-ink); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-ink-muted);">[QR]</div>
+            <div style="width: 130px; height: 130px; background: white; border: 1px solid var(--color-ink); padding: 0.4rem;">
+              <img src="images/qr-hiring.png" alt="QR — recruitment.worv.maum.ai" style="width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated;">
+            </div>
             <div class="mono" style="font-size: var(--size-tiny); margin-top: 0.4rem;">Hiring</div>
             <div class="mono" style="font-size: 0.55rem; color: var(--color-ink-muted);">recruitment.<br>worv.maum.ai</div>
           </div>
