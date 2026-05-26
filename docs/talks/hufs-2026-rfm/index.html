@@ -1586,12 +1586,12 @@ svg text.math-var {
 
     <div class="split" style="display: flex; gap: 2.5rem; margin-top: 1.25rem; flex: 1; align-items: stretch;">
 
-      <div style="flex: 1.1; display: flex; flex-direction: column; gap: 0.75rem;">
+      <div style="flex: 1.1; display: flex; flex-direction: column; gap: 0.75rem; min-width: 0;">
         <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
           One control step &middot; 7-DoF arm + 1 gripper
         </div>
 
-        <svg viewBox="0 0 520 320" style="width: 100%; max-height: 360px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+        <svg viewBox="0 0 520 320" style="width: 100%; max-height: 280px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
           <defs>
             <marker id="arr15" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
               <path d="M 0 0 L 6 4 L 0 8 z" fill="#0a0a0a"/>
@@ -1645,6 +1645,17 @@ svg text.math-var {
           <!-- arrow from arm to vector -->
           <path d="M 285 130 L 315 130" stroke="#0a0a0a" stroke-width="1.5" fill="none" marker-end="url(#arr15)"/>
         </svg>
+
+        <!-- Real-world reference: actual Franka Emika Panda -->
+        <div style="display: flex; gap: 0.8rem; align-items: center; padding: 0.55rem 0.7rem; background: var(--color-bg-alt); border-left: 3px solid var(--color-ink); margin-top: auto;">
+          <img src="images/robots/franka-panda-7dof.jpg"
+               alt="Franka Emika Panda — the canonical 7-DoF research arm with parallel-jaw gripper"
+               style="width: 90px; height: auto; max-height: 130px; object-fit: contain; flex-shrink: 0;">
+          <div style="min-width: 0;">
+            <div style="font-family: var(--font-display); font-weight: 800; font-size: 0.78rem; line-height: 1.1;">Franka Emika Panda</div>
+            <div class="mono" style="font-size: 0.58rem; color: var(--color-ink-muted); margin-top: 0.2rem; line-height: 1.3;">the canonical 7-DoF research arm &middot; 850 mm reach &middot; 3 kg payload &middot; torque-controlled</div>
+          </div>
+        </div>
       </div>
 
       <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 1.1rem;">
