@@ -608,11 +608,7 @@ svg text.math-var {
     <span>01 / 77</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Cover</h4>
-    Welcome — I'm Yunsung Lee from WoRV at maum.ai. Over the next 70 minutes we'll walk through what "robotics foundation models" actually means, how the field got here, and which problems my team is currently working on. The biggest change from last year's lecture: data comes before models — we'll discuss Ch3 (data) before Ch4 (VLAs).
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-02-about-me.html ===== -->
@@ -665,11 +661,7 @@ svg text.math-var {
     <span class="mono">02</span>
   </footer>
 
-  <aside class="notes">
-    <h4>About Me</h4>
-    Quick path — academic side was multimodal learning and visual reasoning; industry side I now lead the research org at WoRV. The third column (WoRV) expands into the entire Ch8 at the end of this talk. (Verbal aside: a one-liner anecdote about how I know Prof. Choi.)
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-03-today.html ===== -->
@@ -741,11 +733,7 @@ svg text.math-var {
     <span class="mono">03</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Today — 8-chapter roadmap</h4>
-    Map for the next 70 minutes. Ch 1 and 2 set up basics; Ch 3-5 are the main spine; Ch 6 and 7 cover the latest frontier; Ch 8 introduces our team. <strong>Key change from last year: Ch 3 and Ch 4 swapped — we talk about data first, models second.</strong> Average ~8-9 minutes per chapter; the longest one (Ch 6 World Models) is roughly 12 minutes.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-04-divider-ch1.html ===== -->
@@ -766,11 +754,7 @@ svg text.math-var {
     <span class="mono">04</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Ch1 Divider</h4>
-    Now we begin properly. Chapter 1 is a question about the term itself — "foundation model" is natural in LLM/VLM land, but in robotics what does it mean, and why is it suddenly tractable?
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-05-two-summers.html ===== -->
@@ -877,22 +861,7 @@ svg text.math-var {
     <span class="mono">05</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Why robotics AI — now (4 forces converging)</h4>
-    Reframed from the original "two robotics summers, two failures" because (a) "robotics winters / summers" isn't a widely-established academic term — that's specifically <em>AI</em> winters / summers in the literature, and (b) calling the current wave a "failure" while it's still in progress invites the audience to disagree before the talk even starts.<br><br>
-
-    The honest researcher framing: <strong>four enablers are arriving in parallel for the first time</strong>. Each tile carries both the positive evidence <em>and</em> a small "∆ still-open" line so we don't sound like a sales pitch:<br><br>
-
-    <strong>1. Foundation models ready</strong> — PaliGemma, DINOv3, CLIP, SigLIP exist as pretrained backbones. RT-2/OpenVLA/&pi;0 inherit from PaLI-X/Llama-2/PaliGemma. <em>But</em> action grounding doesn't inherit cleanly (open).<br>
-    <strong>2. Data infrastructure</strong> — open hardware (ALOHA, UMI), open datasets (OpenX 1M+, DROID), synthetic pipelines (Cosmos-Transfer). <em>But</em> still ~10⁶× short of LLM tokens.<br>
-    <strong>3. Real hardware</strong> — Figure, 1X, Unitree, Tesla, Rainbow shipping. The field finally has a shared body. <em>But</em> cost + dexterity bottleneck.<br>
-    <strong>4. Capital + talent</strong> — $5B+ raised, top NLP researchers pivoting. <em>But</em> SNR messy, many bets will fail.<br><br>
-
-    The bottom strip names the three things still unsolved (data wall, generalization, embodiment-portability) and explicitly points at why the next 70 minutes exist — these are the open problems the field's 2024-26 papers are attacking.<br><br>
-
-    Korean talking: "이번 wave의 honest case는 네 가지 enabler가 처음으로 동시에 모이고 있다는 것. 각각엔 여전히 open problem이 있고, 그게 오늘 talk의 나머지 70분이 다룰 내용."
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-06-foundation-nlp.html ===== -->
@@ -984,11 +953,7 @@ svg text.math-var {
     <span class="mono">06</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Foundation in NLP/Vision</h4>
-    Bommasani et al. 2021 established the term. Core property — <strong>one model → many downstream tasks</strong>. Proven in NLP/Vision. The next slide asks what breaks when we try to copy this template into robotics.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-07-foundation-robots.html ===== -->
@@ -1071,11 +1036,7 @@ svg text.math-var {
     <span class="mono">07</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Foundation for robots</h4>
-    Same diagram, robotics version. Input is multimodal observation; output is <em>physical action</em>. Both must generalize. The input side can borrow LLM/VLM tooling. The output side? — that's robotics-unique difficulty, and the next chapter goes deep on it.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-08-three-axes.html ===== -->
@@ -1143,11 +1104,7 @@ svg text.math-var {
     <span class="mono">08</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Three axes</h4>
-    Generalization here is along three axes, not one — Task (new verbs), Environment (new spaces), Embodiment (new hardware). Almost every recent paper picks one. Try mapping each later example onto these three axes as we go.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-09-scaling-gap.html ===== -->
@@ -1219,11 +1176,7 @@ svg text.math-var {
     <span class="mono">09</span>
   </footer>
 
-  <aside class="notes">
-    <h4>The action data wall</h4>
-    This is what makes robotics structurally different from NLP. Unlike internet text, <strong>action data doesn't grow on its own</strong> — five to six orders of magnitude gap. The data tricks to close that gap are the entire subject of Ch3.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-10-timeline.html ===== -->
@@ -1345,11 +1298,7 @@ svg text.math-var {
     <span class="mono">10</span>
   </footer>
 
-  <aside class="notes">
-    <h4>2023-2026 timeline</h4>
-    These 8 milestones are the main exhibits later in the talk. Each marks one new unlock — action tokenization, web knowledge transfer, open stacks, dual system, OOD generalization, and finally joint video × action generation. The last four — Helix · GR00T · π0.5 · DreamZero — get the deepest treatment.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-11-industry-stack.html ===== -->
@@ -1431,19 +1380,7 @@ svg text.math-var {
     <span class="mono">11</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Slide 11 — the talk's core thesis, in 3 messages</h4>
-    Three sentences to remember from the next 75 minutes. The left tile is Jim Fan's Sequoia AI Ascent 2026 talk (3Y8aq_ofEVs) starting at the 2-min mark where he frames the Physical Turing Test. Use it as a 30-second anchor to set up scale-of-ambition. Then the 3 right tiles map the chapter structure:<br><br>
-
-    <strong>(1) Action is just another modality.</strong> A VLA is structurally a VLM with one extra head. Once we fix action tokenization (Ch2), data scaling (Ch3), and family choice (Ch4), the same recipe that produced GPT-4 should produce robotics foundation models.<br><br>
-
-    <strong>(2) Dual-system is the 2026 consensus.</strong> Helix, π0.5, GR00T N1, Gemini Robotics, FiS-VLA all run a slow VLM "thinker" (5-9 Hz) over a fast action expert "actor" (50-200 Hz). They communicate through one latent vector. We dedicate Ch5 to this.<br><br>
-
-    <strong>(3) World models are how we get past the data wall.</strong> Action-conditioned video WMs (DreamDojo, DreamZero) generate the rollout the policy needs to train on, evaluate against, and plan inside. Ch6-7 is the longest section because this is where the open problems live.<br><br>
-
-    Korean talking: "이 발표에서 한 가지만 가져가야 한다면, 이 세 가지. (1) action은 또 하나의 modality, (2) dual-system이 2026 consensus, (3) world model이 data wall을 뚫는다."
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-12-roadmap.html ===== -->
@@ -1514,11 +1451,7 @@ svg text.math-var {
     <span class="mono">12</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Roadmap</h4>
-    Map for the next 60 minutes. Each chapter as a one-line question. <strong>From the next chapter on</strong> we'll see how words like "VLA" and "diffusion" get reinterpreted inside robotics. Last line — bookmark the NTU MARS survey. Today covers maybe 25 of its 148 papers; the rest live there.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-13-divider-ch2.html ===== -->
@@ -1539,11 +1472,7 @@ svg text.math-var {
     <span class="mono">13</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Ch2 Divider</h4>
-    Chapter 2 is the conceptual reset for the rest of the talk. Students have already covered text, image, audio tokenization (Weeks 10 and 12). The pitch here: add one more row to that table called ACTION, and watch which of those tricks survive and which break.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-14-modalities-recap.html ===== -->
@@ -1629,11 +1558,7 @@ svg text.math-var {
     <span class="mono">14</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Modalities recap</h4>
-    Direct callback to the Week 10 multimodal-LLM table. The visible argument: every modality so far has a settled tokenization recipe; the row we are adding today is ACTION. The clip is Brian Ichter (DeepMind RT) framing the same intuition &mdash; that text tokens and action tokens are "naturally" the same kind of object once you commit to a tokenizer.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-15-what-is-action.html ===== -->
@@ -1737,11 +1662,7 @@ svg text.math-var {
     <span class="mono">15</span>
   </footer>
 
-  <aside class="notes">
-    <h4>What is an action?</h4>
-    Show the picture first: a 7-DoF arm + 1 gripper outputs an 8-dim continuous vector at every control step. Then highlight the buried complication &mdash; the space differs per robot. Joint angles vs end-effector poses vs motor torques. 7 DoF for a Franka, 14 for ALOHA, 35 for Helix. This embodiment dependence is the bill we pay when we try to train one model across many robots (Ch3 data scaling, Ch4 OpenVLA, Ch7 DreamZero cross-embodiment).
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-16-why-action-is-harder.html ===== -->
@@ -1817,11 +1738,7 @@ svg text.math-var {
     <span class="mono">16</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Why action is harder than text</h4>
-    Four orthogonal reasons. Discreteness (text gets cross-entropy for free), determinism (text is just a softmax, action plays out in physics), data source (the famous Finn line &mdash; no internet for robot actions), reversibility (text mistakes are free; broken cups are not). Cell 3 is the loudest in this deck &mdash; the entire Ch3 data-scaling chapter and the Ch6&ndash;7 world-model chapters are responses to it. Cells 1 and 2 motivate the next slide on tokenization.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-17-tokenization-strategies.html ===== -->
@@ -1963,11 +1880,7 @@ svg text.math-var {
     <span class="mono">17</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Two strategies</h4>
-    Discretize the continuous vector and feed it to a language head, or keep it continuous and feed it to a denoiser/flow head. Strategy A buys you the entire LLM stack for free but pays in quantization error. Strategy B handles multimodal action distributions naturally (think left-vs-right reach), but you trade away the clean cross-entropy story. Almost every VLA paper is a vote for one of these two cells. The next three slides walk one example each &mdash; RT-1 (A), Diffusion Policy / ACT (B), and &pi;0-FAST (a 2025 hybrid that quietly goes back to A).
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-18-rt1-discrete.html ===== -->
@@ -2100,11 +2013,7 @@ svg text.math-var {
     <span class="mono">18</span>
   </footer>
 
-  <aside class="notes">
-    <h4>RT-1 discrete vocabulary</h4>
-    The canonical implementation of Strategy A. 11 action dims (7 arm + 3 base + 1 gripper), 256 bins per dim, so each control step emits 11 tokens. Once that mapping is fixed, the policy is literally an LLM: next-token cross-entropy on a sequence of image tokens + text tokens + action tokens. That is the doorway from VLM to VLA we'll walk through in Chapter 4. The clip is the official RT-1 supplementary &mdash; arguably the best three minutes of architecture explanation on YouTube.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-19-action-chunks.html ===== -->
@@ -2212,11 +2121,7 @@ svg text.math-var {
     <span class="mono">19</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Action chunks</h4>
-    Predict a whole k-step sequence at once instead of one action per inference. Two reasons. (1) Real-time &mdash; you can run the heavy VLM once and replay the chunk open-loop. (2) Multimodality &mdash; with diffusion, the chunk captures "left reach" and "right reach" as two modes instead of averaging them into a useless middle path. The DDPM analogy is the load-bearing one for students who just learned diffusion: same epsilon-theta objective, same noise schedule &mdash; the only change is that we denoise an action chunk instead of an image.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-20-fast-tokenizer.html ===== -->
@@ -2276,18 +2181,7 @@ svg text.math-var {
     <span class="mono">20</span>
   </footer>
 
-  <aside class="notes">
-    <h4>FAST tokenizer &mdash; original Fig 2</h4>
-    The 2025 twist on Strategy A. Paper Fig 2 walks the 5-step pipeline:<br>
-    (1) Take a chunk of continuous actions (normalized).<br>
-    (2) Apply <strong>DCT</strong> &mdash; Discrete Cosine Transform &mdash; the same orthonormal basis JPEG uses for images. Smooth trajectories have most energy in the low-frequency components.<br>
-    (3) Quantize the frequency coefficients to small integers. The high-frequency tail collapses to zeros (noise drops out for free).<br>
-    (4) Flatten low-frequency components first &mdash; gives a sparse integer sequence where the front is informative and the back is mostly zeros.<br>
-    (5) Apply <strong>BPE</strong> &mdash; Byte-Pair Encoding &mdash; the same greedy-merge tokenizer GPT uses for text. The repeated zero patterns compress into single tokens.<br><br>
-    Result is ~5&times; shorter action sequences than RT-1's 256-bin scheme, at matched accuracy. That speedup is what makes &pi;0-FAST viable on consumer-grade hardware.<br><br>
-    Strategy C in the chapter's three-way takeaway: continuous &rarr; back to discrete, but in a basis where each token carries real information.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-21-takeaway.html ===== -->
@@ -2381,11 +2275,7 @@ svg text.math-var {
     <span class="mono">21</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Takeaway</h4>
-    Close the chapter by re-showing the slide-14 table with the ACTION row filled in by three candidates: bin discretization, continuous chunk + diffusion, and FAST. The closing line is Fei Xia's literal phrasing &mdash; "action is yet another language." Once that frame lands, the next chapter (data scaling) is the obvious follow-on question: if action is a modality, where does that modality's training data come from?
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-22-divider-ch3.html ===== -->
@@ -2406,12 +2296,7 @@ svg text.math-var {
     <span class="mono">22</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Ch3 Divider — Data Scaling</h4>
-    Ch1 ended on the data wall (5-6 orders of magnitude short of LLMs). Ch2 framed action as a modality. Ch3 is the answer to the obvious next question: <strong>how do we actually scale that modality?</strong><br><br>
-    Four data strategies + one union dataset (OpenX). The rest of the talk — VLAs (Ch4), diffusion (Ch5), world models (Ch6), WAMs (Ch7) — all train on top of what this chapter produces.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-23-data-wall.html ===== -->
@@ -2530,12 +2415,7 @@ svg text.math-var {
     <span class="mono">23</span>
   </footer>
 
-  <aside class="notes">
-    <h4>The data wall, with real datasets</h4>
-    Slide 9 made the abstract case ("no internet of actions"). This slide grounds it with the <em>actual</em> canonical datasets the field uses: RoboMimic (~6k demos, the eval benchmark), BridgeData V2 (60k), DROID (76k traj across 564 scenes — what OpenVLA was trained on), RoboCasa (100k kitchen demos in sim), and OpenX as the union at 1M+.<br><br>
-    Even the union is still 6 orders below LLM tokens. The chapter is the answer to "how do we get there." Four strategies coming up.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-24-aloha-family.html ===== -->
@@ -2614,12 +2494,7 @@ svg text.math-var {
     <span class="mono">24</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Strategy 1 — better hardware (ALOHA family)</h4>
-    The first lever is the most obvious one: <strong>make teleop cheap enough that more labs can collect more data</strong>. ALOHA hit a sub-$20k bimanual rig in 2023 — that's the price-as-data argument. Mobile ALOHA added a wheeled base for whole-home tasks. ALOHA 2 + ALOHA Unleashed are the DeepMind follow-ups: same rig + diffusion-policy training + a lot more teleop hours = shoelace tying, gear insertion, two-robot cooperation.<br><br>
-    Note the people: Tony Zhao and Cheng Chi appear here, and they re-appear next slide on UMI / Sunday Glove. Same team kept pushing the cost curve down.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-25-umi-sunday.html ===== -->
@@ -2685,13 +2560,7 @@ svg text.math-var {
     <span class="mono">25</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Strategy 2 — handheld in-the-wild</h4>
-    UMI's insight: the bottleneck wasn't the policy, it was the <em>collection setup</em>. If you ditch the robot at collection time and use a handheld gripper + GoPro that records the same observation-action stream the robot will eventually see, you can collect data in a friend's kitchen, on the street, outdoors — anywhere. Order-of-magnitude cost reduction.<br><br>
-    Same people then built Sunday. Skill Capture Glove = $200 wearable, 2,000+ shipped, 10M episodes from 500 homes. UMI's research move became a consumer product.<br><br>
-    The narrative thread is intentional — <strong>Tony Zhao and Cheng Chi appear on three slides in a row</strong> (ALOHA, Mobile ALOHA, UMI, Sunday). It's the same crew finding cheaper data over and over.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-26-egocentric.html ===== -->
@@ -2757,12 +2626,7 @@ svg text.math-var {
     <span class="mono">26</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Strategy 3 — egocentric video</h4>
-    This is where the data story shifts. ALOHA and UMI both still required someone to <em>collect</em> data. Egocentric video is the first source where the data already exists at scale — Ego4D alone is 3,670 hours from 9 countries. Ego-Exo4D adds the paired third-person view that helps with body/hand transfer.<br><br>
-    The catch: <strong>no action labels</strong>. So the question becomes how to make pixels usable as supervision. The next slide is the bridge — EgoMimic, EgoVLA, HumanPlus all attack that. And in Ch7 we'll see LAPA (KAIST) recover latent actions directly.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-27-video-to-robot.html ===== -->
@@ -2844,17 +2708,7 @@ svg text.math-var {
     <span class="mono">27</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Strategy 3+ — turning video into policy</h4>
-    Three ways to actually use those human pixels:
-    <ul>
-      <li><strong>EgoMimic</strong> (Georgia Tech, ICRA'25): operator wears Aria glasses, paired with a bimanual rig — co-train so human and robot share representation.</li>
-      <li><strong>EgoVLA</strong> (NVIDIA + UCSD, 2025): pretrain a VLA on a giant pool of human video, fine-tune on a small robot set.</li>
-      <li><strong>HumanPlus</strong> (Stanford CoRL'24): humanoid shadowing from third-person video — Unitree H1 doing boxing, piano, table tennis.</li>
-    </ul>
-    Key reframing: this isn't "just more data." It's an <strong>embodiment bridge</strong> — the same pipeline that scales data also lets us put policies on humanoids. That ties forward to Ch5 (humanoid VLAs) and Ch7 (LAPA, where the latent action itself is recovered from video).
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-28-synthetic.html ===== -->
@@ -2927,17 +2781,7 @@ svg text.math-var {
     <span class="mono">28</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Strategy 4 — synthetic data</h4>
-    The last strategy takes humans out of the loop entirely. Three layers:
-    <ul>
-      <li><strong>Isaac Lab</strong>: GPU-parallel physics — thousands of envs at once with domain randomization.</li>
-      <li><strong>RoboCasa</strong> (RSS'24): 100k procedurally-generated kitchen tasks — appliances, layouts, AI-generated textures.</li>
-      <li><strong>DreamGen / GR00T-Dreams</strong> (NVIDIA, 2505.12705): a world model generates the trajectories directly. NVIDIA reported the GR00T N1.5 supervised cost dropping from <strong>3 months of human teleop to 36 hours</strong> of synthetic.</li>
-    </ul>
-    This slide is also the bridge to Ch6 (World Models) and Ch7 (WAMs). Once generation is good enough, the model itself becomes the data factory.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-29-openx.html ===== -->
@@ -3008,12 +2852,7 @@ svg text.math-var {
     <span class="mono">29</span>
   </footer>
 
-  <aside class="notes">
-    <h4>OpenX — the union, and the cascade it triggered</h4>
-    OpenX is the second-axis answer to the data wall: not a new collection method, but a <strong>convention</strong> that aligns 60+ labs' data formats so they're trainable together. 22 embodiments, 527 skills, 1M+ episodes.<br><br>
-    OpenVLA (Ch4 next chapter) is the direct beneficiary — it trains on 970k OpenX episodes. After OpenX hit, the rest of 2024 produced a wave of follow-on datasets: DROID (76k traj × 564 scenes — the actual OpenVLA training pool), BridgeData V2, ALOHA Unleashed (DeepMind), RoboCasa (100k kitchen demos in sim). All signs of the same field-wide pressure to grow the pool.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-30-recap.html ===== -->
@@ -3117,18 +2956,7 @@ svg text.math-var {
     <span class="mono">30</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Recap — data &gt; model</h4>
-    Section close. The argument I want students to walk away with: in robotics, <strong>almost every SOTA jump in the last three years came from a new data source</strong>, not a bigger model.<br>
-    <ul>
-      <li>RT-1 → RT-2 = web data, not bigger backbone.</li>
-      <li>OpenVLA = OpenX 970k, not new architecture.</li>
-      <li>π0.5 OOD homes = co-training with extra web episodes.</li>
-      <li>GR00T N1.5 = DreamGen synthetic — 3 months to 36 hours.</li>
-    </ul>
-    Four strategies fan out from the center, with OpenX as the union that the field rallied around. <strong>That is the substrate</strong> — Ch4 (VLAs), Ch5 (diffusion), Ch6 (world models), Ch7 (WAMs) all run on top of it.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-31-divider-ch4.html ===== -->
@@ -3149,11 +2977,7 @@ svg text.math-var {
     <span class="mono">31</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Ch4 Divider &mdash; VLAs</h4>
-    Ch2 gave us action as a modality. Ch3 gave us the data. This chapter is the obvious next move: take the VLMs students already know (LLaVA, PaLI, PaliGemma) and swap the head &mdash; from text tokens to action tokens or an action chunk. That single change is the whole VLA story; everything else is variations on tokenizer choice, backbone size, and how much OpenX you train on.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-32-definition-vlm-to-vla.html ===== -->
@@ -3275,12 +3099,7 @@ svg text.math-var {
     <span class="mono">32</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Definition &mdash; VLM &rarr; VLA</h4>
-    The most charitable definition for students: a VLA is a VLM where the output head emits actions instead of (or in addition to) text. Everything else &mdash; the SigLIP vision encoder, the LM backbone, the training recipe &mdash; is shared with the multimodal models they already saw in Week 10.<br><br>
-    What varies between papers: <em>which</em> action head (discrete bin tokens like RT-1/RT-2, diffusion like RDT, flow matching like &pi;0, FAST-compressed tokens), <em>how much</em> robot data (OpenX 970k, in-house 10k), <em>which</em> backbone (Llama-2 7B, PaliGemma 3B, Eagle VLM). The structural skeleton is the same one box.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-33-rt2.html ===== -->
@@ -3346,13 +3165,7 @@ svg text.math-var {
     <span class="mono">33</span>
   </footer>
 
-  <aside class="notes">
-    <h4>RT-2 &mdash; the moment VLA stopped being a thought experiment</h4>
-    RT-2 (Jul 2023) is the canonical first VLA. Two things mattered: (1) it took a large web-pre-trained VLM (PaLI-X / PaLM-E) and represented actions as integers in the same text vocabulary, so the LM didn't need a separate output head; (2) it co-fine-tuned on web VQA + robot trajectories, which kept the LM's semantic knowledge alive after fine-tuning.<br><br>
-    The famous demo: "pick the extinct animal." The robot never saw "dinosaur" in trajectory data &mdash; the LM understands the concept, and because actions are just text tokens, that understanding flows through to the action. That's what "emergent semantic generalization" means in this paper.<br><br>
-    Closed weights. Google. Set the template that every paper from here on either copies (token-vocab head) or rebels against (continuous heads, FAST tokens, diffusion).
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-34-openvla.html ===== -->
@@ -3422,13 +3235,7 @@ svg text.math-var {
     <span class="mono">34</span>
   </footer>
 
-  <aside class="notes">
-    <h4>OpenVLA &mdash; the academic unlock</h4>
-    OpenVLA (Jun 2024) matters more for what it <em>unlocked</em> than what it added. RT-2 was closed; OpenVLA shipped 7B weights + training code + dataset recipe. Suddenly a PhD student with one A100 could LoRA-finetune a generalist VLA on their own task in an afternoon.<br><br>
-    Direct callback to Ch3 slide 29: the 970k OpenX-Embodiment episodes are exactly the union dataset we just looked at. OpenVLA is the first paper that simply trains on the whole pile and shows it works. This is also why <em>almost every academic paper after mid-2024 picks OpenVLA as the baseline</em> &mdash; it's the only fully reproducible VLA at scale.<br><br>
-    The architecture itself is conservative on purpose: SigLIP + DINOv2 dual vision + Llama-2 7B + bin tokens. The novelty is openness, not the recipe.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-35-generalist-policies.html ===== -->
@@ -3511,12 +3318,7 @@ svg text.math-var {
     <span class="mono">35</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Generalist policies &mdash; three takes</h4>
-    Three concurrent generalist-policy papers; same problem (act on a new embodiment / task), wildly different action heads. RDT-1B = a full diffusion transformer with continuous output. Octo = block-wise transformer + diffusion head, trained on OpenX. GR00T N1 = dual system, splitting reasoning (VLM, ~7B) from motor control (DiT, smaller, faster).<br><br>
-    The point of putting all three on one slide: there is no consensus action head in 2024-25. Each of these choices becomes a whole research direction in the next chapter. RDT &rarr; diffusion policy line (Ch5 slide 41). GR00T dual-system &rarr; Helix, &pi;0, Fast-in-Slow (Ch5). Octo &rarr; the open generalist baseline everyone benchmarks against.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-36-open-closed-landscape.html ===== -->
@@ -3650,26 +3452,7 @@ svg text.math-var {
     <span class="mono">36</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Open vs closed VLA landscape &mdash; 2026 H1 update</h4>
-    Same problem, two columns. Left = weights public, right = paper/blog + demo only. The big story since this slide was first drafted (mid-2024) is how <strong>much the open column has grown</strong>.<br><br>
-
-    <strong>Top-left (open + academic)</strong> &mdash; "what you can pick for next semester": OpenVLA, RDT-1B, Octo, and the Korean entry <strong>LAPA</strong> from KAIST (we revisit on slide 64).<br><br>
-
-    <strong>Bottom-left (open + industry) is the big shift.</strong> Three additions matter:
-    <ul>
-      <li><strong>&pi;0 / &pi;0.5</strong> &mdash; Physical Intelligence's <em>openpi</em> repo (Feb 2025) + PyTorch &pi;0.5 release (Sep 2025). These were "closed" in the 2024 version of this slide.</li>
-      <li><strong>DreamZero</strong> (NVIDIA, Feb 2026) &mdash; 14B WAM open-sourced at <em>github.com/dreamzero0/dreamzero</em>. This single release shifted the bar.</li>
-      <li><strong>InternVLA-A1</strong> (Shanghai AI Lab, Jan 2026) and <strong>LingBot-VLA</strong> (Robbyant / Ant Group, Jan 2026) &mdash; Chinese open releases, both pre-trained on ~20k+ hours.</li>
-    </ul>
-
-    <strong>Bottom-right (closed + industry)</strong> &mdash; the closed bet has become <em>vertical-integration</em>. <strong>Helix</strong> ships with Figure's humanoid; <strong>GENE-26.5</strong> (Genesis AI, May 2026) ships with their dexterous hand + tactile glove. <strong>GEN-1</strong> (Generalist AI, April 2026) is the most recent: 99% success on simple tasks, but early-access partners only.<br><br>
-
-    <strong>Top-right (closed + academic) is still essentially empty.</strong> The publishing incentive at universities still pushes for release.<br><br>
-
-    Korean talking point: 1년 반 사이에 open 12개, closed 6개. 우리가 fork &middot; finetune 할 수 있는 base가 압도적으로 많아졌고, 가장 강력한 frontier 모델 (&pi;0.5, DreamZero, GR00T)도 다 받을 수 있다.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-37-vla-failures.html ===== -->
@@ -3765,12 +3548,7 @@ svg text.math-var {
     <span class="mono">37</span>
   </footer>
 
-  <aside class="notes">
-    <h4>What VLAs are still bad at</h4>
-    Four open problems that have not been solved by 2026, each a different kind of limit. (1) Precise contact &mdash; the input modality doesn't carry force/touch yet, so anything finer than a half-cm peg-in-hole is fragile. (2) Long horizon &mdash; no explicit planner, errors compound; you'll see VLA rollouts go great for 20 seconds and then visibly drift. (3) Novel embodiment &mdash; the action vocabulary is tied to the robot you trained on; cross-arm transfer is an active research area (DreamZero on YAM is the current best, 30 min of plays). (4) Speed &mdash; a fundamental trade-off: the bigger the brain, the slower per step.<br><br>
-    These four set up the next two chapters cleanly: Ch5 (Diffusion Policy + dual-system) goes after speed and contact. Ch6 + Ch7 (World Models, WAMs) go after horizon and embodiment generalization.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-38-two-responses.html ===== -->
@@ -3857,14 +3635,7 @@ svg text.math-var {
     <span class="mono">38</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Two responses &mdash; the rest of the talk in one slide</h4>
-    The VLA limits from the previous slide split the field cleanly along the Kahneman S1/S2 line.<br><br>
-    <strong>Faster S1</strong> = take the action head off the LM's critical path. Diffusion Policy denoises a whole chunk; &pi;0's flow-matching expert runs at 50 Hz; Helix puts an 80M expert at 200 Hz while a 7B brain runs at 7&ndash;9 Hz; &pi;0-FAST compresses the action sequence itself so the same LM finishes faster. All four are Ch5.<br><br>
-    <strong>Smarter S2</strong> = externalize reasoning. Give the VLM something to think with &mdash; embodied chain-of-thought (Gemini Robotics ER 1.5), or a learned world model it can roll forward (Ch6), or a joint video+action generator (WAMs, DreamZero, Ch7).<br><br>
-    Bookmark this slide. After Ch7 we come back to see how the field made progress on each arrow.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-39-vla-cheatsheet.html ===== -->
@@ -3928,14 +3699,7 @@ svg text.math-var {
     <span class="mono">39</span>
   </footer>
 
-  <aside class="notes">
-    <h4>VLA cheat-sheet &mdash; the closing bookmark</h4>
-    Survey Figure 2 (Kawaharazuka et al. 2025, arXiv:2510.07077). The Y-axis is chronology, the X-axis is architectural lineage. The chart packs the entire 2022-2025 VLA evolution onto one diagram.<br><br>
-    Read left to right: CNN era (CLIPort) &rarr; Transformer foundation (Gato, VIMA) &rarr; RT-series with VLM backbones &rarr; Diffusion Policy lineage &rarr; DiT (RDT-1B) &rarr; Flow matching (&pi;0) &rarr; Latent action (LAPA) &rarr; Hierarchical (&pi;0.5, GR00T N1). That arc is exactly the substrate of Chapters 5-7.<br><br>
-    Two callouts not yet on the survey chart: Helix (Figure AI, closed) and DreamZero (NVIDIA, the WAM line in Ch7). For everything else, the chart is your one-page bookmark.<br><br>
-    Open-weight subset: OpenVLA, Octo, RDT-1B, GR00T N1/N1.5 &mdash; the practical candidate list for hands-on work.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-40-divider-ch5.html ===== -->
@@ -3956,11 +3720,7 @@ svg text.math-var {
     <span class="mono">40</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Ch5 Divider</h4>
-    Two threads in this chapter. <strong>Smart</strong> = how diffusion (which you covered last week) becomes a policy &mdash; same &epsilon;<sub>&theta;</sub>, different output space. <strong>Fast</strong> = why control frequency forced everyone into a dual-system (slow VLM + fast action expert). By the end you should see Helix, &pi;0.5, GR00T, Fast-in-Slow as variations on one pattern.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-41-diffusion-as-policy.html ===== -->
@@ -4024,13 +3784,7 @@ svg text.math-var {
     <span class="mono">41</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Diffusion as policy &mdash; original paper figures</h4>
-    Left = paper Fig 1: the three policy classes compared on the same 1-D regression toy. (a) Explicit policy regresses to the mean &mdash; collapses on multi-modal data. (b) Implicit / energy-based is bumpy and hard to optimise. (c) Diffusion learns the gradient field across the whole action space &mdash; samples cleanly from either mode.<br><br>
-    Right = paper Fig 2: the architecture. T<sub>o</sub>-step observation history conditions a U-Net (FiLM-conditioned 1D conv) <em>or</em> a Transformer (cross-attention). Output is a T<sub>p</sub>-step action chunk.<br><br>
-    The pitch in one line: the same &epsilon;<sub>&theta;</sub> that denoises image pixels now denoises an action chunk &mdash; conditioned on observation history, multi-modal by construction. That's why every modern policy uses a diffusion or flow head.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-42-control-frequency.html ===== -->
@@ -4125,13 +3879,7 @@ svg text.math-var {
     <span class="mono">42</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Control frequency &mdash; smart vs fast</h4>
-    Left: FiS-VLA's architecture (paper Fig 2) is the cleanest visual of the dual-system pattern. System 2 runs at a low frequency (one forward pass every n steps), feeds shared latents into System 1, which runs at the high control frequency. The fast path uses diffusion; the slow path uses autoregression.<br><br>
-    Right: per-model reported inference rate. The slope of the slide &mdash; every step up in semantic capability has so far cost an order of magnitude in inference rate. RT-2 (55B end-to-end) is 1 Hz; OpenVLA opens the same architecture at 5 Hz; chunked transformers and flow heads reach 50; only dual-system stacks (Helix, FiS-VLA) cross 100 Hz.<br><br>
-    Physics threshold call-outs: contact-rich manipulation needs 30-50 Hz, force-controlled assembly needs 200 Hz+. Helix is the existence proof that you can have both &mdash; the next slide explains why "S1/S2" is exactly the partition Kahneman drew for humans.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-43-dual-system-kahneman.html ===== -->
@@ -4141,38 +3889,47 @@ svg text.math-var {
     <span>43 / 77</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1.1rem); gap: 0.9rem;">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.85rem); gap: 0.7rem;">
 
     <h1>Dual system &mdash; the <span class="accent-text">Kahneman</span> analogy</h1>
     <p style="font-size: var(--size-small); color: var(--color-ink-muted); margin-top: -0.4rem; font-style: italic;">
-      A 20-year-old cognitive-science partition, now reified in silicon.
+      A 20-year-old cognitive-science partition, now reified in silicon &mdash; in robotics <em>and</em> in LLMs.
     </p>
 
     <style>
-      .kah-col { display: flex; flex-direction: column; gap: 0.75rem; flex: 1; min-width: 0; }
-      .kah-band { font-family: var(--font-mono); font-size: var(--size-tiny); text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; padding: 0.45rem 0.85rem; border-bottom: 2px solid var(--color-ink); }
+      .kah-col { display: flex; flex-direction: column; gap: 0.55rem; flex: 1; min-width: 0; }
+      .kah-band { font-family: var(--font-mono); font-size: var(--size-tiny); text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; padding: 0.4rem 0.85rem; border-bottom: 2px solid var(--color-ink); }
       .kah-band.human { color: var(--color-ink); }
       .kah-band.robot { color: var(--color-accent); border-bottom-color: var(--color-accent); }
-      .kah-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
-      .kah-card { padding: 0.85rem 0.95rem; border: var(--border-thin); display: flex; flex-direction: column; gap: 0.45rem; min-width: 0; }
+      .kah-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+      .kah-card { padding: 0.7rem 0.85rem; border: var(--border-thin); display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; }
       .kah-card.s1 { background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 100%); border-color: var(--color-accent); }
       .kah-card.s2 { background: var(--color-bg-alt); }
-      .kah-card .sys-label { font-family: var(--font-display); font-weight: 900; font-size: 1.4rem; line-height: 1; letter-spacing: -0.01em; }
+      .kah-card .sys-label { font-family: var(--font-display); font-weight: 900; font-size: 1.25rem; line-height: 1; letter-spacing: -0.01em; }
       .kah-card.s1 .sys-label { color: var(--color-accent); }
-      .kah-card .tagline { font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.08em; }
-      .kah-card .traits { font-size: var(--size-small); line-height: 1.55; }
-      .kah-card .traits strong { display: inline-block; min-width: 4.2rem; color: var(--color-ink-muted); font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; }
-      .kah-card .example { font-size: var(--size-tiny); color: var(--color-ink-soft); font-style: italic; padding-top: 0.45rem; border-top: 1px solid var(--color-grid-line); margin-top: auto; }
-      .map-row { display: grid; grid-template-columns: 1.2fr 1.4fr 1.4fr; gap: 0.5rem; padding: 0.55rem 0.7rem; align-items: center; font-size: var(--size-small); }
-      .map-row.head { border-top: 1.5px solid var(--color-ink); border-bottom: 1px solid var(--color-ink); font-family: var(--font-mono); font-size: var(--size-tiny); text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ink-muted); }
+      .kah-card .tagline { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+      .kah-card .traits { font-size: 0.72rem; line-height: 1.5; }
+      .kah-card .traits strong { display: inline-block; min-width: 3.9rem; color: var(--color-ink-muted); font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.05em; }
+      .kah-card .example { font-size: 0.6rem; color: var(--color-ink-soft); font-style: italic; padding-top: 0.35rem; border-top: 1px solid var(--color-grid-line); margin-top: auto; }
+      .map-row { display: grid; grid-template-columns: 1.2fr 1.4fr 1.4fr; gap: 0.5rem; padding: 0.45rem 0.7rem; align-items: center; font-size: 0.72rem; }
+      .map-row.head { border-top: 1.5px solid var(--color-ink); border-bottom: 1px solid var(--color-ink); font-family: var(--font-mono); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ink-muted); }
       .map-row.head .s2col { color: var(--color-ink); font-weight: 800; }
       .map-row.head .s1col { color: var(--color-accent); font-weight: 800; }
       .map-row + .map-row:not(.head) { border-top: 1px solid var(--color-grid-line); }
-      .map-row .model { font-family: var(--font-display); font-weight: 800; font-size: 0.95rem; }
-      .freq-tag { display: inline-block; font-family: var(--font-mono); font-size: 0.6rem; padding: 0.1rem 0.4rem; background: var(--color-bg-alt); border-radius: 2px; color: var(--color-ink-muted); margin-left: 0.25rem; }
+      .map-row .model { font-family: var(--font-display); font-weight: 800; font-size: 0.85rem; }
+      .freq-tag { display: inline-block; font-family: var(--font-mono); font-size: 0.55rem; padding: 0.05rem 0.35rem; background: var(--color-bg-alt); border-radius: 2px; color: var(--color-ink-muted); margin-left: 0.2rem; }
+
+      /* bottom reference strip */
+      .ref-strip { display: grid; grid-template-columns: 1fr 1.55fr; gap: 1rem; }
+      .ref-card { border: var(--border-thin); padding: 0.55rem 0.7rem; display: flex; gap: 0.7rem; align-items: center; min-width: 0; }
+      .ref-card .ref-tag { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; }
+      .ref-card .ref-tag .acc { color: var(--color-accent); }
+      .ref-card .ref-title { font-family: var(--font-display); font-weight: 800; font-size: 0.82rem; line-height: 1.15; margin-top: 0.15rem; }
+      .ref-card .ref-desc { font-size: 0.62rem; color: var(--color-ink-soft); line-height: 1.4; margin-top: 0.2rem; }
+      .ref-card .ref-cap { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted); margin-top: 0.25rem; }
     </style>
 
-    <div style="display: flex; gap: 1.5rem; flex: 1; align-items: stretch; min-height: 0;">
+    <div style="display: flex; gap: 1.5rem; flex: 1; align-items: stretch; min-height: 0; min-width: 0;">
 
       <!-- HUMAN side -->
       <div class="kah-col">
@@ -4282,6 +4039,61 @@ svg text.math-var {
 
     </div>
 
+    <!-- Bottom reference strip: book + LLM analogy -->
+    <div class="ref-strip">
+
+      <!-- Bottom-left: Kahneman book cover -->
+      <div class="ref-card">
+        <img src="images/concepts/kahneman-thinking-fast-slow-cover.png"
+             alt="Thinking, Fast and Slow — Daniel Kahneman (2011), Farrar, Straus and Giroux book cover"
+             style="height: 78px; width: auto; object-fit: contain; flex-shrink: 0;">
+        <div style="min-width: 0;">
+          <div class="ref-tag">Origin &middot; cognitive science</div>
+          <div class="ref-title">Thinking, Fast and Slow</div>
+          <div class="ref-desc">Kahneman 2002 Nobel lecture &amp; 2011 best-seller. The S1 / S2 partition that the whole field is now copying.</div>
+        </div>
+      </div>
+
+      <!-- Bottom-right: LLM (non-robot) dual-system example -->
+      <div class="ref-card" style="border-color: var(--color-accent); background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 80%);">
+        <svg viewBox="0 0 220 84" style="width: 220px; height: 78px; flex-shrink: 0; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <marker id="arr43llm-k" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto"><path d="M 0 0 L 5.5 3.5 L 0 7 z" fill="#0a0a0a"/></marker>
+            <marker id="arr43llm-r" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto"><path d="M 0 0 L 5.5 3.5 L 0 7 z" fill="#ff3300"/></marker>
+          </defs>
+          <!-- prompt -->
+          <rect x="4" y="30" width="28" height="24" fill="#f5f3ee" stroke="#0a0a0a" stroke-width="0.8"/>
+          <text x="18" y="46" font-size="7" text-anchor="middle" fill="#0a0a0a">prompt</text>
+
+          <path d="M 33 42 L 47 42" stroke="#0a0a0a" stroke-width="0.8" marker-end="url(#arr43llm-k)"/>
+
+          <!-- S2 thinking trace (long box, dark) -->
+          <rect x="48" y="22" width="92" height="40" fill="#0a0a0a" rx="1"/>
+          <text x="94" y="20" font-size="6.5" font-weight="800" fill="#0a0a0a" text-anchor="middle" font-family="var(--font-display)">S2 &middot; thinking</text>
+          <text x="94" y="36" font-size="6.5" fill="#ffffff" text-anchor="middle">&lt;think&gt; ...</text>
+          <text x="94" y="46" font-size="6" fill="#bbbbbb" text-anchor="middle" font-style="italic">long chain-of-thought</text>
+          <text x="94" y="56" font-size="6.5" fill="#ff3300" text-anchor="middle">&lt;/think&gt;</text>
+          <rect x="58" y="64" width="72" height="9" fill="none" stroke="#ff3300" stroke-width="0.6"/>
+          <text x="94" y="70.5" font-size="5.5" fill="#ff3300" font-weight="700" text-anchor="middle">10 &mdash; 60 s &middot; ~k tokens</text>
+
+          <path d="M 141 42 L 155 42" stroke="#ff3300" stroke-width="1" marker-end="url(#arr43llm-r)"/>
+
+          <!-- S1 final answer (compact, accent) -->
+          <rect x="156" y="30" width="60" height="24" fill="#ff3300" rx="1"/>
+          <text x="186" y="28" font-size="6.5" font-weight="800" fill="#ff3300" text-anchor="middle" font-family="var(--font-display)">S1 &middot; answer</text>
+          <text x="186" y="42" font-size="7" fill="#ffffff" text-anchor="middle" font-weight="700">final tokens</text>
+          <text x="186" y="50" font-size="5.5" fill="#ffffff" text-anchor="middle">fast &middot; concise</text>
+        </svg>
+        <div style="min-width: 0;">
+          <div class="ref-tag">Same pattern &middot; <span class="acc">non-robot</span> AI</div>
+          <div class="ref-title">LLM reasoning &mdash; "think then answer"</div>
+          <div class="ref-desc">OpenAI o1 / DeepSeek-R1 / Claude Extended Thinking all separate a long S2 reasoning trace from a fast S1 answer.</div>
+          <div class="ref-cap">arXiv:2412.16720 (o1) &middot; arXiv:2501.12948 (R1)</div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 
   <footer class="slide-footer">
@@ -4289,17 +4101,7 @@ svg text.math-var {
     <span class="mono">43</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Dual system &mdash; the Kahneman analogy</h4>
-    The right side is a literal mapping of the left. Kahneman's S1/S2 distinction is from his 2002 Nobel lecture (later the popular 2011 book <em>Thinking, Fast and Slow</em>): fast/automatic/parallel vs slow/deliberate/serial.<br><br>
-
-    The robotics version puts a <strong>VLM</strong> in the S2 slot (handles language, scene understanding, intent &mdash; the &quot;think&quot; part) and a much smaller, much faster <strong>action expert</strong> in the S1 slot (closed-loop motor control). They communicate through a <strong>single latent vector</strong> &mdash; that's the architectural commitment Helix, &pi;0/&pi;0.5, and GR00T N1 all share.<br><br>
-
-    The frequency ratio is the whole point: 5&ndash;9 Hz for the slow think vs 50&ndash;200 Hz for the fast act. ~20&times; gap.<br><br>
-
-    Korean talking point: 이건 robotics가 만든 비유가 아니라, cognitive science가 이미 20년 전에 도달한 partition을 그대로 silicon으로 옮긴 것. 다음 4개 슬라이드 (&pi;0, Helix, GR00T, FiS-VLA, Gemini Robotics 1.5)가 모두 이 패턴의 구체적인 instance.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-44-pi0-pi05.html ===== -->
@@ -4368,13 +4170,7 @@ svg text.math-var {
     <span class="mono">44</span>
   </footer>
 
-  <aside class="notes">
-    <h4>&pi;0 &amp; &pi;0.5</h4>
-    Two papers, one architecture. <strong>&pi;0</strong> defines the recipe: PaliGemma 3B as the VLM, a 300M action expert with a flow-matching head, single latent vector between them. Flow matching just replaces the &epsilon;<sub>&theta;</sub> noise-prediction objective with a velocity-field objective &mdash; one short ODE solve at inference instead of T denoise steps.<br><br>
-    <strong>&pi;0.5</strong> keeps that architecture and pushes the data axis. The headline result is the right-hand video: a robot is dropped into an Airbnb bedroom it has never seen and follows free-form language at 94% rate across 100+ never-seen homes. This is the most concrete demonstration to date of the Environment-axis generalization from slide 8.<br><br>
-    Talking point: &pi;0.5's lift is mostly co-training data, not architecture &mdash; reinforces the data &gt; model arc from Ch3.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-45-helix.html ===== -->
@@ -4474,13 +4270,7 @@ svg text.math-var {
     <span class="mono">45</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Helix &mdash; the cleanest dual-system</h4>
-    Helix is the easiest concrete instance to remember. Quoting the Figure blog directly: S2 is a 7B VLM running at 7-9 Hz, S1 is an 80M visuomotor transformer running at 200 Hz, communicating through a single latent vector. <strong>Both</strong> robots in the demo run identical weights &mdash; no role assignment.<br><br>
-    Caveats to flag verbally: no paper, no weights, no architecture diagram in the blog (the right-hand picture is my reconstruction from the prose). And remember slide 11's disclaimer for the broader industry stack: Figure's livestream cuts can mix autonomous and assisted clips &mdash; the Helix architecture itself is the verified bit; specific videos may include teleop.<br><br>
-    If anyone asks "why doesn't &pi;0 do this" &mdash; same architectural family, different bet on scale (300M vs 80M expert; PaliGemma 3B vs proprietary 7B VLM).
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-46-groot-evolution.html ===== -->
@@ -4619,12 +4409,7 @@ svg text.math-var {
     <span class="mono">46</span>
   </footer>
 
-  <aside class="notes">
-    <h4>GR00T evolution</h4>
-    NVIDIA's three-step arc compressed into one slide. <strong>N1</strong> = the open dual-system template (S2 VLM + S1 diffusion transformer). <strong>N1.5</strong> = same arch, retrained on synthetic data produced by GR00T-Dreams &mdash; this is the Ch3 (data scaling) &times; Ch6 (world models) collision point. The headline number is "3 months &rarr; 36 hours" of train time for the synthetic regime. <strong>N2 / DreamZero</strong> = a different bet entirely: dissolve the dual-system into one 14B autoregressive video-diffusion model that emits future frames and future actions in lockstep.<br><br>
-    I treat DreamZero lightly here on purpose &mdash; Ch 7 (World Action Models) does it in depth as a different conceptual category. Here it's just the "where this company went next" bookend.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-47-frontier-2026.html ===== -->
@@ -4754,13 +4539,7 @@ svg text.math-var {
     <span class="mono">47</span>
   </footer>
 
-  <aside class="notes">
-    <h4>2026 frontier</h4>
-    The chapter closer. The 2024-25 pattern of "two networks talking through one latent" is being pushed in opposite directions. <strong>Fast-in-Slow</strong> shoves S1 <em>inside</em> S2 &mdash; they share parameters, S2 runs every 4th S1 tick, and the system hits 117.7 Hz on a single 4090. <strong>Gemini Robotics 1.5</strong> goes the other way: it makes the bridge a natural-language text plan from a separate ER 1.5 reasoner, which is debuggable and can call external tools.<br><br>
-    The unifying point for the chapter: 2026 is the year people stopped treating "S1 + latent + S2" as the only template &mdash; the bridge itself became a design variable.<br><br>
-    This naturally hands off to Ch6: the same DeepMind team used Veo (a world model) to evaluate Gemini Robotics 1.5 1,600+ times. World models aren't just for data &mdash; they're the eval harness too.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-48-divider-ch6.html ===== -->
@@ -4781,11 +4560,7 @@ svg text.math-var {
     <span class="mono">48</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Ch6 Divider &mdash; the longest chapter (14 slides)</h4>
-    The single word "world model" has fractured into at least three robotics-relevant families (JEPA, video gen, 3D-spatial) and two purpose lines (entertainment vs robotics). We spend longer here because almost every 2026 frontier paper either is a WM or uses one. Anchor reference for the whole chapter: NTU MARS survey arXiv:2605.00080 (Hou et al., 18 authors incl. Abbeel/Malik/Wu/Du).
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-49-origin-ha-schmidhuber.html ===== -->
@@ -4803,15 +4578,16 @@ svg text.math-var {
     </p>
 
     <style>
-      .orig-grid { display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 1.1rem; flex: 1; min-height: 0; }
-      .orig-tile { display: flex; flex-direction: column; gap: 0.55rem; border: var(--border-thin); padding: 1.15rem 1rem 0.95rem; position: relative; min-width: 0; }
+      .orig-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.95rem; flex: 1; min-height: 0; }
+      .orig-tile { display: flex; flex-direction: column; gap: 0.6rem; border: var(--border-thin); padding: 1.2rem 1.1rem 1rem; position: relative; min-width: 0; }
       .orig-tile .yr-tag { position: absolute; top: -10px; left: 0.9rem; background: var(--color-bg); padding: 0.05rem 0.55rem; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-accent); font-weight: 700; letter-spacing: 0.15em; z-index: 2; line-height: 1.2; }
       .orig-tile.hero { border: 2px solid var(--color-accent); background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 55%); }
-      .orig-tile h2 { font-size: 1.15rem; line-height: 1.1; margin-top: 0.2rem; }
-      .orig-tile .orig-author { font-family: var(--font-mono); font-size: 0.66rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.05em; }
-      .orig-tile .orig-desc { font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.45; }
+      .orig-tile h2 { font-size: 1.1rem; line-height: 1.1; margin-top: 0.15rem; }
+      .orig-tile .orig-author { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.35; }
+      .orig-tile .orig-desc { font-size: 0.72rem; color: var(--color-ink-soft); line-height: 1.45; }
       .orig-tile .orig-cite { font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); margin-top: auto; padding-top: 0.4rem; }
       .orig-tile.hero .orig-cite { color: var(--color-accent); font-weight: 700; }
+      .orig-svg { width: 100%; height: auto; min-height: 175px; display: block; font-family: var(--font-mono); }
     </style>
 
     <div class="orig-grid">
@@ -4822,29 +4598,35 @@ svg text.math-var {
         <h2>Dyna</h2>
         <div class="orig-author">Sutton &middot; "Integrated Architectures for Learning, Planning, and Reacting"</div>
 
-        <svg viewBox="0 0 280 130" style="width: 100%; height: 130px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+        <svg class="orig-svg" viewBox="0 0 340 200" style="width: 100%; max-height: 210px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
           <defs><marker id="arr49a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 6 4 L 0 8 z" fill="#0a0a0a"/></marker></defs>
-          <!-- world (real) -->
-          <rect x="10" y="20" width="80" height="40" fill="none" stroke="#0a0a0a" stroke-width="1.5"/>
-          <text x="50" y="38" font-size="11" text-anchor="middle" font-weight="700">real env</text>
-          <text x="50" y="52" font-size="10" text-anchor="middle" fill="#8b8b8b">(s, a) → s', r</text>
 
-          <!-- learned model -->
-          <rect x="170" y="20" width="100" height="40" fill="#0a0a0a"/>
-          <text x="220" y="38" font-size="11" text-anchor="middle" fill="#ffffff" font-weight="700">learned model</text>
-          <text x="220" y="52" font-size="10" text-anchor="middle" fill="#ff3300">M̂(s, a) → ŝ', r̂</text>
+          <!-- real env (top-left) -->
+          <rect x="8" y="22" width="130" height="56" fill="none" stroke="#0a0a0a" stroke-width="1.5"/>
+          <text x="73" y="46" font-size="12" text-anchor="middle" font-weight="700">real env</text>
+          <text x="73" y="64" font-size="10" text-anchor="middle" fill="#8b8b8b">(s, a) → s', r</text>
 
-          <!-- policy -->
-          <rect x="90" y="85" width="100" height="38" fill="#ff3300"/>
-          <text x="140" y="103" font-size="11" text-anchor="middle" fill="#ffffff" font-weight="700">policy</text>
-          <text x="140" y="117" font-size="10" text-anchor="middle" fill="#ffffff">Q-learning</text>
+          <!-- learned model (top-right) -->
+          <rect x="202" y="22" width="130" height="56" fill="#0a0a0a"/>
+          <text x="267" y="46" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="700">learned model</text>
+          <text x="267" y="64" font-size="10" text-anchor="middle" fill="#ff3300">M̂(s, a) → ŝ', r̂</text>
 
-          <!-- arrows -->
-          <path d="M 90 40 L 168 40" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr49a)"/>
-          <text x="128" y="32" font-size="9" text-anchor="middle" fill="#8b8b8b" font-style="italic">learn</text>
-          <path d="M 50 60 L 90 85" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr49a)"/>
-          <path d="M 220 60 L 190 85" stroke="#ff3300" stroke-width="1.5" marker-end="url(#arr49a)"/>
-          <text x="218" y="80" font-size="9" text-anchor="end" fill="#ff3300" font-style="italic">imagined</text>
+          <!-- learn arrow (top, label above) -->
+          <text x="170" y="14" font-size="10" text-anchor="middle" fill="#8b8b8b" font-style="italic">learn</text>
+          <path d="M 138 50 L 200 50" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr49a)"/>
+
+          <!-- policy (bottom-center) -->
+          <rect x="105" y="138" width="130" height="50" fill="#ff3300"/>
+          <text x="170" y="162" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="700">policy</text>
+          <text x="170" y="178" font-size="10" text-anchor="middle" fill="#ffffff">Q-learning</text>
+
+          <!-- real → policy (left diagonal, label outside) -->
+          <path d="M 73 78 L 110 138" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr49a)"/>
+          <text x="58" y="118" font-size="10" text-anchor="middle" fill="#8b8b8b" font-style="italic">real exp.</text>
+
+          <!-- model → policy (right diagonal, label outside) -->
+          <path d="M 267 78 L 230 138" stroke="#ff3300" stroke-width="1.5" marker-end="url(#arr49a)"/>
+          <text x="290" y="118" font-size="10" text-anchor="middle" fill="#ff3300" font-style="italic">imagined</text>
         </svg>
 
         <p class="orig-desc">
@@ -4859,27 +4641,34 @@ svg text.math-var {
         <h2>RNN world model + controller</h2>
         <div class="orig-author">Schmidhuber &middot; "Making the World Differentiable" + "An On-line Algorithm…"</div>
 
-        <svg viewBox="0 0 280 130" style="width: 100%; height: 130px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+        <svg class="orig-svg" viewBox="0 0 340 200" style="width: 100%; max-height: 210px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
           <defs><marker id="arr49b" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 6 4 L 0 8 z" fill="#0a0a0a"/></marker></defs>
-          <!-- Controller -->
-          <rect x="20" y="45" width="80" height="42" fill="#ff3300"/>
-          <text x="60" y="65" font-size="11" text-anchor="middle" fill="#ffffff" font-weight="700">controller</text>
-          <text x="60" y="78" font-size="10" text-anchor="middle" fill="#ffffff">RNN π</text>
 
-          <!-- World model RNN -->
-          <rect x="170" y="45" width="92" height="42" fill="#0a0a0a"/>
-          <text x="216" y="65" font-size="11" text-anchor="middle" fill="#ffffff" font-weight="700">world model</text>
-          <text x="216" y="78" font-size="10" text-anchor="middle" fill="#ff3300">RNN M̂</text>
+          <!-- top banner: backprop through time -->
+          <text x="170" y="18" font-size="11" text-anchor="middle" fill="#0a0a0a" font-weight="700">backprop through time</text>
+          <line x1="30" y1="28" x2="310" y2="28" stroke="#ff3300" stroke-width="1" stroke-dasharray="3 3"/>
 
-          <!-- bidirectional arrows -->
-          <path d="M 100 60 L 168 60" stroke="#ff3300" stroke-width="2" marker-end="url(#arr49b)"/>
-          <text x="134" y="52" font-size="9" text-anchor="middle" fill="#8b8b8b" font-style="italic">action</text>
-          <path d="M 170 76 L 102 76" stroke="#0a0a0a" stroke-width="2" marker-end="url(#arr49b)"/>
-          <text x="136" y="92" font-size="9" text-anchor="middle" fill="#8b8b8b" font-style="italic">∂loss / ∂a (differentiable)</text>
+          <!-- Controller (left) -->
+          <rect x="20" y="70" width="115" height="58" fill="#ff3300"/>
+          <text x="77" y="96" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="700">controller</text>
+          <text x="77" y="114" font-size="10" text-anchor="middle" fill="#ffffff">RNN π</text>
 
-          <text x="140" y="22" font-size="11" text-anchor="middle" fill="#0a0a0a" font-weight="700">backprop through time</text>
-          <line x1="40" y1="30" x2="240" y2="30" stroke="#ff3300" stroke-width="1" stroke-dasharray="3 3"/>
-          <text x="140" y="115" font-size="10" text-anchor="middle" fill="#4a4a4a">controller learns by propagating reward gradients through M̂</text>
+          <!-- World model RNN (right) -->
+          <rect x="205" y="70" width="115" height="58" fill="#0a0a0a"/>
+          <text x="262" y="96" font-size="12" text-anchor="middle" fill="#ffffff" font-weight="700">world model</text>
+          <text x="262" y="114" font-size="10" text-anchor="middle" fill="#ff3300">RNN M̂</text>
+
+          <!-- action arrow (top, label above) -->
+          <text x="170" y="56" font-size="10" text-anchor="middle" fill="#8b8b8b" font-style="italic">action</text>
+          <path d="M 135 85 L 203 85" stroke="#ff3300" stroke-width="2" marker-end="url(#arr49b)"/>
+
+          <!-- gradient arrow (bottom, label below) -->
+          <path d="M 205 113 L 137 113" stroke="#0a0a0a" stroke-width="2" marker-end="url(#arr49b)"/>
+          <text x="170" y="148" font-size="10" text-anchor="middle" fill="#8b8b8b" font-style="italic">∂ loss / ∂ a   (differentiable)</text>
+
+          <!-- bottom caption -->
+          <text x="170" y="184" font-size="10" text-anchor="middle" fill="#4a4a4a">controller learns by propagating reward</text>
+          <text x="170" y="196" font-size="10" text-anchor="middle" fill="#4a4a4a">gradients through M̂</text>
         </svg>
 
         <p class="orig-desc">
@@ -4894,36 +4683,37 @@ svg text.math-var {
         <h2>World Models &middot; V&middot;M&middot;C</h2>
         <div class="orig-author">Ha &amp; Schmidhuber &middot; deep + small policy formula</div>
 
-        <svg viewBox="0 0 320 130" style="width: 100%; height: 130px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+        <svg class="orig-svg" viewBox="0 0 360 200" style="width: 100%; max-height: 210px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
           <defs><marker id="arr49c" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 6 4 L 0 8 z" fill="#0a0a0a"/></marker></defs>
 
-          <!-- V -->
-          <rect x="10" y="35" width="80" height="60" fill="#0a0a0a"/>
-          <text x="50" y="60" font-size="22" font-weight="900" text-anchor="middle" fill="#ff3300" font-family="var(--font-display)">V</text>
-          <text x="50" y="78" font-size="10" text-anchor="middle" fill="#ffffff">VAE</text>
-          <text x="50" y="90" font-size="9" text-anchor="middle" fill="rgba(255,255,255,0.65)">z</text>
+          <!-- top banner -->
+          <text x="180" y="18" font-size="11" text-anchor="middle" font-weight="700" fill="#0a0a0a">deep V&middot;M + tiny C → policy inside a dream</text>
 
-          <path d="M 90 65 L 110 65" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr49c)"/>
+          <!-- V -->
+          <rect x="10" y="50" width="100" height="90" fill="#0a0a0a"/>
+          <text x="60" y="86" font-size="26" font-weight="900" text-anchor="middle" fill="#ff3300" font-family="var(--font-display)">V</text>
+          <text x="60" y="108" font-size="11" text-anchor="middle" fill="#ffffff">VAE</text>
+          <text x="60" y="124" font-size="10" text-anchor="middle" fill="rgba(255,255,255,0.65)">z</text>
+
+          <path d="M 110 95 L 130 95" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr49c)"/>
 
           <!-- M -->
-          <rect x="110" y="35" width="80" height="60" fill="#0a0a0a"/>
-          <text x="150" y="60" font-size="22" font-weight="900" text-anchor="middle" fill="#ff3300" font-family="var(--font-display)">M</text>
-          <text x="150" y="78" font-size="10" text-anchor="middle" fill="#ffffff">MDN-RNN</text>
-          <text x="150" y="90" font-size="9" text-anchor="middle" fill="rgba(255,255,255,0.65)">p(z'|z,a,h)</text>
+          <rect x="130" y="50" width="100" height="90" fill="#0a0a0a"/>
+          <text x="180" y="86" font-size="26" font-weight="900" text-anchor="middle" fill="#ff3300" font-family="var(--font-display)">M</text>
+          <text x="180" y="108" font-size="11" text-anchor="middle" fill="#ffffff">MDN-RNN</text>
+          <text x="180" y="124" font-size="10" text-anchor="middle" fill="rgba(255,255,255,0.65)">p(z'|z,a,h)</text>
 
-          <path d="M 190 65 L 210 65" stroke="#ff3300" stroke-width="2" marker-end="url(#arr49c)"/>
+          <path d="M 230 95 L 250 95" stroke="#ff3300" stroke-width="2" marker-end="url(#arr49c)"/>
 
           <!-- C -->
-          <rect x="210" y="35" width="80" height="60" fill="none" stroke="#ff3300" stroke-width="2"/>
-          <text x="250" y="60" font-size="22" font-weight="900" text-anchor="middle" fill="#ff3300" font-family="var(--font-display)">C</text>
-          <text x="250" y="78" font-size="10" text-anchor="middle" fill="#0a0a0a">CMA-ES</text>
-          <text x="250" y="90" font-size="9" text-anchor="middle" fill="#8b8b8b">867 params</text>
+          <rect x="250" y="50" width="100" height="90" fill="none" stroke="#ff3300" stroke-width="2"/>
+          <text x="300" y="86" font-size="26" font-weight="900" text-anchor="middle" fill="#ff3300" font-family="var(--font-display)">C</text>
+          <text x="300" y="108" font-size="11" text-anchor="middle" fill="#0a0a0a">CMA-ES</text>
+          <text x="300" y="124" font-size="10" text-anchor="middle" fill="#8b8b8b">867 params</text>
 
-          <!-- loop -->
-          <path d="M 250 95 L 250 115 L 50 115 L 50 95" stroke="#8b8b8b" stroke-width="1" fill="none" stroke-dasharray="3 3" marker-end="url(#arr49c)"/>
-          <text x="150" y="128" font-size="9" text-anchor="middle" fill="#8b8b8b">policy trained inside M's dream</text>
-
-          <text x="150" y="20" font-size="11" text-anchor="middle" font-weight="700" fill="#0a0a0a">deep V&middot;M + tiny C → policy inside a dream</text>
+          <!-- loop arrow back to V -->
+          <path d="M 300 140 L 300 168 L 60 168 L 60 140" stroke="#8b8b8b" stroke-width="1" fill="none" stroke-dasharray="3 3" marker-end="url(#arr49c)"/>
+          <text x="180" y="190" font-size="10" text-anchor="middle" fill="#8b8b8b">policy trained inside M's dream</text>
         </svg>
 
         <p class="orig-desc">
@@ -4949,19 +4739,7 @@ svg text.math-var {
     <span class="mono">49</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Origin &mdash; three independent arrivals</h4>
-    The user asked us not to flatten the origin to one paper. Three independent strands:<br><br>
-
-    <strong>(1) Sutton 1990 — Dyna.</strong> "Integrated Architectures for Learning, Planning, and Reacting" (ML Workshop). Model-based RL: learn M̂(s,a)→s', then run Q-learning updates from <em>both</em> real and imagined transitions. This is the canonical model-based RL skeleton that DreamerV1/V2/V3 inherits.<br><br>
-
-    <strong>(2) Schmidhuber 1990 — RNN world model + RNN controller.</strong> TR FKI-126 "Making the World Differentiable" + TR FKI-147. He explicitly trained an RNN controller through a learned RNN world model, propagating reward gradients all the way back. This is the differentiable-world-model trick that every subsequent learned-policy-through-rollouts paper uses.<br><br>
-
-    <strong>(3) Ha &amp; Schmidhuber 2018 — V&middot;M&middot;C.</strong> The same partition, but with VAE for V and MDN-RNN for M, plus a tiny CMA-ES controller. The famous result: agent solves CarRacing and ViZDoom entirely inside a learned dream.<br><br>
-
-    Korean talking: 핵심은 1990년에 sutton 과 schmidhuber 가 같은 partition (학습된 model + 그 안에서 policy 학습) 에 독립적으로 도달했다는 것. 2018 Ha&amp;Schmidhuber 는 그 partition 을 deep learning 으로 modernize 한 것. 2024-26 chapter 의 모든 모델들이 이 세 박스의 remix.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-50-dreamer-family.html ===== -->
@@ -5057,12 +4835,7 @@ svg text.math-var {
     <span class="mono">50</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Dreamer evolution + DayDreamer anchor</h4>
-    Five-year arc of one idea, each tile now using the original architecture/result figure from its paper. <strong>V1</strong> nails DMC continuous control (overview shows the dataset → latent dynamics → policy loop). <strong>V2</strong> cracks Atari with discrete latents &mdash; the architecture diagram showing 32 categorical × 32 class latents is the famous figure. <strong>V3</strong> finally generalizes &mdash; one set of hyperparams across 150+ tasks, and Minecraft Diamond from raw pixels (the plot shows it &mdash; the only line that reaches Diamond %).<br><br>
-    <strong>DayDreamer is the historical anchor</strong> &mdash; CoRL'22, Wu et al., trains a real A1 quadruped to walk in ~1 hour using a Dreamer-style WM. This is the earliest concrete bridge from "RL in simulated dreams" to "RL on actual robots", and it sets up slide 61's pitch that WMs unlock data, evaluation, and policy.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-51-two-axes.html ===== -->
@@ -5158,11 +4931,7 @@ svg text.math-var {
     <span class="mono">51</span>
   </footer>
 
-  <aside class="notes">
-    <h4>NEW &mdash; one slide to disambiguate "world model"</h4>
-    The same phrase shows up in three very different communities. This 4&times;2 grid gives the student a shape: the left column is what they have seen on social media (Genie 3, Oasis, Muse), the right column is what we'll spend the rest of this chapter on. The bottom-row "3D / spatial" cell is where the two columns blur &mdash; Genie 3's long-horizon scene consistency is starting to feed robotics sim. Tell them: "if you've seen Genie 3 clips on Twitter, that's the same family &mdash; just a different cell."
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-52-three-families.html ===== -->
@@ -5238,11 +5007,7 @@ svg text.math-var {
     <span class="mono">52</span>
   </footer>
 
-  <aside class="notes">
-    <h4>The chapter map</h4>
-    This is the index for the rest of Ch6. Three branches, each gets two slides (one foundational + one 2026 frontier). Different inductive biases &mdash; <strong>JEPA</strong> bets on abstraction, <strong>video gen</strong> bets on pixel-perfect rollouts, <strong>3D-spatial</strong> bets on explicit geometry. Almost every modern robotics paper picks one of these three. Tell students which one your group bets on at the end (we'll come back in Ch8).
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-53-vjepa2.html ===== -->
@@ -5345,11 +5110,7 @@ svg text.math-var {
     <span class="mono">53</span>
   </footer>
 
-  <aside class="notes">
-    <h4>V-JEPA 2 &mdash; the JEPA branch lands</h4>
-    Meta's V-JEPA 2 is the 2025 landmark for the JEPA family. Architecture: encode context with a learned encoder, encode targets with an EMA copy (no gradient), train a predictor to match the target <em>in latent space</em> &mdash; never reconstructing pixels. 1.2B params. The action-conditioned variant is what unlocks manipulation use. LeCun's bet from 2022 on JEPA finally shipped at production scale.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-54-jepa-2026.html ===== -->
@@ -5449,17 +5210,7 @@ svg text.math-var {
     <span class="mono">54</span>
   </footer>
 
-  <aside class="notes">
-    <h4>2026 JEPA-line &mdash; original figures from both papers</h4>
-    Two follow-ups worth knowing in the post-V-JEPA-2 era, both with their original architecture/comparison diagrams pulled straight from the papers.<br><br>
-
-    <strong>DINO-WM</strong> (NYU+Meta, ICLR 2025) &mdash; the architecture figure shows the trick exactly: freeze a strong DINOv2 encoder for visual features z, learn just a small dynamics head p<sub>&theta;</sub>(z, a) → z'. Then at test-time, you can plan by optimizing the action sequence <em>a<sub>t</sub>..a<sub>T-1</sub></em> via gradient descent on the planning loss against the goal latent z<sub>g</sub>. The point: a strong pretrained encoder + a small dynamics head is enough to plan over.<br><br>
-
-    <strong>LeWorldModel</strong> (Maes/LeCun/Balestriero, Mar 2026) &mdash; the comparison figure from the paper neatly shows how LeWM addresses limits of PLDM, DINO-WM, Dreamer, and TD-MPC: 1 hyperparameter (vs 6), provable anti-collapse regularization, end-to-end learning, task-agnostic, reconstruction-free, pixels-based, reward-free. <strong>15M params total, 48&times; faster planning than V-JEPA 2.</strong><br><br>
-
-    <em>Honest framing</em>: this is not the WM family WoRV builds on for production policies (we're closer to the action-conditioned line), but it's where compute-efficient planning research is moving.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-55-video-gen-simulator.html ===== -->
@@ -5543,12 +5294,7 @@ svg text.math-var {
     <span class="mono">55</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Video gen WMs &mdash; 4 tiles + anchor</h4>
-    Four families showing today, each on its own iframe / inline clip. <strong>Sora 2</strong> (consumer app discontinued Apr 2026 &mdash; this clip is the launch reel), <strong>Veo 3</strong> (native audio + dialogue is the differentiator), <strong>Cosmos Predict</strong> (NVIDIA's Physical-AI angle, the one we'll see again in robotics), <strong>Genie 3</strong> (long-horizon scene memory). <br><br>
-    The one-line anchor at the bottom is critical: UniSim (Yilun Du, ICLR'24 Outstanding Paper) was the paper that <em>named</em> video generation as a world simulator. Everything 2024 and after is downstream.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-56-video-gen-2026.html ===== -->
@@ -5641,17 +5387,7 @@ svg text.math-var {
     <span class="mono">56</span>
   </footer>
 
-  <aside class="notes">
-    <h4>2026 robotics world models &mdash; DreamDojo + DreamZero</h4>
-    <strong>Critical framing.</strong> Earlier drafts of this slide treated Sora/Veo/Wan/Cosmos as "world models". They are <em>video generators</em> &mdash; they emit beautiful pixels from text or image prompts, but they don't take an action input and they're not predicting next state from current state. They become WMs <em>only when wrapped with action conditioning</em> (Slide 60). The truly canonical 2026 robotics WMs are DreamDojo and DreamZero, both from NVIDIA GEAR.<br><br>
-
-    <strong>DreamDojo</strong> (arXiv:2602.06949, Feb 2026) is the cleanest 2026 example of the action-conditioned WM pattern. Pretrain on a huge pool of human videos (EgoDex, In-lab footage, DreamDojo-HV), then post-train on robot teleop from four embodiments (Fourier GR-1, Unitree G1, AgiBot, YAM). The result is one model that supports Model-Based Planning (MPC), Policy Evaluation, Live Teleop, and Unseen-Environment deploy.<br><br>
-
-    <strong>DreamZero</strong> (arXiv:2602.15922, Feb 2026) goes further &mdash; a single 14B autoregressive model that jointly generates future video <em>and</em> future actions. We come back to this in <strong>Ch 7</strong> as the canonical WAM (World Action Model). On this slide, we just place it as the "joint generation" 2026 endpoint of the WM lineage.<br><br>
-
-    Korean talking: "Sora나 Veo는 World Model 이라고 부르긴 하지만 엄밀히는 video generator. 진짜 robotics WM은 (obs, action) → next obs 처럼 action 조건부 next state predictor. 2026년 대표 두 모델이 DreamDojo + DreamZero, 둘 다 NVIDIA GEAR open release."
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-57-3d-spatial.html ===== -->
@@ -5740,11 +5476,7 @@ svg text.math-var {
     <span class="mono">57</span>
   </footer>
 
-  <aside class="notes">
-    <h4>3D / spatial WMs &mdash; original figures from both papers</h4>
-    Two-tile slide using paper-original figures. <strong>4D Gaussian Splatting</strong> (HUST Wu et al., CVPR 2024): the coarse-to-fine pipeline figure shows the training trick exactly &mdash; start from a random point cloud, fit 3D Gaussians at iter 3000, then jointly optimize the temporal deformation at iter 20000. <strong>Cosmos Transfer 1</strong> (NVIDIA, Mar 2025): the architecture figure clearly shows the frozen Cosmos-1 backbone + per-modality ControlNets that turn depth/segmentation/edge sensor maps into photoreal video. Together they form the dominant 2025-26 robot data pipeline: sim engine generates geometry, Cosmos Transfer paints pixels, policy trains on the pixels. Sets up Slide 58 (Lyra 2 generates the 3D scene itself) and Slide 59 (the geometry foundation models that infer 4D-GS from images).
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-58-lyra2.html ===== -->
@@ -5796,11 +5528,7 @@ svg text.math-var {
     <span class="mono">58</span>
   </footer>
 
-  <aside class="notes">
-    <h4>NEW &mdash; Lyra 2 (NVIDIA, Apr 2026)</h4>
-    The user specifically asked for this one. Lyra 2 takes a single image (or text prompt) and produces a navigable 3D Gaussian-splat scene that plugs straight into Isaac Sim. The backbone is WAN 2.1 (the open Alibaba video model from Slide 56) distilled into 3D-GS. The pitch is that you get a whole <em>environment</em> &mdash; not a 5-second video &mdash; that a robot policy can train on and be evaluated in.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-59-geometric-fm.html ===== -->
@@ -5818,15 +5546,15 @@ svg text.math-var {
     </p>
 
     <style>
-      .gfm-tile { display: flex; flex-direction: column; gap: 0.5rem; border: var(--border-thin); padding: 0.85rem 0.9rem; min-width: 0; min-height: 0; }
+      .gfm-tile { display: flex; flex-direction: column; gap: 0.35rem; border: var(--border-thin); padding: 0.7rem 0.75rem; min-width: 0; min-height: 0; }
       .gfm-tile.hero { background: var(--color-bg-alt); border-color: var(--color-accent); border-width: 1.5px; }
       .gfm-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
       .gfm-tile h2 { font-size: 1.2rem; line-height: 1; }
       .gfm-tag { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-accent); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; }
       .gfm-author { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted); }
-      .gfm-img-wrap { flex: 1; display: flex; align-items: center; justify-content: center; background: var(--color-bg); border: 1px solid var(--color-grid-line); padding: 0.35rem; min-height: 0; }
-      .gfm-img-wrap img { max-width: 100%; max-height: 100%; object-fit: contain; }
-      .gfm-caption { font-size: 0.68rem; color: var(--color-ink-soft); line-height: 1.4; }
+      .gfm-img-wrap { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; background: var(--color-bg); border: 1px solid var(--color-grid-line); padding: 0.25rem; min-height: 0; overflow: hidden; }
+      .gfm-img-wrap img { width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; object-position: center; }
+      .gfm-caption { font-size: 0.66rem; color: var(--color-ink-soft); line-height: 1.35; margin-top: 0.1rem; }
       .gfm-meta { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.15rem; }
       .gfm-meta .pill { padding: 0.25rem 0.45rem; background: var(--color-bg); border-left: 2px solid var(--color-accent); }
       .gfm-meta .pill strong { font-family: var(--font-display); font-weight: 900; font-size: 0.85rem; display: block; line-height: 1; }
@@ -5846,8 +5574,8 @@ svg text.math-var {
         </div>
         <div style="font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted);">arXiv:2503.11651</div>
 
-        <div class="gfm-img-wrap" style="padding: 0.55rem;">
-          <img src="images/papers/vggt/architecture.png" alt="VGGT architecture: N input images → DINO + concat + camera token → Global Attention + Frame Attention (×L) → Camera Head + DPT → cameras, depth maps, point maps, tracks in one forward pass">
+        <div class="gfm-img-wrap" style="padding: 0.2rem;">
+          <img src="images/papers/vggt/architecture-trim.png" alt="VGGT architecture: N input images → DINO + concat + camera token → Global Attention + Frame Attention (×L) → Camera Head + DPT → cameras, depth maps, point maps, tracks in one forward pass">
         </div>
 
         <p class="gfm-caption">
@@ -5866,8 +5594,8 @@ svg text.math-var {
         </div>
         <div style="font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted);">arXiv:2605.15195</div>
 
-        <div class="gfm-img-wrap" style="padding: 0.4rem;">
-          <img src="images/papers/vggt-omega/architecture.png" alt="VGGT-Omega architecture: introduces Register Attention as alternative to Global/Frame Attention, plus training-only Matching Loss and Point Loss; same I/O as VGGT but lighter compute and richer supervision">
+        <div class="gfm-img-wrap" style="padding: 0.2rem;">
+          <img src="images/papers/vggt-omega/architecture-trim.png" alt="VGGT-Omega architecture: introduces Register Attention as alternative to Global/Frame Attention, plus training-only Matching Loss and Point Loss; same I/O as VGGT but lighter compute and richer supervision">
         </div>
 
         <p class="gfm-caption" style="font-size: 0.65rem;">
@@ -5892,7 +5620,7 @@ svg text.math-var {
         </div>
         <div style="font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted);">arXiv:2509.13414</div>
 
-        <div class="gfm-img-wrap" style="padding: 0.4rem;">
+        <div class="gfm-img-wrap" style="padding: 0.2rem;">
           <img src="images/papers/mapanything/method.png" alt="MapAnything method: Visual Input N + optional Geometric Inputs (Ray Directions, Pose, Depth) → Multi-Modal Encoders with shared weights → Multi-View Transformer → MLP scaling factor + DPT Head + Pose Head → metric 3D scene">
         </div>
 
@@ -5914,12 +5642,7 @@ svg text.math-var {
     <span class="mono">59</span>
   </footer>
 
-  <aside class="notes">
-    <h4>NEW &mdash; geometric foundation models &middot; original figures</h4>
-    Three-tile slide for the geometry-first WM line, all with paper-original figures pulled from the tex sources. <strong>VGGT</strong> (CVPR 2025 Best Paper, FAIR + Oxford) &mdash; the architecture figure shows the trick: N input views, DINO + camera token, Global + Frame attention (×L), then a Camera Head + DPT producing cameras + depth + point maps + tracks in one forward pass. <strong>VGGT-&Omega;</strong> (CVPR 2026 Oral) &mdash; the architecture figure shows what's <em>architecturally new</em>: Register Attention as an alternative to Global/Frame attention (lighter compute), plus training-only Matching Loss + Point Loss. Same I/O as VGGT but lighter and richer supervision. Headline numbers: 30% memory, 15× data, +77% on Sintel. <strong>MapAnything</strong> (Meta + CMU, 3DV 2026) &mdash; the method figure shows multi-modal encoders that accept image + optional geometric inputs (ray directions, pose, depth) and dual DPT/Pose heads that emit <em>metric</em> 3D in real-world units.<br><br>
-    Korean talking: "월드모델이 픽셀이나 latent를 다룬다면, 이 라인은 <em>기하 자체</em>를 다룬다. 우리 (WoRV) 도 데이터·평가에 이미 쓰고 있다."
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-60-action-conditioned.html ===== -->
@@ -6008,13 +5731,7 @@ svg text.math-var {
     <span class="mono">60</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Action-conditioned WMs &mdash; the bridge slide</h4>
-    Side-by-side with paper-original figures. <strong>GAIA-1</strong> (Wayve, 2023, 9B) was the first big example &mdash; the schematic shows the three input streams (video, action, text) all tokenized and fed into one autoregressive transformer; the world model emits next tokens, decoded back to video. This is where the field first scaled the V&middot;M&middot;C / Sutton-Dyna pattern up to billion-parameter sizes with explicit action conditioning.<br><br>
-    <strong>GR00T-Dreams / DreamGen</strong> (NVIDIA GEAR, May 2025) is the modern robotics counterpart &mdash; given an initial frame, the WM generates a long video, and a small IDM-style head recovers pseudo-actions automatically. These (frame, action) pairs then feed contact-rich data augmentation, new behavior generalization, and new environment generalization. This is the data factory that fed GR00T N1.5 (Slide 46).<br><br>
-    Bridge to Ch 7: once the model can <em>condition on</em> action, the next step is to <em>generate</em> action too &mdash; that's a WAM. DreamZero (Slide 66) is the canonical example.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-61-why-wms-matter.html ===== -->
@@ -6153,15 +5870,7 @@ svg text.math-var {
     <span class="mono">61</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Chapter close &mdash; why WMs matter (now grounded in NTU survey framework)</h4>
-    Reorganized around the NTU MARS survey's clean taxonomy (arXiv:2605.00080). Their core claim: an "actionable" WM provides three capabilities &mdash; <strong>foresight</strong>, <strong>imagination-driven planning</strong>, <strong>data amplification</strong>. I added two more rows: (4) zero-shot evaluation (Gemini-in-Veo replaced 1,600+ real evals, WorldEval is the academic counterpart) and (5) the 2026 shift &mdash; WMs are no longer auxiliary, they're core to the learning loop (VLA-RFT, WMPO, RynnVLA-002 are explicit co-evolution of policy + WM).<br><br>
-
-    Per the survey: "World models are not merely a generative enhancement, but a predictive bridge from semantic intent to physically realizable behavior." Foundation-scale video models (Sora/Veo/Wan/Cosmos) are increasingly being adapted into robot policies, but the key objective is not just plausible futures &mdash; it's <em>control-consistent</em> futures that support decision-making.<br><br>
-
-    Korean talking: "WoRV에서도 이 다섯 가지 모두 사용 중. 3개월 → 36시간 학습 단축 (data amplification), Veo로 policy eval 자동화, MPC + WM 기반 planning, 그리고 가장 중요한 건 forecasting을 통해 contact-rich task에서 implicit physics 캡처. 이게 robotics가 video gen 단순 모방을 넘어서야 하는 이유."
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-62-divider-ch7.html ===== -->
@@ -6182,11 +5891,7 @@ svg text.math-var {
     <span class="mono">62</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Ch7 Divider &mdash; World Action Models</h4>
-    Ch6 ended with action-conditioned world models &mdash; the bridge slide. Ch7 closes the loop: take video generation seriously enough that the model both <em>predicts</em> the future and <em>commits</em> to an action at the same time. The DreamZero hypothesis: jointly modelling video and action is what unlocks zero-shot generalization to new tasks and new embodiments. Nine slides, then we&rsquo;re into the team chapter.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-63-idm-idea.html ===== -->
@@ -6224,7 +5929,7 @@ svg text.math-var {
         <h2>Pay humans to label every frame</h2>
 
         <div class="idm-svg-wrap">
-          <svg viewBox="0 0 460 230" style="width: 100%; max-width: 100%; max-height: 260px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+          <svg viewBox="0 0 560 280" style="width: 100%; max-width: 100%; max-height: 320px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
             <defs>
               <marker id="arr63a" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
                 <path d="M 0 0 L 7 4.5 L 0 9 z" fill="#0a0a0a"/>
@@ -6232,35 +5937,37 @@ svg text.math-var {
             </defs>
 
             <!-- Human -->
-            <rect x="15" y="60" width="100" height="80" fill="#f5f3ee" stroke="#0a0a0a" stroke-width="1.5"/>
-            <text x="65" y="92" font-size="14" font-family="var(--font-display)" font-weight="800" text-anchor="middle" fill="#0a0a0a">HUMAN</text>
-            <text x="65" y="112" font-size="12" text-anchor="middle" fill="#4a4a4a">contractor</text>
-            <text x="65" y="128" font-size="12" text-anchor="middle" fill="#8b8b8b">270k h</text>
+            <rect x="15" y="65" width="120" height="90" fill="#f5f3ee" stroke="#0a0a0a" stroke-width="1.5"/>
+            <text x="75" y="100" font-size="15" font-family="var(--font-display)" font-weight="800" text-anchor="middle" fill="#0a0a0a">HUMAN</text>
+            <text x="75" y="122" font-size="12" text-anchor="middle" fill="#4a4a4a">contractor</text>
+            <text x="75" y="140" font-size="12" text-anchor="middle" fill="#8b8b8b">270k h</text>
 
-            <path d="M 118 95 L 158 95" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr63a)"/>
-            <text x="138" y="84" font-size="11" text-anchor="middle" fill="#8b8b8b">records</text>
+            <path d="M 138 108 L 188 108" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr63a)"/>
+            <text x="163" y="96" font-size="11" text-anchor="middle" fill="#8b8b8b">records</text>
 
             <!-- Frame -->
-            <rect x="162" y="60" width="100" height="55" fill="#ffffff" stroke="#0a0a0a" stroke-width="1.5"/>
-            <text x="212" y="78" font-size="11" text-anchor="middle" fill="#8b8b8b">FRAME</text>
-            <rect x="182" y="84" width="60" height="22" fill="#0a0a0a" opacity="0.85"/>
-            <circle cx="212" cy="95" r="6" fill="#ff3300"/>
+            <rect x="192" y="65" width="120" height="65" fill="#ffffff" stroke="#0a0a0a" stroke-width="1.5"/>
+            <text x="252" y="84" font-size="11" text-anchor="middle" fill="#8b8b8b">FRAME</text>
+            <rect x="215" y="92" width="74" height="28" fill="#0a0a0a" opacity="0.85"/>
+            <circle cx="252" cy="106" r="6" fill="#ff3300"/>
 
             <!-- Action -->
-            <rect x="142" y="135" width="140" height="38" fill="#ffe8e3" stroke="#ff3300" stroke-width="1.5"/>
-            <text x="212" y="151" font-size="11" text-anchor="middle" fill="#ff3300">ACTION (KEY+MOUSE)</text>
-            <text x="212" y="167" font-size="11" font-weight="700" text-anchor="middle" fill="#0a0a0a">W+SPACE, dx=4, dy=-2</text>
+            <rect x="162" y="152" width="180" height="46" fill="#ffe8e3" stroke="#ff3300" stroke-width="1.5"/>
+            <text x="252" y="170" font-size="11" text-anchor="middle" fill="#ff3300">ACTION (KEY+MOUSE)</text>
+            <text x="252" y="189" font-size="12" font-weight="700" text-anchor="middle" fill="#0a0a0a">W+SPACE, dx=4, dy=-2</text>
 
-            <path d="M 285 100 L 335 100" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr63a)"/>
-            <text x="310" y="88" font-size="11" text-anchor="middle" fill="#8b8b8b">BC</text>
+            <path d="M 315 110 L 365 110" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr63a)"/>
+            <text x="340" y="100" font-size="11" text-anchor="middle" fill="#8b8b8b">BC</text>
 
             <!-- Policy -->
-            <rect x="340" y="65" width="100" height="80" fill="#0a0a0a"/>
-            <text x="390" y="105" font-size="16" font-family="var(--font-display)" font-weight="800" text-anchor="middle" fill="white">policy</text>
-            <text x="390" y="125" font-size="13" text-anchor="middle" fill="#ff3300">&pi;(a|o)</text>
+            <rect x="370" y="68" width="170" height="90" fill="#0a0a0a"/>
+            <text x="455" y="110" font-size="17" font-family="var(--font-display)" font-weight="800" text-anchor="middle" fill="white">policy</text>
+            <text x="455" y="138" font-size="18" text-anchor="middle" fill="#ff3300" class="math-var" font-family="'Cambria Math','STIX Two Math','Times New Roman',serif">
+              <tspan font-style="normal">&pi;(</tspan><tspan font-style="italic">a</tspan><tspan font-style="normal">|</tspan><tspan font-style="italic">o</tspan><tspan font-style="normal">)</tspan>
+            </text>
 
             <!-- Cost caption -->
-            <text x="230" y="205" font-size="13" font-family="var(--font-body)" text-anchor="middle" fill="#0a0a0a">
+            <text x="280" y="248" font-size="13" font-family="var(--font-body)" text-anchor="middle" fill="#0a0a0a">
               <tspan font-weight="700">Cost:</tspan> human-hour per label. <tspan font-weight="700" fill="#ff3300">Caps at &asymp;10&#8309; frames</tspan>.
             </text>
           </svg>
@@ -6275,7 +5982,7 @@ svg text.math-var {
         <h2>Recover the missing label from raw video</h2>
 
         <div class="idm-svg-wrap">
-          <svg viewBox="0 0 460 230" style="width: 100%; max-width: 100%; max-height: 260px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+          <svg viewBox="0 0 560 280" style="width: 100%; max-width: 100%; max-height: 320px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
             <defs>
               <marker id="arr63b" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
                 <path d="M 0 0 L 7 4.5 L 0 9 z" fill="#0a0a0a"/>
@@ -6286,50 +5993,58 @@ svg text.math-var {
             </defs>
 
             <!-- tiny labeled set (top right) -->
-            <rect x="305" y="10" width="140" height="55" fill="#f5f3ee" stroke="#0a0a0a" stroke-width="1.5" stroke-dasharray="4,3"/>
-            <text x="375" y="28" font-size="11" font-weight="700" text-anchor="middle" fill="#0a0a0a">tiny labeled set</text>
-            <text x="375" y="44" font-size="11" text-anchor="middle" fill="#4a4a4a">2k h contractor</text>
-            <text x="375" y="58" font-size="10" text-anchor="middle" fill="#8b8b8b">trains the IDM &darr;</text>
-            <path d="M 290 50 L 250 90" stroke="#8b8b8b" stroke-width="1" stroke-dasharray="2,2"/>
+            <rect x="380" y="12" width="170" height="68" fill="#f5f3ee" stroke="#0a0a0a" stroke-width="1.5" stroke-dasharray="4,3"/>
+            <text x="465" y="32" font-size="12" font-weight="700" text-anchor="middle" fill="#0a0a0a">tiny labeled set</text>
+            <text x="465" y="50" font-size="11" text-anchor="middle" fill="#4a4a4a">2k h contractor</text>
+            <text x="465" y="68" font-size="10" text-anchor="middle" fill="#8b8b8b">trains the IDM &darr;</text>
+            <path d="M 378 62 L 300 105" stroke="#8b8b8b" stroke-width="1" stroke-dasharray="2,2"/>
 
             <!-- Web video -->
-            <rect x="15" y="20" width="115" height="60" fill="#f5f3ee" stroke="#0a0a0a" stroke-width="1.5"/>
-            <text x="72" y="40" font-size="12" font-family="var(--font-display)" font-weight="800" text-anchor="middle" fill="#0a0a0a">WEB VIDEO</text>
-            <text x="72" y="58" font-size="11" text-anchor="middle" fill="#4a4a4a">70k h, no labels</text>
-            <text x="72" y="72" font-size="10" text-anchor="middle" fill="#8b8b8b">YouTube Minecraft</text>
+            <rect x="15" y="25" width="135" height="70" fill="#f5f3ee" stroke="#0a0a0a" stroke-width="1.5"/>
+            <text x="82" y="48" font-size="13" font-family="var(--font-display)" font-weight="800" text-anchor="middle" fill="#0a0a0a">WEB VIDEO</text>
+            <text x="82" y="68" font-size="11" text-anchor="middle" fill="#4a4a4a">70k h, no labels</text>
+            <text x="82" y="84" font-size="10" text-anchor="middle" fill="#8b8b8b">YouTube Minecraft</text>
 
             <!-- 2 frames -->
-            <rect x="150" y="20" width="55" height="38" fill="#ffffff" stroke="#0a0a0a" stroke-width="1.5"/>
-            <text x="178" y="14" font-size="10" text-anchor="middle" fill="#8b8b8b">o_t</text>
-            <rect x="158" y="28" width="40" height="22" fill="#0a0a0a" opacity="0.7"/>
-            <circle cx="178" cy="39" r="4" fill="#ff3300"/>
+            <rect x="175" y="28" width="70" height="50" fill="#ffffff" stroke="#0a0a0a" stroke-width="1.5"/>
+            <text x="210" y="20" font-size="13" text-anchor="middle" fill="#0a0a0a" font-family="'Cambria Math','STIX Two Math','Times New Roman',serif">
+              <tspan font-style="italic">o</tspan><tspan font-style="italic" baseline-shift="sub" font-size="9">t</tspan>
+            </text>
+            <rect x="185" y="38" width="50" height="30" fill="#0a0a0a" opacity="0.7"/>
+            <circle cx="210" cy="53" r="5" fill="#ff3300"/>
 
-            <rect x="215" y="20" width="55" height="38" fill="#ffffff" stroke="#0a0a0a" stroke-width="1.5"/>
-            <text x="243" y="14" font-size="10" text-anchor="middle" fill="#8b8b8b">o_t+1</text>
-            <rect x="223" y="28" width="40" height="22" fill="#0a0a0a" opacity="0.7"/>
-            <circle cx="248" cy="36" r="4" fill="#ff3300"/>
+            <rect x="255" y="28" width="70" height="50" fill="#ffffff" stroke="#0a0a0a" stroke-width="1.5"/>
+            <text x="290" y="20" font-size="13" text-anchor="middle" fill="#0a0a0a" font-family="'Cambria Math','STIX Two Math','Times New Roman',serif">
+              <tspan font-style="italic">o</tspan><tspan font-style="italic" baseline-shift="sub" font-size="9">t</tspan><tspan font-style="normal" baseline-shift="sub" font-size="9">+1</tspan>
+            </text>
+            <rect x="265" y="38" width="50" height="30" fill="#0a0a0a" opacity="0.7"/>
+            <circle cx="295" cy="49" r="5" fill="#ff3300"/>
 
-            <path d="M 130 50 L 148 50" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr63b)"/>
+            <path d="M 150 55 L 173 55" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr63b)"/>
 
             <!-- IDM box -->
-            <path d="M 210 60 L 210 90" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr63b)"/>
-            <rect x="140" y="95" width="140" height="50" fill="#0a0a0a"/>
-            <text x="210" y="120" font-size="16" font-family="var(--font-display)" font-weight="800" text-anchor="middle" fill="white">IDM</text>
-            <text x="210" y="138" font-size="11" text-anchor="middle" fill="#ff3300">&pi;_inv(a | o_t, o_t+1)</text>
+            <path d="M 250 80 L 250 110" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr63b)"/>
+            <rect x="155" y="115" width="190" height="62" fill="#0a0a0a"/>
+            <text x="250" y="142" font-size="17" font-family="var(--font-display)" font-weight="800" text-anchor="middle" fill="white">IDM</text>
+            <text x="250" y="166" font-size="14" text-anchor="middle" fill="#ff3300" font-family="'Cambria Math','STIX Two Math','Times New Roman',serif">
+              <tspan font-style="normal">&pi;</tspan><tspan font-style="italic" baseline-shift="sub" font-size="10">inv</tspan><tspan font-style="normal">(</tspan><tspan font-style="italic">a</tspan><tspan font-style="normal"> | </tspan><tspan font-style="italic">o</tspan><tspan font-style="italic" baseline-shift="sub" font-size="10">t</tspan><tspan font-style="normal">, </tspan><tspan font-style="italic">o</tspan><tspan font-style="italic" baseline-shift="sub" font-size="10">t</tspan><tspan font-style="normal" baseline-shift="sub" font-size="10">+1</tspan><tspan font-style="normal">)</tspan>
+            </text>
 
             <!-- Inferred action -->
-            <path d="M 210 148 L 210 165" stroke="#ff3300" stroke-width="2" marker-end="url(#arr63b-red)"/>
-            <rect x="100" y="170" width="220" height="32" fill="#ffe8e3" stroke="#ff3300" stroke-width="1.5"/>
-            <text x="210" y="184" font-size="11" text-anchor="middle" fill="#ff3300">PSEUDO-LABEL</text>
-            <text x="210" y="198" font-size="11" font-weight="700" text-anchor="middle" fill="#0a0a0a">&lt;â = W+SPACE, dx=4&gt;</text>
+            <path d="M 250 180 L 250 200" stroke="#ff3300" stroke-width="2" marker-end="url(#arr63b-red)"/>
+            <rect x="80" y="207" width="280" height="42" fill="#ffe8e3" stroke="#ff3300" stroke-width="1.5"/>
+            <text x="220" y="224" font-size="11" text-anchor="middle" fill="#ff3300">PSEUDO-LABEL</text>
+            <text x="220" y="242" font-size="13" font-weight="700" text-anchor="middle" fill="#0a0a0a">
+              <tspan font-family="var(--font-mono)">&lt;</tspan><tspan font-family="'Cambria Math','STIX Two Math','Times New Roman',serif" font-style="italic" font-weight="700">&#226;</tspan><tspan font-family="var(--font-mono)"> = W+SPACE, dx=4&gt;</tspan>
+            </text>
 
             <!-- Train VPT -->
-            <path d="M 325 186 L 380 186" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr63b)"/>
-            <text x="352" y="178" font-size="10" text-anchor="middle" fill="#8b8b8b">BC on web</text>
+            <path d="M 365 228 L 420 228" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr63b)"/>
+            <text x="392" y="220" font-size="10" text-anchor="middle" fill="#8b8b8b">BC on web</text>
 
-            <rect x="385" y="160" width="60" height="50" fill="#0a0a0a"/>
-            <text x="415" y="186" font-size="13" font-family="var(--font-display)" font-weight="800" text-anchor="middle" fill="white">VPT</text>
-            <text x="415" y="202" font-size="10" text-anchor="middle" fill="#ff3300">diamond!</text>
+            <rect x="425" y="200" width="80" height="60" fill="#0a0a0a"/>
+            <text x="465" y="228" font-size="14" font-family="var(--font-display)" font-weight="800" text-anchor="middle" fill="white">VPT</text>
+            <text x="465" y="248" font-size="10" text-anchor="middle" fill="#ff3300">diamond!</text>
           </svg>
         </div>
 
@@ -6352,13 +6067,7 @@ svg text.math-var {
     <span class="mono">63</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Slide 63 &mdash; the IDM idea, redesigned with breathing room</h4>
-    The simplest possible answer to "no internet of actions": don't collect new labels, <em>recover</em> them. Train an inverse dynamics model from a small contractor pool, then run it on huge unlabeled web video to produce pseudo-labels, then behavior-clone the result. VPT used 2k contractor hours to label 70k YouTube hours and reached the first zero-shot diamond in Minecraft.<br><br>
-    The two-tile layout makes the cost argument visceral: supervised is linear in dollars, IDM is sub-linear. The right-hand tile is highlighted because that's the trick the whole rest of Ch7 inherits.<br><br>
-    Talking point: this seeds the entire chapter. UniPi (NeurIPS'23), GR-1 (ICLR'24, CALVIN 94.9), VPP (ICML'25), NovaFlow (arXiv'26) all run variants of the same recipe in robotics. We mention them in passing — the next slide jumps to LAPA.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-64-lapa-kaist.html ===== -->
@@ -6462,13 +6171,7 @@ svg text.math-var {
     <span class="mono">64</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Slide 64 &mdash; LAPA, the latent-action ancestor</h4>
-    Academic content is now the main beat. LAPA takes the IDM intuition one step further: instead of recovering a hand-defined action label from two frames, learn a <em>latent</em> action via VQ-VAE on inter-frame deltas. Three steps: (1) train VQ-VAE on (o_t, o_t+1), (2) pretrain a VLA to predict the next latent action from human/web video, (3) finetune to map latents to real robot actions with a tiny dataset. <strong>+6.22% over OpenVLA SOTA, 30× more pretraining-efficient.</strong><br><br>
-    Why this matters for the rest of Ch7: the latent-action idea (action information lives <em>implicitly</em> in video) is the exact intuition that DreamZero, InternVLA-A1, and LingBot-VA all build on. LAPA is the ancestor.<br><br>
-    Korean note (kept brief): KAIST-led — 1저자 4명 + 두 advisor (Kimin Lee, Minjoon Seo) 모두 KAIST. 한국 출신 강자 중 하나로 언급만 짧게.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-65-idm-to-joint.html ===== -->
@@ -6577,15 +6280,7 @@ svg text.math-var {
     <span class="mono">65</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Slide 65 &mdash; 3 steps + 3 architectural styles</h4>
-    Top row is the temporal evolution (IDM → LAPA → WAM). Bottom is the NTU MARS survey's clean architectural taxonomy for what "WAM" can mean today:<br><br>
-    (a) <strong>IDM-Style</strong> &mdash; the old way: Video Generation Model → Inverse Dynamics Model → action. Two separate models.<br>
-    (b) <strong>Single-Backbone-Style</strong> &mdash; the canonical WAM: one shared backbone emits both observation tokens and action tokens. <em>DreamZero, Cosmos-Policy.</em> Covered in slide 66.<br>
-    (c) <strong>MoT-Style</strong> &mdash; the hybrid: separate Video Expert + Action Expert connected by Joint Attention. Video prediction is an auxiliary loss alongside the action head. <em>InternVLA-A1, LingBot-VA.</em> Covered in slide 68.<br><br>
-    Korean talking: "이게 WAM 의 핵심 분기. 같은 직관 — video랑 action 같이 다루자 — 인데 architecture는 단일 backbone vs MoT 로 나뉜다. 다음 두 슬라이드에서 각각 하나씩."
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-66-dreamzero-ancestry.html ===== -->
@@ -6743,12 +6438,7 @@ svg text.math-var {
     <span class="mono">66</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Slide 66 &mdash; DreamZero, the canonical WAM</h4>
-    DreamZero is the headline of this chapter. The paper title is honest: <em>World Action Models are Zero-shot Policies</em>. It is a 14B autoregressive video diffusion model that generates the next video frames <em>and</em> the next action together. The numbers are striking because the unseen-task gap closes: 39.5% on AgiBot unseen tasks where a from-scratch VLA gets near zero, and 49% on DROID unseen verbs versus &pi;0.5&rsquo;s 33%.<br><br>
-    But it didn&rsquo;t appear out of nowhere. The bottom timeline is the slide&rsquo;s second message. Six steps in roughly a year: GR-1 (ICLR&rsquo;24) &rarr; VPP (ICML&rsquo;25) &rarr; UVA &amp; UWM (both RSS&rsquo;25) &rarr; GE-Act (ICLR&rsquo;26) &rarr; DreamZero. The single-backbone idea was already there; NVIDIA scaled it to 14B with AR video diffusion. That historical framing makes the field look like the slow accretion it actually is, not a magic NVIDIA moment.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-67-dreamzero-deploy.html ===== -->
@@ -6862,13 +6552,7 @@ svg text.math-var {
     <span class="mono">67</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Slide 67 &mdash; DreamZero deployment</h4>
-    A scaling slide. 14B parameters is normally inconsistent with closed-loop robot control, so the obvious question after slide 66 is &ldquo;does it actually run?&rdquo;<br><br>
-    Left panel: yes &mdash; via DreamZero-Flash, a single-step distillation of the multi-step diffusion, plus KV-cache reuse for the autoregressive video. End-to-end this lands at 7 Hz, which is fine for tabletop manipulation (not yet competitive with &pi;0&rsquo;s 50 Hz or Helix S1&rsquo;s 200 Hz).<br><br>
-    Right panel: the cross-embodiment story. 30 minutes of plays on the YAM robot is enough to adapt the same base model to a new embodiment. The thesis is that <em>the same generative prior that enables zero-shot tasks also enables fast embodiment adaptation</em> &mdash; it&rsquo;s the same prior expressed differently.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-68-vla-wm-hybrids.html ===== -->
@@ -6969,13 +6653,7 @@ svg text.math-var {
     <span class="mono">68</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Slide 68 &mdash; the hybrid branch</h4>
-    Two papers, both from early 2026, both from China &mdash; Shanghai AI Lab and Ant Group / Robbyant. Same intuition as DreamZero (don&rsquo;t separate video and action), different design choice (don&rsquo;t fully generate the future, just predict it as an auxiliary objective inside a VLA backbone).<br><br>
-    Headline numbers: InternVLA-A1 gets +26.7% on dynamic-manipulation tasks over &pi;0.5; LingBot-VA gets 92.9% / 91.6% on LIBERO easy/hard splits.<br><br>
-    Talking point: this whole category is bigger than two papers. The NTU MARS survey from April 2026 lists at least a dozen in this lane &mdash; GE-Act, Motus, BagelVLA, FRAPPE, STARRY, WAV. The honest message is &ldquo;we&rsquo;re showing two representative examples; this is now a lane, not a singleton.&rdquo;
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-69-wam-followups.html ===== -->
@@ -7119,16 +6797,7 @@ svg text.math-var {
     <span class="mono">69</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Slide 69 &mdash; the open question in mid-2026</h4>
-    Four follow-ups in three months, each picking a different axis to push on:<br><br>
-    1. <strong>Being-H0.7</strong> (Peking U) &mdash; <em>simplify the architecture</em>. No future-video gen, just learnable latent queries. The 99.2% on LIBERO is loud. Also: trained on the Ch3 ego pool &mdash; this is the forward-reference that finally pays off.<br>
-    2. <strong>CKT-WAM</strong> (Tsinghua) &mdash; <em>transfer efficiency</em>. 86.1% with 1.17% trainable parameters. Cheap to specialize.<br>
-    3. <strong>OA-WAM</strong> &mdash; <em>address objects, not pixels</em>. LIBERO 97.8%.<br>
-    4. <strong>Fast-WAM</strong> &mdash; the <em>counter-narrative</em>. Argues test-time future imagination is unnecessary &mdash; 4&times; faster (190ms) at SOTA. This is the slide&rsquo;s tension point: <em>do we actually need to imagine the world to act in it?</em> FFDC-WAM tries to thread the needle with conditional imagination (imagine when uncertain, skip when confident).<br><br>
-    The honest message for students: the dust hasn&rsquo;t settled. This is what to watch in the next 12 months.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-70-taxonomy.html ===== -->
@@ -7223,18 +6892,7 @@ svg text.math-var {
     <span class="mono">70</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Slide 70b &mdash; the 5-architecture survey view</h4>
-    Same content as 70a, different cut. The NTU MARS survey (Hou et al., April 2026, 18 authors including Abbeel, Malik, Wu, Du) sorted the field into <em>five</em> architectural patterns. We&rsquo;re lifting their figures straight in.<br><br>
-    Reading order, left to right:<br>
-    1. <strong>IDM-style</strong> &mdash; predict then act (VPT, UniPi, LAPA &mdash; slides 63-64)<br>
-    2. <strong>Single-backbone</strong> &mdash; the canonical WAM line, joint video+action (DreamZero &mdash; slide 66)<br>
-    3. <strong>MoE / MoT</strong> &mdash; expert fusion (LingBot-VA, GE-Act &mdash; slide 68 right)<br>
-    4. <strong>Unified-VLA</strong> &mdash; VLA backbone with video-prediction as auxiliary (InternVLA-A1 &mdash; slide 68 left)<br>
-    5. <strong>Latent-space / JEPA</strong> &mdash; no pixel generation at all (V-JEPA 2, Being-H0.7 in spirit)<br><br>
-    The chapter&rsquo;s active frontier is patterns 2 and 3. The 70a 3-axis view and this 5-pattern view are two complementary closings &mdash; pick whichever lands better with the room, or use both. Bookmark the survey for the students.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-71-divider-ch8.html ===== -->
@@ -7255,11 +6913,7 @@ svg text.math-var {
     <span class="mono">71</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Ch8 Divider</h4>
-    Final chapter. Five minutes, casual tone — how everything we just saw plays out at maum.ai's WoRV team. Recruiting naturally at the end.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-72-who-we-are.html ===== -->
@@ -7329,11 +6983,7 @@ svg text.math-var {
     <span class="mono">72</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Who we are &amp; our bet</h4>
-    Team intro ~30 sec + our bet ~30 sec. Frame our position inside the trajectory we just covered — "WAM × dual-system." <em>Connect today's tour back to our coordinate.</em> No team photo: the public site doesn't show one. Wordmark only.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-73-what-we-do.html ===== -->
@@ -7443,13 +7093,7 @@ svg text.math-var {
     <span class="mono">73</span>
   </footer>
 
-  <aside class="notes">
-    <h4>What we do — three stacks (renamed + restructured)</h4>
-    <strong>Pillar 1 — Data Infrastructure.</strong> CANVAS shows the headline number: 219km / 48h of human-annotated navigation data, all collected via in-house teleop. ALOHA / UMI / egocentric video pipelines + Cosmos-Transfer synthetic factory feed the rest of the stack.<br><br>
-    <strong>Pillar 2 — Robotics Foundation Models.</strong> The hero stack: in-house VLA + WAM + dual-system implementations on top of Ch6 / Ch7 research. Brief video demo. Targeted public release in 2026 H2 (TBD).<br><br>
-    <strong>Pillar 3 — Tailored B2B (from eval to deploy).</strong> CostNav is the canonical example: when you measure navigation in real economic cost, no current academic baseline is economically viable. That's where the tailored B2B work starts. I'm the last author.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-74-selected-research.html ===== -->
@@ -7578,19 +7222,7 @@ svg text.math-var {
     <span class="mono">74</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Selected research — three current collabs</h4>
-    Three projects in flight right now, each a real cross-institution collaboration:<br><br>
-
-    <strong>D2E</strong> (ICLR 2026, arXiv:2510.05684) &mdash; <em>Desktop to Embodied</em>. A 1B Generalist Inverse Dynamics Model that trains on desktop game data (Brotato, Minecraft, BF6, etc.) and transfers zero-shot to real robotics tasks. Collab: MAUM.AI + Stanford + SNU. Lead authors include Suhwan Choi (SNU), Jaeyoon Jung, Yunsung Lee (me).<br><br>
-
-    <strong>WorldCam</strong> (2026) &mdash; camera-controllable progressive autoregressive video transformer. 3,000 minutes of gameplay frames with camera trajectories. Collab: Adobe Research + KAIST CVLAB + MAUM.AI. Lead authors include Jisu Nam (KAIST/Adobe), Yang Zhou (Adobe).<br><br>
-
-    <strong>VLA-Evaluation-Harness</strong> (2026) &mdash; unified VLA evaluation across 18 benchmarks × 13 model servers. 47× faster LIBERO via batch parallel eval. Collab: AI2 + SNU + MAUM.AI.<br><br>
-
-    Korean talking: "세 프로젝트 모두 한국 (KAIST/SNU/MAUM) 과 글로벌 (Stanford/Adobe/AI2) 의 협업. WoRV가 데이터·월드모델·평가 세 축 모두에서 활발히 참여 중."
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-75-verticals.html ===== -->
@@ -7692,11 +7324,7 @@ svg text.math-var {
     <span class="mono">75</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Deployment &amp; verticals</h4>
-    "Specific partners are under NDA, so verticals only. From the student's perspective, the headline is — <strong>the model is actually running in five real industries.</strong>" Impact figures and per-partner detail go verbal only. Hard rule (worv-recruitment CLAUDE.md): no customer-name mention.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-76-recruiting.html ===== -->
@@ -7781,12 +7409,7 @@ svg text.math-var {
     <span class="mono">76</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Recruiting — current open roles (live snapshot from recruitment.worv.maum.ai/jobs)</h4>
-    Nine positions across three tracks. <strong>Research</strong> (Research Scientist/Fellow + World Model Intern), <strong>Engineering</strong> (VLA, AI SW, Robotics SW, Simulation), <strong>Business</strong> (PM, Tech Sales). Plus always-open talent pool.<br><br>
-    Korean military alternative-service tracks (Research + Industrial) available for eligible candidates. All positions @ Pangyo IT Center #2. DMs and emails welcome.
-  </aside>
-</section>
+  </section>
 
 
 <!-- ===== slide-77-thank-you.html ===== -->
@@ -7871,11 +7494,7 @@ svg text.math-var {
     <span class="mono">77 — FIN</span>
   </footer>
 
-  <aside class="notes">
-    <h4>Thank you · Q&amp;A</h4>
-    Thank you — 15 min for Q&amp;A. Before opening up, one or two highlights to repeat: (1) "WAM × dual-system is the most interesting 2026 bet"; (2) we're working on that line from Korea, follow-ups welcome. Three QRs — deck / survey / hiring. <strong>QR PNGs get generated by qrencode in Phase 8 and dropped in.</strong>
-  </aside>
-</section>
+  </section>
 
 
 <!-- ============ SCRIPTS ============ -->
