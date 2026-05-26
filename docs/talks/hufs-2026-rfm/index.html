@@ -780,54 +780,117 @@ svg text.math-var {
     <span>05 / 77</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1.5rem);">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.95rem); gap: 0.85rem;">
 
-    <h1>Two robotics summers, <span class="accent-text">two failures</span></h1>
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 2rem;">
+      <h1>Why robotics AI — <span class="accent-text">now</span></h1>
+      <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
+        four forces converging &middot; first time at once
+      </div>
+    </div>
+    <p style="font-size: var(--size-small); color: var(--color-ink-muted); margin-top: -0.4rem; font-style: italic;">
+      Robotics has been "about to break out" for decades. The honest case for <em>this</em> wave is that four enablers are arriving in parallel.
+    </p>
 
-    <div class="grid cols-2" style="margin-top: 2rem; gap: 2.5rem; flex: 1;">
+    <style>
+      .force-tile { display: flex; flex-direction: column; gap: 0.45rem; padding: 0.85rem 0.95rem; border: var(--border-thin); background: white; min-width: 0; min-height: 0; position: relative; }
+      .force-tile .force-num { position: absolute; top: -13px; left: 0.85rem; background: var(--color-ink); color: white; font-family: var(--font-display); font-weight: 900; font-size: 0.75rem; padding: 0.1rem 0.55rem; letter-spacing: 0.05em; z-index: 2; }
+      .force-tile h3 { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; line-height: 1.1; margin-top: 0.25rem; }
+      .force-tile .force-meta { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+      .force-tile p.body { font-size: 0.7rem; color: var(--color-ink-soft); line-height: 1.45; margin: 0; }
+      .force-tile .examples { font-family: var(--font-mono); font-size: 0.62rem; color: var(--color-ink); padding-top: 0.35rem; border-top: 1px solid var(--color-grid-line); }
+      .force-tile .examples strong { font-family: var(--font-display); font-weight: 700; }
+      .force-tile .open-note { font-size: 0.6rem; color: var(--color-ink-muted); font-style: italic; padding-top: 0.3rem; margin-top: auto; }
+      .force-tile .open-note .delta { color: var(--color-accent); font-weight: 700; font-style: normal; margin-right: 0.3rem; }
+    </style>
 
-      <div style="border-top: var(--border-thin); padding-top: 1.25rem;">
-        <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">
-          Summer #1 · 2015 — 2020
+    <!-- 4 force tiles in 2x2 grid -->
+    <div class="grid cols-2" style="gap: 1rem; flex: 1; min-height: 0;">
+
+      <div class="force-tile">
+        <div class="force-num">01</div>
+        <div class="force-meta">FROM NLP / VISION SPILLOVER</div>
+        <h3>Foundation models are ready</h3>
+        <p class="body">
+          PaliGemma, DINOv3, SigLIP, CLIP — pretrained backbones now exist that can be <em>fine-tuned</em> for embodied tasks instead of trained from scratch.
+        </p>
+        <div class="examples">
+          <strong>Examples:</strong> RT-2 ← PaLI-X &middot; OpenVLA ← Llama-2 &middot; &pi;0 ← PaliGemma
         </div>
-        <h2 style="font-size: var(--size-h2); margin-bottom: 0.5rem;">Classical / RL</h2>
-        <p style="color: var(--color-ink-soft); font-size: var(--size-body); line-height: 1.5;">
-          DeepMind <strong>QT-Opt</strong> · OpenAI <strong>Rubik's Cube</strong> (one-handed). Massive simulation farms + on-policy RL.
-        </p>
-        <p style="margin-top: 1rem; font-size: var(--size-small); color: var(--color-ink-muted); font-style: italic;">
-          Limit: sim-to-real gap, no task transfer.
-        </p>
+        <p class="open-note"><span class="delta">∆</span>action grounding still doesn't inherit cleanly</p>
       </div>
 
-      <div style="border-top: var(--border-thin); padding-top: 1.25rem;">
-        <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">
-          Summer #2 · 2022 — present
+      <div class="force-tile">
+        <div class="force-num">02</div>
+        <div class="force-meta">REAL-WORLD ROBOT DATA</div>
+        <h3>Data infrastructure exists</h3>
+        <p class="body">
+          Open hardware (ALOHA, UMI) + open datasets (OpenX 1M+ episodes, DROID 76k) + synthetic pipelines (Cosmos-Transfer) — the field finally has a data stack.
+        </p>
+        <div class="examples">
+          <strong>Datasets:</strong> OpenX-Embodiment &middot; DROID &middot; BridgeData V2 &middot; RoboCasa
         </div>
-        <h2 style="font-size: var(--size-h2); margin-bottom: 0.5rem;">Imitation / Foundation</h2>
-        <p style="color: var(--color-ink-soft); font-size: var(--size-body); line-height: 1.5;">
-          Google <strong>RT-1</strong> · Stanford <strong>Mobile ALOHA</strong>. Human demonstrations + transformer scaling.
+        <p class="open-note"><span class="delta">∆</span>still <strong>~10⁶× short</strong> of LLM token counts</p>
+      </div>
+
+      <div class="force-tile">
+        <div class="force-num">03</div>
+        <div class="force-meta">REAL HARDWARE AT REAL VOLUME</div>
+        <h3>Humanoid + arm platforms shipped</h3>
+        <p class="body">
+          The 2024-26 wave of physical platforms gives the field a <em>shared body</em> to train on — Figure F.03, Unitree G1/H1, 1X NEO, Tesla Optimus, Rainbow Robotics RB-Y1.
         </p>
-        <p style="margin-top: 1rem; font-size: var(--size-small); color: var(--color-ink-muted); font-style: italic;">
-          Limit: data volume, embodiment transfer, long-horizon — all open.
+        <div class="examples">
+          <strong>Platforms:</strong> Figure &middot; 1X &middot; Unitree &middot; Tesla &middot; Apptronik &middot; Rainbow
+        </div>
+        <p class="open-note"><span class="delta">∆</span>cost &amp; dexterity still bottleneck deployment</p>
+      </div>
+
+      <div class="force-tile">
+        <div class="force-num">04</div>
+        <div class="force-meta">CAPITAL + TALENT REALLOCATION</div>
+        <h3>Industry pull is real</h3>
+        <p class="body">
+          $5B+ raised across Physical Intelligence, Skild, Figure, Wayve in 2024-25. National programs in KR, China, US, EU. Top NLP researchers explicitly pivoting.
         </p>
+        <div class="examples">
+          <strong>Signal:</strong> Physical Intelligence ($400M) &middot; Skild ($300M) &middot; Figure ($675M)
+        </div>
+        <p class="open-note"><span class="delta">∆</span>signal-to-noise still messy; many bets won't survive</p>
       </div>
 
     </div>
 
-    <div style="margin-top: auto; padding: 1.5rem; background: var(--color-bg-alt); border-left: var(--border-accent);">
-      <strong>We're now in the third summer.</strong> The difference is the explicit introduction of <span class="accent-text">foundation</span> — one model that generalizes across robots · tasks · environments.
+    <!-- Bottom: still-unsolved -->
+    <div style="padding: 0.65rem 1.05rem; background: var(--color-ink); color: var(--color-bg); font-size: var(--size-small); line-height: 1.45; display: flex; gap: 1.25rem; align-items: center;">
+      <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; flex-shrink: 0; font-weight: 800;">still unsolved</div>
+      <div>
+        <strong style="color: var(--color-accent);">data wall</strong> &middot; <strong style="color: var(--color-accent);">generalization across tasks &amp; environments</strong> &middot; <strong style="color: var(--color-accent);">embodiment-portability</strong>
+        &nbsp;— that's why we spend the next 70 min on the field's 2024-26 attempts.
+      </div>
     </div>
 
   </div>
 
   <footer class="slide-footer">
-    <span>alohays.github.io · sung@maum.ai</span>
+    <span>alohays.github.io &middot; sung@maum.ai &middot; Ch 1 — why this talk now</span>
     <span class="mono">05</span>
   </footer>
 
   <aside class="notes">
-    <h4>Two robotics summers</h4>
-    Both prior robotics summers hit a wall at generalization. We're in the third one now, and the difference is explicit <em>foundation</em> framing. The core question for this slide — "is it really different this time?" — gets a partial answer in the next few slides.
+    <h4>Why robotics AI — now (4 forces converging)</h4>
+    Reframed from the original "two robotics summers, two failures" because (a) "robotics winters / summers" isn't a widely-established academic term — that's specifically <em>AI</em> winters / summers in the literature, and (b) calling the current wave a "failure" while it's still in progress invites the audience to disagree before the talk even starts.<br><br>
+
+    The honest researcher framing: <strong>four enablers are arriving in parallel for the first time</strong>. Each tile carries both the positive evidence <em>and</em> a small "∆ still-open" line so we don't sound like a sales pitch:<br><br>
+
+    <strong>1. Foundation models ready</strong> — PaliGemma, DINOv3, CLIP, SigLIP exist as pretrained backbones. RT-2/OpenVLA/&pi;0 inherit from PaLI-X/Llama-2/PaliGemma. <em>But</em> action grounding doesn't inherit cleanly (open).<br>
+    <strong>2. Data infrastructure</strong> — open hardware (ALOHA, UMI), open datasets (OpenX 1M+, DROID), synthetic pipelines (Cosmos-Transfer). <em>But</em> still ~10⁶× short of LLM tokens.<br>
+    <strong>3. Real hardware</strong> — Figure, 1X, Unitree, Tesla, Rainbow shipping. The field finally has a shared body. <em>But</em> cost + dexterity bottleneck.<br>
+    <strong>4. Capital + talent</strong> — $5B+ raised, top NLP researchers pivoting. <em>But</em> SNR messy, many bets will fail.<br><br>
+
+    The bottom strip names the three things still unsolved (data wall, generalization, embodiment-portability) and explicitly points at why the next 70 minutes exist — these are the open problems the field's 2024-26 papers are attacking.<br><br>
+
+    Korean talking: "이번 wave의 honest case는 네 가지 enabler가 처음으로 동시에 모이고 있다는 것. 각각엔 여전히 open problem이 있고, 그게 오늘 talk의 나머지 70분이 다룰 내용."
   </aside>
 </section>
 
