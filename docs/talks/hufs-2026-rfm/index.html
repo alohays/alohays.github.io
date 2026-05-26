@@ -484,6 +484,46 @@ body.notes-mode aside.notes h4 {
 }
 
 /* =====================================================================
+ * 10b. Math / equation rendering
+ * Variables in italic serif, operators/numerals in roman, proper sub/sup.
+ * ===================================================================== */
+.math, .eq {
+  font-family: 'Cambria Math', 'Latin Modern Math', 'STIX Two Math', 'Times New Roman', serif;
+  font-style: italic;
+  font-feature-settings: 'lnum' 1, 'tnum' 1;
+  letter-spacing: 0;
+}
+.math .op, .eq .op,
+.math .num, .eq .num {
+  font-style: normal;
+  font-family: 'Cambria Math', 'Latin Modern Math', 'STIX Two Math', 'Times New Roman', serif;
+}
+.math sub, .math sup,
+.eq sub, .eq sup,
+sub, sup {
+  font-size: 0.7em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.math sub, .eq sub, sub {
+  bottom: -0.28em;
+}
+.math sup, .eq sup, sup {
+  top: -0.45em;
+}
+/* Greek + special variables inside SVG keep monospace look uniform */
+svg text.math-var {
+  font-family: 'Cambria Math', 'STIX Two Math', 'Times New Roman', serif;
+  font-style: italic;
+}
+
+/* π-style model names should NOT be italicized */
+.model-name, h1 .accent-text, h2 .accent-text {
+  font-style: normal;
+}
+
+/* =====================================================================
  * 11. Responsive guards
  * ===================================================================== */
 @media (max-height: 700px) {
@@ -1256,79 +1296,89 @@ body.notes-mode aside.notes h4 {
     <span>11 / 77</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1rem); gap: 0.75rem;">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.95rem); gap: 0.85rem;">
 
     <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 2rem;">
-      <h1>Industry stack <span style="font-family: var(--font-mono); font-weight: 500; color: var(--color-ink-muted); font-size: 0.55em;">2026 H1</span></h1>
+      <h1>The <span class="accent-text">core thesis</span> &mdash; <em>robots are about to inherit foundation-model scaling</em></h1>
       <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
-        🇰🇷 <span style="color: var(--color-korean-flag);">red border</span> = K-Humanoid Alliance · WoRV @ maum.ai
+        if you only remember 3 things
       </div>
     </div>
 
     <style>
-      .stack-cell { aspect-ratio: 1.55; border: 1px solid var(--color-grid-line); display: flex; flex-direction: column; justify-content: space-between; padding: 0.4rem 0.45rem; font-family: var(--font-mono); font-size: 0.58rem; min-width: 0; overflow: hidden; }
-      .stack-cell .stack-tag { font-size: 0.52rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-      .stack-cell .stack-name { font-family: var(--font-display); font-weight: 800; font-size: 0.72rem; line-height: 1.0; color: var(--color-ink); margin-top: 0.15rem; }
-      .stack-cell .stack-meta { font-size: 0.52rem; color: var(--color-ink-muted); line-height: 1.15; }
-      .stack-cell.kr { border-left: 3px solid var(--color-korean-flag); }
-      .stack-cell.worv { background: var(--color-ink); color: var(--color-bg); border-color: var(--color-accent); border-left-width: 3px; border-left-color: var(--color-accent); }
-      .stack-cell.worv .stack-tag, .stack-cell.worv .stack-meta { color: rgba(255,255,255,0.7); }
-      .stack-cell.worv .stack-name { color: var(--color-accent); }
+      .core-msg { display: flex; flex-direction: column; gap: 0.55rem; padding: 0.85rem 1rem; border: var(--border-thin); background: white; min-width: 0; min-height: 0; position: relative; }
+      .core-msg.hero { border: 2px solid var(--color-accent); background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 55%); }
+      .core-msg .num { position: absolute; top: -14px; left: 0.85rem; background: var(--color-ink); color: white; font-family: var(--font-display); font-weight: 900; font-size: 0.78rem; padding: 0.1rem 0.6rem; letter-spacing: 0.05em; z-index: 2; }
+      .core-msg.hero .num { background: var(--color-accent); }
+      .core-msg h3 { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; line-height: 1.1; margin-top: 0.25rem; }
+      .core-msg p { font-size: 0.7rem; color: var(--color-ink-soft); line-height: 1.45; margin: 0; }
+      .core-msg .pointer { font-family: var(--font-mono); font-size: 0.58rem; color: var(--color-accent); margin-top: auto; padding-top: 0.35rem; font-weight: 700; letter-spacing: 0.05em; }
     </style>
 
-    <div class="grid cols-7" style="gap: 0.45rem; flex: 1; align-content: start;">
+    <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 1.4rem; flex: 1; min-height: 0;">
 
-      <div class="stack-cell"><span class="stack-tag">Figure</span><div><div class="stack-name">F.03</div><div class="stack-meta">live stream · humanoid</div></div></div>
-      <div class="stack-cell"><span class="stack-tag">Generalist</span><div><div class="stack-name">GEN-1</div><div class="stack-meta">multi-task demo</div></div></div>
-      <div class="stack-cell"><span class="stack-tag">Genesis</span><div><div class="stack-name">GENE-26.5</div><div class="stack-meta">manipulation</div></div></div>
-      <div class="stack-cell"><span class="stack-tag">NVIDIA</span><div><div class="stack-name">Alpamayo</div><div class="stack-meta">AV foundation</div></div></div>
-      <div class="stack-cell"><span class="stack-tag">Physical Intelligence</span><div><div class="stack-name">π0.5</div><div class="stack-meta">OOD home · 94%</div></div></div>
-      <div class="stack-cell"><span class="stack-tag">Skild AI</span><div><div class="stack-name">Brain</div><div class="stack-meta">$1.4B unicorn</div></div></div>
+      <!-- LEFT: Jim Fan keynote embed -->
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; min-width: 0;">
+        <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
+          Anchor — Jim Fan &middot; Sequoia AI Ascent 2026 &middot; "Robotics' End Game"
+        </div>
+        <div class="video-frame aspect-16x9" style="flex: 1; min-height: 0;">
+          <iframe src="https://www.youtube-nocookie.com/embed/3Y8aq_ofEVs?start=120&amp;rel=0&amp;modestbranding=1&amp;controls=1"
+                  title="Jim Fan — Robotics' End Game · Sequoia AI Ascent 2026"
+                  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+        <p style="font-size: 0.65rem; color: var(--color-ink-soft); line-height: 1.4; font-style: italic;">
+          Jim Fan's Sequoia keynote in 1 frame: <em>"Physical Turing Test, Simulation 2.0, DreamZero, Physical API"</em> &mdash; the four ideas this talk grounds in actual 2024-26 papers.
+          See also Stanford ENGR319 talks: <span class="mono">youtu.be/hcJ83vOa1Pg</span>.
+        </p>
+      </div>
 
-      <div class="stack-cell"><span class="stack-tag">Apptronik × Google</span><div><div class="stack-name">Apollo</div><div class="stack-meta">Gemini Robotics</div></div></div>
-      <div class="stack-cell"><span class="stack-tag">Boston Dynamics</span><div><div class="stack-name">Atlas</div><div class="stack-meta">electric · CES'26</div></div></div>
-      <div class="stack-cell"><span class="stack-tag">1X</span><div><div class="stack-name">NEO</div><div class="stack-meta">consumer humanoid</div></div></div>
-      <div class="stack-cell"><span class="stack-tag">Tesla</span><div><div class="stack-name">Optimus</div><div class="stack-meta">factory deploy</div></div></div>
-      <div class="stack-cell"><span class="stack-tag">Sanctuary × Magna</span><div><div class="stack-name">Phoenix</div><div class="stack-meta">dexterous</div></div></div>
-      <div class="stack-cell"><span class="stack-tag">AGIBOT</span><div><div class="stack-name">G2</div><div class="stack-meta">first factory line</div></div></div>
+      <!-- RIGHT: 3 core messages -->
+      <div style="display: flex; flex-direction: column; gap: 1.1rem; min-width: 0;">
 
-      <div class="stack-cell"><span class="stack-tag">Unitree</span><div><div class="stack-name">H1 · G1</div><div class="stack-meta">Spring 679M views</div></div></div>
-      <div class="stack-cell"><span class="stack-tag">Fourier</span><div><div class="stack-name">GR-2</div><div class="stack-meta">humanoid</div></div></div>
-      <div class="stack-cell"><span class="stack-tag">Galbot</span><div><div class="stack-name">G1</div><div class="stack-meta">wheeled humanoid</div></div></div>
-      <div class="stack-cell"><span class="stack-tag">Galaxea</span><div><div class="stack-name">G0 VLA</div><div class="stack-meta">VLA stack</div></div></div>
-      <div class="stack-cell kr"><span class="stack-tag">🇰🇷 Naver Labs</span><div><div class="stack-name">Ambidex</div><div class="stack-meta">bimanual research</div></div></div>
-      <div class="stack-cell kr"><span class="stack-tag">🇰🇷 Rainbow</span><div><div class="stack-name">RB-Y1</div><div class="stack-meta">wheeled humanoid '24</div></div></div>
+        <div class="core-msg">
+          <div class="num">01</div>
+          <h3>Action is just another modality</h3>
+          <p>VLA = VLM + action head. Same scaling laws apply once you fix tokenization, frequency, and data.</p>
+          <div class="pointer">→ Ch 2-4 &middot; covered in detail</div>
+        </div>
 
-      <div class="stack-cell worv"><span class="stack-tag">🇰🇷 maum.ai</span><div><div class="stack-name">WoRV</div><div class="stack-meta">our team → Ch8</div></div></div>
-      <div class="stack-cell kr"><span class="stack-tag">🇰🇷 Holiday</span><div><div class="stack-name">FRIDAY</div><div class="stack-meta">2025-11 launch</div></div></div>
-      <div class="stack-cell kr"><span class="stack-tag">🇰🇷 Robotis</span><div><div class="stack-name">OP3</div><div class="stack-meta">educational platform</div></div></div>
-      <div class="stack-cell kr"><span class="stack-tag">🇰🇷 Yujin</span><div><div class="stack-name">GoCart</div><div class="stack-meta">service AMR</div></div></div>
+        <div class="core-msg hero">
+          <div class="num">02</div>
+          <h3>The S1 / S2 dual-system pattern is converging</h3>
+          <p>Helix, π0.5, GR00T, Gemini Robotics — all run a slow VLM (S2) over a fast action expert (S1) at 50-200 Hz.</p>
+          <div class="pointer">→ Ch 5 &middot; the 2026 architectural consensus</div>
+        </div>
 
-      <div class="stack-cell kr"><span class="stack-tag">🇰🇷 KIST</span><div><div class="stack-name">OCTOID</div><div class="stack-meta">soft robot '25</div></div></div>
-      <div class="stack-cell kr"><span class="stack-tag">🇰🇷 KAIST</span><div><div class="stack-name">HUBO v0.7</div><div class="stack-meta">RL humanoid '26-03</div></div></div>
-      <div class="stack-cell kr"><span class="stack-tag">🇰🇷 SNU ROBIS</span><div><div class="stack-name">research</div><div class="stack-meta">academic lab</div></div></div>
-      <div class="stack-cell kr"><span class="stack-tag">🇰🇷 POSTECH+</span><div><div class="stack-name">consortium</div><div class="stack-meta">GIST · UNIST</div></div></div>
-      <div class="stack-cell kr"><span class="stack-tag">🇰🇷 KIRO</span><div><div class="stack-name">industrial</div><div class="stack-meta">applied research</div></div></div>
-      <div class="stack-cell kr"><span class="stack-tag">🇰🇷 ETRI</span><div><div class="stack-name">robotics</div><div class="stack-meta">national R&amp;D</div></div></div>
+        <div class="core-msg">
+          <div class="num">03</div>
+          <h3>World models close the data loop</h3>
+          <p>Action-conditioned video WMs (DreamDojo, DreamZero) replace teleop and give policies foresight + planning.</p>
+          <div class="pointer">→ Ch 6-7 &middot; the open frontier</div>
+        </div>
+
+      </div>
+
     </div>
 
   </div>
 
   <footer class="slide-footer">
-    <span>Industry-led — and Korea is part of it · multiple K-Humanoid Alliance members</span>
+    <span>Jim Fan keynote &middot; youtu.be/3Y8aq_ofEVs (Sequoia 2026) &middot; youtu.be/hcJ83vOa1Pg (related)</span>
     <span class="mono">11</span>
   </footer>
 
   <aside class="notes">
-    <h4>Industry stack — Korea is part of it</h4>
-    First visual imprint of the talk. <strong>This space is industry-led, not academic</strong>. Almost half of these 30 cells are Korean entities — many K-Humanoid Alliance members, and one of them is our team WoRV (highlighted in red on black). Deep dive in Ch8.<br><br>
-    Verbal disclaimers — call out one line each:
-    <ul>
-      <li>1X NEO viral demo: <strong>teleoperated</strong>.</li>
-      <li>Tesla Optimus public demos: partially <strong>remote-controlled</strong>.</li>
-      <li>Alpamayo is an <strong>autonomous-driving</strong> foundation model, not a humanoid — used here as NVIDIA stack representative.</li>
-      <li>Figure 03 raw live stream is download-locked → using the Day-1 archive instead.</li>
-    </ul>
+    <h4>Slide 11 — the talk's core thesis, in 3 messages</h4>
+    Three sentences to remember from the next 75 minutes. The left tile is Jim Fan's Sequoia AI Ascent 2026 talk (3Y8aq_ofEVs) starting at the 2-min mark where he frames the Physical Turing Test. Use it as a 30-second anchor to set up scale-of-ambition. Then the 3 right tiles map the chapter structure:<br><br>
+
+    <strong>(1) Action is just another modality.</strong> A VLA is structurally a VLM with one extra head. Once we fix action tokenization (Ch2), data scaling (Ch3), and family choice (Ch4), the same recipe that produced GPT-4 should produce robotics foundation models.<br><br>
+
+    <strong>(2) Dual-system is the 2026 consensus.</strong> Helix, π0.5, GR00T N1, Gemini Robotics, FiS-VLA all run a slow VLM "thinker" (5-9 Hz) over a fast action expert "actor" (50-200 Hz). They communicate through one latent vector. We dedicate Ch5 to this.<br><br>
+
+    <strong>(3) World models are how we get past the data wall.</strong> Action-conditioned video WMs (DreamDojo, DreamZero) generate the rollout the policy needs to train on, evaluate against, and plan inside. Ch6-7 is the longest section because this is where the open problems live.<br><br>
+
+    Korean talking: "이 발표에서 한 가지만 가져가야 한다면, 이 세 가지. (1) action은 또 하나의 modality, (2) dual-system이 2026 consensus, (3) world model이 data wall을 뚫는다."
   </aside>
 </section>
 
@@ -4686,9 +4736,9 @@ body.notes-mode aside.notes h4 {
 
     <style>
       .orig-grid { display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 1.1rem; flex: 1; min-height: 0; }
-      .orig-tile { display: flex; flex-direction: column; gap: 0.55rem; border: var(--border-thin); padding: 0.95rem 1rem; position: relative; min-width: 0; overflow: hidden; }
+      .orig-tile { display: flex; flex-direction: column; gap: 0.55rem; border: var(--border-thin); padding: 1.15rem 1rem 0.95rem; position: relative; min-width: 0; }
+      .orig-tile .yr-tag { position: absolute; top: -10px; left: 0.9rem; background: var(--color-bg); padding: 0.05rem 0.55rem; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-accent); font-weight: 700; letter-spacing: 0.15em; z-index: 2; line-height: 1.2; }
       .orig-tile.hero { border: 2px solid var(--color-accent); background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 55%); }
-      .orig-tile .yr-tag { position: absolute; top: -10px; left: 0.9rem; background: var(--color-bg); padding: 0 0.5rem; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-accent); font-weight: 700; letter-spacing: 0.15em; }
       .orig-tile h2 { font-size: 1.15rem; line-height: 1.1; margin-top: 0.2rem; }
       .orig-tile .orig-author { font-family: var(--font-mono); font-size: 0.66rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.05em; }
       .orig-tile .orig-desc { font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.45; }
@@ -4900,8 +4950,8 @@ body.notes-mode aside.notes h4 {
           <div class="dr-tile v3">
             <div class="dr-yr">2023 &middot; arXiv:2301.04104</div>
             <div class="dr-name">Dreamer V3</div>
-            <div class="dr-img"><img src="images/papers/dreamer/v3-minecraft.png" alt="Dreamer V3 on Minecraft: agents with Iron Ingot, Iron Pickaxe, Diamond items vs IMPALA, Rainbow, PPO over 100M env steps"></div>
-            <div class="dr-desc">One set of hyperparams across <strong>150+ tasks</strong>. First to collect <strong>Minecraft diamond</strong> from scratch.</div>
+            <div class="dr-img"><img src="images/papers/dreamer/v3-bars.png" alt="Dreamer V3 unified configuration vs tuned experts across 8 benchmarks (Atari, ProcGen, DMLab, Minecraft, Atari100k, Proprio Control, Visual Control, BSuite). V3 matches or beats tuned baselines with one set of hyperparameters. Plus Minecraft Diamond return curve."></div>
+            <div class="dr-desc"><strong>One unified config</strong> matches or beats <em>tuned experts</em> across 8 benchmark families — that's the V3 thesis. Diamond from scratch is the bonus.</div>
           </div>
 
         </div>
@@ -5286,7 +5336,7 @@ body.notes-mode aside.notes h4 {
         <p class="jepa-cite">dino-wm.github.io</p>
       </div>
 
-      <!-- LeWorldModel -->
+      <!-- LeWorldModel: compact comparison + architecture below -->
       <div class="jepa-tile hero">
         <div class="jepa-head">
           <div>
@@ -5296,8 +5346,14 @@ body.notes-mode aside.notes h4 {
           <span class="jepa-tag">arXiv:2603.19312</span>
         </div>
 
-        <div class="jepa-img-wrap">
-          <img src="images/papers/leworldmodel/wms.png" alt="LeWorldModel vs PLDM / DINO-WM / Dreamer / TD-MPC: 1 hyperparameter (vs 6), provable anti-collapse, end-to-end learning, task-agnostic, reconstruction-free, pixels-based, reward-free">
+        <!-- Compact comparison (smaller, on top) -->
+        <div style="display: flex; align-items: center; justify-content: center; background: var(--color-bg-alt); border: 1px solid var(--color-grid-line); padding: 0.3rem; height: 90px; flex-shrink: 0;">
+          <img src="images/papers/leworldmodel/wms.png" alt="LeWorldModel vs PLDM / DINO-WM / Dreamer / TD-MPC comparison: addresses 6→1 hyperparameter, anti-collapse, end-to-end, task-agnostic, reconstruction-free" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        </div>
+
+        <!-- Architecture (bigger, below) -->
+        <div class="jepa-img-wrap" style="background: white;">
+          <img src="images/papers/leworldmodel/lewm-arch.png" alt="LeWorldModel architecture: two encoders process o_t and o_{t+1}; predictor takes (z_t, a_t) → ẑ_{t+1}; MSE loss between ẑ_{t+1} and z_{t+1}; SIGReg regularization on latents (Statistical Inverse Gaussian) prevents collapse via random projection normality tests">
         </div>
 
         <div class="jepa-meta">
@@ -5690,20 +5746,20 @@ body.notes-mode aside.notes h4 {
 
     <h1>Family 3 &middot; <span class="accent-text">Geometric Foundation Models</span></h1>
     <p style="font-size: var(--size-small); color: var(--color-ink-muted); margin-top: -0.4rem; font-style: italic;">
-      "World model" = 3D reconstruction itself as a feed-forward foundation. The geometric backbone.
+      "World model" = 3D reconstruction as a feed-forward foundation. N views → cameras, depth, geometry in one pass.
     </p>
 
     <style>
-      .gfm-tile { display: flex; flex-direction: column; gap: 0.5rem; border: var(--border-thin); padding: 0.8rem 0.85rem; min-width: 0; min-height: 0; }
+      .gfm-tile { display: flex; flex-direction: column; gap: 0.5rem; border: var(--border-thin); padding: 0.85rem 0.9rem; min-width: 0; min-height: 0; }
       .gfm-tile.hero { background: var(--color-bg-alt); border-color: var(--color-accent); border-width: 1.5px; }
       .gfm-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
-      .gfm-tile h2 { font-size: 1.15rem; line-height: 1; }
+      .gfm-tile h2 { font-size: 1.2rem; line-height: 1; }
       .gfm-tag { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-accent); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; }
       .gfm-author { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted); }
       .gfm-img-wrap { flex: 1; display: flex; align-items: center; justify-content: center; background: var(--color-bg); border: 1px solid var(--color-grid-line); padding: 0.35rem; min-height: 0; }
       .gfm-img-wrap img { max-width: 100%; max-height: 100%; object-fit: contain; }
-      .gfm-caption { font-size: 0.7rem; color: var(--color-ink-soft); line-height: 1.4; }
-      .gfm-meta { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.2rem; }
+      .gfm-caption { font-size: 0.68rem; color: var(--color-ink-soft); line-height: 1.4; }
+      .gfm-meta { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.15rem; }
       .gfm-meta .pill { padding: 0.25rem 0.45rem; background: var(--color-bg); border-left: 2px solid var(--color-accent); }
       .gfm-meta .pill strong { font-family: var(--font-display); font-weight: 900; font-size: 0.85rem; display: block; line-height: 1; }
       .gfm-meta .pill span { font-size: 0.5rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.05em; }
@@ -5711,7 +5767,7 @@ body.notes-mode aside.notes h4 {
 
     <div class="grid cols-3" style="flex: 1; gap: 1rem; min-height: 0;">
 
-      <!-- VGGT -->
+      <!-- VGGT — bigger figure, sub-bullets out of the way -->
       <div class="gfm-tile">
         <div class="gfm-head">
           <div>
@@ -5722,16 +5778,16 @@ body.notes-mode aside.notes h4 {
         </div>
         <div style="font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted);">arXiv:2503.11651</div>
 
-        <div class="gfm-img-wrap">
-          <img src="images/papers/vggt/architecture.png" alt="VGGT architecture: N input images → DINO + concat + camera token → Global/Frame Attention (×L) → Camera Head + DPT → cameras, depth maps, point maps, tracks">
+        <div class="gfm-img-wrap" style="padding: 0.55rem;">
+          <img src="images/papers/vggt/architecture.png" alt="VGGT architecture: N input images → DINO + concat + camera token → Global Attention + Frame Attention (×L) → Camera Head + DPT → cameras, depth maps, point maps, tracks in one forward pass">
         </div>
 
         <p class="gfm-caption">
-          N views &rarr; <strong>cameras + depth + pointmaps + tracks</strong> in one forward pass.
+          N views → <strong>cameras + depth + pointmaps + tracks</strong> in <em>one feed-forward pass</em>. The foundation.
         </p>
       </div>
 
-      <!-- VGGT-Omega -->
+      <!-- VGGT-Omega — architecture figure showing what's new -->
       <div class="gfm-tile hero">
         <div class="gfm-head">
           <div>
@@ -5742,9 +5798,13 @@ body.notes-mode aside.notes h4 {
         </div>
         <div style="font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted);">arXiv:2605.15195</div>
 
-        <div class="gfm-img-wrap">
-          <img src="images/papers/vggt-omega/scale.png" alt="VGGT-Omega scaling: AbsRel error vs data size and model size, showing improvements from VGGT baseline to VGGT-Omega">
+        <div class="gfm-img-wrap" style="padding: 0.4rem;">
+          <img src="images/papers/vggt-omega/architecture.png" alt="VGGT-Omega architecture: introduces Register Attention as alternative to Global/Frame Attention, plus training-only Matching Loss and Point Loss; same I/O as VGGT but lighter compute and richer supervision">
         </div>
+
+        <p class="gfm-caption" style="font-size: 0.65rem;">
+          <strong>What's new vs VGGT</strong>: Register Attention (lighter), Matching + Point losses (training-only).
+        </p>
 
         <div class="gfm-meta">
           <div class="pill"><strong>30%</strong><span>memory</span></div>
@@ -5764,12 +5824,12 @@ body.notes-mode aside.notes h4 {
         </div>
         <div style="font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted);">arXiv:2509.13414</div>
 
-        <div class="gfm-img-wrap">
+        <div class="gfm-img-wrap" style="padding: 0.4rem;">
           <img src="images/papers/mapanything/method.png" alt="MapAnything method: Visual Input N + optional Geometric Inputs (Ray Directions, Pose, Depth) → Multi-Modal Encoders with shared weights → Multi-View Transformer → MLP scaling factor + DPT Head + Pose Head → metric 3D scene">
         </div>
 
         <p class="gfm-caption">
-          Universal feed-forward <strong>metric</strong> 3D &mdash; real-world units, not just scale.
+          Universal feed-forward <strong>metric</strong> 3D &mdash; real-world units, not just relative scale.
         </p>
       </div>
 
@@ -5788,8 +5848,8 @@ body.notes-mode aside.notes h4 {
 
   <aside class="notes">
     <h4>NEW &mdash; geometric foundation models &middot; original figures</h4>
-    Three-tile slide for the geometry-first WM line, all with paper-original figures pulled from the tex sources. <strong>VGGT</strong> (CVPR 2025 Best Paper, FAIR + Oxford) &mdash; the architecture figure shows the trick: N input views, DINO + camera token, Global+Frame attention blocks (×L), then a Camera Head + DPT producing cameras + depth + point maps + tracks in one forward pass. <strong>VGGT-&Omega;</strong> (CVPR 2026 Oral) is the 2026 update &mdash; the scaling plot from the paper shows the headline numbers (30% memory, 15&times; data, +77% Sintel). <strong>MapAnything</strong> (Meta + CMU, 3DV 2026) &mdash; the method figure shows the multi-modal encoders that accept image + optional geometric inputs (ray directions, pose, depth) and the dual DPT/Pose heads that emit <em>metric</em> 3D in real-world units.<br><br>
-    Korean talking point: "월드모델이 픽셀이나 latent를 다룬다면, 이 라인은 <em>기하 자체</em>를 다룬다. 우리 (WoRV) 도 데이터·평가에 이미 쓰고 있다."
+    Three-tile slide for the geometry-first WM line, all with paper-original figures pulled from the tex sources. <strong>VGGT</strong> (CVPR 2025 Best Paper, FAIR + Oxford) &mdash; the architecture figure shows the trick: N input views, DINO + camera token, Global + Frame attention (×L), then a Camera Head + DPT producing cameras + depth + point maps + tracks in one forward pass. <strong>VGGT-&Omega;</strong> (CVPR 2026 Oral) &mdash; the architecture figure shows what's <em>architecturally new</em>: Register Attention as an alternative to Global/Frame attention (lighter compute), plus training-only Matching Loss + Point Loss. Same I/O as VGGT but lighter and richer supervision. Headline numbers: 30% memory, 15× data, +77% on Sintel. <strong>MapAnything</strong> (Meta + CMU, 3DV 2026) &mdash; the method figure shows multi-modal encoders that accept image + optional geometric inputs (ray directions, pose, depth) and dual DPT/Pose heads that emit <em>metric</em> 3D in real-world units.<br><br>
+    Korean talking: "월드모델이 픽셀이나 latent를 다룬다면, 이 라인은 <em>기하 자체</em>를 다룬다. 우리 (WoRV) 도 데이터·평가에 이미 쓰고 있다."
   </aside>
 </section>
 
@@ -5994,11 +6054,27 @@ body.notes-mode aside.notes h4 {
 
     </div>
 
-    <!-- Bottom synthesis -->
-    <div style="padding: 0.65rem 1rem; background: var(--color-ink); color: var(--color-bg); font-size: var(--size-small); line-height: 1.45; display: flex; gap: 1.25rem; align-items: center;">
-      <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; flex-shrink: 0; font-weight: 800;">why this chapter is the longest</div>
-      <div>
-        One trained WM addresses <strong style="color: var(--color-accent);">foresight &middot; planning &middot; data &middot; eval &middot; closed-loop optimization</strong> &mdash; five of the most expensive things in robotics. Ch 7 takes the next step: action <em>generation</em> (WAM).
+    <!-- Bottom: landscape figure from NTU survey -->
+    <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 0.85rem; flex: 1; min-height: 0;">
+      <div style="display: flex; align-items: center; justify-content: center; background: var(--color-bg-alt); border: 1px solid var(--color-grid-line); padding: 0.4rem; min-height: 0;">
+        <img src="images/papers/ntu-survey/develop.png"
+             alt="NTU MARS survey landscape: temporal evolution of representative WM works for robotic policy learning — 'World Model for Policy' branch (UniPi, Gen2Act, VidMan, VPP, GR-1, UVA, UWA, FLARE, Vidar, WorldVLA, RynnVLA-002, DreamVLA, TriVLA, UniVLA, VideoPolicy, VideoVLA, UD-VLA, GE-ACT, Motus, F1, InternVLA-A1, Video2ACT, LVP, MimicVideo, CosmosPolicy, DreamZero, GigaWorld-Policy, Fast-WAM, LingBot-VA, BagelVLA, LDA-1B, FRAPPE, WoG, VLA-JEPA, JEPA-VLA, HALO, CoWVLA, TC-IDM, Say-Dream-ACT) + 'World Model as Simulator' branch (IRASim, GPC, World-Env, Ctrl-World, World in World, WorldEval, World4RL, VLA-RFT, DiWA, DreamPlan, WMPO, RISE, Giga-Brain-0.5M, WorldVLA-Loop, PlayWorld, VLAW, WoVR), color-coded by style"
+             style="max-width: 100%; max-height: 100%; object-fit: contain;">
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 0.55rem; justify-content: center;">
+        <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
+          The landscape — NTU MARS survey
+        </div>
+        <h3 style="font-size: 1.05rem; line-height: 1.2;">~60 models in 18 months across <span class="accent-text">2 branches</span>, <span class="accent-text">7 styles</span>.</h3>
+        <ul class="bullet-list" style="font-size: 0.68rem; gap: 0.3rem;">
+          <li><strong>For Policy</strong>: IDM → Single-Backbone → MoE/MoT → Unified VLA → Latent WM</li>
+          <li><strong>As Simulator</strong>: validation → RL env → policy co-evolution</li>
+        </ul>
+        <div style="padding: 0.55rem 0.85rem; background: var(--color-ink); color: var(--color-bg); font-size: 0.72rem; line-height: 1.4; margin-top: 0.4rem;">
+          <strong style="color: var(--color-accent); font-family: var(--font-mono); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.15em; display: block; margin-bottom: 0.3rem;">why this chapter is longest</strong>
+          One trained WM addresses <strong style="color: var(--color-accent);">foresight · planning · data · eval · co-opt</strong> — five of the most expensive things in robotics.
+        </div>
       </div>
     </div>
 
@@ -6237,45 +6313,45 @@ body.notes-mode aside.notes h4 {
     </p>
 
     <style>
-      .lapa-step { display: flex; flex-direction: column; gap: 0.35rem; padding: 0.85rem 0.95rem; border: 1.5px solid var(--color-ink); background: white; min-width: 0; }
+      .lapa-step { display: flex; flex-direction: column; gap: 0.25rem; padding: 0.55rem 0.7rem 0.65rem; border: 1.5px solid var(--color-ink); background: white; min-width: 0; }
       .lapa-step.hero { border: 2px solid var(--color-accent); background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 60%); }
-      .lapa-step .step-tag { font-family: var(--font-mono); font-size: 0.62rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+      .lapa-step .step-tag { font-family: var(--font-mono); font-size: 0.58rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.08em; }
       .lapa-step.hero .step-tag { color: var(--color-accent); font-weight: 700; }
-      .lapa-step h3 { font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; line-height: 1.1; }
-      .lapa-step .step-eq { font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent); font-weight: 700; }
-      .lapa-step p { font-size: 0.72rem; color: var(--color-ink-soft); line-height: 1.45; }
+      .lapa-step h3 { font-family: var(--font-display); font-weight: 800; font-size: 0.92rem; line-height: 1.1; }
+      .lapa-step .step-eq { font-size: 0.68rem; color: var(--color-accent); font-weight: 700; }
+      .lapa-step p { font-size: 0.66rem; color: var(--color-ink-soft); line-height: 1.35; margin: 0; }
     </style>
 
     <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.4rem; flex: 1; min-height: 0;">
 
-      <!-- LEFT: video + 3-step method (main focus = academic) -->
-      <div style="display: flex; flex-direction: column; gap: 0.7rem; min-width: 0;">
-        <div class="video-frame aspect-16x9" style="max-height: 32vh;">
+      <!-- LEFT: video (bigger) + compact 3-step method -->
+      <div style="display: flex; flex-direction: column; gap: 0.6rem; min-width: 0;">
+        <div class="video-frame aspect-16x9" style="flex: 1; min-height: 0;">
           <video src="https://pub-678d8fb0a3f1496e94a1891463933279.r2.dev/videos/inline/lapa-teaser.mp4" autoplay loop muted playsinline></video>
         </div>
 
-        <!-- 3-step pipeline as cards -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.65rem; flex: 1; min-height: 0;">
+        <!-- 3-step pipeline as compact cards -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.55rem; flex: 0 0 auto;">
 
           <div class="lapa-step">
             <div class="step-tag">Step 1</div>
             <h3>Latent action</h3>
-            <div class="step-eq">VQ-VAE on (o<sub>t</sub>, o<sub>t+1</sub>)</div>
-            <p>Quantize inter-frame deltas → discrete latent action z, no human label.</p>
+            <div class="step-eq"><span class="math">VQ-VAE on (o<sub>t</sub>, o<sub>t+1</sub>)</span></div>
+            <p>Quantize inter-frame deltas → discrete latent z, no human label.</p>
           </div>
 
           <div class="lapa-step">
             <div class="step-tag">Step 2</div>
             <h3>Latent VLA pretrain</h3>
-            <div class="step-eq">predict next z &middot; web video</div>
-            <p>Train VLA to predict the next latent action from raw human / web video. Zero robot data.</p>
+            <div class="step-eq"><span class="math">predict next z</span> · web video</div>
+            <p>Train VLA to predict next latent action from raw video. Zero robot data.</p>
           </div>
 
           <div class="lapa-step hero">
             <div class="step-tag">Step 3</div>
             <h3>Align to real action</h3>
-            <div class="step-eq">tiny robot finetune → a</div>
-            <p>Map latent z to real joint actions with a small labeled robot set.</p>
+            <div class="step-eq"><span class="math">tiny robot finetune → a</span></div>
+            <p>Map latent z to real joint actions with a small labeled set.</p>
           </div>
 
         </div>
@@ -6334,106 +6410,112 @@ body.notes-mode aside.notes h4 {
     <span>65 / 77</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.95rem); gap: 0.95rem;">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.9rem); gap: 0.85rem;">
 
     <h1>From IDM / LAPA to <span class="accent-text">joint</span> video &times; action modelling</h1>
     <p style="font-size: var(--size-small); color: var(--color-ink-muted); margin-top: -0.4rem; font-style: italic;">
-      Three steps. The last one bifurcates &mdash; canonical WAM (slide 66) vs hybrid (slide 68).
+      Three architectural styles &mdash; the bifurcation point splits Slides 66 (canonical) and 68 (hybrid).
     </p>
 
     <style>
-      .ev-step { display: flex; flex-direction: column; gap: 0.55rem; padding: 0.95rem 1rem; border: 1.5px solid var(--color-ink); background: white; min-width: 0; position: relative; }
-      .ev-step .step-num { position: absolute; top: -16px; left: 0.85rem; background: var(--color-ink); color: white; padding: 0.15rem 0.55rem; font-family: var(--font-mono); font-size: 0.62rem; font-weight: 800; letter-spacing: 0.15em; }
+      .ev-step { display: flex; flex-direction: column; gap: 0.4rem; padding: 0.8rem 0.9rem; border: 1.5px solid var(--color-ink); background: white; min-width: 0; position: relative; }
+      .ev-step .step-num { position: absolute; top: -12px; left: 0.85rem; background: var(--color-ink); color: white; padding: 0.1rem 0.5rem; font-family: var(--font-mono); font-size: 0.58rem; font-weight: 800; letter-spacing: 0.15em; z-index: 2; }
       .ev-step.hero { border: 2.5px solid var(--color-accent); background: var(--color-accent-soft); }
       .ev-step.hero .step-num { background: var(--color-accent); }
-      .ev-step .step-yr { font-family: var(--font-mono); font-size: 0.62rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.08em; }
-      .ev-step h3 { font-family: var(--font-display); font-weight: 900; font-size: 1.5rem; line-height: 1; }
-      .ev-step .step-formula { font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-accent); font-weight: 700; padding: 0.35rem 0; border-top: 1px solid var(--color-grid-line); border-bottom: 1px solid var(--color-grid-line); text-align: center; }
-      .ev-step .step-desc { font-size: 0.72rem; color: var(--color-ink-soft); line-height: 1.45; }
-      .ev-step .step-examples { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); margin-top: auto; padding-top: 0.4rem; }
-      .ev-arrow { display: flex; align-items: center; justify-content: center; font-size: 2rem; color: var(--color-accent); font-weight: 800; line-height: 1; }
+      .ev-step .step-yr { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem; }
+      .ev-step h3 { font-family: var(--font-display); font-weight: 900; font-size: 1.25rem; line-height: 1; }
+      .ev-step .step-formula { font-size: 0.68rem; color: var(--color-accent); font-weight: 700; padding: 0.25rem 0; border-top: 1px solid var(--color-grid-line); border-bottom: 1px solid var(--color-grid-line); text-align: center; }
+      .ev-step .step-desc { font-size: 0.65rem; color: var(--color-ink-soft); line-height: 1.4; }
+      .ev-step .step-examples { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted); margin-top: auto; padding-top: 0.3rem; }
+      .ev-arrow { display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-accent); font-weight: 800; line-height: 1; }
     </style>
 
-    <!-- Top: 3-step evolution -->
-    <div style="display: grid; grid-template-columns: 1fr 30px 1fr 30px 1fr; gap: 0.8rem; flex: 1.1; min-height: 0;">
+    <!-- Top: 3-step evolution (compact) -->
+    <div style="display: grid; grid-template-columns: 1fr 26px 1fr 26px 1fr; gap: 0.65rem; flex: 0 0 auto;">
 
       <div class="ev-step">
         <div class="step-num">STEP 1 &middot; 2022</div>
-        <div class="step-yr">VPT &middot; OpenAI</div>
         <h3>IDM</h3>
-        <div class="step-formula">video &rarr; action</div>
-        <p class="step-desc">
-          Infer the action that bridged two frames. <em>Recover</em> the missing label using a tiny labeled set.
-        </p>
-        <div class="step-examples">VPT &middot; UniPi &middot; GR-1 &middot; NovaFlow</div>
+        <div class="step-formula">video → action</div>
+        <p class="step-desc">Recover the missing label using a tiny labeled set.</p>
+        <div class="step-examples">VPT &middot; UniPi &middot; GR-1</div>
       </div>
 
       <div class="ev-arrow">&rarr;</div>
 
       <div class="ev-step">
         <div class="step-num">STEP 2 &middot; 2024</div>
-        <div class="step-yr">LAPA &middot; KAIST</div>
         <h3>LAPA</h3>
-        <div class="step-formula">video &rarr; latent z &rarr; action</div>
-        <p class="step-desc">
-          Drop the hand-defined label entirely. <em>Learn</em> the action as a VQ-VAE latent.
-        </p>
-        <div class="step-examples">LAPA &middot; UniSim-latent &middot; GR-2 latent</div>
+        <div class="step-formula">video → latent z → action</div>
+        <p class="step-desc">Learn the action as a VQ-VAE latent. Drop hand labels.</p>
+        <div class="step-examples">LAPA · UniSim-latent</div>
       </div>
 
       <div class="ev-arrow">&rarr;</div>
 
       <div class="ev-step hero">
         <div class="step-num">STEP 3 &middot; 2026</div>
-        <div class="step-yr">DreamZero &middot; NVIDIA</div>
         <h3>WAM</h3>
         <div class="step-formula" style="color: var(--color-accent);">video &harr; action (joint)</div>
-        <p class="step-desc">
-          <strong>Stop separating them.</strong> Generate the future video <em>and</em> the action together, in one model.
-        </p>
+        <p class="step-desc"><strong>Stop separating them.</strong> Generate future video AND action together.</p>
         <div class="step-examples">DreamZero (canonical) + 12 hybrids</div>
       </div>
 
     </div>
 
-    <!-- Bottom: bifurcation -->
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; flex: 0.65; min-height: 0;">
+    <!-- Middle: NTU survey 3-style architecture figure -->
+    <div style="display: grid; grid-template-columns: 1.55fr 1fr; gap: 1rem; flex: 1; min-height: 0;">
 
-      <div style="display: flex; flex-direction: column; gap: 0.45rem; padding: 0.75rem 0.95rem; border: 1.5px solid var(--color-accent); background: white;">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <h3 style="font-family: var(--font-display); font-weight: 800; font-size: 1.05rem;">(3) Canonical WAM</h3>
-          <span class="mono" style="font-size: 0.62rem; color: var(--color-accent); font-weight: 700;">→ slide 66</span>
+      <div style="display: flex; flex-direction: column; gap: 0.4rem; min-height: 0;">
+        <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
+          Step 3 architecture variants &middot; NTU MARS survey
         </div>
-        <p style="font-size: 0.72rem; color: var(--color-ink-soft); line-height: 1.45;">
-          Single generative backbone over <strong>both video and action</strong>. AR diffusion. <em>DreamZero (14B), Cosmos-Policy</em>.
-        </p>
+        <div style="flex: 1; display: flex; align-items: center; justify-content: center; background: var(--color-bg-alt); border: 1px solid var(--color-grid-line); padding: 0.4rem; min-height: 0;">
+          <img src="images/papers/ntu-survey/wam-compare.png"
+               alt="Three WAM architecture styles from NTU survey: (a) IDM-Style = Video Generation Model → Inverse Dynamics Model → action; (b) Single-Backbone-Style = shared backbone emits both observation tokens and action tokens; (c) MoT-Style = separate Video Expert and Action Expert with Joint Attention"
+               style="max-width: 100%; max-height: 100%; object-fit: contain;">
+        </div>
       </div>
 
-      <div style="display: flex; flex-direction: column; gap: 0.45rem; padding: 0.75rem 0.95rem; border: 1.5px dashed var(--color-accent); background: white;">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <h3 style="font-family: var(--font-display); font-weight: 800; font-size: 1.05rem;">(3a) VLA + WM hybrid</h3>
-          <span class="mono" style="font-size: 0.62rem; color: var(--color-accent); font-weight: 700;">→ slide 68</span>
-        </div>
-        <p style="font-size: 0.72rem; color: var(--color-ink-soft); line-height: 1.45;">
-          VLA backbone with video-prediction as <strong>auxiliary loss</strong>. Don't fully generate, just predict. <em>InternVLA-A1, LingBot-VA, 10+ more</em>.
-        </p>
-      </div>
+      <div style="display: flex; flex-direction: column; gap: 0.6rem; justify-content: center; min-width: 0;">
 
+        <div style="padding: 0.65rem 0.85rem; border: 1.5px solid var(--color-accent); background: white;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <h3 style="font-family: var(--font-display); font-weight: 800; font-size: 0.95rem;">(3) Canonical WAM</h3>
+            <span class="mono" style="font-size: 0.58rem; color: var(--color-accent); font-weight: 700;">→ slide 66</span>
+          </div>
+          <p style="font-size: 0.65rem; color: var(--color-ink-soft); line-height: 1.4; margin-top: 0.25rem;">
+            <strong>Single-Backbone</strong> (b). One generative model over both video and action. AR diffusion. <em>DreamZero, Cosmos-Policy.</em>
+          </p>
+        </div>
+
+        <div style="padding: 0.65rem 0.85rem; border: 1.5px dashed var(--color-accent); background: white;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <h3 style="font-family: var(--font-display); font-weight: 800; font-size: 0.95rem;">(3a) VLA + WM hybrid</h3>
+            <span class="mono" style="font-size: 0.58rem; color: var(--color-accent); font-weight: 700;">→ slide 68</span>
+          </div>
+          <p style="font-size: 0.65rem; color: var(--color-ink-soft); line-height: 1.4; margin-top: 0.25rem;">
+            <strong>MoT-Style</strong> (c). Video expert + action expert, joint attention. Video-pred as auxiliary loss. <em>InternVLA-A1, LingBot-VA.</em>
+          </p>
+        </div>
+
+      </div>
     </div>
 
   </div>
 
   <footer class="slide-footer">
-    <span>arXiv: 2206.11795 &middot; 2410.11758 &middot; 2602.15922 &middot; 2601.16163 &middot; 2601.02456 &middot; 2601.21998</span>
+    <span>NTU MARS survey arXiv:2605.00080 (architecture taxonomy) &middot; arXiv: 2206.11795 &middot; 2410.11758 &middot; 2602.15922 &middot; 2601.02456 &middot; 2601.21998</span>
     <span class="mono">65</span>
   </footer>
 
   <aside class="notes">
-    <h4>Slide 65 &mdash; the framing slide for the rest of Ch7</h4>
-    Three-step linear evolution, then the bifurcation. Read the row as one sentence: <em>video &rarr; action</em> (IDM, recover), <em>video &rarr; latent action</em> (LAPA, learn), <em>video and action together</em> (WAM, jointly model). The last step splits into two branches that emerged at the same time:<br><br>
-    (3) <strong>Canonical WAM</strong> &mdash; literally a generative model over both video and action. Slide 66, DreamZero and Cosmos-Policy.<br>
-    (3a) <strong>VLA + WM hybrid</strong> &mdash; keep the VLA but add a video-prediction objective. Slide 68, InternVLA-A1 and LingBot-VA.<br><br>
-    Slides 66-69 expand each branch. Slide 70 closes with taxonomy.
+    <h4>Slide 65 &mdash; 3 steps + 3 architectural styles</h4>
+    Top row is the temporal evolution (IDM → LAPA → WAM). Bottom is the NTU MARS survey's clean architectural taxonomy for what "WAM" can mean today:<br><br>
+    (a) <strong>IDM-Style</strong> &mdash; the old way: Video Generation Model → Inverse Dynamics Model → action. Two separate models.<br>
+    (b) <strong>Single-Backbone-Style</strong> &mdash; the canonical WAM: one shared backbone emits both observation tokens and action tokens. <em>DreamZero, Cosmos-Policy.</em> Covered in slide 66.<br>
+    (c) <strong>MoT-Style</strong> &mdash; the hybrid: separate Video Expert + Action Expert connected by Joint Attention. Video prediction is an auxiliary loss alongside the action head. <em>InternVLA-A1, LingBot-VA.</em> Covered in slide 68.<br><br>
+    Korean talking: "이게 WAM 의 핵심 분기. 같은 직관 — video랑 action 같이 다루자 — 인데 architecture는 단일 backbone vs MoT 로 나뉜다. 다음 두 슬라이드에서 각각 하나씩."
   </aside>
 </section>
 
@@ -7133,9 +7215,11 @@ body.notes-mode aside.notes h4 {
           We build <strong>foundation models that work in the physical world</strong>.
         </p>
 
-        <div style="display: flex; gap: 1.5rem; margin-top: 0.5rem; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted);">
+        <div style="display: flex; flex-direction: column; gap: 0.45rem; margin-top: 0.5rem; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted);">
           <span>@ Pangyo IT Center #2</span>
-          <span>K-Humanoid Alliance member</span>
+          <span style="padding-left: 0.6rem; border-left: 3px solid var(--color-korean-flag); color: var(--color-ink-soft);">
+            Member of the <strong style="color: var(--color-ink);">national WFM consortium</strong> — Korea Physical AI program (≈$25M scope, MSIT/IITP-supervised, 2026-)
+          </span>
         </div>
       </div>
 
@@ -7320,10 +7404,15 @@ body.notes-mode aside.notes h4 {
       .res-head { display: flex; flex-direction: column; gap: 0.2rem; }
       .res-tile h2 { font-size: 1.25rem; line-height: 1.05; }
       .res-cite { font-family: var(--font-mono); font-size: 0.58rem; color: var(--color-ink-muted); }
-      .res-collab { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.15rem; }
-      .res-collab .badge { display: inline-flex; align-items: center; gap: 0.3rem; padding: 0.18rem 0.5rem; background: var(--color-bg); border: 1px solid var(--color-ink); font-family: var(--font-mono); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.02em; }
-      .res-collab .badge.kr { border-left: 3px solid #CD2E3A; }
-      .res-collab .x { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted); padding: 0.18rem 0.05rem; }
+      .res-collab { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.25rem; align-items: center; }
+      .inst { display: inline-flex; align-items: center; padding: 0.22rem 0.55rem; font-family: var(--font-display); font-size: 0.65rem; font-weight: 800; letter-spacing: 0.04em; line-height: 1; border-radius: 2px; color: white; white-space: nowrap; }
+      .inst.snu      { background: #003876; }
+      .inst.kaist    { background: #004E98; }
+      .inst.stanford { background: #8C1515; }
+      .inst.adobe    { background: #FA0F00; }
+      .inst.ai2      { background: #0F6E96; }
+      .inst.maum     { background: #0a0a0a; }
+      .res-collab .x { font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-ink-muted); padding: 0 0.05rem; }
       .res-img-wrap { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; background: var(--color-bg); border: 1px solid var(--color-grid-line); padding: 0.35rem; }
       .res-img-wrap img { max-width: 100%; max-height: 100%; object-fit: contain; }
       .res-desc { font-size: 0.72rem; color: var(--color-ink-soft); line-height: 1.45; }
@@ -7338,11 +7427,11 @@ body.notes-mode aside.notes h4 {
           <h2>D2E</h2>
           <div class="res-cite">ICLR 2026 &middot; arXiv:2510.05684</div>
           <div class="res-collab">
-            <span class="badge kr">🇰🇷 MAUM.AI</span>
-            <span class="x">&times;</span>
-            <span class="badge">Stanford</span>
-            <span class="x">&times;</span>
-            <span class="badge kr">🇰🇷 SNU</span>
+            <span class="inst maum">MAUM.AI</span>
+            <span class="x">×</span>
+            <span class="inst stanford">Stanford</span>
+            <span class="x">×</span>
+            <span class="inst snu">SNU</span>
           </div>
         </div>
 
@@ -7351,7 +7440,7 @@ body.notes-mode aside.notes h4 {
         </div>
 
         <p class="res-desc">
-          <strong>Generalist Inverse Dynamics Model</strong> &mdash; trained on desktop game data (Brotato, Minecraft, BF6, ...) → transfers to real-world manipulation (Meta-World, LIBERO) and navigation (CANVAS).
+          <strong>Generalist Inverse Dynamics Model</strong> &mdash; trained on desktop game data (Brotato, Minecraft, BF6, …) → transfers to real-world manipulation (Meta-World, LIBERO) and navigation (CANVAS).
         </p>
         <p class="res-meta">github.com/worv-ai/D2E &middot; HF: open-world-agents/Generalist-IDM-1B</p>
       </div>
@@ -7362,11 +7451,11 @@ body.notes-mode aside.notes h4 {
           <h2>WorldCam</h2>
           <div class="res-cite">2026 &middot; cvlab-kaist.github.io/WorldCam</div>
           <div class="res-collab">
-            <span class="badge">Adobe Research</span>
-            <span class="x">&times;</span>
-            <span class="badge kr">🇰🇷 KAIST</span>
-            <span class="x">&times;</span>
-            <span class="badge kr">🇰🇷 MAUM.AI</span>
+            <span class="inst adobe">Adobe</span>
+            <span class="x">×</span>
+            <span class="inst kaist">KAIST</span>
+            <span class="x">×</span>
+            <span class="inst maum">MAUM.AI</span>
           </div>
         </div>
 
@@ -7386,11 +7475,11 @@ body.notes-mode aside.notes h4 {
           <h2>VLA-Eval-Harness</h2>
           <div class="res-cite">2026 &middot; allenai/vla-evaluation-harness</div>
           <div class="res-collab">
-            <span class="badge">AI2</span>
-            <span class="x">&times;</span>
-            <span class="badge kr">🇰🇷 SNU</span>
-            <span class="x">&times;</span>
-            <span class="badge kr">🇰🇷 MAUM.AI</span>
+            <span class="inst ai2">AI2</span>
+            <span class="x">×</span>
+            <span class="inst snu">SNU</span>
+            <span class="x">×</span>
+            <span class="inst maum">MAUM.AI</span>
           </div>
         </div>
 
@@ -7408,9 +7497,9 @@ body.notes-mode aside.notes h4 {
 
     <!-- Bottom synthesis -->
     <div style="padding: 0.6rem 1rem; background: var(--color-ink); color: var(--color-bg); font-size: var(--size-small); line-height: 1.45; display: flex; gap: 1.25rem; align-items: center;">
-      <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; flex-shrink: 0; font-weight: 800;">collab map</div>
+      <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; flex-shrink: 0; font-weight: 800;">collab footprint</div>
       <div>
-        Korea ↔ US deep collabs: <strong>D2E</strong> (SNU + Stanford + MAUM) &middot; <strong>WorldCam</strong> (Adobe + KAIST + MAUM) &middot; <strong>VLA-Eval-Harness</strong> (AI2 + SNU + MAUM). Always hiring &mdash; see next 2 slides.
+        <strong>D2E</strong> (SNU + Stanford + MAUM) &middot; <strong>WorldCam</strong> (Adobe + KAIST + MAUM) &middot; <strong>VLA-Eval-Harness</strong> (AI2 + SNU + MAUM). Always hiring &mdash; see next 2 slides.
       </div>
     </div>
 
@@ -7425,13 +7514,13 @@ body.notes-mode aside.notes h4 {
     <h4>Selected research — three current collabs</h4>
     Three projects in flight right now, each a real cross-institution collaboration:<br><br>
 
-    <strong>D2E</strong> (ICLR 2026, arXiv:2510.05684) &mdash; <em>Desktop to Embodied</em>. A 1B Generalist Inverse Dynamics Model that trains on desktop game data (Brotato, Minecraft, BF6, etc.) and transfers zero-shot to real robotics tasks (Meta-World, LIBERO, SO101, CANVAS navigation). Collab: MAUM.AI + Stanford + SNU. Lead authors include Suhwan Choi (SNU), Jaeyoon Jung, Yunsung Lee (me).<br><br>
+    <strong>D2E</strong> (ICLR 2026, arXiv:2510.05684) &mdash; <em>Desktop to Embodied</em>. A 1B Generalist Inverse Dynamics Model that trains on desktop game data (Brotato, Minecraft, BF6, etc.) and transfers zero-shot to real robotics tasks. Collab: MAUM.AI + Stanford + SNU. Lead authors include Suhwan Choi (SNU), Jaeyoon Jung, Yunsung Lee (me).<br><br>
 
-    <strong>WorldCam</strong> (2026) &mdash; camera-controllable progressive autoregressive video transformer. 3,000 minutes of gameplay frames with camera trajectories. The thesis is that camera control is the right entry point for "WM as controllable simulator". Collab: Adobe Research + KAIST CVLAB + MAUM.AI. Lead authors include Jisu Nam (KAIST/Adobe), Yang Zhou (Adobe).<br><br>
+    <strong>WorldCam</strong> (2026) &mdash; camera-controllable progressive autoregressive video transformer. 3,000 minutes of gameplay frames with camera trajectories. Collab: Adobe Research + KAIST CVLAB + MAUM.AI. Lead authors include Jisu Nam (KAIST/Adobe), Yang Zhou (Adobe).<br><br>
 
-    <strong>VLA-Evaluation-Harness</strong> (2026) &mdash; unified VLA evaluation across 18 benchmarks × 13 model servers, decoupling model from environment to remove the per-benchmark integration work. 47× faster LIBERO via batch parallel eval. Collab: AI2 + SNU + MAUM.AI.<br><br>
+    <strong>VLA-Evaluation-Harness</strong> (2026) &mdash; unified VLA evaluation across 18 benchmarks × 13 model servers. 47× faster LIBERO via batch parallel eval. Collab: AI2 + SNU + MAUM.AI.<br><br>
 
-    Korean talking: 세 프로젝트 모두 한국 (KAIST/SNU/MAUM) 과 글로벌 (Stanford/Adobe/AI2) 의 협업. WoRV가 데이터·월드모델·평가 세 축 모두에서 활발히 참여 중.
+    Korean talking: "세 프로젝트 모두 한국 (KAIST/SNU/MAUM) 과 글로벌 (Stanford/Adobe/AI2) 의 협업. WoRV가 데이터·월드모델·평가 세 축 모두에서 활발히 참여 중."
   </aside>
 </section>
 
@@ -7549,60 +7638,68 @@ body.notes-mode aside.notes h4 {
     <span>76 / 77</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1.5rem);">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1rem); gap: 0.85rem;">
 
     <div style="display: flex; align-items: baseline; gap: 1rem;">
       <h1 style="font-size: clamp(2.5rem, 5vw, 4rem);">We are <span class="accent-text">hiring</span></h1>
       <div style="font-size: var(--size-body); color: var(--color-ink-muted);">— people to solve this with us</div>
     </div>
 
-    <div class="split" style="display: flex; gap: 3rem; margin-top: 2rem; flex: 1; align-items: stretch;">
+    <style>
+      .jr-group { display: flex; flex-direction: column; gap: 0.5rem; min-width: 0; }
+      .jr-group-tag { display: flex; align-items: baseline; gap: 0.5rem; }
+      .jr-group-tag .label { font-family: var(--font-mono); font-size: 0.62rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 800; }
+      .jr-group-tag .count { font-family: var(--font-mono); font-size: 0.58rem; color: var(--color-ink-muted); }
+      .jr-row { display: flex; gap: 0.7rem; align-items: center; padding: 0.5rem 0.85rem; border-left: 3px solid var(--color-accent); background: var(--color-bg); border-bottom: 1px solid var(--color-grid-line); }
+      .jr-row strong { font-family: var(--font-display); font-weight: 800; font-size: 0.92rem; }
+      .jr-row .num { font-family: var(--font-mono); font-size: 0.62rem; color: var(--color-ink-muted); min-width: 1.5rem; }
+      .jr-row .desc { margin-left: auto; font-size: 0.68rem; color: var(--color-ink-soft); text-align: right; }
+    </style>
 
-      <div style="flex: 1.4; display: flex; flex-direction: column; gap: 1rem;">
+    <div class="split" style="display: flex; gap: 2.5rem; flex: 1; align-items: stretch; min-height: 0;">
 
-        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-          <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">Positions</div>
+      <!-- LEFT: 3 groups of open positions -->
+      <div style="flex: 1.7; display: flex; flex-direction: column; gap: 0.85rem; min-width: 0;">
 
-          <div style="display: flex; gap: 0.75rem; align-items: center; padding: 0.75rem 1rem; border-left: 3px solid var(--color-accent);">
-            <span class="mono" style="font-size: var(--size-tiny); color: var(--color-ink-muted);">01</span>
-            <strong style="font-size: var(--size-h3);">Research Scientist</strong>
-            <span style="margin-left: auto; font-size: var(--size-small); color: var(--color-ink-soft);">VLA · WM · WAM</span>
-          </div>
-
-          <div style="display: flex; gap: 0.75rem; align-items: center; padding: 0.75rem 1rem; border-left: 3px solid var(--color-accent);">
-            <span class="mono" style="font-size: var(--size-tiny); color: var(--color-ink-muted);">02</span>
-            <strong style="font-size: var(--size-h3);">Research Engineer</strong>
-            <span style="margin-left: auto; font-size: var(--size-small); color: var(--color-ink-soft);">data infra · training systems</span>
-          </div>
-
-          <div style="display: flex; gap: 0.75rem; align-items: center; padding: 0.75rem 1rem; border-left: 3px solid var(--color-accent);">
-            <span class="mono" style="font-size: var(--size-tiny); color: var(--color-ink-muted);">03</span>
-            <strong style="font-size: var(--size-h3);">Research Associate · Intern</strong>
-            <span style="margin-left: auto; font-size: var(--size-small); color: var(--color-ink-soft);">undergrads welcome</span>
-          </div>
+        <div class="jr-group">
+          <div class="jr-group-tag"><span class="label">Research</span><span class="count">2 positions</span></div>
+          <div class="jr-row"><span class="num">01</span><strong>Research Scientist / Fellow</strong><span class="desc">VLA · WM · WAM</span></div>
+          <div class="jr-row"><span class="num">02</span><strong>Research Intern (World Model)</strong><span class="desc">min 2-month commitment</span></div>
         </div>
 
-        <div style="display: flex; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap;">
-          <span style="background: var(--color-accent); color: var(--color-bg); padding: 0.4rem 0.75rem; font-family: var(--font-mono); font-size: var(--size-small); font-weight: 700;">KR military alt-service: Research</span>
-          <span style="background: var(--color-ink); color: var(--color-bg); padding: 0.4rem 0.75rem; font-family: var(--font-mono); font-size: var(--size-small); font-weight: 700;">KR military alt-service: Industrial</span>
-          <span style="background: var(--color-bg-alt); color: var(--color-ink); padding: 0.4rem 0.75rem; font-family: var(--font-mono); font-size: var(--size-small); border: 1px solid var(--color-ink);">@ Pangyo IT Center #2</span>
+        <div class="jr-group">
+          <div class="jr-group-tag"><span class="label">Engineering</span><span class="count">4 positions</span></div>
+          <div class="jr-row"><span class="num">03</span><strong>VLA Engineer</strong><span class="desc">training · post-training</span></div>
+          <div class="jr-row"><span class="num">04</span><strong>AI SW Engineer</strong><span class="desc">production stack</span></div>
+          <div class="jr-row"><span class="num">05</span><strong>Robotics SW Engineer</strong><span class="desc">on-robot integration</span></div>
+          <div class="jr-row"><span class="num">06</span><strong>Simulation Engineer</strong><span class="desc">Isaac · Cosmos · WM rollouts</span></div>
         </div>
 
-        <div style="margin-top: 1.5rem; font-size: var(--size-body); line-height: 1.55;">
-          Hiring step 2 = <strong>coding test + take-home assignment</strong>. Take a swing. HUFS students: alternative-service tracks are on the table too.
+        <div class="jr-group">
+          <div class="jr-group-tag"><span class="label">Business &amp; PM</span><span class="count">2 positions + talent pool</span></div>
+          <div class="jr-row"><span class="num">07</span><strong>Project Manager</strong><span class="desc">B2B vertical leads</span></div>
+          <div class="jr-row"><span class="num">08</span><strong>Technical Sales &amp; Strategy</strong><span class="desc">vertical GTM</span></div>
+          <div class="jr-row" style="border-left-color: var(--color-ink); background: var(--color-bg-alt);"><span class="num">09</span><strong>Talent Pool · 상시채용</strong><span class="desc">always-open registration</span></div>
         </div>
 
       </div>
 
-      <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; border-left: 1px solid var(--color-grid-line); padding-left: 3rem;">
+      <!-- RIGHT: QR + URL -->
+      <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; border-left: 1px solid var(--color-grid-line); padding-left: 2.5rem; min-width: 0;">
 
-        <div style="width: 220px; height: 220px; background: white; border: 2px solid var(--color-ink); display: flex; align-items: center; justify-content: center; padding: 0.6rem;">
+        <div style="width: 240px; height: 240px; background: white; border: 2px solid var(--color-ink); display: flex; align-items: center; justify-content: center; padding: 0.6rem;">
           <img src="images/qr-hiring.png" alt="QR — recruitment.worv.maum.ai" style="width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated;">
         </div>
 
-        <div style="text-align: center; margin-top: 0.5rem;">
+        <div style="text-align: center;">
           <div class="mono" style="font-size: var(--size-small); font-weight: 700;">recruitment.worv.maum.ai</div>
           <div class="mono" style="font-size: var(--size-tiny); color: var(--color-ink-muted); margin-top: 0.25rem;">worv_hr@maum.ai</div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 0.45rem; margin-top: 0.5rem; align-items: stretch; width: 100%;">
+          <span style="background: var(--color-accent); color: var(--color-bg); padding: 0.4rem 0.75rem; font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700; text-align: center;">KR military alt-service — Research track</span>
+          <span style="background: var(--color-ink); color: var(--color-bg); padding: 0.4rem 0.75rem; font-family: var(--font-mono); font-size: 0.65rem; font-weight: 700; text-align: center;">KR military alt-service — Industrial track</span>
+          <span style="background: var(--color-bg-alt); color: var(--color-ink); padding: 0.4rem 0.75rem; font-family: var(--font-mono); font-size: 0.65rem; border: 1px solid var(--color-ink); text-align: center;">@ Pangyo IT Center #2</span>
         </div>
 
       </div>
@@ -7612,13 +7709,14 @@ body.notes-mode aside.notes h4 {
   </div>
 
   <footer class="slide-footer">
-    <span>"coding test + assignment" disclosed publicly · KR military alternative service available</span>
+    <span>recruitment.worv.maum.ai/jobs · worv_hr@maum.ai · KR military alternative service available</span>
     <span class="mono">76</span>
   </footer>
 
   <aside class="notes">
-    <h4>Recruiting — casual</h4>
-    "DMs and emails welcome — <strong>coding test + take-home</strong> is step 2 of the public process, take a swing. HUFS students: alternative military service programs are on the table too." (That option is on the public recruitment site's process.subtitle — audience-friendly.) LinkedIn company page is intentionally not configured, so only one QR — the recruitment URL.
+    <h4>Recruiting — current open roles (live snapshot from recruitment.worv.maum.ai/jobs)</h4>
+    Nine positions across three tracks. <strong>Research</strong> (Research Scientist/Fellow + World Model Intern), <strong>Engineering</strong> (VLA, AI SW, Robotics SW, Simulation), <strong>Business</strong> (PM, Tech Sales). Plus always-open talent pool.<br><br>
+    Korean military alternative-service tracks (Research + Industrial) available for eligible candidates. All positions @ Pangyo IT Center #2. DMs and emails welcome.
   </aside>
 </section>
 
