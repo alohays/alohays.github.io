@@ -4673,99 +4673,171 @@ body.notes-mode aside.notes h4 {
     <span>49 / 76</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1.5rem);">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.9rem); gap: 0.85rem;">
 
-    <h1>Origin &mdash; <span class="accent-text">Ha &amp; Schmidhuber</span> 2018</h1>
+    <h1>Origin &mdash; <span class="accent-text">not</span> a 2018 invention</h1>
+    <p style="font-size: var(--size-small); color: var(--color-ink-muted); margin-top: -0.4rem; font-style: italic;">
+      The same partition appeared <strong>three times</strong>: model-based RL, recurrent controller, V&middot;M&middot;C decomposition.
+    </p>
 
-    <div style="display: flex; gap: 2.5rem; margin-top: 1.5rem; flex: 1; align-items: stretch;">
+    <style>
+      .orig-grid { display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 1.1rem; flex: 1; min-height: 0; }
+      .orig-tile { display: flex; flex-direction: column; gap: 0.55rem; border: var(--border-thin); padding: 0.95rem 1rem; position: relative; min-width: 0; overflow: hidden; }
+      .orig-tile.hero { border: 2px solid var(--color-accent); background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 55%); }
+      .orig-tile .yr-tag { position: absolute; top: -10px; left: 0.9rem; background: var(--color-bg); padding: 0 0.5rem; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-accent); font-weight: 700; letter-spacing: 0.15em; }
+      .orig-tile h2 { font-size: 1.15rem; line-height: 1.1; margin-top: 0.2rem; }
+      .orig-tile .orig-author { font-family: var(--font-mono); font-size: 0.66rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+      .orig-tile .orig-desc { font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.45; }
+      .orig-tile .orig-cite { font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); margin-top: auto; padding-top: 0.4rem; }
+      .orig-tile.hero .orig-cite { color: var(--color-accent); font-weight: 700; }
+    </style>
 
-      <div style="flex: 1.5; display: flex; flex-direction: column; gap: 0.75rem;">
-        <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
-          The V &rarr; M &rarr; C decomposition
-        </div>
+    <div class="orig-grid">
 
-        <svg viewBox="0 0 640 340" style="width: 100%; max-height: 360px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
-          <defs>
-            <marker id="arr49" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
-              <path d="M 0 0 L 7 4.5 L 0 9 z" fill="#0a0a0a"/>
-            </marker>
-          </defs>
+      <!-- 1990 Sutton: Dyna -->
+      <div class="orig-tile">
+        <div class="yr-tag">1990 &middot; ML Workshop</div>
+        <h2>Dyna</h2>
+        <div class="orig-author">Sutton &middot; "Integrated Architectures for Learning, Planning, and Reacting"</div>
 
-          <!-- Observation -->
-          <g>
-            <rect x="20" y="140" width="100" height="60" fill="none" stroke="#0a0a0a" stroke-width="1.5"/>
-            <text x="70" y="170" font-size="13" text-anchor="middle" fill="#0a0a0a">observation</text>
-            <text x="70" y="188" font-size="11" text-anchor="middle" fill="#4a4a4a">o_t</text>
-          </g>
-          <path d="M 120 170 L 170 170" stroke="#0a0a0a" stroke-width="1.5" fill="none" marker-end="url(#arr49)"/>
+        <svg viewBox="0 0 280 130" style="width: 100%; height: 130px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+          <defs><marker id="arr49a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 6 4 L 0 8 z" fill="#0a0a0a"/></marker></defs>
+          <!-- world (real) -->
+          <rect x="10" y="20" width="80" height="40" fill="none" stroke="#0a0a0a" stroke-width="1.5"/>
+          <text x="50" y="38" font-size="11" text-anchor="middle" font-weight="700">real env</text>
+          <text x="50" y="52" font-size="10" text-anchor="middle" fill="#8b8b8b">(s, a) → s', r</text>
 
-          <!-- V: Vision -->
-          <g>
-            <rect x="170" y="120" width="120" height="100" fill="#0a0a0a"/>
-            <text x="230" y="158" font-size="22" font-weight="900" text-anchor="middle" fill="#ff3300" font-family="var(--font-display)">V</text>
-            <text x="230" y="180" font-size="11" text-anchor="middle" fill="white">Vision (VAE)</text>
-            <text x="230" y="198" font-size="12" text-anchor="middle" fill="rgba(255,255,255,0.7)">z_t  latent</text>
-          </g>
+          <!-- learned model -->
+          <rect x="170" y="20" width="100" height="40" fill="#0a0a0a"/>
+          <text x="220" y="38" font-size="11" text-anchor="middle" fill="#ffffff" font-weight="700">learned model</text>
+          <text x="220" y="52" font-size="10" text-anchor="middle" fill="#ff3300">M̂(s, a) → ŝ', r̂</text>
 
-          <!-- arrow V -> M -->
-          <path d="M 290 170 L 350 170" stroke="#0a0a0a" stroke-width="1.5" fill="none" marker-end="url(#arr49)"/>
+          <!-- policy -->
+          <rect x="90" y="85" width="100" height="38" fill="#ff3300"/>
+          <text x="140" y="103" font-size="11" text-anchor="middle" fill="#ffffff" font-weight="700">policy</text>
+          <text x="140" y="117" font-size="10" text-anchor="middle" fill="#ffffff">Q-learning</text>
 
-          <!-- M: Memory -->
-          <g>
-            <rect x="350" y="120" width="120" height="100" fill="#0a0a0a"/>
-            <text x="410" y="158" font-size="22" font-weight="900" text-anchor="middle" fill="#ff3300" font-family="var(--font-display)">M</text>
-            <text x="410" y="180" font-size="11" text-anchor="middle" fill="white">Memory (MDN-RNN)</text>
-            <text x="410" y="198" font-size="12" text-anchor="middle" fill="rgba(255,255,255,0.7)">p(z<tspan font-size="8" baseline-shift="sub">t+1</tspan> | z<tspan font-size="8" baseline-shift="sub">t</tspan>, a<tspan font-size="8" baseline-shift="sub">t</tspan>, h<tspan font-size="8" baseline-shift="sub">t</tspan>)</text>
-          </g>
-
-          <!-- arrow M -> C -->
-          <path d="M 470 170 L 520 170" stroke="#0a0a0a" stroke-width="1.5" fill="none" marker-end="url(#arr49)"/>
-
-          <!-- C: Controller -->
-          <g>
-            <rect x="520" y="140" width="100" height="60" fill="none" stroke="#ff3300" stroke-width="2"/>
-            <text x="570" y="170" font-size="22" font-weight="900" text-anchor="middle" fill="#ff3300" font-family="var(--font-display)">C</text>
-            <text x="570" y="188" font-size="12" text-anchor="middle" fill="#0a0a0a">CMA-ES &middot; 867 params</text>
-          </g>
-
-          <!-- feedback loop: C -> action -> world -->
-          <path d="M 570 200 L 570 280 L 70 280 L 70 200" stroke="#0a0a0a" stroke-width="1.5" fill="none" marker-end="url(#arr49)" stroke-dasharray="6 4"/>
-          <text x="320" y="298" font-size="11" text-anchor="middle" fill="#4a4a4a">action a_t  (closes the loop on the real environment)</text>
-
-          <!-- 'dream' annotation -->
-          <g>
-            <rect x="110" y="40" width="420" height="45" fill="#ffe8e3" stroke="#ff3300" stroke-width="1"/>
-            <text x="320" y="58" font-size="12" text-anchor="middle" fill="#0a0a0a" font-weight="700">M alone &harr; C  =  policy trained inside the &ldquo;dream&rdquo;</text>
-            <text x="320" y="74" font-size="11" text-anchor="middle" fill="#4a4a4a">CarRacing &middot; ViZDoom &mdash; agent never touches the real env during RL</text>
-          </g>
-          <path d="M 410 85 L 410 120" stroke="#ff3300" stroke-width="1" stroke-dasharray="3 3" fill="none"/>
+          <!-- arrows -->
+          <path d="M 90 40 L 168 40" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr49a)"/>
+          <text x="128" y="32" font-size="9" text-anchor="middle" fill="#8b8b8b" font-style="italic">learn</text>
+          <path d="M 50 60 L 90 85" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr49a)"/>
+          <path d="M 220 60 L 190 85" stroke="#ff3300" stroke-width="1.5" marker-end="url(#arr49a)"/>
+          <text x="218" y="80" font-size="9" text-anchor="end" fill="#ff3300" font-style="italic">imagined</text>
         </svg>
-      </div>
 
-      <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 1rem;">
-        <h2 style="font-size: var(--size-h2);">A world model is a <span class="accent-text">latent simulator</span> of environment dynamics.</h2>
-        <ul class="bullet-list">
-          <li><strong>V</strong> &mdash; compress pixels to z</li>
-          <li><strong>M</strong> &mdash; predict next z given action</li>
-          <li><strong>C</strong> &mdash; tiny controller, trained <em>inside</em> M's rollout</li>
-        </ul>
-        <p style="font-size: var(--size-small); color: var(--color-ink-muted); margin-top: 0.5rem;">
-          The original pitch: <em>train the agent in its own dream</em>. Every WM since &mdash; Dreamer, V-JEPA, Cosmos, DreamZero &mdash; is a re-mix of these three boxes.
+        <p class="orig-desc">
+          <strong>Model-based RL</strong>: train the model from real interaction, then plan / value-iterate <em>inside</em> the model. Same agent learns real + imagined experience.
         </p>
+        <p class="orig-cite">Sutton, ML Workshop 1990</p>
       </div>
 
+      <!-- 1990 Schmidhuber: RNN world model + controller -->
+      <div class="orig-tile">
+        <div class="yr-tag">1990 &middot; FKI-126 / 147 TR</div>
+        <h2>RNN world model + controller</h2>
+        <div class="orig-author">Schmidhuber &middot; "Making the World Differentiable" + "An On-line Algorithm…"</div>
+
+        <svg viewBox="0 0 280 130" style="width: 100%; height: 130px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+          <defs><marker id="arr49b" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 6 4 L 0 8 z" fill="#0a0a0a"/></marker></defs>
+          <!-- Controller -->
+          <rect x="20" y="45" width="80" height="42" fill="#ff3300"/>
+          <text x="60" y="65" font-size="11" text-anchor="middle" fill="#ffffff" font-weight="700">controller</text>
+          <text x="60" y="78" font-size="10" text-anchor="middle" fill="#ffffff">RNN π</text>
+
+          <!-- World model RNN -->
+          <rect x="170" y="45" width="92" height="42" fill="#0a0a0a"/>
+          <text x="216" y="65" font-size="11" text-anchor="middle" fill="#ffffff" font-weight="700">world model</text>
+          <text x="216" y="78" font-size="10" text-anchor="middle" fill="#ff3300">RNN M̂</text>
+
+          <!-- bidirectional arrows -->
+          <path d="M 100 60 L 168 60" stroke="#ff3300" stroke-width="2" marker-end="url(#arr49b)"/>
+          <text x="134" y="52" font-size="9" text-anchor="middle" fill="#8b8b8b" font-style="italic">action</text>
+          <path d="M 170 76 L 102 76" stroke="#0a0a0a" stroke-width="2" marker-end="url(#arr49b)"/>
+          <text x="136" y="92" font-size="9" text-anchor="middle" fill="#8b8b8b" font-style="italic">∂loss / ∂a (differentiable)</text>
+
+          <text x="140" y="22" font-size="11" text-anchor="middle" fill="#0a0a0a" font-weight="700">backprop through time</text>
+          <line x1="40" y1="30" x2="240" y2="30" stroke="#ff3300" stroke-width="1" stroke-dasharray="3 3"/>
+          <text x="140" y="115" font-size="10" text-anchor="middle" fill="#4a4a4a">controller learns by propagating reward gradients through M̂</text>
+        </svg>
+
+        <p class="orig-desc">
+          <strong>Differentiable world model</strong>: gradients of future reward flow <em>through</em> M back into π. This is exactly the modern policy-via-rollout pattern.
+        </p>
+        <p class="orig-cite">Schmidhuber 1990, TR FKI-126/147</p>
+      </div>
+
+      <!-- 2018 Ha & Schmidhuber -->
+      <div class="orig-tile hero">
+        <div class="yr-tag">2018 &middot; arXiv:1803.10122</div>
+        <h2>World Models &middot; V&middot;M&middot;C</h2>
+        <div class="orig-author">Ha &amp; Schmidhuber &middot; deep + small policy formula</div>
+
+        <svg viewBox="0 0 320 130" style="width: 100%; height: 130px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+          <defs><marker id="arr49c" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 6 4 L 0 8 z" fill="#0a0a0a"/></marker></defs>
+
+          <!-- V -->
+          <rect x="10" y="35" width="80" height="60" fill="#0a0a0a"/>
+          <text x="50" y="60" font-size="22" font-weight="900" text-anchor="middle" fill="#ff3300" font-family="var(--font-display)">V</text>
+          <text x="50" y="78" font-size="10" text-anchor="middle" fill="#ffffff">VAE</text>
+          <text x="50" y="90" font-size="9" text-anchor="middle" fill="rgba(255,255,255,0.65)">z</text>
+
+          <path d="M 90 65 L 110 65" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr49c)"/>
+
+          <!-- M -->
+          <rect x="110" y="35" width="80" height="60" fill="#0a0a0a"/>
+          <text x="150" y="60" font-size="22" font-weight="900" text-anchor="middle" fill="#ff3300" font-family="var(--font-display)">M</text>
+          <text x="150" y="78" font-size="10" text-anchor="middle" fill="#ffffff">MDN-RNN</text>
+          <text x="150" y="90" font-size="9" text-anchor="middle" fill="rgba(255,255,255,0.65)">p(z'|z,a,h)</text>
+
+          <path d="M 190 65 L 210 65" stroke="#ff3300" stroke-width="2" marker-end="url(#arr49c)"/>
+
+          <!-- C -->
+          <rect x="210" y="35" width="80" height="60" fill="none" stroke="#ff3300" stroke-width="2"/>
+          <text x="250" y="60" font-size="22" font-weight="900" text-anchor="middle" fill="#ff3300" font-family="var(--font-display)">C</text>
+          <text x="250" y="78" font-size="10" text-anchor="middle" fill="#0a0a0a">CMA-ES</text>
+          <text x="250" y="90" font-size="9" text-anchor="middle" fill="#8b8b8b">867 params</text>
+
+          <!-- loop -->
+          <path d="M 250 95 L 250 115 L 50 115 L 50 95" stroke="#8b8b8b" stroke-width="1" fill="none" stroke-dasharray="3 3" marker-end="url(#arr49c)"/>
+          <text x="150" y="128" font-size="9" text-anchor="middle" fill="#8b8b8b">policy trained inside M's dream</text>
+
+          <text x="150" y="20" font-size="11" text-anchor="middle" font-weight="700" fill="#0a0a0a">deep V&middot;M + tiny C → policy inside a dream</text>
+        </svg>
+
+        <p class="orig-desc">
+          Same partition, modernized: <strong>VAE for V</strong>, <strong>MDN-RNN for M</strong>, tiny <strong>CMA-ES controller</strong>. Agent never touches the real env during RL.
+        </p>
+        <p class="orig-cite">arXiv:1803.10122 &middot; worldmodels.github.io</p>
+      </div>
+
+    </div>
+
+    <!-- bottom synthesis -->
+    <div style="padding: 0.65rem 1rem; background: var(--color-ink); color: var(--color-bg); font-size: var(--size-small); line-height: 1.45; display: flex; gap: 1.25rem; align-items: center;">
+      <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; flex-shrink: 0; font-weight: 800;">unifying recipe</div>
+      <div>
+        <strong>learn M̂(s, a) → ŝ'  &middot;  use it to improve π.</strong> &nbsp;Every WM since &mdash; Dreamer, V-JEPA, DreamDojo, DreamZero &mdash; is a re-mix of these three boxes with bigger backbones and richer data.
+      </div>
     </div>
 
   </div>
 
   <footer class="slide-footer">
-    <span><span class="citation">arXiv:1803.10122</span> &middot; Ha &amp; Schmidhuber "World Models" &middot; worldmodels.github.io</span>
+    <span>Sutton 1990 Dyna &middot; Schmidhuber 1990 TR FKI-126/147 &middot; Ha &amp; Schmidhuber 2018 <span class="citation">arXiv:1803.10122</span></span>
     <span class="mono">49</span>
   </footer>
 
   <aside class="notes">
-    <h4>Origin &mdash; 2018, the ur-paper</h4>
-    Before the term "world model" went mainstream in 2024-26, this Ha &amp; Schmidhuber paper had already nailed the definition: a latent simulator of environment dynamics, plus a tiny controller trained inside it. The reason this slide matters: every chapter after this is a remix of V/M/C with different inductive biases &mdash; pixels (Sora/Veo), latents (JEPA/Dreamer), geometry (VGGT/Lyra), or video+action jointly (DreamZero).
+    <h4>Origin &mdash; three independent arrivals</h4>
+    The user asked us not to flatten the origin to one paper. Three independent strands:<br><br>
+
+    <strong>(1) Sutton 1990 — Dyna.</strong> "Integrated Architectures for Learning, Planning, and Reacting" (ML Workshop). Model-based RL: learn M̂(s,a)→s', then run Q-learning updates from <em>both</em> real and imagined transitions. This is the canonical model-based RL skeleton that DreamerV1/V2/V3 inherits.<br><br>
+
+    <strong>(2) Schmidhuber 1990 — RNN world model + RNN controller.</strong> TR FKI-126 "Making the World Differentiable" + TR FKI-147. He explicitly trained an RNN controller through a learned RNN world model, propagating reward gradients all the way back. This is the differentiable-world-model trick that every subsequent learned-policy-through-rollouts paper uses.<br><br>
+
+    <strong>(3) Ha &amp; Schmidhuber 2018 — V&middot;M&middot;C.</strong> The same partition, but with VAE for V and MDN-RNN for M, plus a tiny CMA-ES controller. The famous result: agent solves CarRacing and ViZDoom entirely inside a learned dream.<br><br>
+
+    Korean talking: 핵심은 1990년에 sutton 과 schmidhuber 가 같은 partition (학습된 model + 그 안에서 policy 학습) 에 독립적으로 도달했다는 것. 2018 Ha&amp;Schmidhuber 는 그 partition 을 deep learning 으로 modernize 한 것. 2024-26 chapter 의 모든 모델들이 이 세 박스의 remix.
   </aside>
 </section>
 
@@ -4777,61 +4849,80 @@ body.notes-mode aside.notes h4 {
     <span>50 / 76</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1rem);">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.9rem); gap: 0.85rem;">
 
     <h1>The <span class="accent-text">Dreamer</span> family &mdash; one idea, five years</h1>
 
-    <div style="margin-top: 1.25rem; display: flex; gap: 1.5rem; flex: 1; align-items: stretch;">
+    <style>
+      .dr-tile { display: flex; flex-direction: column; gap: 0.45rem; border: var(--border-thin); padding: 0.7rem 0.8rem; min-width: 0; min-height: 0; }
+      .dr-tile.v3 { background: var(--color-bg-alt); border-left: var(--border-accent); }
+      .dr-tile .dr-yr { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+      .dr-tile .dr-name { font-family: var(--font-display); font-weight: 900; font-size: 1.2rem; line-height: 1; }
+      .dr-tile .dr-img { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; background: var(--color-bg); padding: 0.3rem; border: 1px solid var(--color-grid-line); }
+      .dr-tile .dr-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+      .dr-tile .dr-desc { font-size: var(--size-tiny); color: var(--color-ink-soft); line-height: 1.4; }
+      .dd-card { border: 1.5px solid var(--color-ink); padding: 0.85rem 1rem; display: flex; gap: 1rem; align-items: stretch; background: white; min-height: 0; }
+      .dd-info { flex: 1.3; display: flex; flex-direction: column; justify-content: center; gap: 0.35rem; min-width: 0; }
+      .dd-info .dd-tag { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em; }
+      .dd-info h3 { font-family: var(--font-display); font-weight: 800; font-size: 1.15rem; }
+      .dd-info p { font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.4; }
+      .dd-video { flex: 1; max-width: 320px; min-width: 240px; }
+    </style>
 
-      <!-- Left: V1 V2 V3 evolution -->
-      <div style="flex: 1.7; display: flex; flex-direction: column; gap: 0.75rem;">
+    <div style="display: flex; gap: 1.2rem; flex: 1; align-items: stretch; min-height: 0;">
+
+      <!-- Left: V1/V2/V3 tiles + DayDreamer anchor (wider) -->
+      <div style="flex: 2.4; display: flex; flex-direction: column; gap: 0.85rem; min-width: 0;">
         <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
           Hafner et al. &middot; latent-imagination policy learning
         </div>
 
-        <div class="grid cols-3" style="gap: 0.85rem; flex: 1;">
+        <div class="grid cols-3" style="gap: 0.85rem; flex: 1.1; min-height: 0;">
 
-          <div style="border: 1px solid var(--color-grid-line); padding: 0.9rem; display: flex; flex-direction: column; gap: 0.4rem;">
-            <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-ink-muted); text-transform: uppercase;">2020 &middot; arXiv:1912.01603</div>
-            <div style="font-family: var(--font-display); font-weight: 900; font-size: 1.3rem;">Dreamer V1</div>
-            <div style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.35;">RSSM latent dynamics + actor-critic in imagination. <strong>Continuous control SOTA</strong> (DMC).</div>
+          <div class="dr-tile">
+            <div class="dr-yr">2020 &middot; arXiv:1912.01603</div>
+            <div class="dr-name">Dreamer V1</div>
+            <div class="dr-img"><img src="images/papers/dreamer/v1-overview.png" alt="Dreamer V1: dataset of experience → learned latent dynamics → value and action learned by latent imagination"></div>
+            <div class="dr-desc">RSSM latent dynamics + actor-critic in imagination. <strong>Continuous control SOTA</strong> (DMC).</div>
           </div>
 
-          <div style="border: 1px solid var(--color-grid-line); padding: 0.9rem; display: flex; flex-direction: column; gap: 0.4rem;">
-            <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-ink-muted); text-transform: uppercase;">2021 &middot; arXiv:2010.02193</div>
-            <div style="font-family: var(--font-display); font-weight: 900; font-size: 1.3rem;">Dreamer V2</div>
-            <div style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.35;">Discrete latents. First model-based agent to <strong>beat humans on Atari 200M</strong>.</div>
+          <div class="dr-tile">
+            <div class="dr-yr">2021 &middot; arXiv:2010.02193</div>
+            <div class="dr-name">Dreamer V2</div>
+            <div class="dr-img"><img src="images/papers/dreamer/v2-model.png" alt="Dreamer V2 RSSM: image x_t → encoder → stochastic z_t (32 categoricals × 32 classes) + deterministic h_t → predicted reward r̂ + reconstruction x̂"></div>
+            <div class="dr-desc"><strong>Discrete latents</strong> (32 categoricals × 32 classes). First model-based agent to beat humans on Atari 200M.</div>
           </div>
 
-          <div style="border: 1px solid var(--color-grid-line); padding: 0.9rem; display: flex; flex-direction: column; gap: 0.4rem; background: var(--color-bg-alt); border-left: var(--border-accent);">
-            <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-ink-muted); text-transform: uppercase;">2023 &middot; arXiv:2301.04104</div>
-            <div style="font-family: var(--font-display); font-weight: 900; font-size: 1.3rem;">Dreamer V3</div>
-            <div style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.35;">One set of hyperparams across <strong>150+ tasks</strong>. First to collect <strong>Minecraft diamond</strong> from scratch.</div>
+          <div class="dr-tile v3">
+            <div class="dr-yr">2023 &middot; arXiv:2301.04104</div>
+            <div class="dr-name">Dreamer V3</div>
+            <div class="dr-img"><img src="images/papers/dreamer/v3-minecraft.png" alt="Dreamer V3 on Minecraft: agents with Iron Ingot, Iron Pickaxe, Diamond items vs IMPALA, Rainbow, PPO over 100M env steps"></div>
+            <div class="dr-desc">One set of hyperparams across <strong>150+ tasks</strong>. First to collect <strong>Minecraft diamond</strong> from scratch.</div>
           </div>
 
         </div>
 
         <!-- DayDreamer anchor card -->
-        <div style="border: 1px solid var(--color-ink); padding: 0.85rem 1rem; display: flex; gap: 1rem; align-items: stretch; background: white;">
-          <div style="flex: 1.4; display: flex; flex-direction: column; justify-content: center; gap: 0.3rem;">
-            <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em;">Historical anchor &middot; CoRL 2023</div>
-            <div style="font-family: var(--font-display); font-weight: 800; font-size: 1.1rem;">DayDreamer &mdash; Dreamer on real robots</div>
-            <div style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.35;">Wu et al. trained a real quadruped to walk from scratch in <span class="accent-text">~1 hour</span> &mdash; physical-world WM-based RL, no sim. The earliest concrete bridge from V/M/C to robotics.</div>
+        <div class="dd-card">
+          <div class="dd-info">
+            <div class="dd-tag">Historical anchor &middot; CoRL 2022</div>
+            <h3>DayDreamer &mdash; Dreamer on real robots</h3>
+            <p>Wu et al. trained a real A1 quadruped to walk from scratch in <span class="accent-text">~1 hour</span> &mdash; physical-world WM-based RL, no sim. The earliest concrete bridge from V&middot;M&middot;C to robotics.</p>
           </div>
-          <div class="video-frame aspect-16x9" style="flex: 1; max-width: 220px;">
+          <div class="video-frame aspect-16x9 dd-video">
             <iframe src="https://www.youtube-nocookie.com/embed/A6Rg0qRwTYs?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=A6Rg0qRwTYs&amp;rel=0&amp;modestbranding=1&amp;controls=0"
                     title="DayDreamer quadruped" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
 
-      <!-- Right: takeaway -->
-      <div style="flex: 1; display: flex; flex-direction: column; gap: 1rem; justify-content: center;">
-        <h2 style="font-size: var(--size-h2);">World model = <span class="accent-text">imagination simulator</span> the policy can train inside.</h2>
-        <ul class="bullet-list">
-          <li>One family, three generations &mdash; the same V&middot;M&middot;C recipe, scaled</li>
-          <li>RL framing dominated until 2023</li>
-          <li>DayDreamer proves it transfers to a <em>physical</em> robot &mdash; bridge to Ch 6.10 (Slide 61)</li>
+      <!-- Right: narrow takeaway -->
+      <div style="flex: 0.85; display: flex; flex-direction: column; gap: 0.85rem; justify-content: center; min-width: 0;">
+        <h2 style="font-size: 1.35rem; line-height: 1.15;">World model = <span class="accent-text">imagination simulator</span> the policy trains inside.</h2>
+        <ul class="bullet-list" style="font-size: var(--size-small); gap: 0.5rem;">
+          <li>One family, three generations &mdash; same V&middot;M&middot;C recipe, scaled</li>
+          <li>RL framing dominated through 2023</li>
+          <li>DayDreamer proves transfer to a <em>physical</em> robot &mdash; bridge to <strong>Slide 61</strong></li>
         </ul>
       </div>
 
@@ -4840,14 +4931,14 @@ body.notes-mode aside.notes h4 {
   </div>
 
   <footer class="slide-footer">
-    <span><span class="citation">arXiv:1912.01603 / 2010.02193 / 2301.04104</span> &middot; danijar.com/project/dreamer{,v2,v3} &middot; DayDreamer CoRL'23</span>
+    <span><span class="citation">arXiv:1912.01603 / 2010.02193 / 2301.04104</span> &middot; danijar.com/project/dreamer{,v2,v3} &middot; DayDreamer CoRL'22</span>
     <span class="mono">50</span>
   </footer>
 
   <aside class="notes">
     <h4>Dreamer evolution + DayDreamer anchor</h4>
-    Five-year arc of one idea. V1 nails DMC continuous control. V2 cracks Atari with discrete latents. V3 finally generalizes &mdash; one set of hyperparams across 150+ tasks, and famously collects a Minecraft diamond from raw pixels. <br><br>
-    <strong>DayDreamer is the historical anchor</strong> &mdash; CoRL'23, Wu et al., trains a real A1 quadruped to walk in ~1 hour using a Dreamer-style WM. This is the earliest concrete bridge from "RL in simulated dreams" to "RL on actual robots", and it sets up slide 61's pitch that WMs unlock data, evaluation, and policy.
+    Five-year arc of one idea, each tile now using the original architecture/result figure from its paper. <strong>V1</strong> nails DMC continuous control (overview shows the dataset → latent dynamics → policy loop). <strong>V2</strong> cracks Atari with discrete latents &mdash; the architecture diagram showing 32 categorical × 32 class latents is the famous figure. <strong>V3</strong> finally generalizes &mdash; one set of hyperparams across 150+ tasks, and Minecraft Diamond from raw pixels (the plot shows it &mdash; the only line that reaches Diamond %).<br><br>
+    <strong>DayDreamer is the historical anchor</strong> &mdash; CoRL'22, Wu et al., trains a real A1 quadruped to walk in ~1 hour using a Dreamer-style WM. This is the earliest concrete bridge from "RL in simulated dreams" to "RL on actual robots", and it sets up slide 61's pitch that WMs unlock data, evaluation, and policy.
   </aside>
 </section>
 
@@ -4910,15 +5001,15 @@ body.notes-mode aside.notes h4 {
         <div class="axis-cell-meta"><span class="pill">2025-26</span> action-conditioned representation prediction (Slides 53-54)</div>
       </div>
 
-      <!-- row 3: Video generation -->
-      <div class="axis-head">Video gen<br><span style="opacity:0.6;">(pixels)</span></div>
+      <!-- row 3: Action-conditioned video WMs -->
+      <div class="axis-head">A-cond video WM<br><span style="opacity:0.6;">(obs,a)→obs'</span></div>
       <div class="axis-cell">
         <div class="axis-cell-title">Genie 1 &middot; 2 &middot; 3 &middot; Oasis &middot; Hunyuan-GameCraft &middot; Mirage &middot; MS Muse / WHAMM</div>
-        <div class="axis-cell-meta"><span class="pill">2024-26</span> playable game worlds at 10-24 fps</div>
+        <div class="axis-cell-meta"><span class="pill">2024-26</span> playable: keyboard/mouse = action</div>
       </div>
       <div class="axis-cell bot acc">
-        <div class="axis-cell-title">Sora 2 &middot; Veo 3 &middot; Cosmos Predict &middot; WAN 2.5</div>
-        <div class="axis-cell-meta"><span class="pill">2025-26</span> video gen as <em>physics simulator</em> (Slides 55-56)</div>
+        <div class="axis-cell-title">DreamDojo &middot; DreamZero &middot; GAIA-1 &middot; GR00T-Dreams</div>
+        <div class="axis-cell-meta"><span class="pill">2026</span> robot action conditioning (Slides 55-56, 60) &middot; <em>Sora&middot;Veo&middot;Wan = data sources, not WMs</em></div>
       </div>
 
       <!-- row 4: 3D / spatial -->
@@ -4985,18 +5076,18 @@ body.notes-mode aside.notes h4 {
       <!-- Family 2 -->
       <div style="display: flex; flex-direction: column; border: 1px solid var(--color-grid-line); padding: 1rem; background: var(--color-bg-alt);">
         <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em;">Family 2</div>
-        <h2 style="font-size: 1.4rem; margin-top: 0.3rem;">Video gen as simulator</h2>
-        <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-ink-muted); margin-top: 0.3rem;">pixel-perfect rollouts</div>
+        <h2 style="font-size: 1.4rem; margin-top: 0.3rem;">Action-conditioned video WMs</h2>
+        <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-ink-muted); margin-top: 0.3rem;">(obs, action) → next pixels</div>
         <ul class="bullet-list" style="margin-top: 1rem; font-size: var(--size-small);">
-          <li>Sora 2 (OpenAI)</li>
-          <li>Veo 3 / 3.1 (DeepMind)</li>
-          <li>Cosmos Predict 1 &middot; 2.5 (NVIDIA)</li>
-          <li>WAN 2.5 (Alibaba) &middot; Genie 3</li>
+          <li><strong>DreamDojo</strong> (NVIDIA, 2026)</li>
+          <li><strong>DreamZero</strong> (NVIDIA, 2026)</li>
+          <li>GR00T-Dreams / DreamGen</li>
+          <li>GAIA-1 &middot; <em>(Sora&middot;Veo&middot;Wan as data sources only)</em></li>
         </ul>
         <div style="margin-top: auto; padding-top: 1rem; font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.4; border-top: 1px solid var(--color-grid-line);">
-          <strong>Bet</strong>: if you can generate the next 5 seconds correctly, you have a simulator &mdash; for data, eval, and rollout.
+          <strong>Bet</strong>: predict the next pixels <em>given an action</em> &mdash; that's what makes it a WM, not video gen.
         </div>
-        <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); margin-top: 0.5rem;">&rarr; Slides 55-56</div>
+        <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); margin-top: 0.5rem;">&rarr; Slides 55-56 &middot; 60</div>
       </div>
 
       <!-- Family 3 -->
@@ -5146,69 +5237,99 @@ body.notes-mode aside.notes h4 {
     <span>54 / 76</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1.25rem);">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.9rem); gap: 0.75rem;">
 
-    <h1>Family 1 &middot; <span class="accent-text">2026 JEPA-line</span></h1>
-    <p style="margin-top: 0.4rem; font-size: var(--size-small); color: var(--color-ink-muted);">After V-JEPA 2 &mdash; cheaper, end-to-end, plannable.</p>
+    <h1>Family 1 &middot; <span class="accent-text">2026 JEPA-line</span> &mdash; DINO-WM + LeWorldModel</h1>
+    <p style="font-size: var(--size-small); color: var(--color-ink-muted); margin-top: -0.4rem; font-style: italic;">
+      Small, plannable WMs in latent space &mdash; not pixels back.
+    </p>
 
-    <div class="grid cols-2" style="margin-top: 1.25rem; flex: 1; gap: 1.5rem;">
+    <style>
+      .jepa-tile { display: flex; flex-direction: column; gap: 0.55rem; border: var(--border-thin); padding: 0.95rem 1rem; min-width: 0; min-height: 0; }
+      .jepa-tile.hero { border: 2px solid var(--color-accent); background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 60%); }
+      .jepa-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+      .jepa-tile h2 { font-size: 1.3rem; line-height: 1; }
+      .jepa-tag { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; }
+      .jepa-author { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); }
+      .jepa-img-wrap { flex: 1; display: flex; align-items: center; justify-content: center; background: var(--color-bg-alt); border: 1px solid var(--color-grid-line); padding: 0.4rem; min-height: 0; }
+      .jepa-img-wrap img { max-width: 100%; max-height: 100%; object-fit: contain; }
+      .jepa-meta { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+      .jepa-meta .pill { padding: 0.35rem 0.55rem; background: var(--color-bg); border-left: 3px solid var(--color-accent); font-size: 0.65rem; }
+      .jepa-meta .pill strong { font-family: var(--font-display); font-weight: 900; font-size: 1.05rem; display: block; line-height: 1; color: var(--color-ink); }
+      .jepa-caption { font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.4; }
+      .jepa-cite { font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); }
+    </style>
 
-      <!-- LeWorldModel -->
-      <div style="display: flex; flex-direction: column; border: 1px solid var(--color-ink); padding: 1.1rem; gap: 0.75rem; background: white;">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em;">Mar 2026 &middot; arXiv:2603.19312</div>
-          <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted);">Maes &middot; LeCun &middot; Balestriero</div>
-        </div>
-        <h2 style="font-size: 1.5rem;">LeWorldModel</h2>
-        <p style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.45;">
-          Stable end-to-end JEPA <em>from raw pixels</em>. No frozen encoder. <strong>15 M params</strong> total &mdash; orders of magnitude smaller than V-JEPA 2.
-        </p>
-        <div style="display: flex; gap: 0.6rem; margin-top: auto; flex-wrap: wrap;">
-          <div style="padding: 0.45rem 0.7rem; background: var(--color-bg-alt); border-left: 3px solid var(--color-accent);">
-            <div class="stat-number" style="font-size: 1.6rem;">48&times;</div>
-            <div class="stat-label" style="font-size: 0.55rem;">faster planning</div>
-          </div>
-          <div style="padding: 0.45rem 0.7rem; background: var(--color-bg-alt); border-left: 3px solid var(--color-accent);">
-            <div class="stat-number" style="font-size: 1.6rem;">15M</div>
-            <div class="stat-label" style="font-size: 0.55rem;">total params</div>
-          </div>
-        </div>
-        <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); margin-top: 0.4rem;">github.com/lucas-maes/le-wm</div>
-      </div>
+    <div class="grid cols-2" style="flex: 1; gap: 1.4rem; min-height: 0;">
 
       <!-- DINO-WM -->
-      <div style="display: flex; flex-direction: column; border: 1px solid var(--color-grid-line); padding: 1.1rem; gap: 0.75rem; background: var(--color-bg-alt);">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-ink-soft); text-transform: uppercase; letter-spacing: 0.08em;">ICLR 2025 &middot; arXiv:2411.04983</div>
-          <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted);">NYU &middot; Meta</div>
+      <div class="jepa-tile">
+        <div class="jepa-head">
+          <div>
+            <h2>DINO-WM</h2>
+            <div class="jepa-author">NYU + Meta &middot; Zhou et al. &middot; ICLR 2025</div>
+          </div>
+          <span class="jepa-tag">arXiv:2411.04983</span>
         </div>
-        <h2 style="font-size: 1.5rem;">DINO-WM</h2>
-        <p style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.45;">
-          World model built on top of frozen <strong>DINOv2</strong> features &mdash; <em>zero-shot planning</em> by gradient descent over latent trajectories. Mazes, pushing, navigation.
+
+        <div class="jepa-img-wrap">
+          <img src="images/papers/dino-wm/model_arch.png" alt="DINO-WM architecture: past frames o_{t-k}..o_t → DINOv2 encoder → latents z_{t-k}..z_t → dynamics head p_θ with action a_t → ẑ_{t+1}; test-time actions optimized via planning loss vs goal z_g">
+        </div>
+
+        <p class="jepa-caption">
+          <strong>Frozen DINOv2</strong> features + small dynamics head trained on (z, a) → ẑ'. At test-time, optimize action sequence by gradient descent on planning loss to goal latent.
         </p>
-        <div style="margin-top: auto; padding: 0.5rem 0.75rem; background: white; border-left: 3px solid var(--color-ink); font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.4;">
-          Showcase: a strong pretrained visual encoder + a small dynamics head is enough to plan over.
+        <p class="jepa-cite">dino-wm.github.io</p>
+      </div>
+
+      <!-- LeWorldModel -->
+      <div class="jepa-tile hero">
+        <div class="jepa-head">
+          <div>
+            <h2>LeWorldModel</h2>
+            <div class="jepa-author">Maes &middot; LeCun &middot; Balestriero &middot; Mar 2026</div>
+          </div>
+          <span class="jepa-tag">arXiv:2603.19312</span>
         </div>
-        <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); margin-top: 0.4rem;">dino-wm.github.io</div>
+
+        <div class="jepa-img-wrap">
+          <img src="images/papers/leworldmodel/wms.png" alt="LeWorldModel vs PLDM / DINO-WM / Dreamer / TD-MPC: 1 hyperparameter (vs 6), provable anti-collapse, end-to-end learning, task-agnostic, reconstruction-free, pixels-based, reward-free">
+        </div>
+
+        <div class="jepa-meta">
+          <div class="pill"><strong>48&times;</strong>faster planning</div>
+          <div class="pill"><strong>15M</strong>params total</div>
+          <div class="pill"><strong>1</strong>hyperparameter</div>
+        </div>
+        <p class="jepa-cite">github.com/lucas-maes/le-wm</p>
       </div>
 
     </div>
 
     <!-- Bottom takeaway -->
-    <div style="margin-top: 1rem; padding: 0.7rem 1rem; background: var(--color-ink); color: white; font-size: var(--size-small);">
-      Common direction: <span style="color: var(--color-accent); font-weight: 800;">small, plannable, end-to-end</span>. JEPA line is now the cheapest WM-for-planning option &mdash; if you don't need pixels back.
+    <div style="padding: 0.6rem 1rem; background: var(--color-ink); color: var(--color-bg); font-size: var(--size-small); line-height: 1.45; display: flex; gap: 1.25rem; align-items: center;">
+      <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; flex-shrink: 0; font-weight: 800;">why JEPA</div>
+      <div>
+        Small + plannable in <em>latent</em> space &mdash; cheapest WM-for-planning option when you don't need pixels back. <strong>LeWorldModel</strong> proves end-to-end JEPA is now stable.
+      </div>
     </div>
 
   </div>
 
   <footer class="slide-footer">
-    <span><span class="citation">arXiv:2603.19312 / 2411.04983</span> &middot; LeWorldModel (Maes/LeCun/Balestriero) &middot; DINO-WM (Zhou et al., ICLR'25)</span>
+    <span>DINO-WM <span class="citation">arXiv:2411.04983</span> &middot; LeWorldModel <span class="citation">arXiv:2603.19312</span></span>
     <span class="mono">54</span>
   </footer>
 
   <aside class="notes">
-    <h4>NEW &mdash; the 2026 JEPA line</h4>
-    Two follow-ups worth knowing: <strong>LeWorldModel</strong> (Mar 2026, Maes/LeCun/Balestriero) makes JEPA stable end-to-end at just 15M params with 48&times; faster planning &mdash; this is the one the user specifically asked us to flag. <strong>DINO-WM</strong> (ICLR 2025) is the companion idea &mdash; freeze a strong DINOv2 encoder and only learn the dynamics head, enough to zero-shot plan by gradient descent. <em>Honest framing</em>: this is not the family WoRV bets on, but it's where compute-efficient planning lives.
+    <h4>2026 JEPA-line &mdash; original figures from both papers</h4>
+    Two follow-ups worth knowing in the post-V-JEPA-2 era, both with their original architecture/comparison diagrams pulled straight from the papers.<br><br>
+
+    <strong>DINO-WM</strong> (NYU+Meta, ICLR 2025) &mdash; the architecture figure shows the trick exactly: freeze a strong DINOv2 encoder for visual features z, learn just a small dynamics head p<sub>&theta;</sub>(z, a) → z'. Then at test-time, you can plan by optimizing the action sequence <em>a<sub>t</sub>..a<sub>T-1</sub></em> via gradient descent on the planning loss against the goal latent z<sub>g</sub>. The point: a strong pretrained encoder + a small dynamics head is enough to plan over.<br><br>
+
+    <strong>LeWorldModel</strong> (Maes/LeCun/Balestriero, Mar 2026) &mdash; the comparison figure from the paper neatly shows how LeWM addresses limits of PLDM, DINO-WM, Dreamer, and TD-MPC: 1 hyperparameter (vs 6), provable anti-collapse regularization, end-to-end learning, task-agnostic, reconstruction-free, pixels-based, reward-free. <strong>15M params total, 48&times; faster planning than V-JEPA 2.</strong><br><br>
+
+    <em>Honest framing</em>: this is not the WM family WoRV builds on for production policies (we're closer to the action-conditioned line), but it's where compute-efficient planning research is moving.
   </aside>
 </section>
 
@@ -5223,11 +5344,14 @@ body.notes-mode aside.notes h4 {
   <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.85rem); gap: 0.65rem;">
 
     <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 2rem;">
-      <h1>Family 2 &middot; <span class="accent-text">Video gen</span> as simulator</h1>
+      <h1>Family 2 &middot; <span class="accent-text">Video gen</span> as a data &amp; sim source</h1>
       <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
-        If you can generate the next 5 s correctly, you have a sim.
+        not WMs themselves — but the substrate for them
       </div>
     </div>
+    <p style="font-size: var(--size-small); color: var(--color-ink-muted); margin-top: -0.35rem; font-style: italic;">
+      Sora&middot;Veo&middot;Wan&middot;Cosmos&middot;Genie are <strong>video generators</strong>: prompt → video. They <em>become</em> WMs only with action conditioning (Slide 56, 60).
+    </p>
 
     <style>
       .vg-tile { display: flex; flex-direction: column; gap: 0.4rem; min-height: 0; }
@@ -5278,10 +5402,10 @@ body.notes-mode aside.notes h4 {
 
     </div>
 
-    <!-- UniSim historical anchor -->
+    <!-- UniSim historical anchor + framing -->
     <div style="margin-top: 0.5rem; padding: 0.55rem 0.85rem; background: var(--color-bg-alt); border-left: var(--border-accent); font-size: var(--size-small);">
       <strong style="font-family: var(--font-display);">Historical anchor &middot; ICLR'24 Outstanding</strong> &nbsp;&middot;&nbsp;
-      <span class="citation">arXiv:2310.06114</span> <strong>UniSim</strong> (Yilun Du et al.) &mdash; first paper to call video generation an <em>interactive real-world simulator</em>. Everything in this slide is downstream of that framing.
+      <span class="citation">arXiv:2310.06114</span> <strong>UniSim</strong> (Yilun Du et al.) &mdash; first paper to call video generation an <em>interactive real-world simulator</em>. <em>The robotics WM ports (DreamDojo, GAIA-1, etc.) wrap these backbones with action conditioning &mdash; next slide.</em>
     </div>
 
   </div>
@@ -5306,91 +5430,98 @@ body.notes-mode aside.notes h4 {
     <span>56 / 76</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.85rem); gap: 0.65rem;">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.9rem); gap: 0.75rem;">
 
     <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 2rem;">
-      <h1>Family 2 &middot; <span class="accent-text">2026</span> &mdash; video gen WMs grow up</h1>
+      <h1>Family 2 &middot; <span class="accent-text">2026 robotics WMs</span> &mdash; DreamDojo + DreamZero</h1>
       <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
-        2025 = arrived &middot; 2026 = becomes a sim
+        action-conditioned &middot; not video gen
       </div>
     </div>
+    <p style="font-size: var(--size-small); color: var(--color-ink-muted); margin-top: -0.35rem; font-style: italic;">
+      Sora&middot;Veo&middot;Wan are video <strong>generators</strong>. WMs predict <strong>next state given action</strong>. Two true 2026 WMs:
+    </p>
 
     <style>
-      .vg26-tile { display: flex; flex-direction: column; gap: 0.4rem; min-height: 0; border: 1px solid var(--color-grid-line); padding: 0.55rem; }
-      .vg26-tile.hero { border-left: 3px solid var(--color-accent); background: var(--color-bg-alt); }
-      .vg26-tile .vg-meta { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.05em; display: flex; justify-content: space-between; }
-      .vg26-tile .vg-name { font-family: var(--font-display); font-weight: 800; font-size: 0.95rem; }
-      .vg26-tile .vg-caption { font-size: 0.65rem; color: var(--color-ink-soft); line-height: 1.35; }
+      .wm26-tile { display: flex; flex-direction: column; gap: 0.7rem; border: var(--border-thin); padding: 1.1rem 1.15rem; min-width: 0; min-height: 0; position: relative; }
+      .wm26-tile.hero { border: 2px solid var(--color-accent); background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 50%); }
+      .wm26-tile h2 { font-size: 1.5rem; line-height: 1; }
+      .wm26-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+      .wm26-tag { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; white-space: nowrap; }
+      .wm26-cite { font-family: var(--font-mono); font-size: 0.62rem; color: var(--color-ink-muted); }
+      .wm26-img-wrap { flex: 1; display: flex; align-items: center; justify-content: center; background: var(--color-bg-alt); border: 1px solid var(--color-grid-line); padding: 0.45rem; min-height: 0; }
+      .wm26-img-wrap img { max-width: 100%; max-height: 100%; object-fit: contain; }
+      .wm26-bullets { font-size: var(--size-small); display: flex; flex-direction: column; gap: 0.4rem; line-height: 1.45; padding: 0; margin: 0; }
+      .wm26-bullets li { position: relative; padding-left: 0.85rem; list-style: none; }
+      .wm26-bullets li::before { content: ""; position: absolute; left: 0; top: 0.55rem; width: 5px; height: 5px; background: var(--color-accent); }
     </style>
 
-    <div class="grid cols-4" style="flex: 1; gap: 0.7rem;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.3rem; flex: 1; min-height: 0;">
 
-      <!-- Cosmos Predict 2.5 -->
-      <div class="vg26-tile hero">
-        <div class="vg-meta"><span>NVIDIA</span><span>arXiv:2511.00062</span></div>
-        <div class="vg-name">Cosmos Predict 2.5</div>
-        <div class="video-frame aspect-16x9">
-          <iframe src="https://www.youtube-nocookie.com/embed/9Uch931cDx8?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=9Uch931cDx8&amp;rel=0&amp;modestbranding=1&amp;controls=0"
-                  title="NVIDIA Cosmos — official launch" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <!-- DreamDojo -->
+      <div class="wm26-tile hero">
+        <div class="wm26-head">
+          <h2>DreamDojo</h2>
+          <span class="wm26-tag">NVIDIA &middot; Feb 2026</span>
         </div>
-        <div class="vg-caption">Unified T2W / I2W / V2W flow model &middot; <strong>200 M clips</strong> &middot; 2 B + 14 B. Targets AV &amp; robotics.</div>
+        <div class="wm26-cite">arXiv:2602.06949 &middot; dreamdojo-world.github.io</div>
+
+        <div class="wm26-img-wrap">
+          <img src="images/papers/dreamdojo/overview.png" alt="DreamDojo: Human-Video Pretraining → DreamDojo → Robot Post-Training (GR-1, G1, AgiBot, YAM) → Autoregressive Distillation → Applications (Unseen Env, Live Teleop, Policy Eval, Model-based Planning)">
+        </div>
+
+        <ul class="wm26-bullets">
+          <li><strong>Pretrain on human videos</strong> (EgoDex, In-lab, DreamDojo-HV) &rarr; post-train on robot data &mdash; cross-embodiment WM</li>
+          <li><strong>Action-conditioned</strong>: (obs, action) → next obs &mdash; supports policy eval, MPC, unseen-env deploy</li>
+        </ul>
       </div>
 
-      <!-- Veo 3 robotics demo -->
-      <div class="vg26-tile hero">
-        <div class="vg-meta"><span>DeepMind</span><span>2025 demo</span></div>
-        <div class="vg-name">Veo 3 &middot; robotics</div>
-        <div class="video-frame aspect-16x9">
-          <iframe src="https://www.youtube-nocookie.com/embed/UObzWjPb6XM?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=UObzWjPb6XM&amp;rel=0&amp;modestbranding=1&amp;controls=0"
-                  title="Gemini Robotics 1.5 / Veo" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <!-- DreamZero -->
+      <div class="wm26-tile hero">
+        <div class="wm26-head">
+          <h2>DreamZero</h2>
+          <span class="wm26-tag">NVIDIA &middot; Feb 2026</span>
         </div>
-        <div class="vg-caption">Veo simulator used by Gemini Robotics for eval (see Slide 61 &mdash; 1,600+ real evals).</div>
-      </div>
+        <div class="wm26-cite">arXiv:2602.15922 &middot; dreamzero0.github.io &middot; 14B WAM</div>
 
-      <!-- WAN 2.5 -->
-      <div class="vg26-tile">
-        <div class="vg-meta"><span>Alibaba</span><span>2025 &middot; no arxiv</span></div>
-        <div class="vg-name">WAN 2.5</div>
-        <div style="aspect-ratio: 16/9; background: var(--color-bg-alt); display: flex; align-items: center; justify-content: center; padding: 0.5rem; text-align: center;">
-          <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-ink-soft); line-height: 1.4;">
-            Open-source<br>video gen baseline<br>
-            <span style="color: var(--color-accent); font-weight: 700;">backbone</span> for Lyra 2 (Slide 58)
+        <div class="wm26-img-wrap" style="background: var(--color-bg);">
+          <div class="video-frame aspect-16x9" style="width: 100%; max-width: 100%;">
+            <video src="https://pub-678d8fb0a3f1496e94a1891463933279.r2.dev/videos/inline/dreamzero-overview.mp4" autoplay loop muted playsinline></video>
           </div>
         </div>
-        <div class="vg-caption">Weights/code track on Wan-Video/Wan2.2. No formal paper &mdash; release notes only.</div>
-      </div>
 
-      <!-- Hunyuan-GameCraft 2 / Kling -->
-      <div class="vg26-tile">
-        <div class="vg-meta"><span>Tencent / Kuaishou</span><span>2025-11</span></div>
-        <div class="vg-name">GameCraft 2 &middot; Kling 2</div>
-        <div style="aspect-ratio: 16/9; background: var(--color-bg-alt); display: flex; align-items: center; justify-content: center; padding: 0.5rem; text-align: center;">
-          <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-ink-soft); line-height: 1.4;">
-            Instruction-following<br>game WM<br>
-            <span style="color: var(--color-accent); font-weight: 700;">text + kbd + mouse</span>
-          </div>
-        </div>
-        <div class="vg-caption">Hunyuan-GameCraft v2 (arXiv:2511.23429) &middot; the games &harr; robotics bleed continues.</div>
+        <ul class="wm26-bullets">
+          <li><strong>Joint video &times; action generation</strong> &mdash; one 14B AR model emits next frames AND next actions in lockstep</li>
+          <li><strong>Open weights</strong> &middot; cross-embodiment in 30 min plays &middot; revisited in <strong>Ch 7</strong> as the canonical WAM</li>
+        </ul>
       </div>
 
     </div>
 
-    <!-- 4-axis takeaway -->
-    <div style="margin-top: 0.4rem; padding: 0.55rem 0.85rem; background: var(--color-ink); color: white; font-size: var(--size-small); line-height: 1.45;">
-      One-year jumps on <strong>four axes at once</strong> &mdash; resolution &middot; clip length &middot; physical consistency &middot; <span style="color: var(--color-accent); font-weight: 800;">action conditioning</span>. The category renamed itself from "video gen" to "neural simulator".
+    <!-- bottom synthesis -->
+    <div style="padding: 0.6rem 1rem; background: var(--color-ink); color: var(--color-bg); font-size: var(--size-small); line-height: 1.45; display: flex; gap: 1.25rem; align-items: center;">
+      <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; flex-shrink: 0; font-weight: 800;">important distinction</div>
+      <div>
+        Video gen models (Sora&middot;Veo&middot;Wan&middot;Cosmos) make beautiful pixels but <em>do not take an action input</em>. They become WMs only when wrapped with explicit action conditioning &mdash; Slide 60 covers that bridge.
+      </div>
     </div>
 
   </div>
 
   <footer class="slide-footer">
-    <span>NEW &middot; <span class="citation">arXiv:2511.00062 / 2511.23429</span> &middot; github.com/Wan-Video/Wan2.2 &middot; deepmind.google/blog/gemini-robotics-1-5</span>
+    <span>DreamDojo <span class="citation">arXiv:2602.06949</span> &middot; DreamZero <span class="citation">arXiv:2602.15922</span> &middot; both: NVIDIA GEAR &middot; open</span>
     <span class="mono">56</span>
   </footer>
 
   <aside class="notes">
-    <h4>NEW &mdash; 2026 video-gen WMs</h4>
-    Four tiles to show the 2026 frontier of video-gen WMs. <strong>Cosmos Predict 2.5</strong> (NVIDIA) &mdash; the one the field is converging on for physical AI: unified T2W/I2W/V2W flow model trained on 200M clips, 2B + 14B variants. <strong>Veo 3 in robotics</strong> is shown via the Gemini Robotics 1.5 reel because DeepMind started using Veo as an evaluation simulator (we'll come back to this on Slide 61). <strong>WAN 2.5</strong> (Alibaba) is interesting because it has no formal paper but is the open-source backbone Lyra 2 is built on. <strong>GameCraft 2 / Kling 2</strong> shows the games-to-robotics bleed continuing.<br><br>
-    Talking point in Korean: "2025 = video gen 들어옴, 2026 = video gen이 simulator로 자리잡음."
+    <h4>2026 robotics world models &mdash; DreamDojo + DreamZero</h4>
+    <strong>Critical framing.</strong> Earlier drafts of this slide treated Sora/Veo/Wan/Cosmos as "world models". They are <em>video generators</em> &mdash; they emit beautiful pixels from text or image prompts, but they don't take an action input and they're not predicting next state from current state. They become WMs <em>only when wrapped with action conditioning</em> (Slide 60). The truly canonical 2026 robotics WMs are DreamDojo and DreamZero, both from NVIDIA GEAR.<br><br>
+
+    <strong>DreamDojo</strong> (arXiv:2602.06949, Feb 2026) is the cleanest 2026 example of the action-conditioned WM pattern. Pretrain on a huge pool of human videos (EgoDex, In-lab footage, DreamDojo-HV), then post-train on robot teleop from four embodiments (Fourier GR-1, Unitree G1, AgiBot, YAM). The result is one model that supports Model-Based Planning (MPC), Policy Evaluation, Live Teleop, and Unseen-Environment deploy.<br><br>
+
+    <strong>DreamZero</strong> (arXiv:2602.15922, Feb 2026) goes further &mdash; a single 14B autoregressive model that jointly generates future video <em>and</em> future actions. We come back to this in <strong>Ch 7</strong> as the canonical WAM (World Action Model). On this slide, we just place it as the "joint generation" 2026 endpoint of the WM lineage.<br><br>
+
+    Korean talking: "Sora나 Veo는 World Model 이라고 부르긴 하지만 엄밀히는 video generator. 진짜 robotics WM은 (obs, action) → next obs 처럼 action 조건부 next state predictor. 2026년 대표 두 모델이 DreamDojo + DreamZero, 둘 다 NVIDIA GEAR open release."
   </aside>
 </section>
 
@@ -5402,84 +5533,76 @@ body.notes-mode aside.notes h4 {
     <span>57 / 76</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1.25rem);">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.9rem); gap: 0.75rem;">
 
     <h1>Family 3 &middot; <span class="accent-text">3D &amp; spatial</span> world models</h1>
-    <p style="margin-top: 0.4rem; font-size: var(--size-small); color: var(--color-ink-muted);">Carry the geometry &mdash; don't re-infer it every frame.</p>
+    <p style="font-size: var(--size-small); color: var(--color-ink-muted); margin-top: -0.4rem; font-style: italic;">
+      Carry the geometry &mdash; don't re-infer it every frame.
+    </p>
 
-    <div class="grid cols-2" style="margin-top: 1.25rem; flex: 1; gap: 1.5rem;">
+    <style>
+      .sp-tile { display: flex; flex-direction: column; gap: 0.55rem; border: var(--border-thin); padding: 0.95rem 1rem; min-width: 0; min-height: 0; }
+      .sp-tile.hero { background: var(--color-bg-alt); border-left: var(--border-accent); }
+      .sp-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+      .sp-tile h2 { font-size: 1.3rem; line-height: 1; }
+      .sp-tag { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; }
+      .sp-author { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); }
+      .sp-img-wrap { flex: 1; display: flex; align-items: center; justify-content: center; background: var(--color-bg); border: 1px solid var(--color-grid-line); padding: 0.4rem; min-height: 0; }
+      .sp-img-wrap img { max-width: 100%; max-height: 100%; object-fit: contain; }
+      .sp-caption { font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.4; }
+      .sp-cite { font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); }
+    </style>
+
+    <div class="grid cols-2" style="flex: 1; gap: 1.4rem; min-height: 0;">
 
       <!-- 4D Gaussian Splatting -->
-      <div style="display: flex; flex-direction: column; border: 1px solid var(--color-grid-line); padding: 1.1rem; gap: 0.75rem;">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em;">CVPR 2024 &middot; arXiv:2310.08528</div>
-          <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted);">HUST (Wu et al.)</div>
+      <div class="sp-tile">
+        <div class="sp-head">
+          <div>
+            <h2>4D Gaussian Splatting</h2>
+            <div class="sp-author">HUST &middot; Wu et al. &middot; CVPR 2024</div>
+          </div>
+          <span class="sp-tag">arXiv:2310.08528</span>
         </div>
-        <h2 style="font-size: 1.4rem;">4D Gaussian Splatting</h2>
 
-        <!-- SVG sketch -->
-        <svg viewBox="0 0 360 140" style="width: 100%; max-height: 140px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
-          <g fill="#ff3300" opacity="0.7">
-            <circle cx="60" cy="60" r="8"/><circle cx="78" cy="48" r="10"/><circle cx="96" cy="70" r="7"/>
-            <circle cx="112" cy="55" r="9"/><circle cx="130" cy="75" r="6"/><circle cx="148" cy="50" r="11"/>
-            <circle cx="170" cy="65" r="7"/><circle cx="190" cy="55" r="9"/><circle cx="210" cy="78" r="8"/>
-            <circle cx="232" cy="58" r="6"/><circle cx="252" cy="70" r="10"/><circle cx="275" cy="50" r="8"/>
-          </g>
-          <text x="180" y="115" font-size="11" text-anchor="middle" fill="#4a4a4a">3D Gaussians + per-Gaussian motion over time t</text>
-          <text x="180" y="130" font-size="12" text-anchor="middle" fill="#8b8b8b">real-time photoreal renders of dynamic scenes</text>
-        </svg>
-
-        <ul class="bullet-list" style="font-size: var(--size-small);">
-          <li>Explicit 3D Gaussians, not implicit fields</li>
-          <li>Real-time render &middot; novel-view eval</li>
-        </ul>
-        <div style="margin-top: auto; padding-top: 0.5rem; border-top: 1px solid var(--color-grid-line); font-size: var(--size-small); color: var(--color-ink-soft);">
-          The geometric substrate Lyra 2 (Slide 58) generates and Cosmos Transfer renders on.
+        <div class="sp-img-wrap">
+          <img src="images/papers/4d-gaussian/coarse2fine.png" alt="4D Gaussian Splatting coarse-to-fine pipeline: Random Point Cloud → 3D Gaussian Initialization at Iter 3000 → 4D Gaussian Joint Optimization at Iter 20000">
         </div>
+
+        <p class="sp-caption">
+          Explicit 3D Gaussians + per-Gaussian motion over time. <strong>Real-time render</strong>, novel-view eval &mdash; the geometric substrate Lyra 2 generates and Cosmos Transfer renders on.
+        </p>
+        <p class="sp-cite">hustvl/4DGaussians</p>
       </div>
 
       <!-- Cosmos Transfer -->
-      <div style="display: flex; flex-direction: column; border: 1px solid var(--color-grid-line); padding: 1.1rem; gap: 0.75rem; background: var(--color-bg-alt);">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em;">Mar 2025 &middot; arXiv:2503.14492</div>
-          <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted);">NVIDIA</div>
+      <div class="sp-tile hero">
+        <div class="sp-head">
+          <div>
+            <h2>Cosmos Transfer 1</h2>
+            <div class="sp-author">NVIDIA &middot; Mar 2025</div>
+          </div>
+          <span class="sp-tag">arXiv:2503.14492</span>
         </div>
-        <h2 style="font-size: 1.4rem;">Cosmos Transfer 1</h2>
 
-        <svg viewBox="0 0 360 140" style="width: 100%; max-height: 140px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
-          <defs>
-            <marker id="arr57" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-              <path d="M 0 0 L 6 4 L 0 8 z" fill="#0a0a0a"/>
-            </marker>
-          </defs>
-          <g>
-            <rect x="20" y="30" width="60" height="22" fill="none" stroke="#0a0a0a" stroke-width="1"/>
-            <text x="50" y="46" font-size="12" text-anchor="middle">depth</text>
-            <rect x="20" y="58" width="60" height="22" fill="none" stroke="#0a0a0a" stroke-width="1"/>
-            <text x="50" y="74" font-size="12" text-anchor="middle">segmentation</text>
-            <rect x="20" y="86" width="60" height="22" fill="none" stroke="#0a0a0a" stroke-width="1"/>
-            <text x="50" y="102" font-size="12" text-anchor="middle">edges</text>
-          </g>
-          <path d="M 80 41 L 140 80" stroke="#0a0a0a" stroke-width="1.2" fill="none" marker-end="url(#arr57)"/>
-          <path d="M 80 69 L 140 80" stroke="#0a0a0a" stroke-width="1.2" fill="none" marker-end="url(#arr57)"/>
-          <path d="M 80 97 L 140 80" stroke="#0a0a0a" stroke-width="1.2" fill="none" marker-end="url(#arr57)"/>
-          <rect x="140" y="55" width="110" height="50" fill="#0a0a0a"/>
-          <text x="195" y="78" font-size="11" text-anchor="middle" fill="#ff3300" font-weight="700">Conditional WM</text>
-          <text x="195" y="93" font-size="11" text-anchor="middle" fill="white">adaptive multimodal ctrl</text>
-          <path d="M 250 80 L 290 80" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr57)"/>
-          <rect x="290" y="60" width="60" height="40" fill="#ff3300"/>
-          <text x="320" y="84" font-size="11" text-anchor="middle" fill="white" font-weight="700">Sim2Real</text>
-        </svg>
-
-        <ul class="bullet-list" style="font-size: var(--size-small);">
-          <li>Depth / seg / edge &rarr; photoreal video</li>
-          <li>Closes the sim-to-real gap on policy rollouts</li>
-        </ul>
-        <div style="margin-top: auto; padding-top: 0.5rem; border-top: 1px solid var(--color-grid-line); font-size: var(--size-small); color: var(--color-ink-soft);">
-          Sim engines do geometry, Cosmos Transfer does pixels &mdash; the standard 2025-26 robot data pipe.
+        <div class="sp-img-wrap">
+          <img src="images/papers/cosmos-transfer/architecture.png" alt="Cosmos Transfer architecture: simulated world + depth/segmentation/etc sensor modalities + text prompt → frozen Cosmos-1 foundation model + per-modality ControlNets with spatiotemporal control maps → output world">
         </div>
+
+        <p class="sp-caption">
+          Structured inputs (depth / segmentation / edge) &rarr; photoreal video via frozen Cosmos-1 + per-modality <strong>ControlNets</strong>. The standard 2025-26 sim-to-real data pipe.
+        </p>
+        <p class="sp-cite">research.nvidia.com/labs/dir/cosmos1</p>
       </div>
 
+    </div>
+
+    <!-- Bottom takeaway -->
+    <div style="padding: 0.6rem 1rem; background: var(--color-ink); color: var(--color-bg); font-size: var(--size-small); line-height: 1.45; display: flex; gap: 1.25rem; align-items: center;">
+      <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; flex-shrink: 0; font-weight: 800;">data pipe</div>
+      <div>
+        Sim engine generates <strong>structure</strong>. Cosmos Transfer paints <strong>pixels</strong>. Policy trains on the pixels. Lyra 2 (Slide 58) generates the 3D scene itself.
+      </div>
     </div>
 
   </div>
@@ -5490,8 +5613,8 @@ body.notes-mode aside.notes h4 {
   </footer>
 
   <aside class="notes">
-    <h4>3D / spatial WMs &mdash; two complementary halves</h4>
-    Two-tile slide: <strong>4D Gaussian Splatting</strong> as the geometric substrate (3D points with per-point motion), and <strong>Cosmos Transfer 1</strong> as the &ldquo;take a structured input (depth/seg/edge) and turn it into photoreal video&rdquo; engine. Together they form the dominant 2025-26 robot data pipeline: sim engine generates structure, Cosmos Transfer paints pixels, policy trains on the pixels. Sets up Slide 58 (Lyra 2 generates the 3D scene itself) and Slide 59 (the geometry foundation models that infer 4D-GS from images).
+    <h4>3D / spatial WMs &mdash; original figures from both papers</h4>
+    Two-tile slide using paper-original figures. <strong>4D Gaussian Splatting</strong> (HUST Wu et al., CVPR 2024): the coarse-to-fine pipeline figure shows the training trick exactly &mdash; start from a random point cloud, fit 3D Gaussians at iter 3000, then jointly optimize the temporal deformation at iter 20000. <strong>Cosmos Transfer 1</strong> (NVIDIA, Mar 2025): the architecture figure clearly shows the frozen Cosmos-1 backbone + per-modality ControlNets that turn depth/segmentation/edge sensor maps into photoreal video. Together they form the dominant 2025-26 robot data pipeline: sim engine generates geometry, Cosmos Transfer paints pixels, policy trains on the pixels. Sets up Slide 58 (Lyra 2 generates the 3D scene itself) and Slide 59 (the geometry foundation models that infer 4D-GS from images).
   </aside>
 </section>
 
@@ -5559,93 +5682,96 @@ body.notes-mode aside.notes h4 {
     <span>59 / 76</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1.1rem);">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.9rem); gap: 0.75rem;">
 
     <h1>Family 3 &middot; <span class="accent-text">Geometric Foundation Models</span></h1>
-    <p style="margin-top: 0.4rem; font-size: var(--size-small); color: var(--color-ink-muted);">
-      "World model" = <em>3D reconstruction itself</em> as a feed-forward foundation. The geometric backbone.
+    <p style="font-size: var(--size-small); color: var(--color-ink-muted); margin-top: -0.4rem; font-style: italic;">
+      "World model" = 3D reconstruction itself as a feed-forward foundation. The geometric backbone.
     </p>
 
-    <div class="grid cols-3" style="margin-top: 1.25rem; flex: 1; gap: 1.1rem;">
+    <style>
+      .gfm-tile { display: flex; flex-direction: column; gap: 0.5rem; border: var(--border-thin); padding: 0.8rem 0.85rem; min-width: 0; min-height: 0; }
+      .gfm-tile.hero { background: var(--color-bg-alt); border-color: var(--color-accent); border-width: 1.5px; }
+      .gfm-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
+      .gfm-tile h2 { font-size: 1.15rem; line-height: 1; }
+      .gfm-tag { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-accent); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; }
+      .gfm-author { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted); }
+      .gfm-img-wrap { flex: 1; display: flex; align-items: center; justify-content: center; background: var(--color-bg); border: 1px solid var(--color-grid-line); padding: 0.35rem; min-height: 0; }
+      .gfm-img-wrap img { max-width: 100%; max-height: 100%; object-fit: contain; }
+      .gfm-caption { font-size: 0.7rem; color: var(--color-ink-soft); line-height: 1.4; }
+      .gfm-meta { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.2rem; }
+      .gfm-meta .pill { padding: 0.25rem 0.45rem; background: var(--color-bg); border-left: 2px solid var(--color-accent); }
+      .gfm-meta .pill strong { font-family: var(--font-display); font-weight: 900; font-size: 0.85rem; display: block; line-height: 1; }
+      .gfm-meta .pill span { font-size: 0.5rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    </style>
+
+    <div class="grid cols-3" style="flex: 1; gap: 1rem; min-height: 0;">
 
       <!-- VGGT -->
-      <div style="display: flex; flex-direction: column; border: 1px solid var(--color-ink); padding: 1rem; gap: 0.55rem;">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase;">CVPR 2025 &middot; Best Paper</div>
+      <div class="gfm-tile">
+        <div class="gfm-head">
+          <div>
+            <h2>VGGT</h2>
+            <div class="gfm-author">FAIR + Oxford</div>
+          </div>
+          <span class="gfm-tag">CVPR'25 Best</span>
         </div>
         <div style="font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted);">arXiv:2503.11651</div>
-        <h2 style="font-size: 1.25rem;">VGGT</h2>
-        <div style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.4;">Visual Geometry Grounded Transformer. <strong>Feed-forward</strong> 3D &mdash; cameras, depth, point map in one pass.</div>
-        <svg viewBox="0 0 220 80" style="width: 100%; max-height: 80px;" preserveAspectRatio="xMidYMid meet">
-          <g fill="#0a0a0a">
-            <rect x="6" y="18" width="22" height="22"/>
-            <rect x="34" y="18" width="22" height="22"/>
-            <rect x="62" y="18" width="22" height="22"/>
-          </g>
-          <text x="44" y="58" font-size="11" fill="#4a4a4a" font-family="var(--font-mono)" text-anchor="middle">N views</text>
-          <path d="M 92 30 L 118 30" stroke="#0a0a0a" stroke-width="1.5"/>
-          <rect x="118" y="14" width="56" height="32" fill="#ff3300"/>
-          <text x="146" y="34" font-size="11" font-weight="800" font-family="var(--font-display)" fill="white" text-anchor="middle">VGGT</text>
-          <path d="M 174 30 L 200 30" stroke="#0a0a0a" stroke-width="1.5"/>
-          <text x="210" y="20" font-size="11" fill="#0a0a0a" font-family="var(--font-mono)">cam</text>
-          <text x="210" y="33" font-size="11" fill="#0a0a0a" font-family="var(--font-mono)">3D</text>
-          <text x="210" y="46" font-size="11" fill="#0a0a0a" font-family="var(--font-mono)">depth</text>
-        </svg>
-        <div style="margin-top: auto; padding-top: 0.5rem; border-top: 1px solid var(--color-grid-line); font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted);">FAIR + Oxford</div>
+
+        <div class="gfm-img-wrap">
+          <img src="images/papers/vggt/architecture.png" alt="VGGT architecture: N input images → DINO + concat + camera token → Global/Frame Attention (×L) → Camera Head + DPT → cameras, depth maps, point maps, tracks">
+        </div>
+
+        <p class="gfm-caption">
+          N views &rarr; <strong>cameras + depth + pointmaps + tracks</strong> in one forward pass.
+        </p>
       </div>
 
       <!-- VGGT-Omega -->
-      <div style="display: flex; flex-direction: column; border: 1px solid var(--color-grid-line); padding: 1rem; gap: 0.55rem; background: var(--color-bg-alt);">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase;">CVPR 2026 Oral</div>
+      <div class="gfm-tile hero">
+        <div class="gfm-head">
+          <div>
+            <h2>VGGT-&Omega;</h2>
+            <div class="gfm-author">Wang &middot; Vedaldi et al.</div>
+          </div>
+          <span class="gfm-tag">CVPR'26 Oral</span>
         </div>
         <div style="font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted);">arXiv:2605.15195</div>
-        <h2 style="font-size: 1.25rem;">VGGT-&Omega;</h2>
-        <div style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.4;">VGGT scaled and shrunk. The 2026 update.</div>
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.3rem;">
-          <div style="padding: 0.35rem 0.6rem; background: white; border-left: 3px solid var(--color-accent);">
-            <div class="stat-number" style="font-size: 1.2rem;">30%</div>
-            <div class="stat-label" style="font-size: 0.5rem;">memory</div>
-          </div>
-          <div style="padding: 0.35rem 0.6rem; background: white; border-left: 3px solid var(--color-accent);">
-            <div class="stat-number" style="font-size: 1.2rem;">15&times;</div>
-            <div class="stat-label" style="font-size: 0.5rem;">data</div>
-          </div>
-          <div style="padding: 0.35rem 0.6rem; background: white; border-left: 3px solid var(--color-accent);">
-            <div class="stat-number" style="font-size: 1.2rem;">+77%</div>
-            <div class="stat-label" style="font-size: 0.5rem;">Sintel</div>
-          </div>
+
+        <div class="gfm-img-wrap">
+          <img src="images/papers/vggt-omega/scale.png" alt="VGGT-Omega scaling: AbsRel error vs data size and model size, showing improvements from VGGT baseline to VGGT-Omega">
         </div>
-        <div style="margin-top: auto; padding-top: 0.5rem; border-top: 1px solid var(--color-grid-line); font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted);">Wang &middot; Vedaldi et al.</div>
+
+        <div class="gfm-meta">
+          <div class="pill"><strong>30%</strong><span>memory</span></div>
+          <div class="pill"><strong>15&times;</strong><span>data</span></div>
+          <div class="pill"><strong>+77%</strong><span>Sintel</span></div>
+        </div>
       </div>
 
       <!-- MapAnything -->
-      <div style="display: flex; flex-direction: column; border: 1px solid var(--color-grid-line); padding: 1rem; gap: 0.55rem;">
-        <div style="display: flex; justify-content: space-between; align-items: baseline;">
-          <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase;">3DV 2026</div>
+      <div class="gfm-tile">
+        <div class="gfm-head">
+          <div>
+            <h2>MapAnything</h2>
+            <div class="gfm-author">Meta + CMU</div>
+          </div>
+          <span class="gfm-tag">3DV 2026</span>
         </div>
         <div style="font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted);">arXiv:2509.13414</div>
-        <h2 style="font-size: 1.25rem;">MapAnything</h2>
-        <div style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.4;">Meta + CMU. Universal feed-forward <strong>metric</strong> 3D &mdash; outputs scenes in real-world units, not just relative scale.</div>
-        <svg viewBox="0 0 220 80" style="width: 100%; max-height: 80px;" preserveAspectRatio="xMidYMid meet">
-          <g fill="#0a0a0a">
-            <rect x="6" y="18" width="20" height="20"/>
-            <rect x="30" y="18" width="20" height="20"/>
-            <rect x="54" y="18" width="20" height="20"/>
-            <rect x="78" y="18" width="20" height="20"/>
-          </g>
-          <text x="50" y="56" font-size="11" fill="#4a4a4a" font-family="var(--font-mono)" text-anchor="middle">any-N views</text>
-          <path d="M 104 28 L 124 28" stroke="#0a0a0a" stroke-width="1.5"/>
-          <rect x="124" y="14" width="80" height="28" fill="#0a0a0a"/>
-          <text x="164" y="32" font-size="12" font-weight="700" fill="white" text-anchor="middle" font-family="var(--font-display)">MapAnything</text>
-          <text x="164" y="62" font-size="11" fill="#ff3300" font-family="var(--font-mono)" text-anchor="middle">metric 3D scene</text>
-        </svg>
-        <div style="margin-top: auto; padding-top: 0.5rem; border-top: 1px solid var(--color-grid-line); font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted);">map-anything.github.io</div>
+
+        <div class="gfm-img-wrap">
+          <img src="images/papers/mapanything/method.png" alt="MapAnything method: Visual Input N + optional Geometric Inputs (Ray Directions, Pose, Depth) → Multi-Modal Encoders with shared weights → Multi-View Transformer → MLP scaling factor + DPT Head + Pose Head → metric 3D scene">
+        </div>
+
+        <p class="gfm-caption">
+          Universal feed-forward <strong>metric</strong> 3D &mdash; real-world units, not just scale.
+        </p>
       </div>
 
     </div>
 
-    <div style="margin-top: 0.6rem; padding: 0.55rem 0.85rem; background: var(--color-ink); color: white; font-size: var(--size-small);">
+    <div style="padding: 0.6rem 1rem; background: var(--color-ink); color: var(--color-bg); font-size: var(--size-small); line-height: 1.45;">
       JEPA carries <em>latents</em>. Video gen carries <em>pixels</em>. This line carries <span style="color: var(--color-accent); font-weight: 800;">geometry itself</span> &mdash; what WoRV uses today for data &amp; eval.
     </div>
 
@@ -5657,8 +5783,8 @@ body.notes-mode aside.notes h4 {
   </footer>
 
   <aside class="notes">
-    <h4>NEW &mdash; geometric foundation models</h4>
-    Three-tile slide for the geometry-first WM line. <strong>VGGT</strong> (CVPR 2025 Best Paper, FAIR + Oxford) takes N views, outputs cameras + 3D points + depth in a single forward pass. <strong>VGGT-&Omega;</strong> (CVPR 2026 Oral) is the 2026 update &mdash; 30% memory, 15&times; data, +77% on Sintel. <strong>MapAnything</strong> (Meta + CMU, 3DV 2026) is the universal feed-forward <em>metric</em> 3D recon &mdash; outputs in real-world units. <br><br>
+    <h4>NEW &mdash; geometric foundation models &middot; original figures</h4>
+    Three-tile slide for the geometry-first WM line, all with paper-original figures pulled from the tex sources. <strong>VGGT</strong> (CVPR 2025 Best Paper, FAIR + Oxford) &mdash; the architecture figure shows the trick: N input views, DINO + camera token, Global+Frame attention blocks (×L), then a Camera Head + DPT producing cameras + depth + point maps + tracks in one forward pass. <strong>VGGT-&Omega;</strong> (CVPR 2026 Oral) is the 2026 update &mdash; the scaling plot from the paper shows the headline numbers (30% memory, 15&times; data, +77% Sintel). <strong>MapAnything</strong> (Meta + CMU, 3DV 2026) &mdash; the method figure shows the multi-modal encoders that accept image + optional geometric inputs (ray directions, pose, depth) and the dual DPT/Pose heads that emit <em>metric</em> 3D in real-world units.<br><br>
     Korean talking point: "월드모델이 픽셀이나 latent를 다룬다면, 이 라인은 <em>기하 자체</em>를 다룬다. 우리 (WoRV) 도 데이터·평가에 이미 쓰고 있다."
   </aside>
 </section>
@@ -5671,109 +5797,90 @@ body.notes-mode aside.notes h4 {
     <span>60 / 76</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1.25rem);">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.9rem); gap: 0.75rem;">
 
     <h1>Action-conditioned <span class="accent-text">world models</span></h1>
-    <p style="margin-top: 0.4rem; font-size: var(--size-small); color: var(--color-ink-muted);">
+    <p style="font-size: var(--size-small); color: var(--color-ink-muted); margin-top: -0.4rem; font-style: italic;">
       Without an action input, it's just video gen. <em>With</em> one &mdash; it's a robotics WM. This is the bridge to Ch 7.
     </p>
 
-    <div class="grid cols-2" style="margin-top: 1.25rem; flex: 1; gap: 1.5rem;">
+    <style>
+      .acw-tile { display: flex; flex-direction: column; gap: 0.6rem; border: var(--border-thin); padding: 0.95rem 1.05rem; min-width: 0; min-height: 0; }
+      .acw-tile.hero { border: 2px solid var(--color-accent); background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 55%); }
+      .acw-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
+      .acw-tile h2 { font-size: 1.25rem; line-height: 1; }
+      .acw-tag { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; }
+      .acw-author { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); }
+      .acw-img-wrap { flex: 1; display: flex; align-items: center; justify-content: center; background: var(--color-bg); border: 1px solid var(--color-grid-line); padding: 0.4rem; min-height: 0; }
+      .acw-img-wrap img { max-width: 100%; max-height: 100%; object-fit: contain; }
+      .acw-caption { font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.4; }
+      .acw-cite { font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); }
+    </style>
 
-      <!-- Left: generic video gen -->
-      <div style="display: flex; flex-direction: column; border: 1px solid var(--color-grid-line); padding: 1.1rem; gap: 0.85rem;">
-        <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.08em;">Generic video generation</div>
-        <h2 style="font-size: 1.3rem;">prompt &rarr; video</h2>
+    <div class="grid cols-2" style="flex: 1; gap: 1.4rem; min-height: 0;">
 
-        <svg viewBox="0 0 360 130" style="width: 100%; max-height: 130px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
-          <defs>
-            <marker id="arr60a" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
-              <path d="M 0 0 L 7 4.5 L 0 9 z" fill="#0a0a0a"/>
-            </marker>
-          </defs>
-          <rect x="10" y="45" width="90" height="40" fill="none" stroke="#0a0a0a" stroke-width="1.5"/>
-          <text x="55" y="62" font-size="11" text-anchor="middle" fill="#0a0a0a">text prompt</text>
-          <text x="55" y="76" font-size="11" text-anchor="middle" fill="#4a4a4a">"a robot..."</text>
+      <!-- GAIA-1 -->
+      <div class="acw-tile">
+        <div class="acw-head">
+          <div>
+            <h2>GAIA-1 &mdash; driving WM</h2>
+            <div class="acw-author">Wayve &middot; Sep 2023 &middot; 9B params</div>
+          </div>
+          <span class="acw-tag">arXiv:2309.17080</span>
+        </div>
 
-          <path d="M 100 65 L 145 65" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr60a)"/>
+        <div class="acw-img-wrap">
+          <img src="images/papers/gaia1/schematic.png" alt="GAIA-1 schematic: input video → image encoder, action input (speed, steering) → action encoder, text input → text encoder, all three streams → world model with autoregressive prediction → output tokens → video decoder → output video">
+        </div>
 
-          <rect x="145" y="35" width="100" height="60" fill="#0a0a0a"/>
-          <text x="195" y="62" font-size="11" text-anchor="middle" fill="white" font-weight="700">Video Gen</text>
-          <text x="195" y="78" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.7)">Sora / Veo / Cosmos</text>
-
-          <path d="M 245 65 L 290 65" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr60a)"/>
-
-          <g fill="#0a0a0a">
-            <rect x="290" y="50" width="18" height="30"/><rect x="312" y="50" width="18" height="30"/><rect x="334" y="50" width="18" height="30"/>
-          </g>
-          <text x="321" y="100" font-size="11" text-anchor="middle" fill="#4a4a4a">video</text>
-        </svg>
-
-        <ul class="bullet-list" style="font-size: var(--size-small);">
-          <li>One-shot prompt &rarr; one rollout</li>
-          <li>No way to <em>steer</em> a robot through it</li>
-          <li>Great for content. Not a policy interface.</li>
-        </ul>
+        <p class="acw-caption">
+          Three input streams &mdash; <strong>video, action, text</strong> &mdash; into one AR transformer. Counterfactual rollouts: "what if I steer left?"
+        </p>
+        <p class="acw-cite">wayve.ai/thinking/introducing-gaia1</p>
       </div>
 
-      <!-- Right: action-conditioned WM -->
-      <div style="display: flex; flex-direction: column; border: 1px solid var(--color-ink); padding: 1.1rem; gap: 0.85rem; background: var(--color-bg-alt); border-left: var(--border-accent);">
-        <div style="font-family: var(--font-mono); font-size: 0.65rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.08em;">Action-conditioned WM</div>
-        <h2 style="font-size: 1.3rem;">(obs, action_t) &rarr; obs_{t+1}</h2>
+      <!-- GR00T-Dreams / DreamGen -->
+      <div class="acw-tile hero">
+        <div class="acw-head">
+          <div>
+            <h2>GR00T-Dreams / DreamGen</h2>
+            <div class="acw-author">NVIDIA GEAR &middot; May 2025</div>
+          </div>
+          <span class="acw-tag">arXiv:2505.12705</span>
+        </div>
 
-        <svg viewBox="0 0 360 130" style="width: 100%; max-height: 130px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
-          <defs>
-            <marker id="arr60b" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
-              <path d="M 0 0 L 7 4.5 L 0 9 z" fill="#0a0a0a"/>
-            </marker>
-          </defs>
-          <rect x="10" y="15" width="90" height="30" fill="none" stroke="#0a0a0a" stroke-width="1.5"/>
-          <text x="55" y="34" font-size="11" text-anchor="middle" fill="#0a0a0a">obs frame</text>
+        <div class="acw-img-wrap">
+          <img src="images/papers/groot-dreams/figure_1_neural.png" alt="GR00T-Dreams / DreamGen: initial frame → video world model → synthetic generated videos for robot learning with automatically extracted pseudo-actions â_{1:H}, used for contact-rich data augmentation, new behavior generalization, new environment generalization">
+        </div>
 
-          <rect x="10" y="85" width="90" height="30" fill="none" stroke="#ff3300" stroke-width="2"/>
-          <text x="55" y="104" font-size="11" text-anchor="middle" fill="#ff3300" font-weight="700">action a_t</text>
-
-          <path d="M 100 30 L 145 50" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr60b)"/>
-          <path d="M 100 100 L 145 80" stroke="#ff3300" stroke-width="1.5" marker-end="url(#arr60b)"/>
-
-          <rect x="145" y="40" width="100" height="50" fill="#0a0a0a"/>
-          <text x="195" y="62" font-size="11" text-anchor="middle" fill="white" font-weight="700">A-cond WM</text>
-          <text x="195" y="78" font-size="11" text-anchor="middle" fill="rgba(255,255,255,0.7)">GAIA-1 / DreamGen</text>
-
-          <path d="M 245 65 L 290 65" stroke="#0a0a0a" stroke-width="1.5" marker-end="url(#arr60b)"/>
-
-          <g fill="#0a0a0a">
-            <rect x="290" y="50" width="18" height="30"/><rect x="312" y="50" width="18" height="30"/><rect x="334" y="50" width="18" height="30"/>
-          </g>
-          <text x="321" y="100" font-size="11" text-anchor="middle" fill="#4a4a4a">next obs</text>
-
-          <!-- closure loop -->
-          <path d="M 321 47 L 321 10 L 55 10 L 55 15" stroke="#4a4a4a" stroke-width="1" stroke-dasharray="4 3" fill="none"/>
-        </svg>
-
-        <ul class="bullet-list" style="font-size: var(--size-small);">
-          <li>Counterfactual rollouts &mdash; "what if I push left?"</li>
-          <li><strong>GAIA-1</strong> (Wayve, 9B, driving) &middot; <strong>GR00T-Dreams / DreamGen</strong> (NVIDIA, arXiv:2505.12705)</li>
-          <li>This is what makes WMs <em>useful for policies</em>.</li>
-        </ul>
+        <p class="acw-caption">
+          Initial frame &rarr; WM &rarr; synthetic robot videos. <strong>Pseudo-actions â auto-extracted</strong> &mdash; used for new behaviors and unseen environments.
+        </p>
+        <p class="acw-cite">developer.nvidia.com/blog/r2d2</p>
       </div>
 
     </div>
 
-    <div style="margin-top: 0.7rem; padding: 0.55rem 0.85rem; background: var(--color-ink); color: white; font-size: var(--size-small);">
-      <em>Bridge to Ch 7</em>: once you can condition on action, you can also generate it. That's a <strong>WAM</strong> (World Action Model) &mdash; DreamZero (Slide 66).
+    <!-- Bottom synthesis -->
+    <div style="padding: 0.65rem 1rem; background: var(--color-ink); color: var(--color-bg); font-size: var(--size-small); line-height: 1.45; display: flex; gap: 1.25rem; align-items: center;">
+      <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; flex-shrink: 0; font-weight: 800;">bridge to Ch 7</div>
+      <div>
+        Once you can <strong>condition on action</strong>, you can also <strong>generate action</strong>. That's a <strong style="color: var(--color-accent);">WAM</strong> (World Action Model) &mdash; DreamZero (Slide 66).
+      </div>
     </div>
 
   </div>
 
   <footer class="slide-footer">
-    <span><span class="citation">arXiv:2309.17080 (GAIA-1) / 2505.12705 (DreamGen)</span> &middot; wayve.ai/thinking/introducing-gaia1 &middot; developer.nvidia.com/blog/r2d2</span>
+    <span><span class="citation">arXiv:2309.17080 (GAIA-1) / 2505.12705 (DreamGen)</span> &middot; wayve.ai &middot; developer.nvidia.com/blog/r2d2</span>
     <span class="mono">60</span>
   </footer>
 
   <aside class="notes">
     <h4>Action-conditioned WMs &mdash; the bridge slide</h4>
-    Side-by-side comparison: <strong>left</strong> = generic video gen (prompt &rarr; video), <strong>right</strong> = action-conditioned WM ((obs, action) &rarr; next obs). The right side is what enables counterfactual rollouts &mdash; the policy can ask "what happens if I push left?". GAIA-1 (Wayve, 9B, driving WM) was the first big example; GR00T-Dreams / DreamGen (NVIDIA, arXiv:2505.12705) is the current robotics one. Sets up Ch 7: once you can <em>condition on</em> action, you can also <em>generate</em> action &mdash; that's a WAM.
+    Side-by-side with paper-original figures. <strong>GAIA-1</strong> (Wayve, 2023, 9B) was the first big example &mdash; the schematic shows the three input streams (video, action, text) all tokenized and fed into one autoregressive transformer; the world model emits next tokens, decoded back to video. This is where the field first scaled the V&middot;M&middot;C / Sutton-Dyna pattern up to billion-parameter sizes with explicit action conditioning.<br><br>
+    <strong>GR00T-Dreams / DreamGen</strong> (NVIDIA GEAR, May 2025) is the modern robotics counterpart &mdash; given an initial frame, the WM generates a long video, and a small IDM-style head recovers pseudo-actions automatically. These (frame, action) pairs then feed contact-rich data augmentation, new behavior generalization, and new environment generalization. This is the data factory that fed GR00T N1.5 (Slide 46).<br><br>
+    Bridge to Ch 7: once the model can <em>condition on</em> action, the next step is to <em>generate</em> action too &mdash; that's a WAM. DreamZero (Slide 66) is the canonical example.
   </aside>
 </section>
 
@@ -5785,85 +5892,126 @@ body.notes-mode aside.notes h4 {
     <span>61 / 76</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1.1rem);">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.85rem); gap: 0.7rem;">
 
-    <h1>Why WMs <span class="accent-text">matter</span> for robotics</h1>
-    <p style="margin-top: 0.4rem; font-size: var(--size-small); color: var(--color-ink-muted);">
-      Three tools in one model &mdash; that's why everyone is racing here.
+    <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 2rem;">
+      <h1>Why WMs <span class="accent-text">matter</span> for robotics</h1>
+      <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
+        framework &middot; NTU MARS survey arxiv:2605.00080
+      </div>
+    </div>
+    <p style="font-size: var(--size-small); color: var(--color-ink-muted); margin-top: -0.35rem; font-style: italic;">
+      Three core capabilities of an <em>actionable</em> world model &mdash; foresight, imagination-planning, data amplification.
     </p>
 
-    <div class="grid cols-3" style="margin-top: 1.25rem; flex: 1; gap: 1.1rem;">
+    <style>
+      .wm-cap { display: flex; flex-direction: column; border: var(--border-thin); padding: 0.85rem 0.95rem; gap: 0.45rem; min-width: 0; min-height: 0; }
+      .wm-cap.hero { background: var(--color-bg-alt); border-left: var(--border-accent); }
+      .wm-cap-head { display: flex; align-items: baseline; gap: 0.5rem; }
+      .wm-cap-num { font-family: var(--font-display); font-weight: 900; font-size: 1.7rem; color: var(--color-accent); line-height: 1; }
+      .wm-cap-tag { font-family: var(--font-mono); font-size: 0.58rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+      .wm-cap h3 { font-size: 1.05rem; line-height: 1.15; }
+      .wm-cap p { font-size: 0.72rem; color: var(--color-ink-soft); line-height: 1.45; }
+      .wm-cap .ex { padding: 0.4rem 0.55rem; background: var(--color-bg); border-left: 2px solid var(--color-accent); font-size: 0.65rem; line-height: 1.35; margin-top: auto; }
+      .wm-cap .ex strong { font-family: var(--font-display); font-weight: 800; }
+    </style>
 
-      <!-- (1) Synthetic data factory -->
-      <div style="display: flex; flex-direction: column; border: 1px solid var(--color-grid-line); padding: 1rem; gap: 0.55rem;">
-        <div style="display: flex; align-items: baseline; gap: 0.5rem;">
-          <div style="font-family: var(--font-display); font-weight: 900; font-size: 1.8rem; color: var(--color-accent); line-height: 1;">1</div>
-          <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); text-transform: uppercase;">data</div>
+    <div class="grid cols-3" style="gap: 1rem; min-height: 0;">
+
+      <!-- 1 Foresight -->
+      <div class="wm-cap">
+        <div class="wm-cap-head">
+          <div class="wm-cap-num">1</div>
+          <div class="wm-cap-tag">foresight</div>
         </div>
-        <h2 style="font-size: 1.15rem;">Synthetic data factory</h2>
-        <p style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.4;">
-          A trained WM is a generator of new (obs, action) pairs. GR00T-Dreams cut training from <strong>3 months &rarr; 36 h</strong> by replacing teleop with WM rollouts.
+        <h3>Anticipate consequences <em>before</em> executing</h3>
+        <p>
+          Predict next state under candidate actions &mdash; the policy can reason about contact, dynamics, and physical regularities <em>language-only pretraining never captures</em>.
         </p>
-        <div style="margin-top: auto; padding-top: 0.5rem; border-top: 1px solid var(--color-grid-line); font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted);">
-          See Ch 3 Slide 28 &middot; arXiv:2505.12705
+        <div class="ex">
+          <strong>Examples</strong> &middot; LingBot-VA &middot; SayDream &middot; MOTUS &middot; TC-IDM
         </div>
       </div>
 
-      <!-- (2) Zero-shot evaluation -->
-      <div style="display: flex; flex-direction: column; border: 1px solid var(--color-ink); padding: 1rem; gap: 0.55rem; background: var(--color-bg-alt); border-left: var(--border-accent);">
-        <div style="display: flex; align-items: baseline; gap: 0.5rem;">
-          <div style="font-family: var(--font-display); font-weight: 900; font-size: 1.8rem; color: var(--color-accent); line-height: 1;">2</div>
-          <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); text-transform: uppercase;">eval</div>
+      <!-- 2 Imagination Planning -->
+      <div class="wm-cap hero">
+        <div class="wm-cap-head">
+          <div class="wm-cap-num">2</div>
+          <div class="wm-cap-tag">planning</div>
         </div>
-        <h2 style="font-size: 1.15rem;">Zero-shot evaluation</h2>
-        <p style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.4;">
-          Score a policy by rolling it out <em>inside</em> the WM &mdash; no real-robot time. DeepMind's "Evaluating Gemini Robotics in Veo World Simulator" ran <strong>1,600+ real evals</strong> this way; academia's <strong>WorldEval</strong> (Midea) does the same.
+        <h3>Imagine rollouts &amp; pick the best</h3>
+        <p>
+          MPC / search <em>inside</em> the WM. Use the imagined future to compare candidate behaviors before acting.
         </p>
-        <div style="display: flex; gap: 0.5rem; margin-top: 0.3rem;">
-          <div style="padding: 0.3rem 0.5rem; background: white; border-left: 3px solid var(--color-accent);">
-            <div class="stat-number" style="font-size: 1.3rem;">1,600+</div>
-            <div class="stat-label" style="font-size: 0.5rem;">real evals (Veo)</div>
-          </div>
-        </div>
-        <div style="margin-top: auto; padding-top: 0.5rem; border-top: 1px solid var(--color-grid-line); font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted);">
-          WorldEval &middot; Gemini-in-Veo (DeepMind)
+        <div class="ex">
+          <strong>DayDreamer</strong> (real A1 in 1h) &middot; <strong>Dreamer V3</strong> (Minecraft Diamond) &middot; <strong>DINO-WM</strong> (latent planning) &middot; <strong>CosmosPolicy</strong>
         </div>
       </div>
 
-      <!-- (3) Policy via rollout -->
-      <div style="display: flex; flex-direction: column; border: 1px solid var(--color-grid-line); padding: 1rem; gap: 0.55rem;">
-        <div style="display: flex; align-items: baseline; gap: 0.5rem;">
-          <div style="font-family: var(--font-display); font-weight: 900; font-size: 1.8rem; color: var(--color-accent); line-height: 1;">3</div>
-          <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); text-transform: uppercase;">policy</div>
+      <!-- 3 Data Amplification -->
+      <div class="wm-cap hero">
+        <div class="wm-cap-head">
+          <div class="wm-cap-num">3</div>
+          <div class="wm-cap-tag">data</div>
         </div>
-        <h2 style="font-size: 1.15rem;">Policy via rollout</h2>
-        <p style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.4;">
-          Plan or RL <em>inside</em> the WM &mdash; the original Ha &amp; Schmidhuber dream. DayDreamer (CoRL'23) on a real quadruped in 1 h; Dreamer V3 on Minecraft.
+        <h3>Synthesize trajectories at scale</h3>
+        <p>
+          Trained WM = generator of new (obs, action) pairs &mdash; replace expensive teleop with imagined rollouts.
         </p>
-        <div style="margin-top: auto; padding-top: 0.5rem; border-top: 1px solid var(--color-grid-line); font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted);">
-          Dreamer V3 &middot; DayDreamer &middot; &rarr; Ch 7 WAMs
+        <div class="ex">
+          <strong>GR00T-Dreams</strong>: 3&nbsp;months → <span class="accent-text">36&nbsp;h</span> &middot; <strong>DreamDojo</strong> &middot; <strong>DreamGen</strong> &middot; <strong>CosmosPredict</strong>
         </div>
       </div>
 
     </div>
 
-    <!-- bottom closer -->
-    <div style="margin-top: 0.7rem; padding: 0.65rem 0.95rem; background: var(--color-ink); color: white; font-size: var(--size-small); line-height: 1.45;">
-      <strong style="color: var(--color-accent);">Data &middot; Eval &middot; Policy</strong> &mdash; three of the most expensive things in robotics, all addressed by one trained model.
-      That's why this chapter is the <em>longest</em> in the talk.
+    <!-- Second row: simulator role + WM-policy evolution -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; min-height: 0;">
+
+      <div class="wm-cap" style="flex-direction: row; padding: 0.7rem 0.9rem; gap: 0.85rem; align-items: center;">
+        <div class="wm-cap-num" style="font-size: 1.4rem;">+</div>
+        <div style="flex: 1; min-width: 0;">
+          <h3 style="font-size: 0.95rem; line-height: 1.2;">Zero-shot policy <span class="accent-text">evaluation</span></h3>
+          <p style="font-size: 0.65rem; color: var(--color-ink-soft); line-height: 1.4; margin-top: 0.2rem;">
+            Roll a policy inside the WM &mdash; no real-robot time. <strong>DeepMind's Gemini-in-Veo: 1,600+ real evals replaced.</strong> WorldEval (Midea) is the academic counterpart.
+          </p>
+        </div>
+      </div>
+
+      <div class="wm-cap" style="flex-direction: row; padding: 0.7rem 0.9rem; gap: 0.85rem; align-items: center; border-color: var(--color-accent); background: var(--color-accent-soft);">
+        <div class="wm-cap-num" style="font-size: 1.4rem;">→</div>
+        <div style="flex: 1; min-width: 0;">
+          <h3 style="font-size: 0.95rem; line-height: 1.2;">Now <em>core</em> to the learning loop</h3>
+          <p style="font-size: 0.65rem; color: var(--color-ink-soft); line-height: 1.4; margin-top: 0.2rem;">
+            2026 trend (NTU MARS): WMs no longer auxiliary &mdash; <strong>VLA-RFT, WMPO, RynnVLA-002</strong> co-evolve policy + WM in one loop.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom synthesis -->
+    <div style="padding: 0.65rem 1rem; background: var(--color-ink); color: var(--color-bg); font-size: var(--size-small); line-height: 1.45; display: flex; gap: 1.25rem; align-items: center;">
+      <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; flex-shrink: 0; font-weight: 800;">why this chapter is the longest</div>
+      <div>
+        One trained WM addresses <strong style="color: var(--color-accent);">foresight &middot; planning &middot; data &middot; eval &middot; closed-loop optimization</strong> &mdash; five of the most expensive things in robotics. Ch 7 takes the next step: action <em>generation</em> (WAM).
+      </div>
     </div>
 
   </div>
 
   <footer class="slide-footer">
-    <span><span class="citation">arXiv:2505.12705 (DreamGen) / 2505.19017 (WorldEval) / 2512.10675 (Gemini in Veo)</span> &middot; chapter close &mdash; Ch 7 next</span>
+    <span>Framework: NTU MARS <span class="citation">arXiv:2605.00080</span> &middot; Gemini-in-Veo (DeepMind 2512.10675) &middot; WorldEval (Midea 2505.19017) &middot; DreamGen (2505.12705)</span>
     <span class="mono">61</span>
   </footer>
 
   <aside class="notes">
-    <h4>Chapter close &mdash; why WMs matter</h4>
-    Three-card structure: <strong>(1) data factory</strong> (GR00T-Dreams shrank training 3 months &rarr; 36 h), <strong>(2) zero-shot evaluation</strong> (DeepMind's Gemini-in-Veo paper ran 1,600+ real evaluations using Veo as the simulator; WorldEval is the academic counterpart from Midea), <strong>(3) policy via rollout</strong> (the original Ha &amp; Schmidhuber dream, finally realized in DayDreamer + Dreamer V3). <br><br>
-    The "1,600+ real evals" stat is the concrete grounding asked for in the slide-plan &mdash; much more visceral for students than an abstract bullet. Tells them: the reason every lab is racing here is that <em>one trained model</em> covers three of the most expensive things in robotics. That's why this is the longest chapter. Next: Ch 7 takes the action-conditioning step from Slide 60 and turns it into action <em>generation</em> &mdash; WAMs.
+    <h4>Chapter close &mdash; why WMs matter (now grounded in NTU survey framework)</h4>
+    Reorganized around the NTU MARS survey's clean taxonomy (arXiv:2605.00080). Their core claim: an "actionable" WM provides three capabilities &mdash; <strong>foresight</strong>, <strong>imagination-driven planning</strong>, <strong>data amplification</strong>. I added two more rows: (4) zero-shot evaluation (Gemini-in-Veo replaced 1,600+ real evals, WorldEval is the academic counterpart) and (5) the 2026 shift &mdash; WMs are no longer auxiliary, they're core to the learning loop (VLA-RFT, WMPO, RynnVLA-002 are explicit co-evolution of policy + WM).<br><br>
+
+    Per the survey: "World models are not merely a generative enhancement, but a predictive bridge from semantic intent to physically realizable behavior." Foundation-scale video models (Sora/Veo/Wan/Cosmos) are increasingly being adapted into robot policies, but the key objective is not just plausible futures &mdash; it's <em>control-consistent</em> futures that support decision-making.<br><br>
+
+    Korean talking: "WoRV에서도 이 다섯 가지 모두 사용 중. 3개월 → 36시간 학습 단축 (data amplification), Veo로 policy eval 자동화, MPC + WM 기반 planning, 그리고 가장 중요한 건 forecasting을 통해 contact-rich task에서 implicit physics 캡처. 이게 robotics가 video gen 단순 모방을 넘어서야 하는 이유."
   </aside>
 </section>
 
