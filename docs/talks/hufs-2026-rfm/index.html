@@ -780,11 +780,11 @@ svg text.math-var {
       .force-tile { display: flex; flex-direction: column; gap: 0.45rem; padding: 0.85rem 0.95rem; border: var(--border-thin); background: white; min-width: 0; min-height: 0; position: relative; }
       .force-tile .force-num { position: absolute; top: -13px; left: 0.85rem; background: var(--color-ink); color: white; font-family: var(--font-display); font-weight: 900; font-size: 0.75rem; padding: 0.1rem 0.55rem; letter-spacing: 0.05em; z-index: 2; }
       .force-tile h3 { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; line-height: 1.1; margin-top: 0.25rem; }
-      .force-tile .force-meta { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.05em; }
-      .force-tile p.body { font-size: 0.7rem; color: var(--color-ink-soft); line-height: 1.45; margin: 0; }
-      .force-tile .examples { font-family: var(--font-mono); font-size: 0.62rem; color: var(--color-ink); padding-top: 0.35rem; border-top: 1px solid var(--color-grid-line); }
+      .force-tile .force-meta { font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+      .force-tile p.body { font-size: 0.85rem; color: var(--color-ink-soft); line-height: 1.5; margin: 0; }
+      .force-tile .examples { font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-ink); padding-top: 0.45rem; border-top: 1px solid var(--color-grid-line); }
       .force-tile .examples strong { font-family: var(--font-display); font-weight: 700; }
-      .force-tile .open-note { font-size: 0.6rem; color: var(--color-ink-muted); font-style: italic; padding-top: 0.3rem; margin-top: auto; }
+      .force-tile .open-note { font-size: 0.78rem; color: var(--color-ink-muted); font-style: italic; padding-top: 0.4rem; margin-top: auto; }
       .force-tile .open-note .delta { color: var(--color-accent); font-weight: 700; font-style: normal; margin-right: 0.3rem; }
     </style>
 
@@ -1046,55 +1046,211 @@ svg text.math-var {
     <span>08 / 77</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1.5rem);">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1.25rem);">
 
     <h1>Three axes of <span class="accent-text">generalization</span></h1>
+    <p style="margin-top: 0.4rem; font-size: var(--size-small); color: var(--color-ink-muted);">
+      When we say a robot "generalizes," we always mean along <strong>one</strong> of these three axes.
+    </p>
 
-    <div class="grid cols-3 stagger" style="margin-top: 2rem; gap: 1.5rem; flex: 1;">
+    <div class="grid cols-3 stagger" style="margin-top: 1.5rem; gap: 1.25rem; flex: 1;">
 
-      <div style="display: flex; flex-direction: column; gap: 1rem; border: var(--border-thin); padding: 1.5rem; position: relative;">
-        <div style="position: absolute; top: -12px; left: 1.5rem; background: var(--color-bg); padding: 0 0.5rem; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-accent); font-weight: 700; letter-spacing: 0.1em;">
+      <!-- ============ AXIS 1 : TASK ============ -->
+      <div style="display: flex; flex-direction: column; gap: 0.85rem; border: var(--border-thin); padding: 1.4rem 1.3rem 1.2rem; position: relative;">
+        <div style="position: absolute; top: -12px; left: 1.3rem; background: var(--color-bg); padding: 0 0.5rem; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-accent); font-weight: 700; letter-spacing: 0.12em;">
           AXIS 1
         </div>
-        <h2 style="font-size: var(--size-h2); margin-top: 0.5rem;">Task</h2>
-        <p style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.5;">
-          New verbs in a known environment. <em>"fold the towel" vs "roll the towel".</em>
+        <h2 style="font-size: var(--size-h2); margin: 0.2rem 0 0;">Task</h2>
+        <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-ink-muted); letter-spacing: 0.05em; text-transform: uppercase;">
+          new verb · same room
+        </div>
+
+        <!-- pictogram: fold → roll (verb swap on the same towel) -->
+        <svg viewBox="0 0 320 110" style="width: 100%; height: auto; margin: 0.3rem 0 0.1rem;" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <defs>
+            <marker id="ax1-arr" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto">
+              <path d="M 0 0 L 7 4.5 L 0 9 z" fill="#ff3300"/>
+            </marker>
+          </defs>
+          <!-- LEFT verb card: FOLD -->
+          <rect x="6" y="14" width="118" height="80" fill="none" stroke="#0a0a0a" stroke-width="1.6"/>
+          <!-- folded square stack pictogram -->
+          <g stroke="#0a0a0a" stroke-width="1.6" fill="none">
+            <rect x="38" y="32" width="54" height="30"/>
+            <line x1="65" y1="32" x2="65" y2="62"/>
+            <line x1="38" y1="47" x2="92" y2="47"/>
+          </g>
+          <text x="65" y="82" font-family="var(--font-mono)" font-size="13" font-weight="700" text-anchor="middle" fill="#0a0a0a">fold</text>
+
+          <!-- arrow + verb-swap label -->
+          <line x1="132" y1="54" x2="188" y2="54" stroke="#ff3300" stroke-width="2" marker-end="url(#ax1-arr)"/>
+          <text x="160" y="44" font-family="var(--font-mono)" font-size="10" text-anchor="middle" fill="#ff3300" font-weight="700">verb swap</text>
+
+          <!-- RIGHT verb card: ROLL -->
+          <rect x="196" y="14" width="118" height="80" fill="none" stroke="#0a0a0a" stroke-width="1.6"/>
+          <!-- rolled spiral pictogram -->
+          <g stroke="#0a0a0a" stroke-width="1.6" fill="none">
+            <circle cx="255" cy="47" r="16"/>
+            <circle cx="255" cy="47" r="10"/>
+            <circle cx="255" cy="47" r="5"/>
+          </g>
+          <text x="255" y="82" font-family="var(--font-mono)" font-size="13" font-weight="700" text-anchor="middle" fill="#0a0a0a">roll</text>
+        </svg>
+
+        <p style="font-size: 1.18rem; color: var(--color-ink-soft); line-height: 1.5; margin: 0;">
+          New verbs in a <strong>known</strong> environment. <em>"fold the towel" vs "roll the towel."</em>
         </p>
-        <p style="margin-top: auto; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted);">
-          flagship — RT-2 (semantic reasoning)
+        <p style="margin: auto 0 0; padding-top: 0.6rem; border-top: 1px solid var(--color-grid-line); font-family: var(--font-mono); font-size: 0.92rem; color: var(--color-ink-muted);">
+          flagship — <strong style="color: var(--color-ink);">RT-2</strong> (semantic reasoning)
         </p>
       </div>
 
-      <div style="display: flex; flex-direction: column; gap: 1rem; border: var(--border-thin); padding: 1.5rem; position: relative;">
-        <div style="position: absolute; top: -12px; left: 1.5rem; background: var(--color-bg); padding: 0 0.5rem; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-accent); font-weight: 700; letter-spacing: 0.1em;">
+      <!-- ============ AXIS 2 : ENVIRONMENT ============ -->
+      <div style="display: flex; flex-direction: column; gap: 0.85rem; border: var(--border-thin); padding: 1.4rem 1.3rem 1.2rem; position: relative; background: var(--color-bg-alt);">
+        <div style="position: absolute; top: -12px; left: 1.3rem; background: var(--color-bg-alt); padding: 0 0.5rem; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-accent); font-weight: 700; letter-spacing: 0.12em;">
           AXIS 2
         </div>
-        <h2 style="font-size: var(--size-h2); margin-top: 0.5rem;">Environment</h2>
-        <p style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.5;">
-          Same task, unseen rooms / lighting / objects. <em>π0.5 reaches 94% follow-rate in unseen homes.</em>
+        <h2 style="font-size: var(--size-h2); margin: 0.2rem 0 0;">Environment</h2>
+        <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-ink-muted); letter-spacing: 0.05em; text-transform: uppercase;">
+          same verb · new room
+        </div>
+
+        <!-- pictogram: two different rooms (sun → moon) with the same robot arm action -->
+        <svg viewBox="0 0 320 110" style="width: 100%; height: auto; margin: 0.3rem 0 0.1rem;" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <!-- ROOM A: kitchen, day -->
+          <g stroke="#0a0a0a" stroke-width="1.6" fill="none">
+            <!-- room outline -->
+            <polyline points="10,20 10,94 130,94 130,20"/>
+            <!-- window with sun -->
+            <rect x="22" y="30" width="34" height="26"/>
+            <line x1="39" y1="30" x2="39" y2="56"/>
+            <line x1="22" y1="43" x2="56" y2="43"/>
+            <!-- counter -->
+            <line x1="10" y1="78" x2="130" y2="78"/>
+            <!-- object on counter -->
+            <rect x="78" y="68" width="14" height="10"/>
+            <!-- arm gripping -->
+            <line x1="100" y1="40" x2="100" y2="70"/>
+            <line x1="100" y1="40" x2="118" y2="40"/>
+            <line x1="95" y1="70" x2="105" y2="70"/>
+          </g>
+          <text x="70" y="108" font-family="var(--font-mono)" font-size="10" text-anchor="middle" fill="#0a0a0a">kitchen · day</text>
+
+          <!-- arrow -->
+          <g stroke="#ff3300" stroke-width="2" fill="none">
+            <line x1="142" y1="54" x2="178" y2="54"/>
+            <polygon points="178,54 172,50 172,58" fill="#ff3300"/>
+          </g>
+          <text x="160" y="44" font-family="var(--font-mono)" font-size="10" text-anchor="middle" fill="#ff3300" font-weight="700">OOD</text>
+
+          <!-- ROOM B: living, night (different layout) -->
+          <g stroke="#0a0a0a" stroke-width="1.6" fill="none">
+            <polyline points="190,20 190,94 310,94 310,20"/>
+            <!-- window with moon (crescent) -->
+            <rect x="252" y="30" width="34" height="26"/>
+            <line x1="269" y1="30" x2="269" y2="56"/>
+            <line x1="252" y1="43" x2="286" y2="43"/>
+            <!-- sofa shape on floor -->
+            <line x1="190" y1="78" x2="310" y2="78"/>
+            <rect x="200" y="64" width="32" height="14"/>
+            <!-- different-shaped object -->
+            <circle cx="247" cy="72" r="6"/>
+            <!-- arm gripping (same posture) -->
+            <line x1="226" y1="40" x2="226" y2="68"/>
+            <line x1="226" y1="40" x2="244" y2="40"/>
+            <line x1="221" y1="68" x2="231" y2="68"/>
+          </g>
+          <text x="250" y="108" font-family="var(--font-mono)" font-size="10" text-anchor="middle" fill="#0a0a0a">living · night</text>
+        </svg>
+
+        <p style="font-size: 1.18rem; color: var(--color-ink-soft); line-height: 1.5; margin: 0;">
+          Same task in <strong>unseen</strong> rooms, lighting, objects. <em>π0.5 hits 94% follow-rate in new homes.</em>
         </p>
-        <p style="margin-top: auto; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted);">
-          flagship — π0.5 (OOD home)
+        <p style="margin: auto 0 0; padding-top: 0.6rem; border-top: 1px solid var(--color-grid-line); font-family: var(--font-mono); font-size: 0.92rem; color: var(--color-ink-muted);">
+          flagship — <strong style="color: var(--color-ink);">π0.5</strong> (OOD home)
         </p>
       </div>
 
-      <div style="display: flex; flex-direction: column; gap: 1rem; border: var(--border-thin); padding: 1.5rem; position: relative;">
-        <div style="position: absolute; top: -12px; left: 1.5rem; background: var(--color-bg); padding: 0 0.5rem; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-accent); font-weight: 700; letter-spacing: 0.1em;">
+      <!-- ============ AXIS 3 : EMBODIMENT ============ -->
+      <div style="display: flex; flex-direction: column; gap: 0.85rem; border: var(--border-thin); padding: 1.4rem 1.3rem 1.2rem; position: relative;">
+        <div style="position: absolute; top: -12px; left: 1.3rem; background: var(--color-bg); padding: 0 0.5rem; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-accent); font-weight: 700; letter-spacing: 0.12em;">
           AXIS 3
         </div>
-        <h2 style="font-size: var(--size-h2); margin-top: 0.5rem;">Embodiment</h2>
-        <p style="font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.5;">
-          Brand-new hardware, zero-shot. <em>DreamZero adapts to a YAM arm with 30 minutes of plays.</em>
+        <h2 style="font-size: var(--size-h2); margin: 0.2rem 0 0;">Embodiment</h2>
+        <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-ink-muted); letter-spacing: 0.05em; text-transform: uppercase;">
+          same brain · new body
+        </div>
+
+        <!-- pictogram: three different robot bodies (parallel-jaw arm, dexterous arm, humanoid) -->
+        <svg viewBox="0 0 320 110" style="width: 100%; height: auto; margin: 0.3rem 0 0.1rem;" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <!-- BODY 1: simple parallel-jaw arm on base -->
+          <g stroke="#0a0a0a" stroke-width="1.6" fill="none">
+            <rect x="22" y="78" width="40" height="14"/>
+            <line x1="42" y1="78" x2="42" y2="40"/>
+            <line x1="42" y1="40" x2="62" y2="40"/>
+            <line x1="62" y1="36" x2="62" y2="48"/>
+            <line x1="58" y1="36" x2="66" y2="36"/>
+            <line x1="58" y1="48" x2="66" y2="48"/>
+          </g>
+          <text x="42" y="106" font-family="var(--font-mono)" font-size="10" text-anchor="middle" fill="#0a0a0a">parallel-jaw</text>
+
+          <!-- BODY 2: dexterous arm w/ hand (more joints, fingers) -->
+          <g stroke="#0a0a0a" stroke-width="1.6" fill="none">
+            <rect x="120" y="78" width="40" height="14"/>
+            <line x1="140" y1="78" x2="140" y2="58"/>
+            <line x1="140" y1="58" x2="155" y2="42"/>
+            <line x1="155" y1="42" x2="170" y2="34"/>
+            <!-- 3-finger hand -->
+            <line x1="170" y1="34" x2="178" y2="28"/>
+            <line x1="170" y1="34" x2="180" y2="34"/>
+            <line x1="170" y1="34" x2="178" y2="40"/>
+            <!-- shoulder joint -->
+            <circle cx="140" cy="58" r="2.5" fill="#0a0a0a"/>
+            <circle cx="155" cy="42" r="2.5" fill="#0a0a0a"/>
+          </g>
+          <text x="150" y="106" font-family="var(--font-mono)" font-size="10" text-anchor="middle" fill="#0a0a0a">dexterous</text>
+
+          <!-- BODY 3: humanoid silhouette -->
+          <g stroke="#0a0a0a" stroke-width="1.6" fill="none">
+            <!-- head -->
+            <circle cx="260" cy="24" r="7"/>
+            <!-- torso -->
+            <line x1="260" y1="31" x2="260" y2="62"/>
+            <rect x="252" y="34" width="16" height="24" fill="none"/>
+            <!-- arms -->
+            <line x1="252" y1="38" x2="240" y2="56"/>
+            <line x1="268" y1="38" x2="280" y2="56"/>
+            <!-- legs -->
+            <line x1="256" y1="58" x2="252" y2="86"/>
+            <line x1="264" y1="58" x2="268" y2="86"/>
+            <!-- ground -->
+            <line x1="234" y1="92" x2="286" y2="92"/>
+          </g>
+          <text x="260" y="106" font-family="var(--font-mono)" font-size="10" text-anchor="middle" fill="#0a0a0a">humanoid</text>
+
+          <!-- connecting brackets at the top suggesting "one brain → many bodies" -->
+          <g stroke="#ff3300" stroke-width="1.6" fill="none">
+            <line x1="42" y1="14" x2="260" y2="14"/>
+            <line x1="42" y1="14" x2="42" y2="20"/>
+            <line x1="150" y1="14" x2="150" y2="20"/>
+            <line x1="260" y1="14" x2="260" y2="14"/>
+            <line x1="260" y1="14" x2="260" y2="18"/>
+          </g>
+          <text x="151" y="10" font-family="var(--font-mono)" font-size="9" text-anchor="middle" fill="#ff3300" font-weight="700">one policy</text>
+        </svg>
+
+        <p style="font-size: 1.18rem; color: var(--color-ink-soft); line-height: 1.5; margin: 0;">
+          Brand-new hardware, <strong>zero-shot</strong>. <em>DreamZero adapts to a YAM arm with 30 min of play.</em>
         </p>
-        <p style="margin-top: auto; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted);">
-          flagship — DreamZero · GR00T N1
+        <p style="margin: auto 0 0; padding-top: 0.6rem; border-top: 1px solid var(--color-grid-line); font-family: var(--font-mono); font-size: 0.92rem; color: var(--color-ink-muted);">
+          flagship — <strong style="color: var(--color-ink);">DreamZero</strong> · GR00T N1
         </p>
       </div>
 
     </div>
 
-    <div style="margin-top: 1.5rem; padding: 1rem 1.5rem; background: var(--color-bg-alt); font-size: var(--size-small);">
-      Most recent papers bet on <strong>one</strong> of these three axes. No model generalizes across all three yet — that's the destination of "robotics foundation."
+    <div style="margin-top: 1.25rem; padding: 1rem 1.4rem; background: var(--color-ink); color: var(--color-bg); font-size: 1.08rem; line-height: 1.5; border-left: var(--border-accent);">
+      Most recent papers bet on <strong style="color: var(--color-accent);">one</strong> of these three axes. No model generalizes across all three yet — that's the destination of "robotics foundation."
     </div>
 
   </div>
@@ -1324,10 +1480,10 @@ svg text.math-var {
       .core-msg.hero .num { background: var(--color-accent); }
       .core-msg h3 { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; line-height: 1.1; margin-top: 0.25rem; }
       .core-msg p { font-size: 0.7rem; color: var(--color-ink-soft); line-height: 1.45; margin: 0; }
-      .core-msg .pointer { font-family: var(--font-mono); font-size: 0.58rem; color: var(--color-accent); margin-top: auto; padding-top: 0.35rem; font-weight: 700; letter-spacing: 0.05em; }
+      .core-msg .pointer { font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-accent); margin-top: auto; padding-top: 0.35rem; font-weight: 700; letter-spacing: 0.05em; }
     </style>
 
-    <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 1.4rem; flex: 1; min-height: 0;">
+    <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 1.4rem; flex: 1; min-height: 0; margin-top: 1.25rem;">
 
       <!-- LEFT: Jim Fan keynote embed -->
       <div style="display: flex; flex-direction: column; gap: 0.5rem; min-width: 0;">
@@ -1441,7 +1597,7 @@ svg text.math-var {
     </div>
 
     <div style="margin-top: 0.45rem; padding: 0.7rem 1.2rem; background: var(--color-bg-alt); border-left: var(--border-accent); font-size: var(--size-small);">
-      <strong>Bookmark</strong> — the canonical written summary of what we'll cover: NTU MARS et al. <span class="mono">arXiv:2605.00080</span> (18 authors incl. Abbeel · Malik · Wu · Du · Mees · Pollefeys, 2026-04). Go here when you want deeper coverage.
+      <strong>Further reading</strong> — for broader coverage of the field, see NTU MARS et al. <span class="mono">arXiv:2605.00080</span> (2026-04).
     </div>
 
   </div>
@@ -2900,7 +3056,7 @@ svg text.math-var {
           <g>
             <rect x="420" y="40" width="200" height="80" fill="#ffffff" stroke="#0a0a0a" stroke-width="1.2"/>
             <text x="430" y="62" font-size="11" fill="#8b8b8b" text-transform="uppercase">strategy 2</text>
-            <text x="430" y="84" font-size="15" font-weight="800" fill="#0a0a0a" font-family="Archivo, sans-serif">In-the-wild</text>
+            <text x="430" y="84" font-size="15" font-weight="800" fill="#0a0a0a" font-family="Archivo, sans-serif">Handheld device</text>
             <text x="430" y="104" font-size="11" fill="#4a4a4a">UMI · Sunday Glove</text>
           </g>
 
@@ -3348,7 +3504,7 @@ svg text.math-var {
       .quad-cell.big-open { background: linear-gradient(180deg, rgba(255,51,0,0.04) 0%, transparent 60%); }
       .model-pill { display: inline-flex; align-items: baseline; gap: 0.3rem; padding: 0.2rem 0.5rem; border: 1px solid var(--color-grid-line); font-family: var(--font-mono); font-size: 0.62rem; background: var(--color-bg); white-space: nowrap; }
       .model-pill strong { font-family: var(--font-display); font-weight: 800; font-size: 0.72rem; letter-spacing: -0.01em; }
-      .model-pill .yr { color: var(--color-ink-muted); font-size: 0.56rem; }
+      .model-pill .yr { color: var(--color-ink-muted); font-size: 0.68rem; }
       .model-pill.kr { border-left: 2px solid #CD2E3A; }
       .model-pill.new { border-color: var(--color-accent); }
       .model-pill.new strong { color: var(--color-accent); }
@@ -3465,23 +3621,23 @@ svg text.math-var {
   <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 1.5rem);">
 
     <h1>What VLAs are <span class="accent-text">still bad at</span></h1>
-    <p style="font-size: var(--size-small); color: var(--color-ink-muted); margin-top: 0.25rem; font-style: italic;">
+    <p style="font-size: var(--size-body); color: var(--color-ink-muted); margin-top: 0.4rem; font-style: italic;">
       VLM limits + robotics-native limits = the four open problems of 2026.
     </p>
 
     <style>
       .fail-cell { border: 1px solid var(--color-grid-line); display: flex; flex-direction: column; padding: 0; overflow: hidden; }
-      .fail-cell .fail-header { padding: 0.6rem 0.85rem; background: var(--color-ink); color: var(--color-bg); display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
-      .fail-cell .fail-num { font-family: var(--font-mono); font-size: 0.65rem; opacity: 0.7; letter-spacing: 0.1em; }
-      .fail-cell .fail-title { font-family: var(--font-display); font-weight: 800; font-size: 0.95rem; }
-      .fail-cell .fail-body { padding: 0.75rem 0.85rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
-      .fail-cell .fail-headline { font-size: var(--size-small); color: var(--color-ink-soft); line-height: 1.4; }
-      .fail-cell .fail-evidence { margin-top: auto; padding: 0.5rem 0.65rem; background: var(--color-bg-alt); font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-soft); line-height: 1.4; }
+      .fail-cell .fail-header { padding: 0.75rem 1.1rem; background: var(--color-ink); color: var(--color-bg); display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
+      .fail-cell .fail-num { font-family: var(--font-mono); font-size: 0.82rem; opacity: 0.7; letter-spacing: 0.12em; }
+      .fail-cell .fail-title { font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; }
+      .fail-cell .fail-body { padding: 1rem 1.1rem; display: flex; flex-direction: column; gap: 0.75rem; flex: 1; justify-content: space-between; }
+      .fail-cell .fail-headline { font-size: 1.05rem; color: var(--color-ink); line-height: 1.45; margin: 0; }
+      .fail-cell .fail-evidence { padding: 0.7rem 0.85rem; background: var(--color-bg-alt); font-family: var(--font-mono); font-size: 0.88rem; color: var(--color-ink-soft); line-height: 1.45; }
       .fail-cell .fail-evidence strong { color: var(--color-accent); }
-      .fail-icon { font-family: var(--font-display); font-weight: 900; font-size: 1.3rem; color: var(--color-accent); }
+      .fail-icon { font-family: var(--font-display); font-weight: 900; font-size: 1.6rem; color: var(--color-accent); }
     </style>
 
-    <div class="grid cols-2 stagger" style="margin-top: 1.25rem; gap: 1rem; flex: 1; grid-template-rows: 1fr 1fr;">
+    <div class="grid cols-2 stagger" style="margin-top: 1rem; gap: 1rem; flex: 1; grid-template-rows: 1fr 1fr; min-height: 0;">
 
       <!-- Cell 1: precise contact -->
       <div class="fail-cell">
@@ -3490,9 +3646,9 @@ svg text.math-var {
           <span class="fail-icon">&#x2715;</span>
         </div>
         <div class="fail-body">
-          <p class="fail-headline">Threading a needle, plugging a USB, inserting a key &mdash; sub-millimeter force-modulated contact is where smooth VLA rollouts fall off a cliff.</p>
+          <p class="fail-headline">Threading a needle, plugging a USB, inserting a key &mdash;<br>sub-millimeter force-modulated contact is where smooth VLA rollouts fall off a cliff.</p>
           <div class="fail-evidence">
-            VLM tokens have <strong>no haptic channel</strong> &middot; tactile sensing not yet in the input pipe.
+            VLM tokens have <strong>no haptic channel</strong> &middot;<br>tactile sensing not yet in the input pipe.
           </div>
         </div>
       </div>
@@ -3504,9 +3660,9 @@ svg text.math-var {
           <span class="fail-icon">&#x2715;</span>
         </div>
         <div class="fail-body">
-          <p class="fail-headline">"Make breakfast" &mdash; 30 sub-tasks, recovery from a dropped egg, no global plan to fall back on. VLAs drift after ~30s of autonomous rollout.</p>
+          <p class="fail-headline">"Make breakfast" &mdash; 30 sub-tasks, recovery from a dropped egg, no global plan to fall back on.<br>VLAs drift after ~30s of autonomous rollout.</p>
           <div class="fail-evidence">
-            No explicit planner &middot; <strong>error compounds</strong> across token-by-token rollouts.
+            No explicit planner &middot; <strong>error compounds</strong><br>across token-by-token rollouts.
           </div>
         </div>
       </div>
@@ -3518,9 +3674,9 @@ svg text.math-var {
           <span class="fail-icon">&#x2715;</span>
         </div>
         <div class="fail-body">
-          <p class="fail-headline">Trained on Franka + ALOHA &rarr; deployed on a new arm with different DoF, gripper, joint limits. Zero-shot collapse is near-universal.</p>
+          <p class="fail-headline">Trained on Franka + ALOHA &rarr; deployed on a new arm with different DoF, gripper, joint limits.<br>Zero-shot collapse is near-universal.</p>
           <div class="fail-evidence">
-            Action vocabulary is embodiment-specific &middot; <strong>DreamZero needs 30 min</strong> of YAM plays to adapt.
+            Action vocabulary is embodiment-specific &middot;<br><strong>DreamZero needs 30 min</strong> of YAM plays to adapt.
           </div>
         </div>
       </div>
@@ -3532,9 +3688,9 @@ svg text.math-var {
           <span class="fail-icon">&#x2715;</span>
         </div>
         <div class="fail-body">
-          <p class="fail-headline">RT-2 runs at ~1 Hz; OpenVLA ~5 Hz. Reactive contact and dynamic motion need 30&ndash;200 Hz. Big VLM = smart but slow.</p>
+          <p class="fail-headline">RT-2 runs at ~1 Hz; OpenVLA ~5 Hz.<br>Reactive contact and dynamic motion need 30&ndash;200 Hz. Big VLM = smart but slow.</p>
           <div class="fail-evidence">
-            <strong>1 Hz vs 200 Hz</strong> &middot; the smarter the model, the slower it serves &mdash; Ch5's whole motivation.
+            <strong>1 Hz vs 200 Hz</strong> &middot; the smarter the model,<br>the slower it serves &mdash; Ch5's whole motivation.
           </div>
         </div>
       </div>
@@ -3889,7 +4045,7 @@ svg text.math-var {
     <span>43 / 77</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.85rem); gap: 0.7rem;">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.85rem); gap: 0.85rem;">
 
     <h1>Dual system &mdash; the <span class="accent-text">Kahneman</span> analogy</h1>
     <p style="font-size: var(--size-small); color: var(--color-ink-muted); margin-top: -0.4rem; font-style: italic;">
@@ -3897,39 +4053,41 @@ svg text.math-var {
     </p>
 
     <style>
-      .kah-col { display: flex; flex-direction: column; gap: 0.55rem; flex: 1; min-width: 0; }
-      .kah-band { font-family: var(--font-mono); font-size: var(--size-tiny); text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; padding: 0.4rem 0.85rem; border-bottom: 2px solid var(--color-ink); }
-      .kah-band.human { color: var(--color-ink); }
-      .kah-band.robot { color: var(--color-accent); border-bottom-color: var(--color-accent); }
-      .kah-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
-      .kah-card { padding: 0.7rem 0.85rem; border: var(--border-thin); display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; }
-      .kah-card.s1 { background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 100%); border-color: var(--color-accent); }
-      .kah-card.s2 { background: var(--color-bg-alt); }
-      .kah-card .sys-label { font-family: var(--font-display); font-weight: 900; font-size: 1.25rem; line-height: 1; letter-spacing: -0.01em; }
-      .kah-card.s1 .sys-label { color: var(--color-accent); }
-      .kah-card .tagline { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.08em; }
-      .kah-card .traits { font-size: 0.72rem; line-height: 1.5; }
-      .kah-card .traits strong { display: inline-block; min-width: 3.9rem; color: var(--color-ink-muted); font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.05em; }
-      .kah-card .example { font-size: 0.6rem; color: var(--color-ink-soft); font-style: italic; padding-top: 0.35rem; border-top: 1px solid var(--color-grid-line); margin-top: auto; }
-      .map-row { display: grid; grid-template-columns: 1.2fr 1.4fr 1.4fr; gap: 0.5rem; padding: 0.45rem 0.7rem; align-items: center; font-size: 0.72rem; }
-      .map-row.head { border-top: 1.5px solid var(--color-ink); border-bottom: 1px solid var(--color-ink); font-family: var(--font-mono); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ink-muted); }
-      .map-row.head .s2col { color: var(--color-ink); font-weight: 800; }
-      .map-row.head .s1col { color: var(--color-accent); font-weight: 800; }
-      .map-row + .map-row:not(.head) { border-top: 1px solid var(--color-grid-line); }
-      .map-row .model { font-family: var(--font-display); font-weight: 800; font-size: 0.85rem; }
-      .freq-tag { display: inline-block; font-family: var(--font-mono); font-size: 0.55rem; padding: 0.05rem 0.35rem; background: var(--color-bg-alt); border-radius: 2px; color: var(--color-ink-muted); margin-left: 0.2rem; }
+      #slide-43 .kah-grid { display: grid; grid-template-columns: 0.85fr 1.4fr; gap: 1.6rem; flex: 1; min-height: 0; min-width: 0; }
+      #slide-43 .kah-col { display: flex; flex-direction: column; gap: 0.7rem; min-width: 0; min-height: 0; }
+      #slide-43 .kah-band { font-family: var(--font-mono); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 700; padding: 0.45rem 0.9rem; border-bottom: 2px solid var(--color-ink); }
+      #slide-43 .kah-band.human { color: var(--color-ink); }
+      #slide-43 .kah-band.robot { color: var(--color-accent); border-bottom-color: var(--color-accent); }
+      #slide-43 .kah-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; flex: 1; min-height: 0; }
+      #slide-43 .kah-card { padding: 0.85rem 1rem; border: var(--border-thin); display: flex; flex-direction: column; gap: 0.45rem; min-width: 0; }
+      #slide-43 .kah-card.s1 { background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 100%); border-color: var(--color-accent); }
+      #slide-43 .kah-card.s2 { background: var(--color-bg-alt); }
+      #slide-43 .kah-card .sys-label { font-family: var(--font-display); font-weight: 900; font-size: 1.7rem; line-height: 1; letter-spacing: -0.01em; }
+      #slide-43 .kah-card.s1 .sys-label { color: var(--color-accent); }
+      #slide-43 .kah-card .tagline { font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+      #slide-43 .kah-card .traits { font-size: 0.9rem; line-height: 1.55; }
+      #slide-43 .kah-card .traits strong { display: inline-block; min-width: 4.6rem; color: var(--color-ink-muted); font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; }
+      #slide-43 .kah-card .example { font-size: 0.78rem; color: var(--color-ink-soft); font-style: italic; padding-top: 0.45rem; border-top: 1px solid var(--color-grid-line); margin-top: auto; }
+      #slide-43 .kah-caption { font-size: 0.92rem; color: var(--color-ink-soft); line-height: 1.5; margin: 0; }
+      #slide-43 .map-row { display: grid; grid-template-columns: 1.1fr 1.5fr 1.5fr; gap: 0.6rem; padding: 0.55rem 0.8rem; align-items: center; font-size: 0.9rem; }
+      #slide-43 .map-row.head { border-top: 1.5px solid var(--color-ink); border-bottom: 1px solid var(--color-ink); font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-ink-muted); }
+      #slide-43 .map-row.head .s2col { color: var(--color-ink); font-weight: 800; }
+      #slide-43 .map-row.head .s1col { color: var(--color-accent); font-weight: 800; }
+      #slide-43 .map-row + .map-row:not(.head) { border-top: 1px solid var(--color-grid-line); }
+      #slide-43 .map-row .model { font-family: var(--font-display); font-weight: 800; font-size: 1.02rem; }
+      #slide-43 .freq-tag { display: inline-block; font-family: var(--font-mono); font-size: 0.78rem; padding: 0.08rem 0.4rem; background: var(--color-bg-alt); border-radius: 2px; color: var(--color-ink-muted); margin-left: 0.25rem; }
 
       /* bottom reference strip */
-      .ref-strip { display: grid; grid-template-columns: 1fr 1.55fr; gap: 1rem; }
-      .ref-card { border: var(--border-thin); padding: 0.55rem 0.7rem; display: flex; gap: 0.7rem; align-items: center; min-width: 0; }
-      .ref-card .ref-tag { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; }
-      .ref-card .ref-tag .acc { color: var(--color-accent); }
-      .ref-card .ref-title { font-family: var(--font-display); font-weight: 800; font-size: 0.82rem; line-height: 1.15; margin-top: 0.15rem; }
-      .ref-card .ref-desc { font-size: 0.62rem; color: var(--color-ink-soft); line-height: 1.4; margin-top: 0.2rem; }
-      .ref-card .ref-cap { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted); margin-top: 0.25rem; }
+      #slide-43 .ref-strip { display: grid; grid-template-columns: 0.85fr 1.4fr; gap: 1.2rem; }
+      #slide-43 .ref-card { border: var(--border-thin); padding: 0.7rem 0.9rem; display: flex; gap: 0.85rem; align-items: center; min-width: 0; }
+      #slide-43 .ref-card .ref-tag { font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 700; }
+      #slide-43 .ref-card .ref-tag .acc { color: var(--color-accent); }
+      #slide-43 .ref-card .ref-title { font-family: var(--font-display); font-weight: 800; font-size: 1rem; line-height: 1.2; margin-top: 0.2rem; }
+      #slide-43 .ref-card .ref-desc { font-size: 0.8rem; color: var(--color-ink-soft); line-height: 1.45; margin-top: 0.25rem; }
+      #slide-43 .ref-card .ref-cap { font-family: var(--font-mono); font-size: 0.72rem; color: var(--color-ink-muted); margin-top: 0.3rem; }
     </style>
 
-    <div style="display: flex; gap: 1.5rem; flex: 1; align-items: stretch; min-height: 0; min-width: 0;">
+    <div class="kah-grid">
 
       <!-- HUMAN side -->
       <div class="kah-col">
@@ -3959,7 +4117,7 @@ svg text.math-var {
           </div>
         </div>
 
-        <p style="font-size: var(--size-small); color: var(--color-ink-soft); margin-top: 0.25rem; line-height: 1.5;">
+        <p class="kah-caption">
           Two modes communicate through a <strong>shared intent signal</strong> &mdash; S2 sets goals, S1 executes.
         </p>
       </div>
@@ -3969,7 +4127,7 @@ svg text.math-var {
         <div class="kah-band robot">ROBOT &middot; Helix &middot; &pi;0 &middot; GR00T</div>
 
         <!-- single clean architectural diagram -->
-        <svg viewBox="0 0 540 175" style="width: 100%; max-height: 175px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+        <svg viewBox="0 0 540 175" style="width: 100%; height: auto; max-height: 245px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
           <!-- S2 VLM block -->
           <rect x="10" y="35" width="195" height="105" fill="#0a0a0a" rx="2"/>
           <text x="107" y="60" font-size="11" fill="#ffffff" font-weight="700" text-anchor="middle">VLM BACKBONE</text>
@@ -4013,7 +4171,7 @@ svg text.math-var {
         </svg>
 
         <!-- Compact mapping table -->
-        <div style="display: flex; flex-direction: column; margin-top: -0.2rem;">
+        <div style="display: flex; flex-direction: column; margin-top: 0.15rem;">
           <div class="map-row head">
             <div>model</div>
             <div class="s2col">S2 &middot; slow</div>
@@ -4046,7 +4204,7 @@ svg text.math-var {
       <div class="ref-card">
         <img src="images/concepts/kahneman-thinking-fast-slow-cover.png"
              alt="Thinking, Fast and Slow — Daniel Kahneman (2011), Farrar, Straus and Giroux book cover"
-             style="height: 78px; width: auto; object-fit: contain; flex-shrink: 0;">
+             style="height: 92px; width: auto; object-fit: contain; flex-shrink: 0;">
         <div style="min-width: 0;">
           <div class="ref-tag">Origin &middot; cognitive science</div>
           <div class="ref-title">Thinking, Fast and Slow</div>
@@ -4056,7 +4214,7 @@ svg text.math-var {
 
       <!-- Bottom-right: LLM (non-robot) dual-system example -->
       <div class="ref-card" style="border-color: var(--color-accent); background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 80%);">
-        <svg viewBox="0 0 220 84" style="width: 220px; height: 78px; flex-shrink: 0; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+        <svg viewBox="0 0 220 84" style="width: 250px; height: 92px; flex-shrink: 0; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
           <defs>
             <marker id="arr43llm-k" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto"><path d="M 0 0 L 5.5 3.5 L 0 7 z" fill="#0a0a0a"/></marker>
             <marker id="arr43llm-r" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto"><path d="M 0 0 L 5.5 3.5 L 0 7 z" fill="#ff3300"/></marker>
@@ -4426,13 +4584,13 @@ svg text.math-var {
     <style>
       .fr-tile { display: flex; flex-direction: column; gap: 0.85rem; border: var(--border-thin); padding: 1.4rem 1.3rem; min-width: 0; }
       .fr-head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; }
-      .fr-head h2 { font-size: 1.55rem; line-height: 1; }
-      .fr-head .fr-tag { font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; }
-      .fr-sub { font-family: var(--font-mono); font-size: 0.66rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.07em; margin-top: -0.4rem; }
-      .fr-bullets { font-size: var(--size-small); display: flex; flex-direction: column; gap: 0.55rem; line-height: 1.5; padding: 0; margin: 0; }
+      .fr-head h2 { font-size: 1.65rem; line-height: 1; }
+      .fr-head .fr-tag { font-family: var(--font-mono); font-size: 0.82rem; color: var(--color-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap; }
+      .fr-sub { font-family: var(--font-mono); font-size: 0.78rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.07em; margin-top: -0.4rem; }
+      .fr-bullets { font-size: 1.0rem; display: flex; flex-direction: column; gap: 0.5rem; line-height: 1.5; padding: 0; margin: 0; }
       .fr-bullets li { position: relative; padding-left: 1rem; list-style: none; }
       .fr-bullets li::before { content: ""; position: absolute; left: 0; top: 0.58rem; width: 6px; height: 6px; background: var(--color-accent); }
-      .fr-cite { font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); margin-top: auto; padding-top: 0.45rem; }
+      .fr-cite { font-family: var(--font-mono); font-size: 0.8rem; color: var(--color-ink-muted); margin-top: auto; padding-top: 0.45rem; }
     </style>
 
     <div style="display: flex; gap: 1.6rem; flex: 1; align-items: stretch; min-height: 0;">
@@ -4525,8 +4683,8 @@ svg text.math-var {
     </div>
 
     <!-- Bottom synthesis -->
-    <div style="padding: 0.7rem 1.2rem; background: var(--color-ink); color: var(--color-bg); font-size: var(--size-small); display: flex; gap: 1.25rem; align-items: center; line-height: 1.45;">
-      <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; flex-shrink: 0; font-weight: 800;">2026 trend</div>
+    <div style="padding: 0.7rem 1.2rem; background: var(--color-ink); color: var(--color-bg); font-size: 1.05rem; display: flex; gap: 1.25rem; align-items: center; line-height: 1.45;">
+      <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; flex-shrink: 0; font-weight: 800;">2026 trend</div>
       <div>
         Beyond <em>separate</em> S1 &amp; S2 &mdash; <strong style="color: var(--color-accent);">share parameters</strong> (FiS-VLA) or <strong style="color: var(--color-accent);">externalize the reasoning channel</strong> (Gemini Robotics 1.5). Two opposite answers to "make the bridge thicker."
       </div>
@@ -4570,24 +4728,27 @@ svg text.math-var {
     <span>49 / 77</span>
   </header>
 
-  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.9rem); gap: 0.85rem;">
+  <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.5rem); gap: 0.55rem;">
 
     <h1>Origin &mdash; <span class="accent-text">not</span> a 2018 invention</h1>
-    <p style="font-size: var(--size-small); color: var(--color-ink-muted); margin-top: -0.4rem; font-style: italic;">
-      The same partition appeared <strong>three times</strong>: model-based RL, recurrent controller, V&middot;M&middot;C decomposition.
+    <p style="font-size: 1.1rem; color: var(--color-ink-muted); margin-top: -0.2rem; font-style: italic; line-height: 1.4;">
+      The same partition appeared <strong>three times</strong>:
+      model-based RL &middot; recurrent controller &middot; V&middot;M&middot;C decomposition.
     </p>
 
     <style>
-      .orig-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.95rem; flex: 1; min-height: 0; }
-      .orig-tile { display: flex; flex-direction: column; gap: 0.6rem; border: var(--border-thin); padding: 1.2rem 1.1rem 1rem; position: relative; min-width: 0; }
-      .orig-tile .yr-tag { position: absolute; top: -10px; left: 0.9rem; background: var(--color-bg); padding: 0.05rem 0.55rem; font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-accent); font-weight: 700; letter-spacing: 0.15em; z-index: 2; line-height: 1.2; }
-      .orig-tile.hero { border: 2px solid var(--color-accent); background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 55%); }
-      .orig-tile h2 { font-size: 1.1rem; line-height: 1.1; margin-top: 0.15rem; }
-      .orig-tile .orig-author { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.05em; line-height: 1.35; }
-      .orig-tile .orig-desc { font-size: 0.72rem; color: var(--color-ink-soft); line-height: 1.45; }
-      .orig-tile .orig-cite { font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); margin-top: auto; padding-top: 0.4rem; }
+      .orig-grid { display: grid; grid-template-columns: 1fr 1fr 1.2fr; gap: 0.7rem; flex: 1; min-height: 0; }
+      .orig-tile { display: flex; flex-direction: column; gap: 0.55rem; border: var(--border-thin); padding: 1.1rem 1.1rem 0.9rem; position: relative; min-width: 0; }
+      .orig-tile .yr-tag { position: absolute; top: -12px; left: 1rem; background: var(--color-bg); padding: 0.12rem 0.75rem; font-family: var(--font-mono); font-size: 0.82rem; color: var(--color-accent); font-weight: 700; letter-spacing: 0.14em; z-index: 2; line-height: 1.2; }
+      .orig-tile.hero { border: 2px solid var(--color-accent); background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 55%); padding: 1.15rem 1.2rem 0.95rem; }
+      .orig-tile h2 { font-size: 1.75rem; line-height: 1.1; margin-top: 0.15rem; margin-bottom: 0.05rem; }
+      .orig-tile.hero h2 { font-size: 1.85rem; }
+      .orig-tile .orig-author { font-family: var(--font-mono); font-size: 0.86rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.5; }
+      .orig-tile .orig-desc { font-size: 1.08rem; color: var(--color-ink-soft); line-height: 1.5; }
+      .orig-tile.hero .orig-desc { font-size: 1.12rem; }
+      .orig-tile .orig-cite { font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-ink-muted); margin-top: auto; padding-top: 0.4rem; line-height: 1.3; }
       .orig-tile.hero .orig-cite { color: var(--color-accent); font-weight: 700; }
-      .orig-svg { width: 100%; height: auto; min-height: 175px; display: block; font-family: var(--font-mono); }
+      .orig-svg { width: 100%; height: 215px; display: block; font-family: var(--font-mono); margin: 0.1rem 0 0.15rem; }
     </style>
 
     <div class="orig-grid">
@@ -4596,9 +4757,9 @@ svg text.math-var {
       <div class="orig-tile">
         <div class="yr-tag">1990 &middot; ML Workshop</div>
         <h2>Dyna</h2>
-        <div class="orig-author">Sutton &middot; "Integrated Architectures for Learning, Planning, and Reacting"</div>
+        <div class="orig-author">Sutton<br>"Integrated Architectures for<br>Learning, Planning, and Reacting"</div>
 
-        <svg class="orig-svg" viewBox="0 0 340 200" style="width: 100%; max-height: 210px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+        <svg class="orig-svg" viewBox="0 0 340 200" preserveAspectRatio="xMidYMid meet">
           <defs><marker id="arr49a" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 6 4 L 0 8 z" fill="#0a0a0a"/></marker></defs>
 
           <!-- real env (top-left) -->
@@ -4638,10 +4799,10 @@ svg text.math-var {
       <!-- 1990 Schmidhuber: RNN world model + controller -->
       <div class="orig-tile">
         <div class="yr-tag">1990 &middot; FKI-126 / 147 TR</div>
-        <h2>RNN world model + controller</h2>
-        <div class="orig-author">Schmidhuber &middot; "Making the World Differentiable" + "An On-line Algorithm…"</div>
+        <h2>RNN world model<br>+ controller</h2>
+        <div class="orig-author">Schmidhuber<br>"Making the World Differentiable"<br>+ "An On-line Algorithm&hellip;"</div>
 
-        <svg class="orig-svg" viewBox="0 0 340 200" style="width: 100%; max-height: 210px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+        <svg class="orig-svg" viewBox="0 0 340 200" preserveAspectRatio="xMidYMid meet">
           <defs><marker id="arr49b" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 6 4 L 0 8 z" fill="#0a0a0a"/></marker></defs>
 
           <!-- top banner: backprop through time -->
@@ -4681,9 +4842,9 @@ svg text.math-var {
       <div class="orig-tile hero">
         <div class="yr-tag">2018 &middot; arXiv:1803.10122</div>
         <h2>World Models &middot; V&middot;M&middot;C</h2>
-        <div class="orig-author">Ha &amp; Schmidhuber &middot; deep + small policy formula</div>
+        <div class="orig-author">Ha &amp; Schmidhuber<br>deep V&middot;M + tiny policy formula</div>
 
-        <svg class="orig-svg" viewBox="0 0 360 200" style="width: 100%; max-height: 210px; font-family: var(--font-mono);" preserveAspectRatio="xMidYMid meet">
+        <svg class="orig-svg" viewBox="0 0 360 200" preserveAspectRatio="xMidYMid meet">
           <defs><marker id="arr49c" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M 0 0 L 6 4 L 0 8 z" fill="#0a0a0a"/></marker></defs>
 
           <!-- top banner -->
@@ -4725,10 +4886,11 @@ svg text.math-var {
     </div>
 
     <!-- bottom synthesis -->
-    <div style="padding: 0.65rem 1rem; background: var(--color-ink); color: var(--color-bg); font-size: var(--size-small); line-height: 1.45; display: flex; gap: 1.25rem; align-items: center;">
-      <div style="font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.15em; flex-shrink: 0; font-weight: 800;">unifying recipe</div>
+    <div style="padding: 0.95rem 1.4rem; background: var(--color-ink); color: var(--color-bg); font-size: 1.12rem; line-height: 1.5; display: flex; gap: 1.6rem; align-items: center;">
+      <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.16em; flex-shrink: 0; font-weight: 800; line-height: 1.25; max-width: 8rem;">unifying<br>recipe</div>
       <div>
-        <strong>learn M̂(s, a) → ŝ'  &middot;  use it to improve π.</strong> &nbsp;Every WM since &mdash; Dreamer, V-JEPA, DreamDojo, DreamZero &mdash; is a re-mix of these three boxes with bigger backbones and richer data.
+        <strong>learn M̂(s, a) &rarr; ŝ'  &middot;  use it to improve &pi;.</strong><br>
+        Every WM since &mdash; Dreamer, V-JEPA, DreamDojo, DreamZero &mdash; is a re-mix of these three boxes with bigger backbones and richer data.
       </div>
     </div>
 
@@ -4863,7 +5025,7 @@ svg text.math-var {
       .axis-cell .axis-cell-meta { font-size: 0.65rem; color: var(--color-ink-soft); line-height: 1.35; }
       .axis-cell.bot { background: var(--color-bg-alt); }
       .axis-cell.acc { border-left: 3px solid var(--color-accent); }
-      .axis-cell .pill { display: inline-block; font-family: var(--font-mono); font-size: 0.55rem; padding: 1px 5px; background: var(--color-ink); color: white; border-radius: 2px; margin-right: 3px; }
+      .axis-cell .pill { display: inline-block; font-family: var(--font-mono); font-size: 0.68rem; padding: 1px 5px; background: var(--color-ink); color: white; border-radius: 2px; margin-right: 3px; }
       .axis-cell.bot .pill { background: var(--color-accent); }
     </style>
 
@@ -5550,15 +5712,15 @@ svg text.math-var {
       .gfm-tile.hero { background: var(--color-bg-alt); border-color: var(--color-accent); border-width: 1.5px; }
       .gfm-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; }
       .gfm-tile h2 { font-size: 1.2rem; line-height: 1; }
-      .gfm-tag { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-accent); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; }
-      .gfm-author { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted); }
+      .gfm-tag { font-family: var(--font-mono); font-size: 0.68rem; color: var(--color-accent); font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; }
+      .gfm-author { font-family: var(--font-mono); font-size: 0.68rem; color: var(--color-ink-muted); }
       .gfm-img-wrap { flex: 1 1 auto; display: flex; align-items: center; justify-content: center; background: var(--color-bg); border: 1px solid var(--color-grid-line); padding: 0.25rem; min-height: 0; overflow: hidden; }
       .gfm-img-wrap img { width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: contain; object-position: center; }
       .gfm-caption { font-size: 0.66rem; color: var(--color-ink-soft); line-height: 1.35; margin-top: 0.1rem; }
       .gfm-meta { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.15rem; }
       .gfm-meta .pill { padding: 0.25rem 0.45rem; background: var(--color-bg); border-left: 2px solid var(--color-accent); }
       .gfm-meta .pill strong { font-family: var(--font-display); font-weight: 900; font-size: 0.85rem; display: block; line-height: 1; }
-      .gfm-meta .pill span { font-size: 0.5rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+      .gfm-meta .pill span { font-size: 0.65rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.05em; }
     </style>
 
     <div class="grid cols-3" style="flex: 1; gap: 1rem; min-height: 0;">
@@ -5572,7 +5734,7 @@ svg text.math-var {
           </div>
           <span class="gfm-tag">CVPR'25 Best</span>
         </div>
-        <div style="font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted);">arXiv:2503.11651</div>
+        <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--color-ink-muted);">arXiv:2503.11651</div>
 
         <div class="gfm-img-wrap" style="padding: 0.2rem;">
           <img src="images/papers/vggt/architecture-trim.png" alt="VGGT architecture: N input images → DINO + concat + camera token → Global Attention + Frame Attention (×L) → Camera Head + DPT → cameras, depth maps, point maps, tracks in one forward pass">
@@ -5592,7 +5754,7 @@ svg text.math-var {
           </div>
           <span class="gfm-tag">CVPR'26 Oral</span>
         </div>
-        <div style="font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted);">arXiv:2605.15195</div>
+        <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--color-ink-muted);">arXiv:2605.15195</div>
 
         <div class="gfm-img-wrap" style="padding: 0.2rem;">
           <img src="images/papers/vggt-omega/architecture-trim.png" alt="VGGT-Omega architecture: introduces Register Attention as alternative to Global/Frame Attention, plus training-only Matching Loss and Point Loss; same I/O as VGGT but lighter compute and richer supervision">
@@ -5618,7 +5780,7 @@ svg text.math-var {
           </div>
           <span class="gfm-tag">3DV 2026</span>
         </div>
-        <div style="font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted);">arXiv:2509.13414</div>
+        <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--color-ink-muted);">arXiv:2509.13414</div>
 
         <div class="gfm-img-wrap" style="padding: 0.2rem;">
           <img src="images/papers/mapanything/method.png" alt="MapAnything method: Visual Input N + optional Geometric Inputs (Ray Directions, Pose, Depth) → Multi-Modal Encoders with shared weights → Multi-View Transformer → MLP scaling factor + DPT Head + Pose Head → metric 3D scene">
@@ -5758,7 +5920,7 @@ svg text.math-var {
       .wm-cap.hero { background: var(--color-bg-alt); border-left: var(--border-accent); }
       .wm-cap-head { display: flex; align-items: baseline; gap: 0.5rem; }
       .wm-cap-num { font-family: var(--font-display); font-weight: 900; font-size: 1.7rem; color: var(--color-accent); line-height: 1; }
-      .wm-cap-tag { font-family: var(--font-mono); font-size: 0.58rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+      .wm-cap-tag { font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.08em; }
       .wm-cap h3 { font-size: 1.05rem; line-height: 1.15; }
       .wm-cap p { font-size: 0.72rem; color: var(--color-ink-soft); line-height: 1.45; }
       .wm-cap .ex { padding: 0.4rem 0.55rem; background: var(--color-bg); border-left: 2px solid var(--color-accent); font-size: 0.65rem; line-height: 1.35; margin-top: auto; }
@@ -6092,7 +6254,7 @@ svg text.math-var {
     <style>
       .lapa-step { display: flex; flex-direction: column; gap: 0.25rem; padding: 0.55rem 0.7rem 0.65rem; border: 1.5px solid var(--color-ink); background: white; min-width: 0; }
       .lapa-step.hero { border: 2px solid var(--color-accent); background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 60%); }
-      .lapa-step .step-tag { font-family: var(--font-mono); font-size: 0.58rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+      .lapa-step .step-tag { font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.08em; }
       .lapa-step.hero .step-tag { color: var(--color-accent); font-weight: 700; }
       .lapa-step h3 { font-family: var(--font-display); font-weight: 800; font-size: 0.92rem; line-height: 1.1; }
       .lapa-step .step-eq { font-size: 0.68rem; color: var(--color-accent); font-weight: 700; }
@@ -6190,14 +6352,14 @@ svg text.math-var {
 
     <style>
       .ev-step { display: flex; flex-direction: column; gap: 0.4rem; padding: 0.8rem 0.9rem; border: 1.5px solid var(--color-ink); background: white; min-width: 0; position: relative; }
-      .ev-step .step-num { position: absolute; top: -12px; left: 0.85rem; background: var(--color-ink); color: white; padding: 0.1rem 0.5rem; font-family: var(--font-mono); font-size: 0.58rem; font-weight: 800; letter-spacing: 0.15em; z-index: 2; }
+      .ev-step .step-num { position: absolute; top: -12px; left: 0.85rem; background: var(--color-ink); color: white; padding: 0.1rem 0.5rem; font-family: var(--font-mono); font-size: 0.7rem; font-weight: 800; letter-spacing: 0.15em; z-index: 2; }
       .ev-step.hero { border: 2.5px solid var(--color-accent); background: var(--color-accent-soft); }
       .ev-step.hero .step-num { background: var(--color-accent); }
-      .ev-step .step-yr { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem; }
+      .ev-step .step-yr { font-family: var(--font-mono); font-size: 0.68rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.2rem; }
       .ev-step h3 { font-family: var(--font-display); font-weight: 900; font-size: 1.25rem; line-height: 1; }
       .ev-step .step-formula { font-size: 0.68rem; color: var(--color-accent); font-weight: 700; padding: 0.25rem 0; border-top: 1px solid var(--color-grid-line); border-bottom: 1px solid var(--color-grid-line); text-align: center; }
       .ev-step .step-desc { font-size: 0.65rem; color: var(--color-ink-soft); line-height: 1.4; }
-      .ev-step .step-examples { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted); margin-top: auto; padding-top: 0.3rem; }
+      .ev-step .step-examples { font-family: var(--font-mono); font-size: 0.68rem; color: var(--color-ink-muted); margin-top: auto; padding-top: 0.3rem; }
       .ev-arrow { display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-accent); font-weight: 800; line-height: 1; }
     </style>
 
@@ -6253,7 +6415,7 @@ svg text.math-var {
         <div style="padding: 0.65rem 0.85rem; border: 1.5px solid var(--color-accent); background: white;">
           <div style="display: flex; justify-content: space-between; align-items: baseline;">
             <h3 style="font-family: var(--font-display); font-weight: 800; font-size: 0.95rem;">(3) Canonical WAM</h3>
-            <span class="mono" style="font-size: 0.58rem; color: var(--color-accent); font-weight: 700;">→ slide 66</span>
+            <span class="mono" style="font-size: 0.7rem; color: var(--color-accent); font-weight: 700;">→ slide 66</span>
           </div>
           <p style="font-size: 0.65rem; color: var(--color-ink-soft); line-height: 1.4; margin-top: 0.25rem;">
             <strong>Single-Backbone</strong> (b). One generative model over both video and action. AR diffusion. <em>DreamZero, Cosmos-Policy.</em>
@@ -6263,7 +6425,7 @@ svg text.math-var {
         <div style="padding: 0.65rem 0.85rem; border: 1.5px dashed var(--color-accent); background: white;">
           <div style="display: flex; justify-content: space-between; align-items: baseline;">
             <h3 style="font-family: var(--font-display); font-weight: 800; font-size: 0.95rem;">(3a) VLA + WM hybrid</h3>
-            <span class="mono" style="font-size: 0.58rem; color: var(--color-accent); font-weight: 700;">→ slide 68</span>
+            <span class="mono" style="font-size: 0.7rem; color: var(--color-accent); font-weight: 700;">→ slide 68</span>
           </div>
           <p style="font-size: 0.65rem; color: var(--color-ink-soft); line-height: 1.4; margin-top: 0.25rem;">
             <strong>MoT-Style</strong> (c). Video expert + action expert, joint attention. Video-pred as auxiliary loss. <em>InternVLA-A1, LingBot-VA.</em>
@@ -6353,9 +6515,9 @@ svg text.math-var {
         <div style="position: absolute; left: 0%; width: 14.28%; display: flex; flex-direction: column; align-items: center; gap: 0.15rem;">
           <div style="width: 14px; height: 14px; background: var(--color-ink); border-radius: 50%; margin-top: 23px;"></div>
           <div style="text-align: center;">
-            <div class="mono" style="font-size: 0.58rem; color: var(--color-ink-muted);">2024 &middot; ICLR</div>
+            <div class="mono" style="font-size: 0.7rem; color: var(--color-ink-muted);">2024 &middot; ICLR</div>
             <div style="font-family: var(--font-display); font-weight: 800; font-size: 0.88rem; line-height: 1;">GR-1</div>
-            <div class="mono" style="font-size: 0.55rem; color: var(--color-ink-soft);">ByteDance</div>
+            <div class="mono" style="font-size: 0.68rem; color: var(--color-ink-soft);">ByteDance</div>
           </div>
         </div>
         <div style="position: absolute; left: 12%; top: 24px; font-size: 0.85rem; color: var(--color-ink-muted);">&rarr;</div>
@@ -6364,9 +6526,9 @@ svg text.math-var {
         <div style="position: absolute; left: 14.28%; width: 14.28%; display: flex; flex-direction: column; align-items: center; gap: 0.15rem;">
           <div style="width: 14px; height: 14px; background: var(--color-ink); border-radius: 50%; margin-top: 23px;"></div>
           <div style="text-align: center;">
-            <div class="mono" style="font-size: 0.58rem; color: var(--color-ink-muted);">2025 &middot; ICML</div>
+            <div class="mono" style="font-size: 0.7rem; color: var(--color-ink-muted);">2025 &middot; ICML</div>
             <div style="font-family: var(--font-display); font-weight: 800; font-size: 0.88rem; line-height: 1;">VPP</div>
-            <div class="mono" style="font-size: 0.55rem; color: var(--color-ink-soft);">Tsinghua</div>
+            <div class="mono" style="font-size: 0.68rem; color: var(--color-ink-soft);">Tsinghua</div>
           </div>
         </div>
         <div style="position: absolute; left: 26.28%; top: 24px; font-size: 0.85rem; color: var(--color-ink-muted);">&rarr;</div>
@@ -6375,9 +6537,9 @@ svg text.math-var {
         <div style="position: absolute; left: 28.57%; width: 14.28%; display: flex; flex-direction: column; align-items: center; gap: 0.15rem;">
           <div style="width: 14px; height: 14px; background: var(--color-ink); border-radius: 50%; margin-top: 23px;"></div>
           <div style="text-align: center;">
-            <div class="mono" style="font-size: 0.58rem; color: var(--color-ink-muted);">2025 &middot; RSS</div>
+            <div class="mono" style="font-size: 0.7rem; color: var(--color-ink-muted);">2025 &middot; RSS</div>
             <div style="font-family: var(--font-display); font-weight: 800; font-size: 0.88rem; line-height: 1;">UVA</div>
-            <div class="mono" style="font-size: 0.55rem; color: var(--color-ink-soft);">Stanford</div>
+            <div class="mono" style="font-size: 0.68rem; color: var(--color-ink-soft);">Stanford</div>
           </div>
         </div>
         <div style="position: absolute; left: 40.57%; top: 24px; font-size: 0.85rem; color: var(--color-ink-muted);">&rarr;</div>
@@ -6386,9 +6548,9 @@ svg text.math-var {
         <div style="position: absolute; left: 42.85%; width: 14.28%; display: flex; flex-direction: column; align-items: center; gap: 0.15rem;">
           <div style="width: 14px; height: 14px; background: var(--color-ink); border-radius: 50%; margin-top: 23px;"></div>
           <div style="text-align: center;">
-            <div class="mono" style="font-size: 0.58rem; color: var(--color-ink-muted);">2025 &middot; RSS</div>
+            <div class="mono" style="font-size: 0.7rem; color: var(--color-ink-muted);">2025 &middot; RSS</div>
             <div style="font-family: var(--font-display); font-weight: 800; font-size: 0.88rem; line-height: 1;">UWM</div>
-            <div class="mono" style="font-size: 0.55rem; color: var(--color-ink-soft);">UW WEIRD</div>
+            <div class="mono" style="font-size: 0.68rem; color: var(--color-ink-soft);">UW WEIRD</div>
           </div>
         </div>
         <div style="position: absolute; left: 54.85%; top: 24px; font-size: 0.85rem; color: var(--color-ink-muted);">&rarr;</div>
@@ -6397,9 +6559,9 @@ svg text.math-var {
         <div style="position: absolute; left: 57.14%; width: 14.28%; display: flex; flex-direction: column; align-items: center; gap: 0.15rem;">
           <div style="width: 14px; height: 14px; background: var(--color-ink); border-radius: 50%; margin-top: 23px;"></div>
           <div style="text-align: center;">
-            <div class="mono" style="font-size: 0.58rem; color: var(--color-ink-muted);">2026 &middot; ICLR</div>
+            <div class="mono" style="font-size: 0.7rem; color: var(--color-ink-muted);">2026 &middot; ICLR</div>
             <div style="font-family: var(--font-display); font-weight: 800; font-size: 0.88rem; line-height: 1;">GE-Act</div>
-            <div class="mono" style="font-size: 0.55rem; color: var(--color-ink-soft);">AgiBot</div>
+            <div class="mono" style="font-size: 0.68rem; color: var(--color-ink-soft);">AgiBot</div>
           </div>
         </div>
         <div style="position: absolute; left: 69.14%; top: 24px; font-size: 0.85rem; color: var(--color-ink-muted);">&rarr;</div>
@@ -6408,9 +6570,9 @@ svg text.math-var {
         <div style="position: absolute; left: 71.42%; width: 14.28%; display: flex; flex-direction: column; align-items: center; gap: 0.15rem;">
           <div style="width: 14px; height: 14px; background: var(--color-ink); border-radius: 50%; margin-top: 23px;"></div>
           <div style="text-align: center;">
-            <div class="mono" style="font-size: 0.58rem; color: var(--color-ink-muted);">2026-01 &middot; arXiv</div>
+            <div class="mono" style="font-size: 0.7rem; color: var(--color-ink-muted);">2026-01 &middot; arXiv</div>
             <div style="font-family: var(--font-display); font-weight: 800; font-size: 0.82rem; line-height: 1;">Cosmos-Policy</div>
-            <div class="mono" style="font-size: 0.55rem; color: var(--color-ink-soft);">NVIDIA &middot; 2B</div>
+            <div class="mono" style="font-size: 0.68rem; color: var(--color-ink-soft);">NVIDIA &middot; 2B</div>
           </div>
         </div>
         <div style="position: absolute; left: 83.42%; top: 24px; font-size: 0.85rem; color: var(--color-accent); font-weight: 800;">&rarr;</div>
@@ -6419,9 +6581,9 @@ svg text.math-var {
         <div style="position: absolute; left: 85.71%; width: 14.28%; display: flex; flex-direction: column; align-items: center; gap: 0.15rem;">
           <div style="width: 18px; height: 18px; background: var(--color-accent); border: 2px solid var(--color-ink); border-radius: 50%; margin-top: 21px;"></div>
           <div style="text-align: center;">
-            <div class="mono" style="font-size: 0.58rem; color: var(--color-accent); font-weight: 700;">2026-02</div>
+            <div class="mono" style="font-size: 0.7rem; color: var(--color-accent); font-weight: 700;">2026-02</div>
             <div style="font-family: var(--font-display); font-weight: 900; font-size: 0.9rem; line-height: 1; color: var(--color-accent);">DreamZero</div>
-            <div class="mono" style="font-size: 0.55rem; color: var(--color-ink);">NVIDIA &middot; 14B</div>
+            <div class="mono" style="font-size: 0.68rem; color: var(--color-ink);">NVIDIA &middot; 14B</div>
           </div>
         </div>
       </div>
@@ -6692,15 +6854,15 @@ svg text.math-var {
         <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.4rem; margin-top: auto;">
           <div style="text-align: center; padding: 0.35rem 0.25rem; background: var(--color-bg-alt);">
             <div class="stat-number" style="font-size: 1.3rem;">99.2%</div>
-            <div class="stat-label" style="font-size: 0.55rem;">LIBERO</div>
+            <div class="stat-label" style="font-size: 0.68rem;">LIBERO</div>
           </div>
           <div style="text-align: center; padding: 0.35rem 0.25rem; background: var(--color-bg-alt);">
             <div class="stat-number" style="font-size: 1.3rem;">62.1%</div>
-            <div class="stat-label" style="font-size: 0.55rem;">RoboCasa</div>
+            <div class="stat-label" style="font-size: 0.68rem;">RoboCasa</div>
           </div>
           <div style="text-align: center; padding: 0.35rem 0.25rem; background: var(--color-bg-alt);">
             <div class="stat-number" style="font-size: 1.3rem;">49.2%</div>
-            <div class="stat-label" style="font-size: 0.55rem;">GR1</div>
+            <div class="stat-label" style="font-size: 0.68rem;">GR1</div>
           </div>
         </div>
         <span class="citation" style="align-self: flex-start; font-size: 0.62rem;">arXiv:2605.00078 &middot; &larr; Ch3 forward-ref</span>
@@ -6724,11 +6886,11 @@ svg text.math-var {
         <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 0.4rem; margin-top: auto;">
           <div style="text-align: center; padding: 0.4rem 0.4rem; background: var(--color-accent); color: white;">
             <div class="stat-number" style="font-size: 1.5rem; color: white;">86.1%</div>
-            <div class="stat-label" style="font-size: 0.55rem; color: rgba(255,255,255,0.85);">LIBERO-Plus</div>
+            <div class="stat-label" style="font-size: 0.68rem; color: rgba(255,255,255,0.85);">LIBERO-Plus</div>
           </div>
           <div style="text-align: center; padding: 0.4rem 0.3rem; background: var(--color-bg-alt);">
             <div class="stat-number" style="font-size: 1.4rem;">1.17%</div>
-            <div class="stat-label" style="font-size: 0.55rem;">trainable params</div>
+            <div class="stat-label" style="font-size: 0.68rem;">trainable params</div>
           </div>
         </div>
         <span class="citation" style="align-self: flex-start; font-size: 0.62rem;">arXiv:2605.06247</span>
@@ -6752,7 +6914,7 @@ svg text.math-var {
         <div style="display: grid; grid-template-columns: 1fr; gap: 0.4rem; margin-top: auto;">
           <div style="text-align: center; padding: 0.4rem 0.3rem; background: var(--color-bg-alt);">
             <div class="stat-number" style="font-size: 1.6rem;">97.8%</div>
-            <div class="stat-label" style="font-size: 0.55rem;">LIBERO</div>
+            <div class="stat-label" style="font-size: 0.68rem;">LIBERO</div>
           </div>
         </div>
         <span class="citation" style="align-self: flex-start; font-size: 0.62rem;">preprint &middot; 2026-05</span>
@@ -6776,11 +6938,11 @@ svg text.math-var {
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.4rem; margin-top: auto;">
           <div style="text-align: center; padding: 0.4rem 0.3rem; background: white; border: 1px solid var(--color-accent);">
             <div class="stat-number" style="font-size: 1.5rem;">190 ms</div>
-            <div class="stat-label" style="font-size: 0.55rem;">inference</div>
+            <div class="stat-label" style="font-size: 0.68rem;">inference</div>
           </div>
           <div style="text-align: center; padding: 0.4rem 0.3rem; background: white; border: 1px solid var(--color-accent);">
             <div class="stat-number" style="font-size: 1.5rem;">4&times;</div>
-            <div class="stat-label" style="font-size: 0.55rem;">faster</div>
+            <div class="stat-label" style="font-size: 0.68rem;">faster</div>
           </div>
         </div>
         <p style="font-size: var(--size-tiny); color: var(--color-ink-soft); margin-top: 0.15rem;">
@@ -7012,8 +7174,8 @@ svg text.math-var {
       .wd-stats { display: flex; gap: 0.5rem; }
       .wd-stats .s { flex: 1; padding: 0.45rem 0.55rem; border-left: 3px solid var(--color-accent); background: var(--color-bg); }
       .wd-stats .s .n { font-family: var(--font-display); font-weight: 900; font-size: 1.3rem; line-height: 1; }
-      .wd-stats .s .l { font-family: var(--font-mono); font-size: 0.55rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.15rem; }
-      .wd-meta { font-family: var(--font-mono); font-size: 0.58rem; color: var(--color-ink-muted); margin-top: auto; padding-top: 0.4rem; }
+      .wd-stats .s .l { font-family: var(--font-mono); font-size: 0.68rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.15rem; }
+      .wd-meta { font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-ink-muted); margin-top: auto; padding-top: 0.4rem; }
     </style>
 
     <div class="grid cols-3 stagger" style="gap: 1rem; flex: 1; min-height: 0;">
@@ -7115,7 +7277,7 @@ svg text.math-var {
       .res-tile.hero { border-left: 3px solid var(--color-accent); background: var(--color-bg-alt); }
       .res-head { display: flex; flex-direction: column; gap: 0.2rem; }
       .res-tile h2 { font-size: 1.25rem; line-height: 1.05; }
-      .res-cite { font-family: var(--font-mono); font-size: 0.58rem; color: var(--color-ink-muted); }
+      .res-cite { font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-ink-muted); }
       .res-collab { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.25rem; align-items: center; }
       .inst { display: inline-flex; align-items: center; padding: 0.22rem 0.55rem; font-family: var(--font-display); font-size: 0.65rem; font-weight: 800; letter-spacing: 0.04em; line-height: 1; border-radius: 2px; color: white; white-space: nowrap; }
       .inst.snu      { background: #003876; }
@@ -7128,7 +7290,7 @@ svg text.math-var {
       .res-img-wrap { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; background: var(--color-bg); border: 1px solid var(--color-grid-line); padding: 0.35rem; }
       .res-img-wrap img { max-width: 100%; max-height: 100%; object-fit: contain; }
       .res-desc { font-size: 0.72rem; color: var(--color-ink-soft); line-height: 1.45; }
-      .res-meta { font-family: var(--font-mono); font-size: 0.58rem; color: var(--color-ink-muted); margin-top: auto; padding-top: 0.4rem; }
+      .res-meta { font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-ink-muted); margin-top: auto; padding-top: 0.4rem; }
     </style>
 
     <div class="grid cols-3 stagger" style="gap: 1.05rem; flex: 1; min-height: 0;">
@@ -7345,7 +7507,7 @@ svg text.math-var {
       .jr-group { display: flex; flex-direction: column; gap: 0.5rem; min-width: 0; }
       .jr-group-tag { display: flex; align-items: baseline; gap: 0.5rem; }
       .jr-group-tag .label { font-family: var(--font-mono); font-size: 0.62rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 800; }
-      .jr-group-tag .count { font-family: var(--font-mono); font-size: 0.58rem; color: var(--color-ink-muted); }
+      .jr-group-tag .count { font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-ink-muted); }
       .jr-row { display: flex; gap: 0.7rem; align-items: center; padding: 0.5rem 0.85rem; border-left: 3px solid var(--color-accent); background: var(--color-bg); border-bottom: 1px solid var(--color-grid-line); }
       .jr-row strong { font-family: var(--font-display); font-weight: 800; font-size: 0.92rem; }
       .jr-row .num { font-family: var(--font-mono); font-size: 0.62rem; color: var(--color-ink-muted); min-width: 1.5rem; }
