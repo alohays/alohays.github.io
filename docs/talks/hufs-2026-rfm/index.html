@@ -1470,62 +1470,91 @@ svg text.math-var {
   <div class="slide-content top-aligned" style="padding-top: calc(var(--header-height) + 0.95rem); gap: 0.85rem;">
 
     <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 2rem;">
-      <h1>The <span class="accent-text">core thesis</span> &mdash; <em>robots are about to inherit foundation-model scaling</em></h1>
+      <h1>The <span class="accent-text">core thesis</span> &mdash; <em>Jim Fan's roadmap, this talk's evidence</em></h1>
       <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
-        if you only remember 3 things
+        aligned with Sequoia AI Ascent &middot; May 2026
       </div>
     </div>
 
     <style>
-      .core-msg { display: flex; flex-direction: column; gap: 0.55rem; padding: 0.85rem 1rem; border: var(--border-thin); background: white; min-width: 0; min-height: 0; position: relative; }
-      .core-msg.hero { border: 2px solid var(--color-accent); background: linear-gradient(180deg, var(--color-accent-soft) 0%, transparent 55%); }
-      .core-msg .num { position: absolute; top: -14px; left: 0.85rem; background: var(--color-ink); color: white; font-family: var(--font-display); font-weight: 900; font-size: 0.78rem; padding: 0.1rem 0.6rem; letter-spacing: 0.05em; z-index: 2; }
-      .core-msg.hero .num { background: var(--color-accent); }
-      .core-msg h3 { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; line-height: 1.1; margin-top: 0.25rem; }
-      .core-msg p { font-size: 0.7rem; color: var(--color-ink-soft); line-height: 1.45; margin: 0; }
-      .core-msg .pointer { font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-accent); margin-top: auto; padding-top: 0.35rem; font-weight: 700; letter-spacing: 0.05em; }
+      .jf-quote { padding: 0.85rem 1.1rem; background: var(--color-ink); color: var(--color-bg); font-size: 0.78rem; line-height: 1.5; }
+      .jf-quote .author { font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 800; display: block; margin-bottom: 0.35rem; }
+      .jf-quote .stages { font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-accent); font-weight: 700; }
+      .unlock-row { display: flex; align-items: center; gap: 0.85rem; padding: 0.65rem 0.85rem; border: var(--border-thin); background: white; min-width: 0; }
+      .unlock-row.add { border-style: dashed; border-color: var(--color-grid-line); background: var(--color-bg-alt); }
+      .unlock-row .num { font-family: var(--font-display); font-weight: 900; font-size: 1.05rem; color: var(--color-accent); flex-shrink: 0; width: 1.4rem; text-align: center; }
+      .unlock-row.add .num { color: var(--color-ink-muted); font-weight: 700; }
+      .unlock-row .name { font-family: var(--font-display); font-weight: 800; font-size: 0.95rem; flex: 1; line-height: 1.15; }
+      .unlock-row .name .sub { display: block; font-family: var(--font-mono); font-size: 0.62rem; color: var(--color-ink-muted); font-weight: 500; margin-top: 0.15rem; letter-spacing: 0.02em; }
+      .unlock-row .arrow { font-family: var(--font-display); font-weight: 900; color: var(--color-accent); font-size: 1.1rem; flex-shrink: 0; }
+      .unlock-row.add .arrow { color: var(--color-ink-muted); }
+      .unlock-row .ch { font-family: var(--font-display); font-weight: 800; font-size: 0.95rem; color: var(--color-ink); white-space: nowrap; flex-shrink: 0; }
+      .unlock-row .ch .ch-desc { display: block; font-family: var(--font-mono); font-size: 0.6rem; color: var(--color-ink-muted); font-weight: 500; margin-top: 0.15rem; letter-spacing: 0.02em; }
+      .plus-label { font-family: var(--font-mono); font-size: 0.62rem; color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.4rem; margin-bottom: 0.1rem; }
     </style>
 
-    <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 1.4rem; flex: 1; min-height: 0; margin-top: 1.25rem;">
+    <div style="display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.4rem; flex: 1; min-height: 0; margin-top: 1.25rem;">
 
       <!-- LEFT: Jim Fan keynote embed -->
       <div style="display: flex; flex-direction: column; gap: 0.5rem; min-width: 0;">
         <div style="font-family: var(--font-mono); font-size: var(--size-tiny); color: var(--color-ink-muted); text-transform: uppercase; letter-spacing: 0.1em;">
-          Anchor — Jim Fan &middot; Sequoia AI Ascent 2026 &middot; "Robotics' End Game"
+          Jim Fan &middot; NVIDIA &middot; Sequoia AI Ascent 2026 &middot; "Robotics: Endgame"
         </div>
         <div class="video-frame aspect-16x9" style="flex: 1; min-height: 0;">
           <iframe data-src="https://www.youtube-nocookie.com/embed/3Y8aq_ofEVs?autoplay=1&amp;mute=1&amp;start=240&amp;rel=0&amp;modestbranding=1&amp;controls=1&amp;playsinline=1" src="about:blank"
-                  title="Jim Fan — Robotics' End Game · Sequoia AI Ascent 2026"
+                  title="Jim Fan — Robotics: Endgame · Sequoia AI Ascent 2026"
                   allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
         </div>
-        <p style="font-size: 0.65rem; color: var(--color-ink-soft); line-height: 1.4; font-style: italic;">
-          Jim Fan's Sequoia keynote in 1 frame: <em>"Physical Turing Test, Simulation 2.0, DreamZero, Physical API"</em> &mdash; the four ideas this talk grounds in actual 2024-26 papers.
-          See also Stanford ENGR319 talks: <span class="mono">youtu.be/hcJ83vOa1Pg</span>.
+        <p style="font-size: 0.72rem; color: var(--color-ink-soft); line-height: 1.45;">
+          Fan's framework: <strong>"The Great Parallel"</strong> &mdash; robotics is replaying the GPT trajectory (pretrain &rarr; align &rarr; reason &rarr; auto-research). The three concrete <em>unlocks</em> he names for the <strong>pretrain stage</strong> are exactly the spine of this talk.
         </p>
       </div>
 
-      <!-- RIGHT: 3 core messages -->
-      <div style="display: flex; flex-direction: column; gap: 1.1rem; min-width: 0;">
+      <!-- RIGHT: 3 unlocks mapping + 2 added layers -->
+      <div style="display: flex; flex-direction: column; gap: 0.55rem; min-width: 0;">
 
-        <div class="core-msg">
-          <div class="num">01</div>
-          <h3>Action is just another modality</h3>
-          <p>VLA = VLM + action head. Same scaling laws apply once you fix tokenization, frequency, and data.</p>
-          <div class="pointer">→ Ch 2-4 &middot; covered in detail</div>
+        <div class="jf-quote">
+          <span class="author">Jim Fan · May 2026 · paraphrased</span>
+          "Robotics' Endgame is on the GPT-parallel roadmap. Three unlocks get us through the pretrain stage."
         </div>
 
-        <div class="core-msg hero">
-          <div class="num">02</div>
-          <h3>The S1 / S2 dual-system pattern is converging</h3>
-          <p>Helix, π0.5, GR00T, Gemini Robotics — all run a slow VLM (S2) over a fast action expert (S1) at 50-200 Hz.</p>
-          <div class="pointer">→ Ch 5 &middot; the 2026 architectural consensus</div>
+        <div class="plus-label">His 3 unlocks &mdash; this talk's spine</div>
+
+        <div class="unlock-row">
+          <div class="num">①</div>
+          <div class="name">Sensorized human data<span class="sub">egocentric video · UMI</span></div>
+          <div class="arrow">&rarr;</div>
+          <div class="ch">Ch 3<span class="ch-desc">data scaling</span></div>
         </div>
 
-        <div class="core-msg">
-          <div class="num">03</div>
-          <h3>World models close the data loop</h3>
-          <p>Action-conditioned video WMs (DreamDojo, DreamZero) replace teleop and give policies foresight + planning.</p>
-          <div class="pointer">→ Ch 6-7 &middot; the open frontier</div>
+        <div class="unlock-row">
+          <div class="num">②</div>
+          <div class="name">Neural simulators<span class="sub">DreamDojo · NVIDIA</span></div>
+          <div class="arrow">&rarr;</div>
+          <div class="ch">Ch 6<span class="ch-desc">world models</span></div>
+        </div>
+
+        <div class="unlock-row">
+          <div class="num">③</div>
+          <div class="name">Video-first WAMs<span class="sub">DreamZero · vision/action as first-class</span></div>
+          <div class="arrow">&rarr;</div>
+          <div class="ch">Ch 7<span class="ch-desc">world action models</span></div>
+        </div>
+
+        <div class="plus-label">+ 2 layers we add</div>
+
+        <div class="unlock-row add">
+          <div class="num">+</div>
+          <div class="name">S1/S2 dual-system convergence<span class="sub">Helix · π0.5 · GR00T</span></div>
+          <div class="arrow">&rarr;</div>
+          <div class="ch">Ch 5<span class="ch-desc">diffusion + dual</span></div>
+        </div>
+
+        <div class="unlock-row add">
+          <div class="num">+</div>
+          <div class="name">Korea-built RFM stack<span class="sub">data, model, deploy &mdash; in-house</span></div>
+          <div class="arrow">&rarr;</div>
+          <div class="ch">Ch 8<span class="ch-desc">WoRV @ maum.ai</span></div>
         </div>
 
       </div>
@@ -1535,7 +1564,7 @@ svg text.math-var {
   </div>
 
   <footer class="slide-footer">
-    <span>Jim Fan keynote &middot; youtu.be/3Y8aq_ofEVs (Sequoia 2026) &middot; youtu.be/hcJ83vOa1Pg (related)</span>
+    <span>Jim Fan "Robotics: Endgame" &middot; Sequoia AI Ascent May 2026 &middot; youtu.be/3Y8aq_ofEVs</span>
     <span class="mono">11</span>
   </footer>
 
