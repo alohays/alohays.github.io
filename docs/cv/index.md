@@ -180,6 +180,12 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 ### Invited Talk
 
+**Hankuk University of Foreign Studies (HUFS), Language AI Lab**
+
+**Invited Speaker** | _May 2026_
+
+- "Robotics Foundation Models: Trajectories and open problems." Multimodal AI course. [[slides](https://alohays.github.io/talks/hufs-2026-rfm/)]
+
 **State University of New York (SUNY) Korea**
 
 **Invited Speaker** | _Apr. 2026_
