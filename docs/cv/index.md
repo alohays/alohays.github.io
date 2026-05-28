@@ -180,7 +180,7 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 ### Invited Talk
 
-**Hankuk University of Foreign Studies (HUFS), Language AI Lab**
+**Hankuk University of Foreign Studies (HUFS), Division of Language & AI**
 
 **Invited Speaker** | _May 2026_
 
