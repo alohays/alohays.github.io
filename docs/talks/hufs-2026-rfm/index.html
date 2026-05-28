@@ -5340,13 +5340,13 @@ svg text.math-var {
           <span class="jepa-tag">arXiv:2603.19312</span>
         </div>
 
-        <!-- Compact comparison (smaller, on top) -->
-        <div style="display: flex; align-items: center; justify-content: center; background: var(--color-bg-alt); border: 1px solid var(--color-grid-line); padding: 0.3rem; height: 90px; flex-shrink: 0;">
+        <!-- Comparison table (enlarged from height:90px) -->
+        <div style="display: flex; align-items: center; justify-content: center; background: var(--color-bg-alt); border: 1px solid var(--color-grid-line); padding: 0.4rem; flex: 1.2; min-height: 0;">
           <img src="images/papers/leworldmodel/wms.png" alt="LeWorldModel vs PLDM / DINO-WM / Dreamer / TD-MPC comparison: addresses 6→1 hyperparameter, anti-collapse, end-to-end, task-agnostic, reconstruction-free" style="max-width: 100%; max-height: 100%; object-fit: contain;">
         </div>
 
-        <!-- Architecture (bigger, below) -->
-        <div class="jepa-img-wrap" style="background: white;">
+        <!-- Architecture (shrunk to ~half) -->
+        <div class="jepa-img-wrap" style="background: white; flex: 0.7;">
           <img src="images/papers/leworldmodel/lewm-arch.png" alt="LeWorldModel architecture: two encoders process o_t and o_{t+1}; predictor takes (z_t, a_t) → ẑ_{t+1}; MSE loss between ẑ_{t+1} and z_{t+1}; SIGReg regularization on latents (Statistical Inverse Gaussian) prevents collapse via random projection normality tests">
         </div>
 
@@ -7095,7 +7095,10 @@ svg text.math-var {
       <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 1.5rem;">
         <img src="images/worv-logo.png" alt="WoRV" style="max-width: 80%; max-height: 18vh; object-fit: contain; margin-left: 0;">
 
-        <h1 style="font-size: var(--size-h1); line-height: 1.05; margin-top: 0.5rem;">World <span class="accent-text">Robot Verse</span></h1>
+        <h1 style="font-size: var(--size-h1); line-height: 1.05; margin-top: 0.5rem;"><span class="accent-text">WoRV</span> @ maum.ai</h1>
+        <div style="font-family: var(--font-mono); font-size: 0.95rem; color: var(--color-accent); letter-spacing: 0.02em; margin-top: -0.5rem; line-height: 1.3;">
+          World model for Robotics and Vehicle control
+        </div>
 
         <p style="font-size: var(--size-body); color: var(--color-ink-soft); line-height: 1.5;">
           maum.ai's physical-AI division.<br>
