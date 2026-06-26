@@ -99,11 +99,9 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
     **\*** denotes equal contribution (co-first authors).
     **†** denotes co-corresponding authorship.
 
-### Under Review
-
-- **Yunsung Lee**, Hyeongmin Lee, "Choosing the Right Prediction Target Maintains Realistic Manifold in Diffusion Models with Training-Free Guidance," Under Review.
-
 ### 2026
+
+- **Yunsung Lee**, Hyeongmin Lee, "Not All Prediction Targets Keep Training-Free Diffusion Guidance on the Manifold," European Conference on Computer Vision (**ECCV'26**), 2026.
 
 - Haebin Seong\*, Sungmin Kim\*, Yongjun Cho\*, ..., Youngjae Yu†, **Yunsung Lee**†, "CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents," The First Workshop on Scalable Robot Learning Systems at CVPR 2026 (**ScaleBot @ CVPR'26**), 2026. [[arXiv]](https://arxiv.org/abs/2511.20216)
 

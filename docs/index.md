@@ -108,7 +108,7 @@ Leading research initiatives in <strong>Embodied AI</strong>, <strong>autonomous
 
 ### Recent Publications
 
-- **Choosing the Right Prediction Target Maintains Realistic Manifold in Diffusion Models with Training-Free Guidance** (Under Review)
+- **Not All Prediction Targets Keep Training-Free Diffusion Guidance on the Manifold** (ECCV'26)
 - **CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents** (ScaleBot @ CVPR'26)
 - **WorldCam: Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation** (VideoWorldModel @ CVPR'26)
 - **vla-eval: A Unified Evaluation Harness for Vision-Language-Action Models** (From Data to Decisions @ ICRA'26)
