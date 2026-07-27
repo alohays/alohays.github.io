@@ -68,10 +68,10 @@ HYPERCONNECT · Seoul, South Korea · Jul. 2020 - Aug. 2020
 
 Researched adversarial robust semi-supervised learning.
 
-**Intern, Web Developer**
+**Intern**
 Algorithm Labs · Seoul, South Korea · Dec. 2016 - Feb. 2017
 
-On-site internship with focus on competitive programming and web development. Wrote competitive programming problems and contributed to web front-end development.
+Developed software and produced algorithm education content.
 
 ---
 
