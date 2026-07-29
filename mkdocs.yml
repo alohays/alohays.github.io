@@ -77,9 +77,8 @@ theme:
     repo: fontawesome/brands/github
     edit: material/pencil
     view: material/eye
-  font:
-    text: Roboto
-    code: Roboto Mono
+  # Self-hosted Geist / Geist Mono via docs/stylesheets/extra.css (@font-face)
+  font: false
   favicon: assets/favicon.svg
 
 extra:
