@@ -56,7 +56,7 @@ Artificial intelligence engineer specializing in memory and personalization for 
 **Research Scientist**
 Riiid · Seoul, South Korea · Apr. 2022 - Oct. 2023
 
-Computer vision research scientist focusing on educational AI applications. Math problem image retrieval for [AI:R Math](https://www.airmath.com/). English vocabulary visualization with text-to-image diffusion models ([Santa](https://www.aitutorsanta.com/)).
+Computer vision research scientist focusing on educational AI applications. Math problem image retrieval for AI:R Math. English vocabulary visualization with text-to-image diffusion models (Santa).
 
 **ML Research Scientist**
 Scatter Lab · Seoul, South Korea · Jul. 2021 - Mar. 2022
