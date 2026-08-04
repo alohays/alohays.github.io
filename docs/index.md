@@ -8,7 +8,7 @@ hide:
 
 <div class="yl-hero">
   <div class="yl-hero-text">
-    <span class="yl-eyebrow">Head of Research · MaumAI WoRV</span>
+    <span class="yl-eyebrow">Head of Research, MaumAI WoRV · Adjunct Professor, DGIST</span>
     <h1>Yunsung Lee</h1>
     <p class="yl-role">AI/ML Research Engineer</p>
     <p class="yl-desc">Leading research in <strong>Embodied AI</strong>, <strong>autonomous agents</strong>, and <strong>robotics foundation models</strong> — from top-tier publications to products used by millions.</p>
@@ -43,8 +43,8 @@ hide:
 </div>
 
 <div class="yl-callout">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9a6 6 0 1 0 12 0V3H6v6Z"/><path d="M18 5h3a1 1 0 0 1 1 1c0 2.5-2 4.5-4.5 4.5M6 5H3a1 1 0 0 0-1 1c0 2.5 2 4.5 4.5 4.5M12 15v4m-4 3h8m-8 0a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2"/></svg>
-  <span>Selected as an <strong>ICML 2026 Gold Reviewer</strong> — placed among top reviewers based on area-chair ratings.</span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0Z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
+  <span>Appointed <strong>Adjunct Professor at DGIST</strong>, School of Undergraduate Studies — teaching undergraduate coursework in Physical AI.</span>
 </div>
 
 <div class="yl-sec-head">
@@ -65,6 +65,7 @@ hide:
 
 <div class="yl-xp">
   <div class="yl-xp-row"><span class="yl-xp-co">MaumAI</span><span class="yl-xp-ti">Head of Research, WoRV Team</span><span class="yl-xp-dt">2025 —</span></div>
+  <div class="yl-xp-row"><span class="yl-xp-co">DGIST</span><span class="yl-xp-ti">Adjunct Professor, School of Undergraduate Studies</span><span class="yl-xp-dt">2026 —</span></div>
   <div class="yl-xp-row"><span class="yl-xp-co">Wrtn Technologies</span><span class="yl-xp-ti">AI Engineer</span><span class="yl-xp-dt">2023 – 2025</span></div>
   <div class="yl-xp-row"><span class="yl-xp-co">Riiid</span><span class="yl-xp-ti">Research Scientist</span><span class="yl-xp-dt">2022 – 2023</span></div>
   <div class="yl-xp-row"><span class="yl-xp-co">Scatter Lab</span><span class="yl-xp-ti">ML Research Scientist</span><span class="yl-xp-dt">2021 – 2022</span></div>

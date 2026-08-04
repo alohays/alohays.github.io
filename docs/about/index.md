@@ -10,6 +10,7 @@ I'm a dedicated AI researcher and engineer who enjoys tackling complex problems 
 
 - **AI/ML Research**: Specializing in vision-language multimodal systems, diffusion models, and autonomous agents
 - **Research Leadership**: Leading research initiatives at MaumAI's WoRV team for robotics and vehicle control
+- **Teaching**: Adjunct Professor at DGIST, School of Undergraduate Studies, teaching undergraduate coursework in Physical AI
 - **Product Development**: Deploying commercial AI products with over {{ stats.maus }} MAUs
 - **Academic Contributions**: Publishing in top-tier conferences with {{ stats.citations }} citations
 - **Knowledge Sharing**: Contributing to the AI community through research, open-source projects, and conference reviews

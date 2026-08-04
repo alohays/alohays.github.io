@@ -18,7 +18,7 @@ description: Professional CV of Yunsung Lee - AI/ML Research Engineer
 
 ## Professional Summary
 
-AI/ML research engineer with strong research foundations (**{{ stats.publications }} publications** in top-tier conferences, **almost 2K citations**) and practical experience deploying commercial AI products (over **{{ stats.maus }} MAUs**). Currently leading research initiatives at MaumAI's **WoRV** team, specializing in Embodied AI, autonomous agents, and robotics foundation models. Expertise spans multimodal AI, autonomous systems, and translating cutting-edge research into real-world applications.
+AI/ML research engineer with strong research foundations (**{{ stats.publications }} publications** in top-tier conferences, **almost 2K citations**) and practical experience deploying commercial AI products (over **{{ stats.maus }} MAUs**). Currently leading research initiatives at MaumAI's **WoRV** team, specializing in Embodied AI, autonomous agents, and robotics foundation models, while also serving as an **Adjunct Professor at DGIST** (School of Undergraduate Studies), teaching undergraduate coursework in Physical AI. Expertise spans multimodal AI, autonomous systems, and translating cutting-edge research into real-world applications.
 
 ## Core Competencies
 
@@ -42,6 +42,11 @@ Research Team Management, Cross-functional Collaboration, Technical Mentoring
 MaumAI · Seongnam, South Korea · May 2025 - Present
 
 Leading research initiatives for WoRV (World Model for Robotics and Vehicle Control), MaumAI's flagship Embodied AI research organization. Overseeing development of foundation models that integrate language, vision, and action for robotics and autonomous driving applications.
+
+**Adjunct Professor, School of Undergraduate Studies**
+DGIST (Daegu Gyeongbuk Institute of Science and Technology) · Daegu, South Korea · Aug. 2026 - Present
+
+Teaching undergraduate coursework in Physical AI.
 
 **AI Engineer**
 Wrtn Technologies · Seoul, South Korea · Oct. 2023 - Apr. 2025
