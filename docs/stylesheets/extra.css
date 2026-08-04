@@ -40,7 +40,11 @@
   --yl-border: #e6e8f0;
   --yl-border-strong: #d5d9e6;
   --yl-text-2: #555b6e;
-  --yl-text-3: #878da1;
+  /* Muted tier. Darkened from #878da1, which measured 3.30:1 on white and so
+     missed WCAG AA (4.5:1) for the session dates, the course meta line and
+     the materials chips. Same hue and saturation, minimum shift that clears
+     it: 4.51:1. --yl-text-2 sits at 6.76:1, so the two tiers stay distinct. */
+  --yl-text-3: #6f768e;
   --yl-accent: #4f46e5;
   --yl-accent-ink: #ffffff;
   --yl-accent-subtle: #eef0ff;
@@ -71,7 +75,9 @@
   --yl-border: #232736;
   --yl-border-strong: #303549;
   --yl-text-2: #a6abbd;
-  --yl-text-3: #6e7488;
+  /* Lightened from #6e7488 (4.14:1 on the dark background) for the same
+     reason as the light scheme. Now 4.52:1. */
+  --yl-text-3: #747a8f;
   --yl-accent: #8e96ff;
   --yl-accent-ink: #0c0e16;
   --yl-accent-subtle: rgba(99, 102, 241, 0.14);
