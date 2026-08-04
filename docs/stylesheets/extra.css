@@ -565,6 +565,17 @@
   background: var(--yl-accent-subtle);
 }
 
+/* Weeks that belong to the term but carry no session of mine: the two public
+   holidays, the two assessment weeks, and the sessions DGIST runs. They are
+   listed so the schedule is the whole sixteen weeks rather than a subset --
+   a page that shows some weeks and silently drops others makes the gaps read
+   as cancellations, which is worse than saying nothing. Subdued, and with no
+   materials slot, so the sessions I actually teach still lead the eye. */
+.yl-sess-row--quiet .yl-sess-title {
+  font-weight: 450;
+  color: var(--yl-text-2);
+}
+
 /* ===== Per-session materials slot ===== */
 
 .yl-sess-mat {

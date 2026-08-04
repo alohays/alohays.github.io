@@ -1,6 +1,6 @@
 ---
 title: Physical AI (DGIST HSS118)
-description: Companion page for the Fall 2026 sessions I teach and host in DGIST's Future Literacy course — schedule, slides, and recordings.
+description: Companion page for DGIST's Fall 2026 Future Literacy course — the full sixteen-week schedule, plus slides and recordings for the sessions I teach and host.
 hide:
   - navigation
   - toc
@@ -15,7 +15,7 @@ hide:
 
 <div class="yl-callout">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0Z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
-  <span>A <strong>personal companion page</strong> for the sessions I teach and host. Official announcements, assignments, and grades live on the DGIST LMS.</span>
+  <span>A <strong>personal companion page</strong>. The schedule below covers the full term; slides and recordings are for the sessions I teach and host. Official announcements, assignments, deadlines, and grades live on the DGIST LMS.</span>
 </div>
 
 <div class="yl-sec-head">
@@ -23,6 +23,15 @@ hide:
 </div>
 
 <div class="yl-sess">
+
+  <div class="yl-sess-row yl-sess-row--quiet">
+    <span class="yl-sess-date">Aug 28</span>
+    <span class="yl-sess-body">
+      <span class="yl-sess-title">Special lecture on AI</span>
+      <span class="yl-sess-desc">Opening session, arranged by DGIST.</span>
+      <span class="yl-sess-tag">DGIST</span>
+    </span>
+  </div>
 
   <div class="yl-sess-row">
     <span class="yl-sess-date">Sep 4</span>
@@ -63,6 +72,14 @@ hide:
     </span>
   </div>
 
+  <div class="yl-sess-row yl-sess-row--quiet">
+    <span class="yl-sess-date">Sep 25</span>
+    <span class="yl-sess-body">
+      <span class="yl-sess-title">No class — Chuseok holiday</span>
+      <span class="yl-sess-tag">No class</span>
+    </span>
+  </div>
+
   <div class="yl-sess-row">
     <span class="yl-sess-date">Oct 2</span>
     <span class="yl-sess-body">
@@ -73,6 +90,23 @@ hide:
     <span class="yl-sess-mat">
       <span class="yl-mat">Slides</span>
       <span class="yl-mat">Recording</span>
+    </span>
+  </div>
+
+  <div class="yl-sess-row yl-sess-row--quiet">
+    <span class="yl-sess-date">Oct 9</span>
+    <span class="yl-sess-body">
+      <span class="yl-sess-title">No class — Hangul Day</span>
+      <span class="yl-sess-tag">No class</span>
+    </span>
+  </div>
+
+  <div class="yl-sess-row yl-sess-row--quiet">
+    <span class="yl-sess-date">Oct 16</span>
+    <span class="yl-sess-body">
+      <span class="yl-sess-title">Midterm week — a reflection report takes the place of an exam</span>
+      <span class="yl-sess-desc">No sitting exam for this course. The prompt and the deadline are announced on the LMS.</span>
+      <span class="yl-sess-tag">Assessment</span>
     </span>
   </div>
 
@@ -89,6 +123,15 @@ hide:
     </span>
   </div>
 
+  <div class="yl-sess-row yl-sess-row--quiet">
+    <span class="yl-sess-date">Oct 30</span>
+    <span class="yl-sess-body">
+      <span class="yl-sess-title">Leadership talk on entrepreneurship</span>
+      <span class="yl-sess-desc">Arranged by DGIST.</span>
+      <span class="yl-sess-tag">DGIST</span>
+    </span>
+  </div>
+
   <div class="yl-sess-row">
     <span class="yl-sess-date">Nov 6</span>
     <span class="yl-sess-body">
@@ -99,6 +142,24 @@ hide:
     <span class="yl-sess-mat">
       <span class="yl-mat">Slides</span>
       <span class="yl-mat">Recording</span>
+    </span>
+  </div>
+
+  <div class="yl-sess-row yl-sess-row--quiet">
+    <span class="yl-sess-date">Nov 13</span>
+    <span class="yl-sess-body">
+      <span class="yl-sess-title">Leadership talk</span>
+      <span class="yl-sess-desc">Arranged by DGIST; speaker announced on the LMS.</span>
+      <span class="yl-sess-tag">DGIST</span>
+    </span>
+  </div>
+
+  <div class="yl-sess-row yl-sess-row--quiet">
+    <span class="yl-sess-date">Nov 20</span>
+    <span class="yl-sess-body">
+      <span class="yl-sess-title">Leadership talk</span>
+      <span class="yl-sess-desc">Arranged by DGIST; speaker announced on the LMS.</span>
+      <span class="yl-sess-tag">DGIST</span>
     </span>
   </div>
 
@@ -128,13 +189,24 @@ hide:
     </span>
   </div>
 
+  <div class="yl-sess-row yl-sess-row--quiet">
+    <span class="yl-sess-date">Dec 11</span>
+    <span class="yl-sess-body">
+      <span class="yl-sess-title">Final week — a synthesis essay takes the place of an exam</span>
+      <span class="yl-sess-desc">No sitting exam for this course. The prompt and the deadline are announced on the LMS.</span>
+      <span class="yl-sess-tag">Assessment</span>
+    </span>
+  </div>
+
 </div>
 
 <div class="yl-sec-head">
   <h2 id="scope">What this page covers</h2>
 </div>
 
-<p class="yl-desc">Future Literacy is a required general-education course for first- and second-year students at DGIST, co-taught across a full sixteen-week term. The eight sessions above are the ones I lecture, host, or co-run. The remaining weeks are arranged by DGIST and announced through the LMS.</p>
+<p class="yl-desc">Future Literacy is a required general-education course for first- and second-year students at DGIST, co-taught across a full sixteen-week term. The schedule above lists every week so the shape of the term is visible at a glance. The eight highlighted sessions are the ones I lecture, host, or co-run; the weeks marked <em>DGIST</em> are arranged by the school, and both assessment weeks replace a sitting exam with written work.</p>
+
+<p class="yl-desc">Dates follow the revised plan submitted to DGIST on 4 August 2026. If the school adjusts it, this page follows — but the LMS is the authority, and deadlines and grading are set there, not here.</p>
 
 <p class="yl-desc">Sessions assume <strong>no prior background</strong> in robotics or machine learning. Technical terms are introduced in plain language first, and every acronym is spelled out the first time it appears.</p>
 
