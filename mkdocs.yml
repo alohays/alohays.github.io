@@ -11,6 +11,11 @@ nav:
   - Home: index.md
   - About: about/index.md
   - CV: cv/index.md
+  - Teaching:
+      - teaching/index.md
+      - DGIST HSS118 (Fall 2026): teaching/dgist-hss118-2026f/index.md
+  - Talks:
+      - talks/index.md
   - Blog:
       - blog/index.md
 
