@@ -4,7 +4,7 @@ Hello! I'm **Yunsung Lee**, an AI/ML research engineer with strong research foun
 
 ## Who I Am
 
-I'm a dedicated AI researcher and engineer who enjoys tackling complex problems in machine learning and computer vision. My journey in AI has been driven by curiosity and a passion for translating cutting-edge research into real-world applications with significant impact.
+I'm an AI researcher and engineer working in machine learning and computer vision. What keeps me in the field is the distance between a result on paper and a system people actually use — most of my work lives in that gap.
 
 ## What I Do
 
@@ -26,12 +26,11 @@ I'm a dedicated AI researcher and engineer who enjoys tackling complex problems 
 
 ### Beyond Code
 
-When I'm not coding, you can find me:
+Outside of work:
 
-- Reading about emerging technologies
-- Contributing to open-source projects
-- Exploring new programming languages and frameworks
-- Sharing knowledge with the developer community
+- Reading papers with PR12, TensorFlow Korea's advanced study group — going on six years now
+- Maintaining open-source tooling for open-world agents at [open-world-agents](https://github.com/open-world-agents)
+- Mixing drinks; I hold Korea's national Craftsman Bartender license
 
 ## Let's Connect
 
