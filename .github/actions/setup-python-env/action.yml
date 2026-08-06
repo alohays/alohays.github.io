@@ -14,12 +14,15 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - uses: actions/setup-python@v5
+    - uses: actions/setup-python@v7
       with:
         python-version: ${{ inputs.python-version }}
 
+    # setup-uv publishes floating major tags only up to v7; v8 and v9 exist as
+    # exact versions only, so @v7 is the newest tag that both resolves and runs
+    # on node24. Bump past this only with an exact version.
     - name: Install uv
-      uses: astral-sh/setup-uv@v6
+      uses: astral-sh/setup-uv@v7
       with:
         version: ${{ inputs.uv-version }}
         enable-cache: "true"
