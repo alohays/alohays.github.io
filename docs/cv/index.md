@@ -181,7 +181,13 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 ## Other Activities
 
-### Invited Talk
+### Invited Talks & Panels
+
+**Korean Conference on Computer Vision (KCCV 2026), Busan, South Korea**
+
+**Invited Mentor** | _Aug. 2026_
+
+- Mentoring session "Work & Life." [[program](https://kcvs.kr/?act=info.workshop&pseq=9&pcode=schedule_2026)]
 
 **Hankuk University of Foreign Studies (HUFS), Division of Language & AI**
 
