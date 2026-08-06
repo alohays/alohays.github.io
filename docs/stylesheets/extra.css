@@ -25,6 +25,17 @@
 :root {
   --md-text-font: "Geist";
   --md-code-font: "Geist Mono";
+
+  /* One reading measure for every run of prose on the site. Paragraphs were the
+     only width-capped thing here -- rows, cards, callouts and grids all run to
+     the content edge (61rem), so on a wide screen a paragraph stopped roughly
+     600px short of everything above it and read as a column that had been
+     orphaned. Widening the prose is the half of the fix that does not touch the
+     row layouts; 40rem is where it stops for two independent reasons: it is the
+     cap the session descriptions already used, and it is the widest value that
+     still clears the home hero's text cell without crowding the avatar beside
+     it. Past this the line length stops being readable anyway. */
+  --yl-measure: 40rem;
 }
 
 /* ===== Color tokens ===== */
@@ -263,7 +274,7 @@
 .yl-desc {
   font-size: 0.86rem;
   color: var(--yl-text-2);
-  max-width: 32rem;
+  max-width: var(--yl-measure);
   margin: 0 0 1.5rem;
 }
 
@@ -567,7 +578,7 @@
 .yl-sess-desc {
   display: block;
   margin-top: 0.22rem;
-  max-width: 40rem;
+  max-width: var(--yl-measure);
   font-size: 0.72rem;
   line-height: 1.55;
   color: var(--yl-text-2);
