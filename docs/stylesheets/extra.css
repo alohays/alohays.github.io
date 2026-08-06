@@ -529,11 +529,38 @@
   min-width: 0;
 }
 
+/* Sessions delivered by someone else -- the two invited talks and the closing
+   keynote -- lead with a kicker instead of trailing with a tag. Position is
+   doing the work here, not colour: a label sitting above the title lines up
+   down the left edge of the schedule and is readable in one pass, which a pill
+   at the bottom of a sixteen-row list is not. All three guest slots share one
+   treatment; the label text is what separates an invited talk from the
+   keynote, so no second colour is needed to say it twice. */
+.yl-sess-kicker {
+  display: block;
+  margin-bottom: 0.24rem;
+  font-family: var(--md-code-font-family);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--yl-accent);
+}
+
 .yl-sess-title {
   display: block;
   font-size: 0.82rem;
   font-weight: 530;
   line-height: 1.45;
+  color: var(--md-default-fg-color);
+}
+
+/* Speaker attribution. Sits between the title and the description in weight so
+   the name reads as part of the billing rather than as body copy. */
+.yl-sess-speaker {
+  display: block;
+  margin-top: 0.24rem;
+  font-size: 0.73rem;
+  line-height: 1.5;
   color: var(--md-default-fg-color);
 }
 
