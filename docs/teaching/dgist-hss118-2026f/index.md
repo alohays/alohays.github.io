@@ -49,8 +49,8 @@ hide:
   <div class="yl-sess-row">
     <span class="yl-sess-date">Sep 11</span>
     <span class="yl-sess-body">
-      <span class="yl-sess-title">Invited lecture</span>
-      <span class="yl-sess-desc">Speaker and topic to be announced. Delivered remotely.</span>
+      <span class="yl-sess-title">Video and Robot Foundation Models</span>
+      <span class="yl-sess-desc"><a href="https://hyeongminlee.github.io/">Hyeongmin Lee</a>, Seoul National University of Science and Technology. Working title. Delivered remotely.</span>
       <span class="yl-sess-tag">Invited</span>
     </span>
     <span class="yl-sess-mat">
@@ -135,8 +135,8 @@ hide:
   <div class="yl-sess-row">
     <span class="yl-sess-date">Nov 6</span>
     <span class="yl-sess-body">
-      <span class="yl-sess-title">Invited lecture</span>
-      <span class="yl-sess-desc">Speaker and topic to be announced.</span>
+      <span class="yl-sess-title">Spatial AI to Physical AI</span>
+      <span class="yl-sess-desc"><a href="https://sunghwanhong.github.io/">Sunghwan Hong</a>, ETH Zurich. Working title.</span>
       <span class="yl-sess-tag">Invited</span>
     </span>
     <span class="yl-sess-mat">
@@ -180,7 +180,7 @@ hide:
     <span class="yl-sess-date">Dec 4</span>
     <span class="yl-sess-body">
       <span class="yl-sess-title">The Physical AI Megatrend and the Coming Industrial Revolution</span>
-      <span class="yl-sess-desc">An industry view of the market, the jobs, and the corporate strategy that acting AI is about to reshape. Delivered by my co-instructor from Maum AI.</span>
+      <span class="yl-sess-desc">An industry view of the market, the jobs, and the corporate strategy that acting AI is about to reshape. Delivered by <a href="https://www.linkedin.com/in/chris-choi-527013362/">Chris (Hongseop) Choi</a>, my co-instructor at Maum AI.</span>
       <span class="yl-sess-tag">Closing keynote</span>
     </span>
     <span class="yl-sess-mat">
