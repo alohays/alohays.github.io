@@ -54,9 +54,9 @@ Wrtn Technologies · Seoul, South Korea · Oct. 2023 - Apr. 2025
 Specialized in memory and personalization for autonomous agents and in multimodal capabilities for [wrtn](https://wrtn.ai/). Led core development efforts ranging from ML research and implementation to backend engineering, and delivered the product's key agent features. Wrtn reached unicorn status in Aug. 2026 with a valuation above ₩1T.
 
 **Research Scientist**
-Riiid · Seoul, South Korea · Apr. 2022 - Oct. 2023
+Riiid (now Socra AI) · Seoul, South Korea · Apr. 2022 - Oct. 2023
 
-Conducted computer vision research for educational AI, building math problem image retrieval for [AI:R Math](https://www.airmath.com/). Developed English vocabulary visualizations using text-to-image diffusion models ([Santa](https://www.aitutorsanta.com/)).
+Conducted computer vision research for educational AI, building math problem image retrieval for AI:R Math. Developed English vocabulary visualizations using text-to-image diffusion models (Santa).
 
 **ML Research Scientist**
 Scatter Lab · Seoul, South Korea · Jul. 2021 - Mar. 2022
