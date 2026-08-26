@@ -51,7 +51,7 @@ Teaching undergraduate coursework in Physical AI.
 **AI Engineer**
 Wrtn Technologies · Seoul, South Korea · Oct. 2023 - Apr. 2025
 
-Specialized in memory and personalization for autonomous agents and in multimodal capabilities for [wrtn](https://wrtn.ai/). Led core development efforts ranging from ML research and implementation to backend engineering, and delivered the product's key agent features.
+Specialized in memory and personalization for autonomous agents and in multimodal capabilities for [wrtn](https://wrtn.ai/). Led core development efforts ranging from ML research and implementation to backend engineering, and delivered the product's key agent features. Wrtn reached unicorn status in Aug. 2026 with a valuation above ₩1T.
 
 **Research Scientist**
 Riiid · Seoul, South Korea · Apr. 2022 - Oct. 2023
@@ -105,6 +105,8 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
     **†** denotes co-corresponding authorship.
 
 ### 2026
+
+- Suhwan Choi<sup>\*</sup>, Jaeyoon Jung<sup>\*</sup>, Sungkyung Kim, **Yunsung Lee**<sup>†</sup>, Youngjae Yu<sup>†</sup>, "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control," arXiv preprint, 2026 (Under review). [[arXiv]](https://arxiv.org/abs/2608.24115) [[Project page]](https://worv-ai.github.io/ponderpounce/)
 
 - **Yunsung Lee**, Hyeongmin Lee, "Not All Prediction Targets Keep Training-Free Diffusion Guidance on the Manifold," European Conference on Computer Vision (**ECCV'26**), 2026.
 
