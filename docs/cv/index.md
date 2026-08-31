@@ -185,6 +185,12 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 ### Invited Talks & Panels
 
+**Telecommunications Technology Association (TTA), Seongnam, South Korea**
+
+**Invited Speaker** | _Aug. 2026_
+
+- "World Models and World-Action Models: From VLAs to WAMs." Physical AI seminar. [[slides](https://alohays.github.io/paper2pr/slides/talks/tta-2026.html)]
+
 **Korean Conference on Computer Vision (KCCV 2026), Busan, South Korea**
 
 **Invited Mentor** | _Aug. 2026_
