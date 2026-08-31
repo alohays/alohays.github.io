@@ -10,7 +10,7 @@ hide:
   <span class="yl-eyebrow">DGIST · School of Undergraduate Studies · Fall 2026</span>
   <h1>Future Literacy for the Age of Physical AI</h1>
   <p class="yl-course-meta">HSS118 · 1 credit · Fridays 13:00–14:00 KST · E7-233</p>
-  <p class="yl-desc">Why the center of gravity in AI is moving from systems that talk to systems that <strong>see, understand, decide, and act</strong>. The course opens with the paradigm shift itself, builds up robot hardware, data, and action learning, visits the research frontier through invited speakers, and lands on ethics and an industry keynote.</p>
+  <p class="yl-desc">Why the center of gravity in AI is moving from systems that talk to systems that <strong>see, understand, decide, and act</strong>. The course takes a robot-learning-first path: it opens with the paradigm shift, builds from robot data to action-learning methods, visits the research frontier through invited speakers, then gathers hardware, control, and mechanical engineering into a late special module before landing on ethics and an industry keynote.</p>
 </div>
 
 <div class="yl-callout">
@@ -60,16 +60,12 @@ hide:
     </span>
   </div>
 
-  <div class="yl-sess-row">
+  <div class="yl-sess-row yl-sess-row--quiet">
     <span class="yl-sess-date">Sep 18</span>
     <span class="yl-sess-body">
-      <span class="yl-sess-title">Foundations of Robot Hardware, Control, and Modern Platforms</span>
-      <span class="yl-sess-desc">The minimum hardware and control vocabulary needed to read robot learning work, plus a tour of humanoids, arms, grippers, and teleoperation rigs.</span>
-      <span class="yl-sess-tag yl-sess-tag--mine">Lecture</span>
-    </span>
-    <span class="yl-sess-mat">
-      <span class="yl-mat">Slides</span>
-      <span class="yl-mat">Recording</span>
+      <span class="yl-sess-title">Leadership talk</span>
+      <span class="yl-sess-desc">Arranged by DGIST; speaker announced on the LMS.</span>
+      <span class="yl-sess-tag">DGIST</span>
     </span>
   </div>
 
@@ -156,12 +152,17 @@ hide:
     </span>
   </div>
 
-  <div class="yl-sess-row yl-sess-row--quiet">
+  <div class="yl-sess-row">
     <span class="yl-sess-date">Nov 20</span>
     <span class="yl-sess-body">
-      <span class="yl-sess-title">Leadership talk</span>
-      <span class="yl-sess-desc">Arranged by DGIST; speaker announced on the LMS.</span>
-      <span class="yl-sess-tag">DGIST</span>
+      <span class="yl-sess-kicker">Special module</span>
+      <span class="yl-sess-title">Foundations of Robot Hardware, Control, and Modern Platforms</span>
+      <span class="yl-sess-desc">A late-term introduction to the hardware, control, and mechanical engineering behind robot learning — from actuators and kinematics to humanoids, arms, grippers, and teleoperation — with no engineering background assumed.</span>
+      <span class="yl-sess-tag yl-sess-tag--mine">Lecture</span>
+    </span>
+    <span class="yl-sess-mat">
+      <span class="yl-mat">Slides</span>
+      <span class="yl-mat">Recording</span>
     </span>
   </div>
 
@@ -209,7 +210,7 @@ hide:
 
 <p class="yl-desc">Future Literacy is a required general-education course for first- and second-year students at DGIST, co-taught across a full sixteen-week term. The schedule above lists every week so the shape of the term is visible at a glance. The eight highlighted sessions are the ones I lecture, host, or co-run; the weeks marked <em>DGIST</em> are arranged by the school, and both assessment weeks replace a sitting exam with written work.</p>
 
-<p class="yl-desc">Dates follow the revised plan submitted to DGIST on 4 August 2026. If the school adjusts it, this page follows — but the LMS is the authority, and deadlines and grading are set there, not here.</p>
+<p class="yl-desc">Dates reflect my 31 August 2026 response accepting DGIST's proposed schedule adjustment. If the school adjusts it further, this page follows — but the LMS is the authority, and deadlines and grading are set there, not here.</p>
 
 <p class="yl-desc">Sessions assume <strong>no prior background</strong> in robotics or machine learning. Technical terms are introduced in plain language first, and every acronym is spelled out the first time it appears.</p>
 
