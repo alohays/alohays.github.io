@@ -10,12 +10,12 @@ hide:
   <span class="yl-eyebrow">DGIST · School of Undergraduate Studies · Fall 2026</span>
   <h1>Future Literacy for the Age of Physical AI</h1>
   <p class="yl-course-meta">HSS118 · 1 credit · Fridays 13:00–14:00 KST · E7-233</p>
-  <p class="yl-desc">Why the center of gravity in AI is moving from systems that talk to systems that <strong>see, understand, decide, and act</strong>. The course takes a robot-learning-first path: it opens with the paradigm shift, builds from robot data to action-learning methods, visits the research frontier through invited speakers, then gathers hardware, control, and mechanical engineering into a late special module before landing on ethics and an industry keynote.</p>
+  <p class="yl-desc">Why the center of gravity in AI is moving from systems that talk to systems that <strong>see, understand, decide, and act</strong>. Robot learning comes first; hardware, control, and mechanics return as a late special module.</p>
 </div>
 
 <div class="yl-callout">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0Z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
-  <span>A <strong>personal companion page</strong>. The schedule below covers the full term; slides and recordings are for the sessions I teach and host. Official announcements, assignments, deadlines, and grades live on the DGIST LMS.</span>
+  <span>A <strong>personal companion page</strong>. The schedule below covers the full term; slides and recordings are for the sessions I teach, host, or co-run. Official announcements, assignments, deadlines, and grades live on the DGIST LMS.</span>
 </div>
 
 <div class="yl-sec-head">
@@ -157,7 +157,7 @@ hide:
     <span class="yl-sess-body">
       <span class="yl-sess-kicker">Special module</span>
       <span class="yl-sess-title">Foundations of Robot Hardware, Control, and Modern Platforms</span>
-      <span class="yl-sess-desc">A late-term introduction to the hardware, control, and mechanical engineering behind robot learning — from actuators and kinematics to humanoids, arms, grippers, and teleoperation — with no engineering background assumed.</span>
+      <span class="yl-sess-desc">How hardware, control, and mechanics turn a learned policy into physical motion.</span>
       <span class="yl-sess-tag yl-sess-tag--mine">Lecture</span>
     </span>
     <span class="yl-sess-mat">
@@ -209,8 +209,6 @@ hide:
 </div>
 
 <p class="yl-desc">Future Literacy is a required general-education course for first- and second-year students at DGIST, co-taught across a full sixteen-week term. The schedule above lists every week so the shape of the term is visible at a glance. The eight highlighted sessions are the ones I lecture, host, or co-run; the weeks marked <em>DGIST</em> are arranged by the school, and both assessment weeks replace a sitting exam with written work.</p>
-
-<p class="yl-desc">Dates reflect my 31 August 2026 response accepting DGIST's proposed schedule adjustment. If the school adjusts it further, this page follows — but the LMS is the authority, and deadlines and grading are set there, not here.</p>
 
 <p class="yl-desc">Sessions assume <strong>no prior background</strong> in robotics or machine learning. Technical terms are introduced in plain language first, and every acronym is spelled out the first time it appears.</p>
 
