@@ -108,18 +108,18 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 - Suhwan Choi<sup>\*</sup>, Jaeyoon Jung<sup>\*</sup>, Sungkyung Kim, **Yunsung Lee**<sup>†</sup>, Youngjae Yu<sup>†</sup>, "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control," arXiv preprint, 2026 (Under review). [[arXiv]](https://arxiv.org/abs/2608.24115) [[Project page]](https://worv-ai.github.io/ponderpounce/)
 
-- **Yunsung Lee**, Hyeongmin Lee, "Not All Prediction Targets Keep Training-Free Diffusion Guidance on the Manifold," European Conference on Computer Vision (**ECCV'26**), 2026. [[arXiv]](https://arxiv.org/abs/2607.00647) [[Code]](https://github.com/ManLuML/on-manifold-tfg)
-
-- Haebin Seong<sup>\*</sup>, Sungmin Kim<sup>\*</sup>, Yongjun Cho<sup>\*</sup>, ..., Youngjae Yu<sup>†</sup>, **Yunsung Lee**<sup>†</sup>, "CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents," The First Workshop on Scalable Robot Learning Systems at CVPR 2026 (**ScaleBot @ CVPR'26**), 2026. [[arXiv]](https://arxiv.org/abs/2511.20216) [[Project page]](https://worv-ai.github.io/costnav/)
+- Haebin Seong<sup>\*</sup>, Sungmin Kim<sup>\*</sup>, Yongjun Cho<sup>\*</sup>, ..., Youngjae Yu<sup>†</sup>, **Yunsung Lee**<sup>†</sup>, "CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents," Conference on Robot Learning (**CoRL'26**), 2026. [[arXiv]](https://arxiv.org/abs/2511.20216) [[Project page]](https://worv-ai.github.io/costnav/)
 
     ??? note "Show all 23 authors"
-        Haebin Seong<sup>\*</sup>, Sungmin Kim<sup>\*</sup>, Yongjun Cho<sup>\*</sup>, Myunchul Joe, Geunwoo Kim, Yubeen Park, Sunhoo Kim, Yoonshik Kim, Suhwan Choi, Jaeyoon Jung, Jiyong Youn, Jinmyung Kwak, Sunghee Ahn, Jaemin Lee, Younggil Do, Seungyeop Yi, Woojin Cheong, Minhyeok Oh, Minchan Kim, Seongjae Kang, Samwoo Seong, Youngjae Yu<sup>†</sup>, **Yunsung Lee**<sup>†</sup>
+        Haebin Seong<sup>\*</sup>, Sungmin Kim<sup>\*</sup>, Yongjun Cho<sup>\*</sup>, Myunchul Joe, Geunwoo Kim, Yubeen Park, Sunhoo Kim, Samwoo Seong, Yoonshik Kim, Suhwan Choi, Jaeyoon Jung, Jiyong Youn, Jinmyung Kwak, Sunghee Ahn, Jaemin Lee, Younggil Do, Seungyeop Yi, Woojin Cheong, Minhyeok Oh, Minchan Kim, Seongjae Kang, Youngjae Yu<sup>†</sup>, **Yunsung Lee**<sup>†</sup>
+
+- **Yunsung Lee**, Hyeongmin Lee, "Not All Prediction Targets Keep Training-Free Diffusion Guidance on the Manifold," European Conference on Computer Vision (**ECCV'26**), 2026. [[arXiv]](https://arxiv.org/abs/2607.00647) [[Code]](https://github.com/ManLuML/on-manifold-tfg)
+
+- Suhwan Choi<sup>\*</sup>, Jaeyoon Jung<sup>\*</sup>, Haebin Seong<sup>\*</sup>, Minchan Kim, Minyeong Kim, Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu<sup>†</sup>, **Yunsung Lee**<sup>†</sup>, "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI," The International Conference on Learning Representations (**ICLR'26**), 2026. [[arXiv]](https://arxiv.org/abs/2510.05684) [[Project page]](https://worv-ai.github.io/d2e/)
 
 - Jisu Nam, Yicong Hong, Chun-Hao Huang, Feng Liu, JoungBin Lee, Jiyoung Kim, Siyoon Jin, **Yunsung Lee**, Jaeyoon Jung, Suhwan Choi, Seungryong Kim<sup>†</sup>, Yang Zhou<sup>†</sup>, "WorldCam: Interactive Autoregressive 3D Gaming Worlds with Camera Pose as a Unifying Geometric Representation," The CVPR 2026 Workshop on Video World Models (**VideoWorldModel @ CVPR'26**), 2026. [[arXiv]](https://arxiv.org/abs/2603.16871) [[Project page]](https://cvlab-kaist.github.io/WorldCam/)
 
 - Suhwan Choi, **Yunsung Lee**, Yubeen Park, Chris Dongjoo Kim, Ranjay Krishna, Dieter Fox, Youngjae Yu, "vla-eval: A Unified Evaluation Harness for Vision-Language-Action Models," The ICRA 2026 Workshop on From Data to Decisions (**From Data to Decisions @ ICRA'26**), 2026. [[arXiv]](https://arxiv.org/abs/2603.13966) [[Project page]](https://allenai.github.io/vla-evaluation-harness/)
-
-- Suhwan Choi<sup>\*</sup>, Jaeyoon Jung<sup>\*</sup>, Haebin Seong<sup>\*</sup>, Minchan Kim, Minyeong Kim, Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu<sup>†</sup>, **Yunsung Lee**<sup>†</sup>, "D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI," The International Conference on Learning Representations (**ICLR'26**), 2026. [[arXiv]](https://arxiv.org/abs/2510.05684) [[Project page]](https://worv-ai.github.io/d2e/)
 
 ### 2025
 
