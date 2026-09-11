@@ -50,7 +50,7 @@ hide:
     <span class="yl-sess-date">Sep 11</span>
     <span class="yl-sess-body">
       <span class="yl-sess-kicker">Invited talk</span>
-      <span class="yl-sess-title">Video and Robot Foundation Models</span>
+      <span class="yl-sess-title">Video Foundation Models and World Models</span>
       <span class="yl-sess-speaker"><a href="https://hyeongminlee.github.io/">Hyeongmin Lee</a>, Assistant Professor, SeoulTech</span>
       <span class="yl-sess-desc">Delivered remotely.</span>
     </span>
