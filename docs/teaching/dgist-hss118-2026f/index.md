@@ -55,7 +55,7 @@ hide:
       <span class="yl-sess-desc">Delivered remotely.</span>
     </span>
     <span class="yl-sess-mat">
-      <span class="yl-mat">Slides</span>
+      <a class="yl-mat" href="https://hyeongminlee.github.io/slides/video-world-models-2026/">Slides</a>
       <span class="yl-mat">Recording</span>
     </span>
   </div>
