@@ -1,6 +1,6 @@
 ---
-title: Physical AI (DGIST HSS118)
-description: Companion page for DGIST's Fall 2026 Future Literacy course — the full sixteen-week schedule, plus slides and recordings for the sessions I teach and host.
+title: Physical AI for Everyone (DGIST HSS118)
+description: Companion page for DGIST's Fall 2026 Seminar for Comprehensive Competency Cultivation (SCCC, HSS118), taught as Physical AI for Everyone — schedule, slides, and recordings.
 hide:
   - navigation
   - toc
@@ -8,8 +8,8 @@ hide:
 
 <div class="yl-course">
   <span class="yl-eyebrow">DGIST · School of Undergraduate Studies · Fall 2026</span>
-  <h1>Future Literacy for the Age of Physical AI</h1>
-  <p class="yl-course-meta">HSS118 · 1 credit · Fridays 13:00–14:00 KST · E7-233</p>
+  <h1>Physical AI for Everyone</h1>
+  <p class="yl-course-meta">Seminar for Comprehensive Competency Cultivation (SCCC) · HSS118 · 1 credit · Fridays 13:00–14:00 KST · E7-233</p>
   <p class="yl-desc">Why the center of gravity in AI is moving from systems that talk to systems that <strong>see, understand, decide, and act</strong>. Robot learning comes first; hardware, control, and mechanics return as a late special module.</p>
 </div>
 
@@ -208,7 +208,7 @@ hide:
   <h2 id="scope">What this page covers</h2>
 </div>
 
-<p class="yl-desc">Future Literacy is a required general-education course for first- and second-year students at DGIST, co-taught across a full sixteen-week term. The schedule above lists every week so the shape of the term is visible at a glance. The eight highlighted sessions are the ones I lecture, host, or co-run; the weeks marked <em>DGIST</em> are arranged by the school, and both assessment weeks replace a sitting exam with written work.</p>
+<p class="yl-desc">The Seminar for Comprehensive Competency Cultivation (SCCC, course code HSS118) is a required general-education course for first- and second-year students at DGIST, co-taught across a full sixteen-week term. This fall it is taught as <em>Physical AI for Everyone</em>. The schedule above lists every week so the shape of the term is visible at a glance. The eight highlighted sessions are the ones I lecture, host, or co-run; the weeks marked <em>DGIST</em> are arranged by the school, and both assessment weeks replace a sitting exam with written work.</p>
 
 <p class="yl-desc">Sessions assume <strong>no prior background</strong> in robotics or machine learning. Technical terms are introduced in plain language first, and every acronym is spelled out the first time it appears.</p>
 

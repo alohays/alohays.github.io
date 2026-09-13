@@ -15,8 +15,8 @@ hide:
 
 <div class="yl-xp">
   <div class="yl-xp-row">
-    <span class="yl-xp-co"><a href="dgist-hss118-2026f/">Future Literacy for the Age of Physical AI</a></span>
-    <span class="yl-xp-ti">DGIST HSS118 · School of Undergraduate Studies</span>
+    <span class="yl-xp-co"><a href="dgist-hss118-2026f/">Physical AI for Everyone</a></span>
+    <span class="yl-xp-ti">Seminar for Comprehensive Competency Cultivation (SCCC, HSS118) · DGIST School of Undergraduate Studies</span>
     <span class="yl-xp-dt">Fall 2026</span>
   </div>
 </div>
