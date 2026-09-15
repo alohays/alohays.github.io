@@ -56,7 +56,7 @@ hide:
     </span>
     <span class="yl-sess-mat">
       <a class="yl-mat" href="https://hyeongminlee.github.io/slides/video-world-models-2026/">Slides</a>
-      <span class="yl-mat">Recording</span>
+      <a class="yl-mat" href="https://youtu.be/xS-9OUQi7hw">Recording</a>
     </span>
   </div>
 
