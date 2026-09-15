@@ -1,6 +1,6 @@
 ---
 title: Physical AI for Everyone (DGIST HSS118)
-description: Companion page for DGIST's Fall 2026 Seminar for Comprehensive Competency Cultivation (SCCC, HSS118), taught as Physical AI for Everyone — schedule, slides, and recordings.
+description: "Physical AI for Everyone at DGIST: slides, recordings, and schedule for HSS118, Seminar for Comprehensive Competency Cultivation (SCCC), Fall 2026."
 hide:
   - navigation
   - toc

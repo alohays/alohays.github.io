@@ -14,6 +14,7 @@ check: ## Run code quality tools.
 .PHONY: docs-test
 docs-test: ## Test if documentation can be built without warnings or errors
 	@uv run mkdocs build -s
+	@uv run python scripts/check_site_metadata.py
 
 .PHONY: docs
 docs: ## Build and serve the documentation
