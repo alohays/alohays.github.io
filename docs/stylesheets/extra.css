@@ -512,6 +512,152 @@
   margin: 0 0 1.1rem;
 }
 
+/* ===== Language switch =====
+   A course page can exist in a second language, and this is how a reader gets
+   to it. The switch belongs to the page, not to the site header: only course
+   pages are translated, so a header selector would offer Korean on a CV and a
+   blog that do not have it. Both pages list the languages in the same order,
+   so the control does not move when it is used.
+
+   The current language is a span rather than a link because it leads nowhere;
+   aria-current carries that state to a screen reader. On this page accent
+   colour already means "this is a link" (the materials chips), so it goes to
+   the language a reader can switch to, and the current one is marked by a
+   filled chip in plain ink -- fill and weight, never colour alone. */
+
+.yl-course-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+}
+
+.yl-lang {
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  border: 1px solid var(--yl-border);
+  border-radius: 8px;
+  background: var(--yl-bg-subtle);
+}
+
+.yl-lang-opt {
+  font-family: var(--md-code-font-family);
+  font-size: 0.62rem;
+  line-height: 1.5;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.yl-lang-opt[aria-current="page"] {
+  font-weight: 560;
+  color: var(--md-default-fg-color);
+  background: var(--md-default-bg-color);
+  box-shadow: 0 0 0 1px var(--yl-border-strong);
+}
+
+.md-typeset a.yl-lang-opt {
+  color: var(--yl-accent);
+  transition: background-color 0.15s ease;
+}
+
+.md-typeset a.yl-lang-opt:hover {
+  background: var(--yl-accent-subtle);
+}
+
+.md-typeset a.yl-lang-opt:focus-visible {
+  outline: 2px solid var(--yl-accent);
+  outline-offset: 1px;
+}
+
+@media screen and (max-width: 44.9375em) {
+  /* On a phone the eyebrow needs the full line, so the switch takes the line
+     above it -- where a language choice is looked for -- instead of wedging
+     itself between the eyebrow and the title it belongs to. */
+  .yl-course-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.9rem;
+  }
+
+  .yl-lang {
+    order: -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .md-typeset a.yl-lang-opt {
+    transition: none;
+  }
+}
+
+/* ===== Korean course pages =====
+   Everything above was tuned for Latin text, and three of those choices work
+   against Hangul. Geist has no Hangul glyphs, so without a named fallback the
+   page takes whatever the system offers. The browser default breaks a line
+   between any two syllables, which splits Korean words in half; keep-all moves
+   the break to the spaces, where a Korean reader expects it. And a Hangul
+   syllable fills its em square, so it wants more leading than Latin at the
+   same size and almost none of the tracking the uppercase labels use (the
+   uppercasing itself is a no-op on Hangul, which is why those labels are also
+   a step larger here).
+
+   The wrapper carries lang="ko" rather than the <html> element: the header,
+   the tabs and the footer around it are still English, and that is the honest
+   description of the page. Latin and digits keep coming from Geist; only the
+   Hangul falls through to Pretendard, which main.html loads for these pages. */
+
+.yl-ko {
+  --md-code-font-family: "Geist Mono", "Pretendard Variable", Pretendard,
+    SFMono-Regular, Consolas, Menlo, monospace;
+  font-family: "Geist", "Pretendard Variable", Pretendard, -apple-system,
+    BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR",
+    Helvetica, Arial, sans-serif;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  line-break: strict;
+}
+
+.md-typeset .yl-ko .yl-course h1 {
+  line-height: 1.22;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.yl-ko .yl-eyebrow {
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+}
+
+.yl-ko .yl-desc,
+.yl-ko .yl-callout {
+  line-height: 1.75;
+}
+
+.yl-ko .yl-sess-kicker {
+  font-size: 0.63rem;
+  letter-spacing: 0.04em;
+}
+
+/* With keep-all a long title wraps a whole word at a time, which on a phone can
+   strand one word on the last line. Balancing evens the lines out instead. */
+.yl-ko .yl-sess-title {
+  line-height: 1.5;
+  text-wrap: balance;
+}
+
+.yl-ko .yl-sess-desc {
+  font-size: 0.74rem;
+  line-height: 1.7;
+}
+
+.yl-ko .yl-sess-tag {
+  font-size: 0.6rem;
+  letter-spacing: 0.02em;
+}
+
 /* ===== Session list ===== */
 
 .yl-sess {

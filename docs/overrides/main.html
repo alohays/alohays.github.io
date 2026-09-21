@@ -23,4 +23,53 @@
   <meta name="twitter:title" content="{{ preview_title | striptags | e }}">
   <meta name="twitter:description" content="{{ preview_description | e }}">
   <meta name="twitter:image" content="{{ config.site_url }}assets/images/social-preview.png">
+
+  <!-- Page-level translations. The site is English; a page that also exists in
+       another language lists it in its front matter (`translations:` = a list of
+       {lang, path}), and a page written in another language names it with
+       `lang:`. Nothing here is site-wide on purpose: a header language selector
+       would offer Korean on pages that do not have it. -->
+  {% if page and page.meta.translations %}
+    {% set page_lang = page.meta.lang or "en" %}
+    {% set alt = namespace(default=page.canonical_url) %}
+    <link rel="alternate" hreflang="{{ page_lang | e }}" href="{{ page.canonical_url | e }}">
+    {% for translation in page.meta.translations %}
+      {# `path` is the page's directory URL under the site root. Slashes at
+         either end are normalised here so a front-matter typo cannot produce
+         "//" or a slashless URL that GitHub Pages answers with a redirect. #}
+      {% set path = translation.path.strip("/") %}
+      {% set href = config.site_url ~ path ~ ("/" if path else "") %}
+      <link rel="alternate" hreflang="{{ translation.lang | e }}" href="{{ href | e }}">
+      {% if translation.lang == "en" %}
+        {% set alt.default = href %}
+      {% endif %}
+    {% endfor %}
+    <link rel="alternate" hreflang="x-default" href="{{ alt.default | e }}">
+  {% endif %}
+
+  <!-- Material writes <html lang> once, from theme.language, and instant
+       navigation never touches it again. A translated page wraps its content in
+       an element that carries its language, so this keeps the document's own
+       language in step with whichever page is showing: a screen reader picks
+       its voice from it. document$ fires on first load and after every instant
+       navigation. -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (typeof document$ === "undefined") return
+      var siteLang = document.documentElement.getAttribute("lang") || "en"
+      document$.subscribe(function () {
+        var el = document.querySelector(".md-content__inner > [lang]")
+        document.documentElement.lang = el ? el.getAttribute("lang") : siteLang
+      })
+    })
+  </script>
+  {% if page and page.meta.lang == "ko" %}
+    <meta property="og:locale" content="ko_KR">
+    <!-- Geist has no Hangul. Pretendard fills that gap on Korean pages only, as a
+         unicode-range subset, so a reader downloads the glyphs on the page and
+         nothing more. Without it Korean falls to the system face, which is fine
+         on macOS and Malgun Gothic on Windows. -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  {% endif %}
 {% endblock %}
