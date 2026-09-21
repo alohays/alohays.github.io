@@ -19,6 +19,11 @@ nav:
   - Blog:
       - blog/index.md
 
+# Reached from the language switch on the English course page, not from the nav:
+# the site nav is English only, and a second entry per course would double it.
+not_in_nav: |
+  /teaching/dgist-hss118-2026f/ko/index.md
+
 plugins:
   - macros
   - search:

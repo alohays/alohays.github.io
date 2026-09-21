@@ -1,13 +1,22 @@
 ---
 title: Physical AI for Everyone (DGIST HSS118)
 description: "Physical AI for Everyone at DGIST: slides, recordings, and schedule for HSS118, Seminar for Comprehensive Competency Cultivation (SCCC), Fall 2026."
+translations:
+  - lang: ko
+    path: teaching/dgist-hss118-2026f/ko/
 hide:
   - navigation
   - toc
 ---
 
 <div class="yl-course">
-  <span class="yl-eyebrow">DGIST · School of Undergraduate Studies · Fall 2026</span>
+  <div class="yl-course-top">
+    <span class="yl-eyebrow">DGIST · School of Undergraduate Studies · Fall 2026</span>
+    <nav class="yl-lang" aria-label="Page language">
+      <span class="yl-lang-opt" aria-current="page" lang="en">English</span>
+      <a class="yl-lang-opt" href="ko/" lang="ko" hreflang="ko">한국어</a>
+    </nav>
+  </div>
   <h1>Physical AI for Everyone</h1>
   <p class="yl-course-meta">Seminar for Comprehensive Competency Cultivation (SCCC) · HSS118 · 1 credit · Fridays 13:00–14:00 KST · E7-233</p>
   <p class="yl-desc">Why the center of gravity in AI is moving from systems that talk to systems that <strong>see, understand, decide, and act</strong>. Robot learning comes first; hardware, control, and mechanics return as a late special module.</p>
