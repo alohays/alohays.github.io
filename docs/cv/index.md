@@ -106,7 +106,7 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 ### 2026
 
-- Suhwan Choi<sup>\*</sup>, Jaeyoon Jung<sup>\*</sup>, Sungkyung Kim, **Yunsung Lee**<sup>†</sup>, Youngjae Yu<sup>†</sup>, "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control," arXiv preprint, 2026 (Under review). [[arXiv]](https://arxiv.org/abs/2608.24115) [[Project page]](https://worv-ai.github.io/ponderpounce/)
+- Suhwan Choi<sup>\*</sup>, Jaeyoon Jung<sup>\*</sup>, Sungkyung Kim, **Yunsung Lee**<sup>†</sup>, Youngjae Yu<sup>†</sup>, "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control," arXiv preprint, 2026. [[arXiv]](https://arxiv.org/abs/2608.24115) [[Project page]](https://worv-ai.github.io/ponderpounce/)
 
 - Haebin Seong<sup>\*</sup>, Sungmin Kim<sup>\*</sup>, Yongjun Cho<sup>\*</sup>, ..., Youngjae Yu<sup>†</sup>, **Yunsung Lee**<sup>†</sup>, "CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents," Conference on Robot Learning (**CoRL'26**), 2026. [[arXiv]](https://arxiv.org/abs/2511.20216) [[Project page]](https://worv-ai.github.io/costnav/)
 

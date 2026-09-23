@@ -34,7 +34,7 @@ hide:
 </div>
 
 <div class="yl-pubs">
-  <div class="yl-pub"><span class="yl-pub-year">2026</span><span class="yl-pub-title">PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control</span><span class="yl-pub-venue">Under review</span></div>
+  <div class="yl-pub"><span class="yl-pub-year">2026</span><span class="yl-pub-title">PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control</span><span class="yl-pub-venue">arXiv preprint</span></div>
   <div class="yl-pub"><span class="yl-pub-year">2026</span><span class="yl-pub-title">CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents</span><span class="yl-pub-venue">CoRL'26</span></div>
   <div class="yl-pub"><span class="yl-pub-year">2026</span><span class="yl-pub-title">Not All Prediction Targets Keep Training-Free Diffusion Guidance on the Manifold</span><span class="yl-pub-venue">ECCV'26</span></div>
   <div class="yl-pub"><span class="yl-pub-year">2026</span><span class="yl-pub-title">D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI</span><span class="yl-pub-venue">ICLR'26</span></div>
