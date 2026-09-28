@@ -1,0 +1,38 @@
+{
+  "temperature_kelvin": 300,
+  "boltzmann_joule_per_kelvin": 1.380649e-23,
+  "hardware": {
+    "source": "https://pdfs.semanticscholar.org/9476/20a1854655ed91a86b90d12695e05be85983.pdf",
+    "locator": "Horowitz, ISSCC 2014 accompanying presentation, slide 32 of 46",
+    "context": "Rough 45 nm per-event estimates. Memory access width: 64 bits. These operations do different work; this is not an intelligence-efficiency ranking.",
+    "operations": [
+      {"label": "Integer add / 32 bit", "low_pj": 0.1, "high_pj": 0.1},
+      {"label": "FP multiply / 32 bit", "low_pj": 4, "high_pj": 4},
+      {"label": "Cache read / 8 KB", "low_pj": 10, "high_pj": 10},
+      {"label": "Cache read / 32 KB", "low_pj": 20, "high_pj": 20},
+      {"label": "Cache read / 1 MB", "low_pj": 100, "high_pj": 100},
+      {"label": "DRAM read / 64 bit", "low_pj": 1300, "high_pj": 2600}
+    ]
+  },
+  "biology": {
+    "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5686401/",
+    "doi": "10.1098/rsta.2016.0343",
+    "locator": "Kempes et al. 2017, sections 4.1 and 4.5",
+    "context": "ATP-equivalent biochemical estimates compared with sequence-writing bounds under an idealized uniform alphabet. Each ratio has its own operation-specific denominator, k_B T ln(alphabet size). No organism-level efficiency is inferred.",
+    "operations": [
+      {"label": "Translation", "unit": "joules per amino acid", "alphabet_size": 20, "estimated_joules": 3.17e-19, "reported_bound_joules": 1.24e-20, "reported_ratio_approx": 26},
+      {"label": "DNA copying", "unit": "joules per nucleotide", "alphabet_size": 4, "estimated_joules": 9.50e-19, "reported_bound_joules": 5.74e-21, "reported_ratio_approx": 165}
+    ]
+  },
+  "illustrative_brain_arithmetic": {
+    "power_watts": 20,
+    "behavioural_bits_per_second": 10,
+    "source": "https://arxiv.org/abs/2408.10234",
+    "context": "An illustration of mismatched measurement levels, not plotted as an efficiency ranking. Whole-brain power divided by behavioural output throughput is not reset energy or total internal computation."
+  },
+  "audit": {
+    "checked_on": "2026-09-15",
+    "hardware_page_visually_checked": true,
+    "notes": "The DRAM interval is the source's rough range, not a confidence interval. No LLM, neuron, or synapse estimates are inferred from TDP, peak FLOPS, or unspecified signal definitions."
+  }
+}

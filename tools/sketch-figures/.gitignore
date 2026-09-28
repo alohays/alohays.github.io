@@ -1,0 +1,9 @@
+# Version only the sources needed to reproduce the published figures.
+# Editorial notes, audit outputs, and retired artwork remain local.
+*
+!.gitignore
+!README.md
+!energy-data.json
+!audit.py
+!responsive_figures.py
+!responsive_plots.py

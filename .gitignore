@@ -21,3 +21,12 @@ venv/
 
 # Logs
 *.log
+
+# Private reading editions, research notes, and release checks
+/_workspace/
+
+# Retired/local-only blog artwork (the published figures use HTML snippets)
+/docs/assets/images/blog/physical-units/*.ko.html
+/docs/assets/images/blog/physical-units/fig-*.svg
+/docs/assets/images/blog/physical-units/xkcd-standards.png
+/docs/assets/fonts/Excalifont-*.woff2

@@ -1,0 +1,181 @@
+<svg role="img" aria-label="Equal verified performance: A uses 1 J in 10 s, B uses 10 J in 1 s, C uses 1 J in 1 s. A and B lie on E times T = 10." xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288 266.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+
+ <g id="energy-time-figure_1">
+  <g id="energy-time-patch_1">
+   <path d="M 0 266.4
+L 288 266.4
+L 288 0
+L 0 0
+L 0 266.4
+z
+" style="fill: none"/>
+  </g>
+  <g id="energy-time-axes_1">
+   <g id="energy-time-patch_2">
+    <path d="M 48.96 223.776
+L 273.6 223.776
+L 273.6 15.984
+L 48.96 15.984
+L 48.96 223.776
+z
+" style="fill: none"/>
+   </g>
+   <g id="energy-time-matplotlib.axis_1">
+    <g id="energy-time-xtick_1">
+     <g id="energy-time-line2d_1"/>
+     <g id="energy-time-text_1">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: var(--pu-ink, #202c35)" x="69.381818" y="244.692016" transform="rotate(-0 69.381818 244.692016)">1</text>
+     </g>
+    </g>
+    <g id="energy-time-xtick_2">
+     <g id="energy-time-line2d_2"/>
+     <g id="energy-time-text_2">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: var(--pu-ink, #202c35)" x="151.069091" y="244.692016" transform="rotate(-0 151.069091 244.692016)">5</text>
+     </g>
+    </g>
+    <g id="energy-time-xtick_3">
+     <g id="energy-time-line2d_3"/>
+     <g id="energy-time-text_3">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: var(--pu-ink, #202c35)" x="253.178182" y="244.692016" transform="rotate(-0 253.178182 244.692016)">10</text>
+     </g>
+    </g>
+   </g>
+   <g id="energy-time-matplotlib.axis_2">
+    <g id="energy-time-ytick_1">
+     <g id="energy-time-line2d_4">
+      <path d="M 48.96 205.70713
+L 273.6 205.70713
+" clip-path="url(#energy-time-p8f75fbd42f)" style="fill: none; stroke: var(--pu-grid, #d6dfe4); stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="energy-time-line2d_5"/>
+     <g id="energy-time-text_4">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: end; fill: var(--pu-ink, #202c35)" x="40.96" y="212.165138" transform="rotate(-0 40.96 212.165138)">1</text>
+     </g>
+    </g>
+    <g id="energy-time-ytick_2">
+     <g id="energy-time-line2d_6">
+      <path d="M 48.96 133.431652
+L 273.6 133.431652
+" clip-path="url(#energy-time-p8f75fbd42f)" style="fill: none; stroke: var(--pu-grid, #d6dfe4); stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="energy-time-line2d_7"/>
+     <g id="energy-time-text_5">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: end; fill: var(--pu-ink, #202c35)" x="40.96" y="139.88966" transform="rotate(-0 40.96 139.88966)">5</text>
+     </g>
+    </g>
+    <g id="energy-time-ytick_3">
+     <g id="energy-time-line2d_8">
+      <path d="M 48.96 43.087304
+L 273.6 43.087304
+" clip-path="url(#energy-time-p8f75fbd42f)" style="fill: none; stroke: var(--pu-grid, #d6dfe4); stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="energy-time-line2d_9"/>
+     <g id="energy-time-text_6">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: end; fill: var(--pu-ink, #202c35)" x="40.96" y="49.545312" transform="rotate(-0 40.96 49.545312)">10</text>
+     </g>
+    </g>
+   </g>
+   <g id="energy-time-line2d_10">
+    <path d="M 69.381818 43.087304
+L 70.763746 54.539405
+L 72.606316 67.726672
+L 74.448886 79.007346
+L 76.291456 88.767031
+L 78.134026 97.293913
+L 79.976596 104.8077
+L 81.819166 111.47882
+L 83.661736 117.441502
+L 85.964949 124.059832
+L 88.268161 129.902576
+L 90.571374 135.098522
+L 92.874586 139.749439
+L 95.177799 143.936809
+L 97.481012 147.726644
+L 100.244867 151.825112
+L 103.008722 155.504419
+L 105.772577 158.825739
+L 108.536432 161.838896
+L 111.76093 165.01904
+L 114.985427 167.888566
+L 118.670567 170.842968
+L 122.355707 173.500693
+L 126.50149 176.18868
+L 130.647273 178.603826
+L 135.253698 181.015152
+L 139.860123 183.182087
+L 144.927191 185.325446
+L 150.454901 187.419576
+L 156.443254 189.445148
+L 162.892249 191.388404
+L 169.801887 193.240299
+L 177.632809 195.098677
+L 185.924375 196.834748
+L 195.137225 198.532726
+L 205.27136 200.169324
+L 216.326781 201.728664
+L 228.764129 203.253714
+L 242.583404 204.718429
+L 253.178182 205.70713
+L 253.178182 205.70713
+" clip-path="url(#energy-time-p8f75fbd42f)" style="fill: none; stroke: var(--pu-accent, #226794); stroke-width: 2; stroke-linecap: square"/>
+   </g>
+   <g id="energy-time-patch_3">
+    <path d="M 48.96 223.776
+L 48.96 15.984
+" style="fill: none; stroke: var(--pu-ink, #202c35); stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="energy-time-patch_4">
+    <path d="M 48.96 223.776
+L 273.6 223.776
+" style="fill: none; stroke: var(--pu-ink, #202c35); stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="energy-time-PathCollection_1">
+    <defs>
+     <path id="energy-time-mc3a3dc4556" d="M 0 4.330127
+C 1.148363 4.330127 2.249847 3.873878 3.061862 3.061862
+C 3.873878 2.249847 4.330127 1.148363 4.330127 0
+C 4.330127 -1.148363 3.873878 -2.249847 3.061862 -3.061862
+C 2.249847 -3.873878 1.148363 -4.330127 0 -4.330127
+C -1.148363 -4.330127 -2.249847 -3.873878 -3.061862 -3.061862
+C -3.873878 -2.249847 -4.330127 -1.148363 -4.330127 0
+C -4.330127 1.148363 -3.873878 2.249847 -3.061862 3.061862
+C -2.249847 3.873878 -1.148363 4.330127 0 4.330127
+z
+" style="stroke: var(--pu-accent, #226794)"/>
+    </defs>
+    <g clip-path="url(#energy-time-p8f75fbd42f)">
+     <use xlink:href="#energy-time-mc3a3dc4556" x="253.178182" y="205.70713" style="fill: var(--pu-accent, #226794); stroke: var(--pu-accent, #226794)"/>
+     <use xlink:href="#energy-time-mc3a3dc4556" x="69.381818" y="43.087304" style="fill: var(--pu-accent, #226794); stroke: var(--pu-accent, #226794)"/>
+    </g>
+   </g>
+   <g id="energy-time-PathCollection_2">
+    <defs>
+     <path id="energy-time-m1af5bbc886" d="M -4.743416 4.743416
+L 4.743416 4.743416
+L 4.743416 -4.743416
+L -4.743416 -4.743416
+z
+" style="stroke: var(--pu-amber, #966014)"/>
+    </defs>
+    <g clip-path="url(#energy-time-p8f75fbd42f)">
+     <use xlink:href="#energy-time-m1af5bbc886" x="69.381818" y="205.70713" style="fill: var(--pu-amber, #966014); stroke: var(--pu-amber, #966014)"/>
+    </g>
+   </g>
+   <g id="energy-time-text_7">
+    <text style="font-weight: 700; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: var(--pu-ink, #202c35)" x="226.629818" y="187.638261" transform="rotate(-0 226.629818 187.638261)">A</text>
+   </g>
+   <g id="energy-time-text_8">
+    <text style="font-weight: 700; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: var(--pu-ink, #202c35)" x="87.761455" y="46.701078" transform="rotate(-0 87.761455 46.701078)">B</text>
+   </g>
+   <g id="energy-time-text_9">
+    <text style="font-weight: 700; font-size: 19px; font-family: 'DejaVu Sans'; text-anchor: start; fill: var(--pu-ink, #202c35)" x="85.719273" y="205.70713" transform="rotate(-0 85.719273 205.70713)">C</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="energy-time-p8f75fbd42f">
+   <rect x="48.96" y="15.984" width="224.64" height="207.792"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -852,3 +852,47 @@
     transition: none;
   }
 }
+
+/* ---- Blog figures ------------------------------------------------------- */
+.yl-sketch {
+  margin: 1.6rem auto;
+  max-width: 100%;
+}
+
+/* ---- Wide reading column ------------------------------------------------ */
+/* Give blog posts a wider reading column and hide the archive sidebar.
+   Material's .md-content--post marker is inside the content swapped by instant
+   navigation, so these rules apply only while a post is displayed. */
+@media screen and (min-width: 76.25em) {
+  html:has(.md-content--post) .md-grid {
+    max-width: 84rem;
+  }
+  html:has(.md-content--post) .md-sidebar--primary {
+    display: none;
+  }
+  html:has(.md-content--post) .md-content {
+    max-width: 58rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  html:has(.md-content--post) .md-content__inner {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
+@media screen and (min-width: 60em) and (max-width: 76.1875em) {
+  html:has(.md-content--post) .md-grid {
+    max-width: 72rem;
+  }
+  html:has(.md-content--post) .md-sidebar--primary {
+    display: none;
+  }
+}
+html:has(.md-content--post) .md-typeset figure,
+html:has(.md-content--post) .md-typeset .yl-sketch {
+  width: 100%;
+  max-width: 100%;
+}
+html:has(.md-content--post) .md-typeset figure img {
+  width: 100%;
+}
