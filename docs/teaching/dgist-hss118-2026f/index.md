@@ -19,7 +19,7 @@ hide:
   </div>
   <h1>Physical AI for Everyone</h1>
   <p class="yl-course-meta">Seminar for Comprehensive Competency Cultivation (SCCC) · HSS118 · 1 credit · Fridays 13:00–14:00 KST · E7-233</p>
-  <p class="yl-desc">Why the center of gravity in AI is moving from systems that talk to systems that <strong>see, understand, decide, and act</strong>. Robot learning comes first; hardware, control, and mechanics return as a late special module.</p>
+  <p class="yl-desc">Why the center of gravity in AI is moving from systems that talk to systems that <strong>see, understand, decide, and act</strong>. Robot learning comes first; hardware, control, and mechanics follow late in the semester.</p>
 </div>
 
 <div class="yl-callout">
@@ -164,7 +164,6 @@ hide:
   <div class="yl-sess-row">
     <span class="yl-sess-date">Nov 20</span>
     <span class="yl-sess-body">
-      <span class="yl-sess-kicker">Special module</span>
       <span class="yl-sess-title">Foundations of Robot Hardware, Control, and Modern Platforms</span>
       <span class="yl-sess-desc">How hardware, control, and mechanics turn a learned policy into physical motion.</span>
       <span class="yl-sess-tag yl-sess-tag--mine">Lecture</span>
