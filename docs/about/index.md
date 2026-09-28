@@ -1,51 +1,42 @@
 # About Me
 
-Hello! I'm **Yunsung Lee**, an AI/ML research engineer with strong research foundations and practical experience in deploying commercial AI products.
+I'm **Yunsung Lee**, Head of Research on MaumAI's WoRV team and an Adjunct Professor at DGIST, where I teach undergraduate coursework in Physical AI.
 
 ## Who I Am
 
-I'm an AI researcher and engineer working in machine learning and computer vision. What keeps me in the field is the distance between a result on paper and a system people actually use — most of my work lives in that gap.
+I'm an AI researcher and engineer working in machine learning and computer vision. What keeps me in the field is the distance between a result on paper and a system people actually use. Most of my work lives in that gap.
 
 ## What I Do
 
-- **AI/ML Research**: Specializing in vision-language multimodal systems, diffusion models, and autonomous agents
-- **Research Leadership**: Leading research initiatives at MaumAI's WoRV team for robotics and vehicle control
-- **Teaching**: Adjunct Professor at DGIST, School of Undergraduate Studies, teaching undergraduate coursework in Physical AI
-- **Product Development**: Deploying commercial AI products with over {{ stats.maus }} MAUs
-- **Academic Contributions**: Publishing in top-tier conferences with {{ stats.citations }} citations
-- **Knowledge Sharing**: Contributing to the AI community through research, open-source projects, and conference reviews
+- **Research leadership**: At MaumAI I lead WoRV (World Model for Robotics and Vehicle Control), building foundation models that tie language, vision, and action together for robots and autonomous vehicles.
+- **Teaching**: At DGIST's School of Undergraduate Studies I teach Physical AI ([HSS118, Fall 2026](../teaching/dgist-hss118-2026f/index.md)).
+- **Publishing**: {{ stats.publications }} papers at venues including ICLR, ECCV, and CoRL, with {{ stats.citations }} citations. The recent ones are on the [homepage](../index.md) and the full list is in my [CV](../cv/index.md).
+- **Shipping products**: Before WoRV I built agent memory, personalization, and multimodal features for [wrtn](https://wrtn.ai/), and earlier worked on multimodal dialogue at Scatter Lab and vision for education at Riiid. Those products reached {{ stats.maus }} monthly active users.
+- **Community**: I review for CVPR, ICCV, NeurIPS, ECCV, ICLR, ICML, and ACL Rolling Review (ICML 2026 Gold Reviewer), and I give [talks](../talks/index.md) on robotics foundation models, world models, and research careers.
 
-## My Research Interests
+## Research Interests
 
-### Core Areas
+- **Vision-language-action models**: Extending multimodal AI from seeing and reading to acting in the real world
+- **Diffusion models**: Generative modeling and training-free guidance
+- **Embodied and agentic AI**: Agents that perceive, reason, and act, from desktops to robots and vehicles
+- **Robotics foundation models**: Large-scale pretraining for skills that generalize across tasks and embodiments
 
-- **Vision-Language AI**: Multimodal systems that understand both visual and textual information
-- **Diffusion Models**: Generative AI and advanced diffusion-based approaches
-- **Autonomous Agents**: Embodied AI systems that can act in real-world environments
-- **Foundation Models**: Large-scale robotics models for generalizable intelligence
+## Background
 
-### Beyond Code
+I earned my M.Sc. in Computer Science at Korea University, advised by Seungryong Kim and Jaegul Choo, and spent the first half of 2020 as a visiting scholar at Carnegie Mellon University's Language Technologies Institute. Along the way I interned with NAVER CLOVA's OCR team and Hyperconnect's ML team. The full record is in my [CV](../cv/index.md).
+
+## Beyond Code
 
 Outside of work:
 
-- Reading papers with PR12, TensorFlow Korea's advanced study group — going on six years now
+- Reading papers with PR12, TensorFlow Korea's advanced study group, going on six years now
 - Maintaining open-source tooling for open-world agents at [open-world-agents](https://github.com/open-world-agents)
 - Mixing drinks; I hold Korea's national Craftsman Bartender license
 
-## Let's Connect
+## Get in Touch
 
-I'm always interested in connecting with fellow developers, discussing new ideas, and collaborating on interesting projects. Feel free to reach out through any of the following channels:
+I'm glad to hear from researchers, students, and anyone building with embodied or multimodal AI.
 
+- **Email**: [dldbstjd9751@gmail.com](mailto:dldbstjd9751@gmail.com)
 - **GitHub**: [@alohays](https://github.com/alohays)
 - **LinkedIn**: [Yunsung Lee](https://www.linkedin.com/in/yunsung-lee-23a926150/)
-- **Email**: [dldbstjd9751@gmail.com](mailto:dldbstjd9751@gmail.com)
-
-## This Website
-
-This personal website serves as a hub for my professional presence, featuring:
-
-- **[Blog](../blog/)**: Technical articles, tutorials, and insights
-- **[CV](../cv/)**: My professional experience and qualifications
-- **Projects**: Showcases of my work and contributions
-
-Thank you for visiting, and I hope you find the content here valuable and interesting!
