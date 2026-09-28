@@ -1,0 +1,160 @@
+<svg role="img" aria-label="Hardware rows 1 to 4: 0.1, 4, 10, and 1300 to 2600 pJ per specified operation. Logarithmic x axis." xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288 288" xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+
+ <g id="hardware-energy-figure_1">
+  <g id="hardware-energy-patch_1">
+   <path d="M 0 288
+L 288 288
+L 288 0
+L 0 0
+L 0 288
+z
+" style="fill: none"/>
+  </g>
+  <g id="hardware-energy-axes_1">
+   <g id="hardware-energy-patch_2">
+    <path d="M 34.56 241.92
+L 270.72 241.92
+L 270.72 23.04
+L 34.56 23.04
+L 34.56 241.92
+z
+" style="fill: none"/>
+   </g>
+   <g id="hardware-energy-matplotlib.axis_1">
+    <g id="hardware-energy-xtick_1">
+     <g id="hardware-energy-line2d_1"/>
+     <g id="hardware-energy-text_1">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: var(--pu-ink, #202c35)" x="51.050263" y="262.836016" transform="rotate(-0 51.050263 262.836016)">0.1</text>
+     </g>
+    </g>
+    <g id="hardware-energy-xtick_2">
+     <g id="hardware-energy-line2d_2"/>
+     <g id="hardware-energy-text_2">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: var(--pu-ink, #202c35)" x="133.928397" y="262.836016" transform="rotate(-0 133.928397 262.836016)">10</text>
+     </g>
+    </g>
+    <g id="hardware-energy-xtick_3">
+     <g id="hardware-energy-line2d_3"/>
+     <g id="hardware-energy-text_3">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: var(--pu-ink, #202c35)" x="216.806531" y="262.836016" transform="rotate(-0 216.806531 262.836016)">1,000</text>
+     </g>
+    </g>
+   </g>
+   <g id="hardware-energy-matplotlib.axis_2">
+    <g id="hardware-energy-ytick_1">
+     <g id="hardware-energy-line2d_4">
+      <path d="M 34.56 214.56
+L 270.72 214.56
+" clip-path="url(#hardware-energy-p673a0bd3da)" style="fill: none; stroke: var(--pu-grid, #d6dfe4); stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="hardware-energy-line2d_5"/>
+     <g id="hardware-energy-text_4">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: end; fill: var(--pu-ink, #202c35)" x="26.56" y="221.018008" transform="rotate(-0 26.56 221.018008)">4</text>
+     </g>
+    </g>
+    <g id="hardware-energy-ytick_2">
+     <g id="hardware-energy-line2d_6">
+      <path d="M 34.56 159.84
+L 270.72 159.84
+" clip-path="url(#hardware-energy-p673a0bd3da)" style="fill: none; stroke: var(--pu-grid, #d6dfe4); stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="hardware-energy-line2d_7"/>
+     <g id="hardware-energy-text_5">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: end; fill: var(--pu-ink, #202c35)" x="26.56" y="166.298008" transform="rotate(-0 26.56 166.298008)">3</text>
+     </g>
+    </g>
+    <g id="hardware-energy-ytick_3">
+     <g id="hardware-energy-line2d_8">
+      <path d="M 34.56 105.12
+L 270.72 105.12
+" clip-path="url(#hardware-energy-p673a0bd3da)" style="fill: none; stroke: var(--pu-grid, #d6dfe4); stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="hardware-energy-line2d_9"/>
+     <g id="hardware-energy-text_6">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: end; fill: var(--pu-ink, #202c35)" x="26.56" y="111.578008" transform="rotate(-0 26.56 111.578008)">2</text>
+     </g>
+    </g>
+    <g id="hardware-energy-ytick_4">
+     <g id="hardware-energy-line2d_10">
+      <path d="M 34.56 50.4
+L 270.72 50.4
+" clip-path="url(#hardware-energy-p673a0bd3da)" style="fill: none; stroke: var(--pu-grid, #d6dfe4); stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="hardware-energy-line2d_11"/>
+     <g id="hardware-energy-text_7">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: end; fill: var(--pu-ink, #202c35)" x="26.56" y="56.858008" transform="rotate(-0 26.56 56.858008)">1</text>
+     </g>
+    </g>
+   </g>
+   <g id="hardware-energy-line2d_12">
+    <path d="M 51.050263 50.4
+L 51.050263 50.4
+" clip-path="url(#hardware-energy-p673a0bd3da)" style="fill: none; stroke: var(--pu-accent, #226794); stroke-width: 5; stroke-linecap: round"/>
+   </g>
+   <g id="hardware-energy-line2d_13">
+    <defs>
+     <path id="hardware-energy-md212e8ba23" d="M 0 3.5
+C 0.928211 3.5 1.81853 3.131218 2.474874 2.474874
+C 3.131218 1.81853 3.5 0.928211 3.5 0
+C 3.5 -0.928211 3.131218 -1.81853 2.474874 -2.474874
+C 1.81853 -3.131218 0.928211 -3.5 0 -3.5
+C -0.928211 -3.5 -1.81853 -3.131218 -2.474874 -2.474874
+C -3.131218 -1.81853 -3.5 -0.928211 -3.5 0
+C -3.5 0.928211 -3.131218 1.81853 -2.474874 2.474874
+C -1.81853 3.131218 -0.928211 3.5 0 3.5
+z
+" style="stroke: var(--pu-accent, #226794)"/>
+    </defs>
+    <g clip-path="url(#hardware-energy-p673a0bd3da)">
+     <use xlink:href="#hardware-energy-md212e8ba23" x="51.050263" y="50.4" style="fill: var(--pu-accent, #226794); stroke: var(--pu-accent, #226794)"/>
+    </g>
+   </g>
+   <g id="hardware-energy-line2d_14">
+    <path d="M 117.438134 105.12
+L 117.438134 105.12
+" clip-path="url(#hardware-energy-p673a0bd3da)" style="fill: none; stroke: var(--pu-accent, #226794); stroke-width: 5; stroke-linecap: round"/>
+   </g>
+   <g id="hardware-energy-line2d_15">
+    <g clip-path="url(#hardware-energy-p673a0bd3da)">
+     <use xlink:href="#hardware-energy-md212e8ba23" x="117.438134" y="105.12" style="fill: var(--pu-accent, #226794); stroke: var(--pu-accent, #226794)"/>
+    </g>
+   </g>
+   <g id="hardware-energy-line2d_16">
+    <path d="M 133.928397 159.84
+L 133.928397 159.84
+" clip-path="url(#hardware-energy-p673a0bd3da)" style="fill: none; stroke: var(--pu-accent, #226794); stroke-width: 5; stroke-linecap: round"/>
+   </g>
+   <g id="hardware-energy-line2d_17">
+    <g clip-path="url(#hardware-energy-p673a0bd3da)">
+     <use xlink:href="#hardware-energy-md212e8ba23" x="133.928397" y="159.84" style="fill: var(--pu-accent, #226794); stroke: var(--pu-accent, #226794)"/>
+    </g>
+   </g>
+   <g id="hardware-energy-line2d_18">
+    <path d="M 221.528237 214.56
+L 234.002639 214.56
+" clip-path="url(#hardware-energy-p673a0bd3da)" style="fill: none; stroke: var(--pu-accent, #226794); stroke-width: 5; stroke-linecap: round"/>
+   </g>
+   <g id="hardware-energy-line2d_19">
+    <g clip-path="url(#hardware-energy-p673a0bd3da)">
+     <use xlink:href="#hardware-energy-md212e8ba23" x="227.765438" y="214.56" style="fill: var(--pu-accent, #226794); stroke: var(--pu-accent, #226794)"/>
+    </g>
+   </g>
+   <g id="hardware-energy-patch_3">
+    <path d="M 34.56 241.92
+L 34.56 23.04
+" style="fill: none; stroke: var(--pu-ink, #202c35); stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="hardware-energy-patch_4">
+    <path d="M 34.56 241.92
+L 270.72 241.92
+" style="fill: none; stroke: var(--pu-ink, #202c35); stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="hardware-energy-p673a0bd3da">
+   <rect x="34.56" y="23.04" width="236.16" height="218.88"/>
+  </clipPath>
+ </defs>
+</svg>

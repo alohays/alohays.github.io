@@ -1,0 +1,110 @@
+<svg role="img" aria-label="Biological rows 1 and 2: approximately 26 and 165 times each operation-specific bound. Logarithmic x axis." xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288 208.8" xmlns="http://www.w3.org/2000/svg" version="1.1">
+
+
+ <g id="biology-energy-figure_1">
+  <g id="biology-energy-patch_1">
+   <path d="M 0 208.8
+L 288 208.8
+L 288 0
+L 0 0
+L 0 208.8
+z
+" style="fill: none"/>
+  </g>
+  <g id="biology-energy-axes_1">
+   <g id="biology-energy-patch_2">
+    <path d="M 34.56 162.864
+L 270.72 162.864
+L 270.72 25.056
+L 34.56 25.056
+L 34.56 162.864
+z
+" style="fill: none"/>
+   </g>
+   <g id="biology-energy-matplotlib.axis_1">
+    <g id="biology-energy-xtick_1">
+     <g id="biology-energy-line2d_1"/>
+     <g id="biology-energy-text_1">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: var(--pu-ink, #202c35)" x="45.542204" y="183.780016" transform="rotate(-0 45.542204 183.780016)">1</text>
+     </g>
+    </g>
+    <g id="biology-energy-xtick_2">
+     <g id="biology-energy-line2d_2"/>
+     <g id="biology-energy-text_2">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: var(--pu-ink, #202c35)" x="116.439977" y="183.780016" transform="rotate(-0 116.439977 183.780016)">10</text>
+     </g>
+    </g>
+    <g id="biology-energy-xtick_3">
+     <g id="biology-energy-line2d_3"/>
+     <g id="biology-energy-text_3">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: var(--pu-ink, #202c35)" x="187.337749" y="183.780016" transform="rotate(-0 187.337749 183.780016)">100</text>
+     </g>
+    </g>
+    <g id="biology-energy-xtick_4">
+     <g id="biology-energy-line2d_4"/>
+     <g id="biology-energy-text_4">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: var(--pu-ink, #202c35)" x="258.235522" y="183.780016" transform="rotate(-0 258.235522 183.780016)">1,000</text>
+     </g>
+    </g>
+   </g>
+   <g id="biology-energy-matplotlib.axis_2">
+    <g id="biology-energy-ytick_1">
+     <g id="biology-energy-line2d_5">
+      <path d="M 34.56 125.28
+L 270.72 125.28
+" clip-path="url(#biology-energy-pb71c8eca3a)" style="fill: none; stroke: var(--pu-grid, #d6dfe4); stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="biology-energy-line2d_6"/>
+     <g id="biology-energy-text_5">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: end; fill: var(--pu-ink, #202c35)" x="26.56" y="131.738008" transform="rotate(-0 26.56 131.738008)">2</text>
+     </g>
+    </g>
+    <g id="biology-energy-ytick_2">
+     <g id="biology-energy-line2d_7">
+      <path d="M 34.56 62.64
+L 270.72 62.64
+" clip-path="url(#biology-energy-pb71c8eca3a)" style="fill: none; stroke: var(--pu-grid, #d6dfe4); stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="biology-energy-line2d_8"/>
+     <g id="biology-energy-text_6">
+      <text style="font-size: 17px; font-family: 'DejaVu Sans'; text-anchor: end; fill: var(--pu-ink, #202c35)" x="26.56" y="69.098008" transform="rotate(-0 26.56 69.098008)">1</text>
+     </g>
+    </g>
+   </g>
+   <g id="biology-energy-PathCollection_1">
+    <defs>
+     <path id="biology-energy-mc631da5055" d="M 0 4.472136
+C 1.186024 4.472136 2.323632 4.000923 3.162278 3.162278
+C 4.000923 2.323632 4.472136 1.186024 4.472136 0
+C 4.472136 -1.186024 4.000923 -2.323632 3.162278 -3.162278
+C 2.323632 -4.000923 1.186024 -4.472136 0 -4.472136
+C -1.186024 -4.472136 -2.323632 -4.000923 -3.162278 -3.162278
+C -4.000923 -2.323632 -4.472136 -1.186024 -4.472136 0
+C -4.472136 1.186024 -4.000923 2.323632 -3.162278 3.162278
+C -2.323632 4.000923 -1.186024 4.472136 0 4.472136
+z
+" style="stroke: var(--pu-amber, #966014)"/>
+    </defs>
+    <g clip-path="url(#biology-energy-pb71c8eca3a)">
+     <use xlink:href="#biology-energy-mc631da5055" x="145.320307" y="62.64" style="fill: var(--pu-amber, #966014); stroke: var(--pu-amber, #966014)"/>
+     <use xlink:href="#biology-energy-mc631da5055" x="202.840512" y="125.28" style="fill: var(--pu-amber, #966014); stroke: var(--pu-amber, #966014)"/>
+    </g>
+   </g>
+   <g id="biology-energy-patch_3">
+    <path d="M 34.56 162.864
+L 34.56 25.056
+" style="fill: none; stroke: var(--pu-ink, #202c35); stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="biology-energy-patch_4">
+    <path d="M 34.56 162.864
+L 270.72 162.864
+" style="fill: none; stroke: var(--pu-ink, #202c35); stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="biology-energy-pb71c8eca3a">
+   <rect x="34.56" y="25.056" width="236.16" height="137.808"/>
+  </clipPath>
+ </defs>
+</svg>
