@@ -22,7 +22,7 @@ hide:
   </div>
   <h1>모두를 위한 Physical AI</h1>
   <p class="yl-course-meta">미래소양강좌 · HSS118 · 1학점 · 매주 금요일 13:00~14:00 · E7-233</p>
-  <p class="yl-desc">AI의 무게중심은 말하는 AI에서 <strong>보고, 이해하고, 판단하고, 행동하는</strong> AI로 옮겨 가고 있습니다. 이 강좌는 그 이유를 다룹니다. 로봇 학습(robot learning)을 먼저 배우고 하드웨어·제어·기계공학은 학기 후반의 특별 모듈에서 다룹니다.</p>
+  <p class="yl-desc">AI의 무게중심은 말하는 AI에서 <strong>보고, 이해하고, 판단하고, 행동하는</strong> AI로 옮겨 가고 있습니다. 이 강좌는 그 이유를 다룹니다. 로봇 학습(robot learning)을 먼저 배우고 하드웨어·제어·기계공학은 학기 후반에 다룹니다.</p>
 </div>
 
 <div class="yl-callout">
@@ -167,7 +167,6 @@ hide:
   <div class="yl-sess-row">
     <span class="yl-sess-date">11월 20일</span>
     <span class="yl-sess-body">
-      <span class="yl-sess-kicker">특별 모듈</span>
       <span class="yl-sess-title">로봇 하드웨어와 제어의 기초, 최신 로봇 플랫폼</span>
       <span class="yl-sess-desc">학습된 정책(policy)은 하드웨어와 제어, 기계공학을 거쳐 실제 물리적 움직임이 됩니다.</span>
       <span class="yl-sess-tag yl-sess-tag--mine">강의</span>
