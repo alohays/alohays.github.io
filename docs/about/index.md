@@ -9,6 +9,7 @@ I'm an AI researcher and engineer working in machine learning and computer visio
 ## What I Do
 
 - **Research leadership**: At MaumAI I lead WoRV (World Model for Robotics and Vehicle Control), building foundation models that tie language, vision, and action together for robots and autonomous vehicles.
+- **PonderPounce**: As a co-corresponding author, I work on episode memory and reasoning for robot control. PonderPounce-9B reached [#1 on the official RoboMME Regular Leaderboard](https://robomme.github.io/leaderboard.html) in September 2026 with 60.83% overall success, 16.32 percentage points ahead of the next model. The paper was accepted to the [8th Robot Learning Workshop @ NeurIPS 2026](https://www.robot-learning.ml/2026/). [Research, code, and demos →](https://worv-ai.github.io/ponderpounce/)
 - **Teaching**: At DGIST's School of Undergraduate Studies I teach Physical AI ([HSS118, Fall 2026](../teaching/dgist-hss118-2026f/index.md)).
 - **Publishing**: {{ stats.publications }} papers at venues including ICLR, ECCV, and CoRL, with {{ stats.citations }} citations. The recent ones are on the [homepage](../index.md) and the full list is in my [CV](../cv/index.md).
 - **Shipping products**: Before WoRV I built agent memory, personalization, and multimodal features for [wrtn](https://wrtn.ai/), and earlier worked on multimodal dialogue at Scatter Lab and vision for education at Riiid. Those products reached {{ stats.maus }} monthly active users.
