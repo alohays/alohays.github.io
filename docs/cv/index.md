@@ -43,6 +43,8 @@ MaumAI · Seongnam, South Korea · May 2025 - Present
 
 Leading research initiatives for WoRV (World Model for Robotics and Vehicle Control), MaumAI's flagship Embodied AI research organization. Overseeing the development of foundation models that integrate language, vision, and action for robotics and autonomous driving applications.
 
+- Co-corresponding author of [PonderPounce](https://worv-ai.github.io/ponderpounce/), ranked **#1 on the official [RoboMME Regular Leaderboard](https://robomme.github.io/leaderboard.html)** in September 2026: **60.83% overall success**, **16.32 percentage points** ahead of the next model. Accepted to the **8th Robot Learning Workshop @ NeurIPS 2026**.
+
 **Adjunct Professor, School of Undergraduate Studies**
 DGIST (Daegu Gyeongbuk Institute of Science and Technology) · Daegu, South Korea · Aug. 2026 - Present
 
@@ -106,7 +108,7 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 ### 2026
 
-- Suhwan Choi<sup>\*</sup>, Jaeyoon Jung<sup>\*</sup>, Sungkyung Kim, **Yunsung Lee**<sup>†</sup>, Youngjae Yu<sup>†</sup>, "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control," arXiv preprint, 2026. [[arXiv]](https://arxiv.org/abs/2608.24115) [[Project page]](https://worv-ai.github.io/ponderpounce/)
+- Suhwan Choi<sup>\*</sup>, Jaeyoon Jung<sup>\*</sup>, Sungkyung Kim, **Yunsung Lee**<sup>†</sup>, Youngjae Yu<sup>†</sup>, "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control," 8th Robot Learning Workshop: Is Physical AI Going Zero-Shot? (**WRL @ NeurIPS'26**), 2026 (Accepted). [[arXiv]](https://arxiv.org/abs/2608.24115) [[Project page]](https://worv-ai.github.io/ponderpounce/) [[Workshop]](https://www.robot-learning.ml/2026/) [[Leaderboard]](https://robomme.github.io/leaderboard.html)
 
 - Haebin Seong<sup>\*</sup>, Sungmin Kim<sup>\*</sup>, Yongjun Cho<sup>\*</sup>, ..., Youngjae Yu<sup>†</sup>, **Yunsung Lee**<sup>†</sup>, "CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents," Conference on Robot Learning (**CoRL'26**), 2026. [[arXiv]](https://arxiv.org/abs/2511.20216) [[Project page]](https://worv-ai.github.io/costnav/)
 

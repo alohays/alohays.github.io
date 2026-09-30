@@ -29,12 +29,30 @@ hide:
 </div>
 
 <div class="yl-sec-head">
+  <h2 id="research-news">Research news</h2>
+  <a class="yl-more" href="https://worv-ai.github.io/ponderpounce/">PonderPounce project →</a>
+</div>
+
+<div class="yl-grid2">
+  <div class="yl-card">
+    <p><time datetime="2026-09">September 2026</time></p>
+    <h3>PonderPounce reaches #1 on RoboMME</h3>
+    <p>PonderPounce-9B topped the official <a href="https://robomme.github.io/leaderboard.html">RoboMME Regular Leaderboard</a> with <strong>60.83% overall success</strong>, a <strong>16.32 percentage-point lead</strong> over the next model (September 29 standings).</p>
+  </div>
+  <div class="yl-card">
+    <p><time datetime="2026-09">September 2026</time></p>
+    <h3>Accepted to WRL @ NeurIPS 2026</h3>
+    <p>PonderPounce was accepted to the <a href="https://www.robot-learning.ml/2026/">8th Robot Learning Workshop @ NeurIPS 2026</a>: <em>Is Physical AI Going Zero-Shot?</em> <a href="https://arxiv.org/abs/2608.24115">Read the paper →</a></p>
+  </div>
+</div>
+
+<div class="yl-sec-head">
   <h2 id="recent-publications">Recent publications</h2>
   <a class="yl-more" href="https://scholar.google.co.kr/citations?user=7iaKhrEAAAAJ&hl=en">Google Scholar →</a>
 </div>
 
 <div class="yl-pubs">
-  <div class="yl-pub"><span class="yl-pub-year">2026</span><span class="yl-pub-title">PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control</span><span class="yl-pub-venue">arXiv preprint</span></div>
+  <div class="yl-pub"><span class="yl-pub-year">2026</span><span class="yl-pub-title"><a href="https://worv-ai.github.io/ponderpounce/">PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control</a></span><span class="yl-pub-venue">WRL @ NeurIPS'26</span></div>
   <div class="yl-pub"><span class="yl-pub-year">2026</span><span class="yl-pub-title">CostNav: A Navigation Benchmark for Real-World Economic-Cost Evaluation of Physical AI Agents</span><span class="yl-pub-venue">CoRL'26</span></div>
   <div class="yl-pub"><span class="yl-pub-year">2026</span><span class="yl-pub-title">Not All Prediction Targets Keep Training-Free Diffusion Guidance on the Manifold</span><span class="yl-pub-venue">ECCV'26</span></div>
   <div class="yl-pub"><span class="yl-pub-year">2026</span><span class="yl-pub-title">D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to Embodied AI</span><span class="yl-pub-venue">ICLR'26</span></div>
