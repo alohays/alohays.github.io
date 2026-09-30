@@ -43,7 +43,7 @@ MaumAI · Seongnam, South Korea · May 2025 - Present
 
 Leading research initiatives for WoRV (World Model for Robotics and Vehicle Control), MaumAI's flagship Embodied AI research organization. Overseeing the development of foundation models that integrate language, vision, and action for robotics and autonomous driving applications.
 
-- Co-corresponding author of [PonderPounce](https://worv-ai.github.io/ponderpounce/), ranked **#1 on the official [RoboMME Regular Leaderboard](https://robomme.github.io/leaderboard.html)** in September 2026: **60.83% overall success**, **16.32 percentage points** ahead of the next model. Accepted to the **8th Robot Learning Workshop @ NeurIPS 2026**.
+- Co-corresponding author of [PonderPounce](https://worv-ai.github.io/ponderpounce/), ranked **[#1 on the official RoboMME Regular Leaderboard](https://robomme.github.io/leaderboard.html)** in September 2026: **60.83% overall success**, **16.32 percentage points** ahead of the next model. Accepted to the **8th Robot Learning Workshop @ NeurIPS 2026**.
 
 **Adjunct Professor, School of Undergraduate Studies**
 DGIST (Daegu Gyeongbuk Institute of Science and Technology) · Daegu, South Korea · Aug. 2026 - Present
