@@ -23,6 +23,7 @@ nav:
 # the site nav is English only, and a second entry per course would double it.
 not_in_nav: |
   /teaching/dgist-hss118-2026f/ko/index.md
+  /teaching/dgist-hss118-2026f/w06-sources.md
 
 plugins:
   - macros
