@@ -97,7 +97,7 @@ hide:
       <span class="yl-sess-tag yl-sess-tag--mine">강의</span>
     </span>
     <span class="yl-sess-mat">
-      <span class="yl-mat">슬라이드</span>
+      <a class="yl-mat" href="https://alohays.github.io/paper2pr/slides/lectures/dgist-2026f-w06.html">슬라이드</a>
       <span class="yl-mat">녹화본</span>
     </span>
   </div>
