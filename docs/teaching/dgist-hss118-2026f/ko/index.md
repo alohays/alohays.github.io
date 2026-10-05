@@ -34,6 +34,8 @@ hide:
   <h2 id="sessions">강의 일정</h2>
 </div>
 
+<p class="yl-desc"><strong>평가 운영 안내 — 10월 5일:</strong> 별도의 중간·기말 시험이나 리포트 없이, 지정된 8회 강의의 주간 성찰 에세이로 과제 평가를 진행합니다. 출석 기준은 계속 적용되며, 공식 배점과 제출 안내는 DGIST LMS에서 공지합니다.</p>
+
 <div class="yl-sess">
 
   <div class="yl-sess-row yl-sess-row--quiet">
@@ -98,7 +100,7 @@ hide:
     </span>
     <span class="yl-sess-mat">
       <a class="yl-mat" href="https://alohays.github.io/paper2pr/slides/lectures/dgist-2026f-w06.html">슬라이드</a>
-      <span class="yl-mat">녹화본</span>
+      <a class="yl-mat" href="https://youtu.be/-WCeRn4c9tQ">녹화본 (공개 예정)</a>
     </span>
   </div>
 
@@ -113,9 +115,9 @@ hide:
   <div class="yl-sess-row yl-sess-row--quiet">
     <span class="yl-sess-date">10월 16일</span>
     <span class="yl-sess-body">
-      <span class="yl-sess-title">중간고사 주간 (성찰 리포트로 대체)</span>
-      <span class="yl-sess-desc">이 과목은 지필 시험을 보지 않습니다. 리포트 주제와 마감은 LMS에서 공지합니다.</span>
-      <span class="yl-sess-tag">평가</span>
+      <span class="yl-sess-title">중간고사 주간 — 별도 수업·과제 없음</span>
+      <span class="yl-sess-desc">중간고사와 별도 중간 리포트는 없습니다. 지정된 8회 강의의 주간 성찰 에세이로 과제 평가를 진행하며, 제출 안내는 LMS를 확인해 주세요.</span>
+      <span class="yl-sess-tag">휴강</span>
     </span>
   </div>
 
@@ -207,9 +209,9 @@ hide:
   <div class="yl-sess-row yl-sess-row--quiet">
     <span class="yl-sess-date">12월 11일</span>
     <span class="yl-sess-body">
-      <span class="yl-sess-title">기말고사 주간 (종합 에세이로 대체)</span>
-      <span class="yl-sess-desc">이 과목은 지필 시험을 보지 않습니다. 에세이 주제와 마감은 LMS에서 공지합니다.</span>
-      <span class="yl-sess-tag">평가</span>
+      <span class="yl-sess-title">기말고사 주간 — 별도 수업·과제 없음</span>
+      <span class="yl-sess-desc">기말고사와 별도 종합 에세이는 없습니다. 지정된 8회 강의의 주간 성찰 에세이로 과제 평가를 진행하며, 제출 안내는 LMS를 확인해 주세요.</span>
+      <span class="yl-sess-tag">휴강</span>
     </span>
   </div>
 
@@ -219,7 +221,7 @@ hide:
   <h2 id="scope">이 페이지가 다루는 범위</h2>
 </div>
 
-<p class="yl-desc">미래소양강좌(과목코드 HSS118)는 DGIST 1~2학년을 대상으로 하는 기초필수 교양 과목입니다. 16주 한 학기 전체를 공동으로 운영합니다. 이번 가을 학기에는 「모두를 위한 Physical AI」라는 주제로 진행합니다. 위 일정에는 학기가 어떻게 흘러가는지 한눈에 보이도록 16주를 모두 적었습니다. 강조해 둔 8개 회차에서는 제가 직접 강의를 하거나, 진행을 맡거나, 공동으로 운영합니다. DGIST로 표시한 주는 학교가 주관합니다. 두 번의 평가 주간에는 지필 시험 대신 글을 제출합니다.</p>
+<p class="yl-desc">미래소양강좌(과목코드 HSS118)는 DGIST 1~2학년을 대상으로 하는 기초필수 교양 과목입니다. 16주 한 학기 전체를 공동으로 운영합니다. 이번 가을 학기에는 「모두를 위한 Physical AI」라는 주제로 진행합니다. 위 일정에는 학기가 어떻게 흘러가는지 한눈에 보이도록 16주를 모두 적었습니다. 강조해 둔 8개 회차에서는 제가 직접 강의를 하거나, 진행을 맡거나, 공동으로 운영합니다. DGIST로 표시한 주는 학교가 주관합니다. 과제 평가는 8회 주간 성찰 에세이로 진행하며, 별도의 중간·기말 시험이나 리포트는 없습니다.</p>
 
 <p class="yl-desc">수업은 로봇공학이나 머신러닝 <strong>사전 지식이 필요하지 않습니다</strong>. 전문 용어는 먼저 쉬운 말로 소개하고 모든 약어는 처음 등장할 때 풀어서 씁니다.</p>
 
