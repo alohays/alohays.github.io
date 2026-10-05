@@ -31,6 +31,8 @@ hide:
   <h2 id="sessions">Sessions</h2>
 </div>
 
+<p class="yl-desc"><strong>Assessment update — October 5:</strong> There are no separate midterm or final exams or reports. Written assessment uses the weekly reflection essays for the eight designated talks. Attendance requirements continue to apply; official grading and submission details are announced on the DGIST LMS.</p>
+
 <div class="yl-sess">
 
   <div class="yl-sess-row yl-sess-row--quiet">
@@ -95,7 +97,7 @@ hide:
     </span>
     <span class="yl-sess-mat">
       <a class="yl-mat" href="https://alohays.github.io/paper2pr/slides/lectures/dgist-2026f-w06.html">Slides</a>
-      <span class="yl-mat">Recording</span>
+      <a class="yl-mat" href="https://youtu.be/-WCeRn4c9tQ">Recording (publication pending)</a>
     </span>
   </div>
 
@@ -110,9 +112,9 @@ hide:
   <div class="yl-sess-row yl-sess-row--quiet">
     <span class="yl-sess-date">Oct 16</span>
     <span class="yl-sess-body">
-      <span class="yl-sess-title">Midterm week — a reflection report takes the place of an exam</span>
-      <span class="yl-sess-desc">No sitting exam for this course. The prompt and the deadline are announced on the LMS.</span>
-      <span class="yl-sess-tag">Assessment</span>
+      <span class="yl-sess-title">Midterm week — no class or separate assignment</span>
+      <span class="yl-sess-desc">No midterm exam or report. Written assessment is covered by the weekly reflection essays for the eight designated talks; see the LMS for submission details.</span>
+      <span class="yl-sess-tag">No class</span>
     </span>
   </div>
 
@@ -204,9 +206,9 @@ hide:
   <div class="yl-sess-row yl-sess-row--quiet">
     <span class="yl-sess-date">Dec 11</span>
     <span class="yl-sess-body">
-      <span class="yl-sess-title">Final week — a synthesis essay takes the place of an exam</span>
-      <span class="yl-sess-desc">No sitting exam for this course. The prompt and the deadline are announced on the LMS.</span>
-      <span class="yl-sess-tag">Assessment</span>
+      <span class="yl-sess-title">Final week — no class or separate assignment</span>
+      <span class="yl-sess-desc">No final exam or synthesis essay. Written assessment is covered by the weekly reflection essays for the eight designated talks; see the LMS for submission details.</span>
+      <span class="yl-sess-tag">No class</span>
     </span>
   </div>
 
@@ -216,7 +218,7 @@ hide:
   <h2 id="scope">What this page covers</h2>
 </div>
 
-<p class="yl-desc">The Seminar for Comprehensive Competency Cultivation (SCCC, course code HSS118) is a required general-education course for first- and second-year students at DGIST, co-taught across a full sixteen-week term. This fall it is taught as <em>Physical AI for Everyone</em>. The schedule above lists every week so the shape of the term is visible at a glance. The eight highlighted sessions are the ones I lecture, host, or co-run; the weeks marked <em>DGIST</em> are arranged by the school, and both assessment weeks replace a sitting exam with written work.</p>
+<p class="yl-desc">The Seminar for Comprehensive Competency Cultivation (SCCC, course code HSS118) is a required general-education course for first- and second-year students at DGIST, co-taught across a full sixteen-week term. This fall it is taught as <em>Physical AI for Everyone</em>. The schedule above lists every week so the shape of the term is visible at a glance. The eight highlighted sessions are the ones I lecture, host, or co-run; the weeks marked <em>DGIST</em> are arranged by the school. Written assessment consists of the eight weekly reflection essays, with no separate midterm or final exam or report.</p>
 
 <p class="yl-desc">Sessions assume <strong>no prior background</strong> in robotics or machine learning. Technical terms are introduced in plain language first, and every acronym is spelled out the first time it appears.</p>
 
