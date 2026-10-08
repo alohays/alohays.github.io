@@ -22,7 +22,7 @@ mkdocs.yml             # MkDocs configuration
 When updating CV content (publications, work experience, etc.), **all three sources must be kept in sync**:
 
 1. **`docs/index.md`** — Update the "Recent Publications" list if the change affects it.
-2. **`docs/cv/index.md`** — Update the Markdown CV page (publications are organized by sections: `### Under Review`, `### 2026`, `### 2025`, etc.).
+2. **`docs/cv/index.md`** — Update the Markdown CV page (publications are organized by year sections: `### 2026`, `### 2025`, etc.; add `### Under Review` above them when needed).
 3. **`docs/cv/yunsungs_cv/Resume_for_Frehers.tex`** — Update the LaTeX source in the submodule.
 4. **Rebuild PDF** — Run `pdflatex` in the submodule directory to regenerate `Resume_for_Frehers.pdf`.
 5. **Copy PDF** — Copy the rebuilt PDF to the served location:
@@ -38,6 +38,13 @@ Since `docs/cv/yunsungs_cv/` is a **git submodule**, commits and pushes must hap
 2. **Parent repo second**: Stage the submodule ref update (`docs/cv/yunsungs_cv`), the copied `docs/cv/cv.pdf`, and any other changed files. Commit and push.
 
 Use `git push --recurse-submodules=on-demand` from the parent repo to push both in one command, or push each repo individually.
+
+### Other places that repeat CV facts
+
+- **`mkdocs.yml` → `extra.stats`** — publication count, citations, h-index, and MAUs, rendered through `{{ stats.* }}` on the homepage, CV page, and About page. The LaTeX summary and publications note hardcode the same numbers, so update both.
+- **`docs/about/index.md`** — current roles, PonderPounce summary, review venues.
+- **`docs/talks/index.md`** — talks also listed under "Invited Talks & Panels" in both CVs.
+- **`docs/teaching/`** — the DGIST course page has English and Korean editions (`ko/index.md`); keep them in step.
 
 ## Local Development
 
@@ -58,20 +65,23 @@ pdflatex -interaction=nonstopmode Resume_for_Frehers.tex
 ## Publication Entry Formats
 
 ### Homepage (`docs/index.md`)
+```html
+<div class="yl-pub"><span class="yl-pub-year">YYYY</span><span class="yl-pub-title">Paper Title</span><span class="yl-pub-venue">VENUE'YY</span></div>
 ```
-- **Paper Title** (VENUE'YY)
-```
+- The title may be wrapped in `<a href="url">…</a>` when there is a project page.
 
 ### CV Markdown (`docs/cv/index.md`)
 ```
-- Authors, "Paper Title," Full Venue Name (**VENUE'YY**), YYYY. [[Project Code]](url)
+- Authors, "Paper Title," Full Venue Name (**VENUE'YY**), YYYY. [[arXiv]](url) [[Project page]](url) [[Code]](url)
 ```
-- Escaped asterisks for equal contribution: `\*`
-- Co-corresponding: `†` (no superscript, just the dagger symbol)
+- Own name in bold: `**Yunsung Lee**`
+- Equal contribution: `<sup>\*</sup>`
+- Co-corresponding: `<sup>†</sup>`
 
 ### CV LaTeX (`Resume_for_Frehers.tex`)
 ```latex
-\item Authors, ``Paper Title," Full Venue Name ({\bf VENUE'YY}), YYYY. \href{url}{Project page}
+\item Authors, ``Paper Title," Full Venue Name ({\bf VENUE'YY}), YYYY. \href{url}{arXiv}, \href{url}{Project page}
 ```
+- Own name in bold, with markers outside the braces: `{\bf Yunsung Lee}*`
 - Equal contribution: `*`
 - Co-corresponding: `$^{\dag}$`
