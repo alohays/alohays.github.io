@@ -30,7 +30,7 @@ I earned my M.Sc. in Computer Science at Korea University, advised by Seungryong
 
 Outside of work:
 
-- Reading papers with PR12, TensorFlow Korea's advanced study group, going on six years now
+- Reading papers with PR12, TensorFlow Korea's advanced study group, since 2020
 - Maintaining open-source tooling for open-world agents at [open-world-agents](https://github.com/open-world-agents)
 - Mixing drinks; I hold Korea's national Craftsman Bartender license
 
