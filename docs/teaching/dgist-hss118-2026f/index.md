@@ -121,8 +121,8 @@ hide:
   <div class="yl-sess-row">
     <span class="yl-sess-date">Oct 23</span>
     <span class="yl-sess-body">
-      <span class="yl-sess-title">Methods for Learning Action: Imitation, Reinforcement Learning, and Diffusion Policies</span>
-      <span class="yl-sess-desc">How imitation and reinforcement learning differ, and how diffusion — already familiar from image generation — is reused to generate action.</span>
+      <span class="yl-sess-title">From Experience to Action: How Robots Learn</span>
+      <span class="yl-sess-desc">How robots turn demonstrations and trial-and-error experience into action, connecting action generation, generalist policies, world models, and planning.</span>
       <span class="yl-sess-tag yl-sess-tag--mine">Lecture</span>
     </span>
     <span class="yl-sess-mat">

@@ -124,8 +124,8 @@ hide:
   <div class="yl-sess-row">
     <span class="yl-sess-date">10월 23일</span>
     <span class="yl-sess-body">
-      <span class="yl-sess-title">행동 학습의 방법론: 모방학습·강화학습·디퓨전 폴리시</span>
-      <span class="yl-sess-desc">모방학습과 강화학습이 어떻게 다른지 짚습니다. 이미지 생성으로 익숙한 디퓨전(diffusion)이 행동을 생성하는 데 어떻게 다시 쓰이는지 들여다봅니다.</span>
+      <span class="yl-sess-title">경험에서 행동으로: 로봇은 어떻게 배우는가</span>
+      <span class="yl-sess-desc">시연과 시행착오로 쌓은 경험이 실제 행동으로 이어지는 과정을 따라갑니다. 행동 생성부터 범용 로봇 정책, 미래 예측과 계획까지 연결해 살펴봅니다.</span>
       <span class="yl-sess-tag yl-sess-tag--mine">강의</span>
     </span>
     <span class="yl-sess-mat">
