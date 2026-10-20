@@ -100,7 +100,7 @@ hide:
     </span>
     <span class="yl-sess-mat">
       <a class="yl-mat" href="https://alohays.github.io/paper2pr/slides/lectures/dgist-2026f-w06.html">슬라이드</a>
-      <a class="yl-mat" href="https://youtu.be/-WCeRn4c9tQ">녹화본 (공개 예정)</a>
+      <a class="yl-mat" href="https://youtu.be/-WCeRn4c9tQ">녹화본</a>
     </span>
   </div>
 
