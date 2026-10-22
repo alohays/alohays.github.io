@@ -1,7 +1,7 @@
 # alohays.github.io
 
 [![Build status](https://img.shields.io/github/actions/workflow/status/alohays/alohays.github.io/main.yml?branch=main)](https://github.com/alohays/alohays.github.io/actions/workflows/main.yml?query=branch%3Amain)
-[![License](https://img.shields.io/github/license/alohays/alohays.github.io)](https://img.shields.io/github/license/alohays/alohays.github.io)
+[![License](https://img.shields.io/github/license/alohays/alohays.github.io)](https://github.com/alohays/alohays.github.io/blob/main/LICENSE)
 
 Personal website and blog of Yunsung Lee, built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/).
 
@@ -30,5 +30,6 @@ make docs
 ### Run quality checks
 
 ```bash
-make check
+make check       # lock file and pre-commit hooks
+make docs-test   # strict MkDocs build and sharing-metadata check
 ```
