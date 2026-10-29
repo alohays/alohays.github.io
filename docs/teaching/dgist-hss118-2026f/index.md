@@ -127,7 +127,7 @@ hide:
     </span>
     <span class="yl-sess-mat">
       <a class="yl-mat" href="https://alohays.github.io/paper2pr/slides/lectures/dgist-2026f-w09.html">Slides</a>
-      <span class="yl-mat">Recording</span>
+      <a class="yl-mat" href="https://youtu.be/UOngj3pNWUs">Recording</a>
     </span>
   </div>
 
