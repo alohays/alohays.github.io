@@ -127,7 +127,7 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 - Yohan Lee<sup>\*</sup>, Sungho Park<sup>\*</sup>, Sangwoo Han<sup>\*</sup>, **Yunsung Lee**<sup>\*†</sup>, Yongwoo Song, Adam Lee, Jiwung Hyun, Jaemin Kim, Seungtaek Choi, HyeJin Gong<sup>†</sup>, "SAFARI: Sample-specific Assessment Framework for AI in Real-world Interactions," Findings of the Annual Conference of the North American Chapter of the Association for Computational Linguistics (**Findings of NAACL'25**), 2025 (Accepted, but withdrawn due to corporate policy).
 
-- Jin-Young Kim<sup>\*</sup>, Soonwoo Kwon<sup>\*</sup>, Hyojun Go<sup>\*</sup>, **Yunsung Lee**, and Seungtaek Choi, "ScoreCL: Augmentation-Adaptive Contrastive Learning via Score-Matching Function," Machine Learning (Springer Journal), 2025. [[arXiv]](https://arxiv.org/abs/2306.04175)
+- Jin-Young Kim<sup>\*</sup>, Soonwoo Kwon<sup>\*</sup>, Hyojun Go<sup>\*</sup>, **Yunsung Lee**, Seungtaek Choi, and Hyun-Gyoon Kim, "ScoreCL: Augmentation-Adaptive Contrastive Learning via Score-Matching Function," Machine Learning (Springer Journal), 2025. [[arXiv]](https://arxiv.org/abs/2306.04175)
 
 ### 2024
 
@@ -151,15 +151,15 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 
 - Seokju Cho<sup>\*</sup>, Sunghwan Hong<sup>\*</sup>, Sangryul Jeon, **Yunsung Lee**, Kwanghoon Sohn, and Seungryong Kim, "CATs: Cost Aggregation Transformers for Visual Correspondence," Conference on Neural Information Processing Systems (**NeurIPS'21**), 2021. [[arXiv]](https://arxiv.org/abs/2106.02520) [[Code]](https://github.com/SunghwanHong/Cost-Aggregation-transformers)
 
-- Junbum Cha, Hancheol Cho, Kyungjae Lee, Seunghyun Park, **Yunsung Lee**, and Sungrae Park. "SWAD: Domain Generalization by Seeking Flat Minima," Conference on Neural Information Processing Systems (**NeurIPS'21**), 2021. [[arXiv]](https://arxiv.org/abs/2102.08604) [[Code]](https://github.com/khanrc/swad)
+- Junbum Cha, Sanghyuk Chun, Kyungjae Lee, Han-Cheol Cho, Seunghyun Park, **Yunsung Lee**, and Sungrae Park, "SWAD: Domain Generalization by Seeking Flat Minima," Conference on Neural Information Processing Systems (**NeurIPS'21**), 2021. [[arXiv]](https://arxiv.org/abs/2102.08604) [[Code]](https://github.com/khanrc/swad)
 
-- **Yunsung Lee**, Teakgyu Hong, Han-Cheol Cho, Junbum Cha, and Seungryong Kim. "HoughCL: Finding Better Positive Pairs in Dense Self-supervised Learning," ICML 2021 Workshop: Self-Supervised Learning for Reasoning and Perception (**ICMLW'21**), 2021. [[arXiv]](https://arxiv.org/abs/2111.10794)
+- **Yunsung Lee**, Teakgyu Hong, Han-Cheol Cho, Junbum Cha, and Seungryong Kim, "HoughCL: Finding Better Positive Pairs in Dense Self-supervised Learning," ICML 2021 Workshop: Self-Supervised Learning for Reasoning and Perception (**ICMLW'21**), 2021. [[arXiv]](https://arxiv.org/abs/2111.10794)
 
-- **Yunsung Lee**, Teakgyu Hong, and Seungryong Kim. "Data Augmentations for Document Images," The AAAI-21 Workshop on Scientific Document Understanding (**AAAIW'21**), 2021.
+- **Yunsung Lee**, Teakgyu Hong, and Seungryong Kim, "Data Augmentations for Document Images," The AAAI-21 Workshop on Scientific Document Understanding (**AAAIW'21**), 2021.
 
 ### 2020
 
-- Seokeon Choi, Junhyun Lee, **Yunsung Lee**, and Alexander Hauptmann. "Robust Long-Term Object Tracking via Improved Discriminative Model Prediction," The ECCV-20 Workshop on Visual Object Tracking Challenge (**ECCVW'20**), 2020. [[arXiv]](https://arxiv.org/abs/2008.04722) [[Code]](https://github.com/bismex/RLT-DIMP)
+- Seokeon Choi, Junhyun Lee, **Yunsung Lee**, and Alexander Hauptmann, "Robust Long-Term Object Tracking via Improved Discriminative Model Prediction," The ECCV-20 Workshop on Visual Object Tracking Challenge (**ECCVW'20**), 2020. [[arXiv]](https://arxiv.org/abs/2008.04722) [[Code]](https://github.com/bismex/RLT-DIMP)
 
 - Junsoo Lee<sup>\*</sup>, Eungyeup Kim<sup>\*</sup>, **Yunsung Lee**, Dongjun Kim, Jaehyuk Chang, and Jaegul Choo, "Reference-Based Sketch Image Colorization using Augmented-Self Reference and Dense Semantic Correspondence," IEEE Conference on Computer Vision and Pattern Recognition (**CVPR'20**), 2020. [[arXiv]](https://arxiv.org/abs/2005.05207) [[Project page]](https://ssuhan.github.io/RSC_CVPR20/)
 
