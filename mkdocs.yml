@@ -95,8 +95,8 @@ theme:
 extra:
   stats:
     publications: "10+"
-    citations: "2K+"
-    citations_full: "2,048"
+    citations: "2.1K+"
+    citations_full: "2,100+"
     h_index: "10"
     maus: "5M+"
   social:

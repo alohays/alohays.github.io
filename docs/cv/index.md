@@ -18,7 +18,7 @@ description: Professional CV of Yunsung Lee - AI/ML Research Engineer
 
 ## Professional Summary
 
-AI/ML research engineer with strong research foundations (**{{ stats.publications }} publications** in top-tier conferences, **over 2,000 citations**) and practical experience deploying commercial AI products (over **{{ stats.maus }} MAUs**). Currently leading research initiatives at MaumAI's **WoRV** team, specializing in Embodied AI, autonomous agents, and robotics foundation models, while also serving as an **Adjunct Professor at DGIST** (School of Undergraduate Studies), teaching undergraduate coursework in Physical AI. Expertise spans multimodal AI, autonomous systems, and translating research into deployed products.
+AI/ML research engineer with strong research foundations (**{{ stats.publications }} publications** in top-tier conferences, **{{ stats.citations }} citations**) and practical experience deploying commercial AI products (over **{{ stats.maus }} MAUs**). Currently leading research initiatives at MaumAI's **WoRV** team, specializing in Embodied AI, autonomous agents, and robotics foundation models, while also serving as an **Adjunct Professor at DGIST** (School of Undergraduate Studies), teaching undergraduate coursework in Physical AI. Expertise spans multimodal AI, autonomous systems, and translating research into deployed products.
 
 ## Skills & Expertise
 
@@ -100,7 +100,7 @@ Hanyang University · Seoul, South Korea · Mar. 2014 - Feb. 2019
 ## Publications
 
 !!! success "Research Impact"
-    These publications have accumulated over **{{ stats.citations_full }} citations** on Google Scholar.
+    These publications have accumulated **{{ stats.citations_full }} citations** on [Google Scholar](https://scholar.google.co.kr/citations?user=7iaKhrEAAAAJ&hl=en).
 
 !!! note "Publication Notes"
     **\*** denotes equal contribution (co-first authors).
