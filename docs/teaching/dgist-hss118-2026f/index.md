@@ -150,7 +150,7 @@ hide:
     </span>
     <span class="yl-sess-mat">
       <span class="yl-mat">Slides</span>
-      <span class="yl-mat">Recording</span>
+      <a class="yl-mat" href="https://youtu.be/g9__BA9kMtw">Recording</a>
     </span>
   </div>
 

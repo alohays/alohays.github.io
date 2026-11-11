@@ -153,7 +153,7 @@ hide:
     </span>
     <span class="yl-sess-mat">
       <span class="yl-mat">슬라이드</span>
-      <span class="yl-mat">녹화본</span>
+      <a class="yl-mat" href="https://youtu.be/g9__BA9kMtw">녹화본</a>
     </span>
   </div>
 
