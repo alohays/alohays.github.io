@@ -152,7 +152,7 @@ hide:
       <span class="yl-sess-desc">원격 강연.</span>
     </span>
     <span class="yl-sess-mat">
-      <span class="yl-mat">슬라이드</span>
+      <a class="yl-mat" href="https://alohays.github.io/teaching/dgist-hss118-2026f/slides/2026-11-06-sunghwan-hong-spatial-ai-to-physical-ai.pdf">슬라이드</a>
       <a class="yl-mat" href="https://youtu.be/g9__BA9kMtw">녹화본</a>
     </span>
   </div>

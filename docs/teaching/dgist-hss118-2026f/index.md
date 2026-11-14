@@ -149,7 +149,7 @@ hide:
       <span class="yl-sess-desc">Delivered remotely.</span>
     </span>
     <span class="yl-sess-mat">
-      <span class="yl-mat">Slides</span>
+      <a class="yl-mat" href="https://alohays.github.io/teaching/dgist-hss118-2026f/slides/2026-11-06-sunghwan-hong-spatial-ai-to-physical-ai.pdf">Slides</a>
       <a class="yl-mat" href="https://youtu.be/g9__BA9kMtw">Recording</a>
     </span>
   </div>
